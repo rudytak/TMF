@@ -1,0 +1,16 @@
+Oscillating wall animation
+
+This shows solution to 2-dimensional Navier-Stokes
+equation for incompressible fluid, in low-amplitude approximation,
+assuming these boundary conditions:  a lower boundary that moves
+harmonically in time, and stationary fluid at plus infinity.
+Each vertical tic mark is one viscous penetration depth.
+The moving, wavy line is the location of a line of marked 
+fluid elements, that would lie along the vertical axis if the
+boundary were not moving.
+
+See Landau and Lifshitz "Fluid Mechanics" Section 24.
+
+Typing "L" toggles between this animation and one in which
+the wall is stationary and the fluid moves in response to an
+oscillating pressure gradient, as described in VISCOUS.TXT.

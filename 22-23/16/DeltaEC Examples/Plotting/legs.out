@@ -1,0 +1,108 @@
+TITLE      Model of 1982 Penn State Championship Bottle
+!->C:\Users\092710\Documents\DeltaEC\PySource\Examples\TEMPORARY\legs.out
+!Created@18:42:21  22-Aug-2019 with DeltaEC version 6.4b2.8!under win32,
+using Win 6.1.7601 (Service Pack 1) under Python 2.7.9.
+!---------------------------------  0 ---------------------------------
+BEGIN      Initial
+ 1.0000E+5  a Mean P Pa                 
+  514.73    b Freq   Hz       G         
+  300.00    c TBeg   K                  
+   20.000   d |p|    Pa                 
+     0.0000 e Ph(p)  deg                
+ 6.8788E-4  f |U|    m^3/s    G         
+     0.0000 g Ph(U)  deg                
+air           Gas type                  
+!---------------------------------  1 ---------------------------------
+DUCT       top
+ 2.0000E-4  a Area   m^2                  510.98    A |p|    Pa
+ 5.0133E-2  b Perim  m                    -88.61    B Ph(p)  deg
+ 4.0000E-2  c Length m                   6.3982E-4  C |U|    m^3/s
+                                        -0.24666    D Ph(U)  deg
+                                         6.8788E-3  E Htot   W
+ideal           Solid type               4.6701E-3  F Edot   W
+!---------------------------------  2 ---------------------------------
+TBRANCH    
+ 3.4176E+4  a Re(Zb) Pa-s/m^3 G           510.98    A |p|    Pa
+-1.0966E+6  b Im(Zb) Pa-s/m^3 G           -88.61    B Ph(p)  deg
+                                         4.6576E-4  C |U|    m^3/s
+                                           -0.3947  D Ph(U)  deg
+                                         3.7069E-3  E HtotBr W
+                                         3.7069E-3  F EdotBr W
+                                         9.6318E-4  G EdotTr W
+!---------------------------------  3 ---------------------------------
+DUCT       start of side branch
+ 1.0000E-4  a Area   m^2                 1017.3     A |p|    Pa
+ 3.5450E-2  b Perim  m                    -90.024   B Ph(p)  deg
+ 3.0000E-2  c Length m                   4.1200E-4  C |U|    m^3/s
+                                        -0.44142    D Ph(U)  deg
+                                         3.7069E-3  E Htot   W
+ideal           Solid type               1.5250E-3  F Edot   W
+!---------------------------------  4 ---------------------------------
+CONE       more of side branch
+sameas   3a a AreaI  m^2                 1127.7     A |p|    Pa
+sameas   3b b PerimI m                    -90.141   B Ph(p)  deg
+ 1.5000E-2  c Length m                   3.2275E-4  C |U|    m^3/s
+sameas   5a d AreaF  m^2                -0.44723    D Ph(U)  deg
+sameas   5b e PerimF m                   3.7069E-3  E Htot   W
+ideal           Solid type               9.7223E-4  F Edot   W
+!---------------------------------  5 ---------------------------------
+DUCT       more side branch
+ 4.0000E-4  a Area   m^2                 1173.9     A |p|    Pa
+ 7.0900E-2  b Perim  m                    -90.175   B Ph(p)  deg
+ 3.0000E-2  c Length m                   3.6184E-7  C |U|    m^3/s
+                                          -45.175   D Ph(U)  deg
+                                         3.7069E-3  E Htot   W
+ideal           Solid type               1.5018E-4  F Edot   W
+!---------------------------------  6 ---------------------------------
+SURFACE    Bottom of side branch
+sameas   5a a Area   m^2                 1173.9     A |p|    Pa
+                                          -90.175   B Ph(p)  deg
+                                         1.1054E-21 C |U|    m^3/s
+                                           73.301   D Ph(U)  deg
+                                         3.7069E-3  E Htot   W
+ideal           Solid type              -6.2204E-19 F Edot   W
+!---------------------------------  7 ---------------------------------
+HARDEND    Final
+     0.0000 a R(1/z)          =7G        1173.9     A |p|    Pa
+     0.0000 b I(1/z)          =7H         -90.175   B Ph(p)  deg
+     0.0000 c Htot   W                   1.1054E-21 C |U|    m^3/s
+                                           73.301   D Ph(U)  deg
+                                         3.7069E-3  E Htot   W
+                                        -6.2204E-19 F Edot   W
+                                        -9.0997E-19 G R(1/z)
+                                         2.6996E-19 H I(1/z)
+!---------------------------------  8 ---------------------------------
+DUCT       back to the trunk
+sameas   3a a Area   m^2                  870.63    A |p|    Pa
+sameas   3b b Perim  m                    -89.603   B Ph(p)  deg
+    0.1000  c Length m                   6.7089E-8  C |U|    m^3/s
+                                          -44.603   D Ph(U)  deg
+                                         3.1719E-3  E Htot   W
+ideal           Solid type               2.0651E-5  F Edot   W
+!---------------------------------  9 ---------------------------------
+SURFACE    bottom of trunk
+sameas   8a a Area   m^2                  870.63    A |p|    Pa
+                                          -89.603   B Ph(p)  deg
+                                         8.3467E-20 C |U|    m^3/s
+                                            0.32252 D Ph(U)  deg
+                                         3.1719E-3  E Htot   W
+ideal           Solid type               4.6928E-20 F Edot   W
+!--------------------------------- 10 ---------------------------------
+HARDEND    
+     0.0000 a R(1/z)          =10G        870.63    A |p|    Pa
+     0.0000 b I(1/z)          =10H        -89.603   B Ph(p)  deg
+     0.0000 c Htot   W                   8.3467E-20 C |U|    m^3/s
+                                            0.32252 D Ph(U)  deg
+                                         3.1719E-3  E Htot   W
+                                         4.6928E-20 F Edot   W
+                                         4.9925E-19 G R(1/z)
+                                         3.8655E-16 H I(1/z)
+! The restart information below was generated by a previous run
+! and will be used by DeltaEC the next time it opens this file.
+guessz   0b   0f   2a   2b
+xprecn  1.1540E-3  -7.2907E-11     0.36266    37.248  
+targs    7a   7b  10a  10b
+hilite 10F 10G 10H
+! Plot start, end, and step values.  May be edited if you wish.
+! Outer Loop:                       | Inner Loop .
+

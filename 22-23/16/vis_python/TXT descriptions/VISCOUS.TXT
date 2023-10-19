@@ -1,0 +1,37 @@
+Viscous penetration depth animation
+
+First frame shows a central cross section of a long resonator, with an
+oscillating piston at the right end.
+
+If the oscillating piston moves at the correct frequency, it will excite
+resonance.  Second frame adds plots of pressure and velocity of the 
+half-wavelength mode in the resonator.
+
+Third frame adds lines in the gas in the resonator, showing how 
+elements of gas move in the standing wave.  Imagine tracer particles.
+
+But these tracers show a nonzero velocity along the walls, which is 
+impossible.  In this coarse view, we have assumed a negligibly small viscous
+penetration depth.  Yellow circles in fourth frame shows region to be 
+magnified in the next frame.
+
+Fifth frame shows solution to 2-dimensional Navier-Stokes
+equation for incompressible fluid, in low-amplitude approximation,
+assuming these boundary conditions:  a lower boundary that is 
+stationary, and uniform oscillating flow in the fluid at plus infinity.
+Each vertical tic mark is one viscous penetration depth.
+The moving, wavy line is the location of a line of marked 
+fluid elements, that would lie along the vertical axis if the
+fluid were not moving.
+
+Typing "L" changes to zero oscillating pressure gradient and
+oscillating wall. This shows solution to 2-dimensional Navier-Stokes
+equation for incompressible fluid, in low-amplitude approximation,
+assuming these boundary conditions:  a lower boundary that moves
+harmonically in time, and stationary fluid at plus infinity.
+Each vertical tic mark is one viscous penetration depth.
+The moving, wavy line is the location of a line of marked 
+fluid elements, that would lie along the vertical axis if the
+boundary were not moving.
+
+See Landau and Lifshitz "Fluid Mechanics" Section 24.

@@ -1,0 +1,21 @@
+For sharing library files among animations when
+they run on Macs, it was necessary to create
+mr7g.py and ThermoAc.exe, which allow all the
+animations to be launched from mouse clicks in
+a Mac.  
+
+On a Mac, you can also access any animation through 
+a command line or something like a hyperlink from 
+within powerpoint, with syntax like this:
+
+thermoac animation-option
+for example:
+thermoac viscous-m
+
+Windows users don't need thermoAc.exe or mr7g.py, 
+and they seem to make the animations run more slowly
+on Windows sometimes.  But they work fine in Windows,
+and we include them for Windows users in case 
+future Windows operating systems are less friendly 
+to our shortcuts in folder win7-vista-xp.
+

@@ -1,0 +1,86 @@
+TITLE      Hofler's 1986 thermoacoustic refrigerator
+!->C:\Users\092710\Documents\DeltaEC\PySource\Examples\TEMPORARY\Hofler1.out
+!Created@18:48:15  22-Aug-2019 with DeltaEC version 6.4b2.8!under win32,
+using Win 6.1.7601 (Service Pack 1) under Python 2.7.9.
+!---------------------------------  0 ---------------------------------
+BEGIN      
+ 1.0000E+6  a Mean P Pa                 
+  500.00    b Freq   Hz                 
+  300.00    c TBeg   K                  
+ 3.0000E+4  d |p|    Pa                 
+     0.0000 e Ph(p)  deg                
+ 5.0000E-4  f |U|    m^3/s              
+     0.0000 g Ph(U)  deg                
+helium           Gas type               
+!---------------------------------  1 ---------------------------------
+SURFACE    driver end
+ 1.1340E-3  a Area   m^2                 3.0000E+4  A |p|    Pa
+                                             0.0000 B Ph(p)  deg
+                                         4.9770E-4  C |U|    m^3/s
+                                        -0.26555    D Ph(U)  deg
+                                            7.5000  E Htot   W
+ideal           Solid type                  7.4654  F Edot   W
+!---------------------------------  2 ---------------------------------
+DUCT       ambient temperature duct
+sameas   1a a Area   m^2                 2.9739E+4  A |p|    Pa
+    0.1190  b Perim  m                  -0.17766    B Ph(p)  deg
+ 4.2600E-2  c Length m                   2.7787E-3  C |U|    m^3/s
+                                          -79.987   D Ph(U)  deg
+                                            7.5000  E Htot   W
+ideal           Solid type                  7.3104  F Edot   W
+!---------------------------------  3 ---------------------------------
+HX         ambient temperature heat exchanger
+sameas   1a a Area   m^2                 2.9570E+4  A |p|    Pa
+    0.6000  b GasA/A                    -0.13006    B Ph(p)  deg
+ 6.3500E-3  c Length m                   3.0558E-3  C |U|    m^3/s
+ 1.9000E-4  d y0     m                    -81.853   D Ph(U)  deg
+   -9.640   e HeatIn W                     -2.140   E Htot   W
+  300.00    f SolidT K                      6.5045  F Edot   W
+                                          300.00    G GasT   K
+copper           Solid type               299.30    H SolidT K
+!---------------------------------  4 ---------------------------------
+STKSLAB    Stack
+sameas   1a a Area   m^2                 2.6110E+4  A |p|    Pa
+    0.7240  b GasA/A                        1.4224  B Ph(p)  deg
+ 7.8500E-2  c Length m                   6.7980E-3  C |U|    m^3/s
+ 1.8000E-4  d y0     m                    -87.967   D Ph(U)  deg
+ 4.0000E-5  e Lplate m                     -2.140   E Htot   W
+                                            0.94533 F Edot   W
+                                          300.00    G TBeg   K
+kapton           Solid type               217.44    H TEnd   K
+!---------------------------------  5 ---------------------------------
+HX         Cold heat exchanger
+sameas   1a a Area   m^2                 2.5930E+4  A |p|    Pa
+    0.6700  b GasA/A                        1.4793  B Ph(p)  deg
+ 2.5400E-3  c Length m                   6.9026E-3  C |U|    m^3/s
+ 2.5500E-4  d y0     m                    -88.06    D Ph(U)  deg
+    3.0000  e HeatIn W                      0.8600  E Htot   W
+  200.00    f SolidT K                      0.71988 F Edot   W
+                                          217.44    G GasT   K
+copper           Solid type               217.71    H SolidT K
+!---------------------------------  6 ---------------------------------
+DUCT       Cold Duct
+ 3.8400E-4  a Area   m^2                 1547.2     A |p|    Pa
+ 6.9400E-2  b Perim  m                      1.4461  B Ph(p)  deg
+    0.1670  c Length m                   8.6248E-3  C |U|    m^3/s
+                                          -88.212   D Ph(U)  deg
+                                            0.8600  E Htot   W
+ideal           Solid type               3.9769E-2  F Edot   W
+!---------------------------------  7 ---------------------------------
+CONE       
+sameas   6a a AreaI  m^2                 4459.1     A |p|    Pa
+sameas   6b b PerimI m                   -178.47    B Ph(p)  deg
+ 6.6800E-2  c Length m                   8.3900E-3  C |U|    m^3/s
+ 1.1600E-3  d AreaF  m^2                  -88.20    D Ph(U)  deg
+    0.1210  e PerimF m                      0.8600  E Htot   W
+ideal           Solid type              -8.7152E-2  F Edot   W
+!---------------------------------  8 ---------------------------------
+COMPLIANCE end bulb
+ 4.9000E-2  a SurfAr m^2                 4459.1     A |p|    Pa
+ 1.0600E-3  b Volume m^3                 -178.47    B Ph(p)  deg
+                                         5.3324E-4  C |U|    m^3/s
+                                           86.117   D Ph(U)  deg
+                                            0.8600  E Htot   W
+ideal           Solid type              -0.11221    F Edot   W
+! The restart information below was generated by a previous run
+! and will be used by DeltaEC the next time it opens this file.

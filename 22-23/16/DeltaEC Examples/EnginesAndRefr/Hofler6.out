@@ -1,0 +1,128 @@
+TITLE      Hofler's 1986 thermoacoustic refrigerator
+!->C:\Users\092710\Documents\DeltaEC\PySource\Examples\TEMPORARY\Hofler6.out
+!Created@18:48:04  22-Aug-2019 with DeltaEC version 6.4b2.8!under win32,
+using Win 6.1.7601 (Service Pack 1) under Python 2.7.9.
+!---------------------------------  0 ---------------------------------
+BEGIN      
+ 1.0000E+6  a Mean P Pa                 
+  505.55    b Freq   Hz       G         
+  302.59    c TBeg   K        G         
+     0.0000 d |p|    Pa                 
+     0.0000 e Ph(p)  deg                
+ 5.4334E-4  f |U|    m^3/s    G         
+     0.0000 g Ph(U)  deg                
+helium           Gas type               
+!---------------------------------  1 ---------------------------------
+VESPEAKER  electrodynamic driver
+ 6.0000E-4  a Area   m^2                 3.0000E+4  A |p|    Pa
+    6.0000  b R      ohms               -0.12238    B Ph(p)  deg
+     0.0000 c L      H                   5.4217E-4  C |U|    m^3/s
+    8.0000  d BLProd T-m                -0.12238    D Ph(U)  deg
+ 5.0000E-3  e M      kg                    32.982   E Htot   W
+     0.0000 f K      N/m                    8.1326  F Edot   W
+     0.0000 g Rm     N-s/m                 32.982   G WorkIn W
+   23.368   h |V|    V        G            23.368   H Volts  V
+  207.41    i Ph(V)  deg      G             2.8770  I Amps   A
+                                          -11.14    J Ph(V/I) deg
+                                         3.0000E+4  K |Px|   Pa
+kapton           Solid type             -0.12238    L Ph(Px) deg
+!---------------------------------  2 ---------------------------------
+RPN        enforce resonance
+     0.0000 a =A?                       -6.9389E-16               A deg
+1B 1D -
+!---------------------------------  3 ---------------------------------
+RPN        enforce desired pressure amplitude
+ 3.0000E+4  a =A?                       3.0000E+4                 A Pa
+p1 mag
+!---------------------------------  4 ---------------------------------
+DUCT       ambient temperature duct
+ 1.1340E-3  a Area   m^2                 2.9736E+4  A |p|    Pa
+    0.1190  b Perim  m                  -0.31674    B Ph(p)  deg
+ 4.2600E-2  c Length m                   2.8141E-3  C |U|    m^3/s
+                                          -79.328   D Ph(U)  deg
+                                           32.982   E Htot   W
+ideal           Solid type                  7.9756  F Edot   W
+!---------------------------------  5 ---------------------------------
+HX         ambient temperature heat exchanger
+ 1.1340E-3  a Area   m^2                 2.9564E+4  A |p|    Pa
+    0.6000  b GasA/A                    -0.27255    B Ph(p)  deg
+ 6.3500E-3  c Length m                   3.0931E-3  C |U|    m^3/s
+ 1.9000E-4  d y0     m                    -81.266   D Ph(U)  deg
+  -35.982   e HeatIn W        G            -3.000   E Htot   W
+  300.00    f SolidT K        =5H           7.1580  F Edot   W
+                                          302.59    G GasT   K
+copper           Solid type               300.00    H SolidT K
+!---------------------------------  6 ---------------------------------
+STKSLAB    Stack
+ 1.1340E-3  a Area   m^2                 2.6102E+4  A |p|    Pa
+    0.7240  b GasA/A                        1.2914  B Ph(p)  deg
+ 7.8500E-2  c Length m                   6.8882E-3  C |U|    m^3/s
+ 1.8000E-4  d y0     m                    -88.016   D Ph(U)  deg
+ 4.0000E-5  e Lplate m                     -3.000   E Htot   W
+                                            1.0867  F Edot   W
+                                          302.59    G TBeg   K
+kapton           Solid type               224.74    H TEnd   K
+!---------------------------------  7 ---------------------------------
+HX         Cold heat exchanger
+ 1.1340E-3  a Area   m^2                 2.5923E+4  A |p|    Pa
+    0.6700  b GasA/A                        1.3489  B Ph(p)  deg
+ 2.5400E-3  c Length m                   6.9942E-3  C |U|    m^3/s
+ 2.5500E-4  d y0     m                    -88.111   D Ph(U)  deg
+    3.0000  e HeatIn W                       0.0000 E Htot   W
+  200.00    f SolidT K                      0.85377 F Edot   W
+                                          224.74    G GasT   K
+copper           Solid type               225.01    H SolidT K
+!---------------------------------  8 ---------------------------------
+DUCT       Cold Duct
+ 3.8400E-4  a Area   m^2                 1747.1     A |p|    Pa
+ 6.9400E-2  b Perim  m                      0.55513 B Ph(p)  deg
+    0.1670  c Length m                   8.7472E-3  C |U|    m^3/s
+                                          -88.291   D Ph(U)  deg
+                                             0.0000 E Htot   W
+ideal           Solid type                  0.15381 F Edot   W
+!---------------------------------  9 ---------------------------------
+CONE       
+sameas   8a a AreaI  m^2                 4217.5     A |p|    Pa
+sameas   8b b PerimI m                   -178.22    B Ph(p)  deg
+ 6.6800E-2  c Length m                   8.5313E-3  C |U|    m^3/s
+ 1.1600E-3  d AreaF  m^2                  -88.295   D Ph(U)  deg
+    0.1210  e PerimF m                       0.0000 E Htot   W
+ideal           Solid type               2.3190E-2  F Edot   W
+!--------------------------------- 10 ---------------------------------
+COMPLIANCE end bulb
+ 4.9000E-2  a SurfAr m^2                 4217.5     A |p|    Pa
+ 1.0600E-3  b Volume m^3                 -178.22    B Ph(p)  deg
+                                         1.3908E-17 C |U|    m^3/s
+                                           93.799   D Ph(U)  deg
+                                             0.0000 E Htot   W
+ideal           Solid type               1.0342E-15 F Edot   W
+!--------------------------------- 11 ---------------------------------
+HARDEND    target this to seal the end
+     0.0000 a R(1/z)          =11G       4217.5     A |p|    Pa
+     0.0000 b I(1/z)          =11H       -178.22    B Ph(p)  deg
+     0.0000 c Htot   W        =11E       1.3908E-17 C |U|    m^3/s
+                                           93.799   D Ph(U)  deg
+                                             0.0000 E Htot   W
+                                         1.0342E-15 F Edot   W
+                                         1.8941E-16 G R(1/z)
+                                        -5.3680E-15 H I(1/z)
+!--------------------------------- 12 ---------------------------------
+RPN        gross cooling power is net power plus tail dissipation
+     0.0000 a G or T                    3.8538                    A Watt
+7e 7F +
+!--------------------------------- 13 ---------------------------------
+RPN        temperature ratio, Tc/T0
+     0.0000 a G or T                    0.75004                   A ratio
+7H 5H /
+!--------------------------------- 14 ---------------------------------
+RPN        COP / Carnot's COP
+     0.0000 a G or T                    0.15792                   A cop rat
+12A 1F / 7H 5H 7H - / /
+! The restart information below was generated by a previous run
+! and will be used by DeltaEC the next time it opens this file.
+guessz   0b   0c   0f   1h   1i   5e
+xprecn -4.3632E-3   1.3225E-3  -3.8369E-9   1.3385E-5   8.1589E-4   2.2989E-4 
+targs    2a   3a   5f  11a  11b  11c
+! Plot start, end, and step values.  May be edited if you wish.
+! Outer Loop:                       | Inner Loop .
+

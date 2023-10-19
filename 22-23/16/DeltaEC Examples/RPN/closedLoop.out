@@ -1,0 +1,151 @@
+TITLE      A loop of tubing, with two side-branch drivers
+!->C:\Users\092710\Documents\DeltaEC\PySource\Examples\TEMPORARY\closedLoop.out
+!Created@18:44:29  22-Aug-2019 with DeltaEC version 6.4b2.8!under win32,
+using Win 6.1.7601 (Service Pack 1) under Python 2.7.9.
+!---------------------------------  0 ---------------------------------
+BEGIN      Start in the middle of nowhere, and integrate around a loop
+ 1.0000E+5  a Mean P Pa                 
+  178.50    b Freq   Hz                 
+  300.00    c TBeg   K                  
+  688.55    d |p|    Pa       G         
+-0.92861    e Ph(p)  deg      G         
+ 1.7186E-3  f |U|    m^3/s    G         
+    2.3823  g Ph(U)  deg      G         
+air           Gas type                  
+!---------------------------------  1 ---------------------------------
+RPN        Edot passing this point
+     0.0000 a G or T                    0.59068                   A Watt
+                                        0.59068                   B Watt
+Htot ; Edot
+!---------------------------------  2 ---------------------------------
+DUCT       FIRST QUARTER WAVELENGTH
+ 1.0000E-3  a Area   m^2      Mstr        684.71    A |p|    Pa
+    0.1121  b Perim  m        2a          -90.881   B Ph(p)  deg
+    0.5000  c Length m                   1.6894E-3  C |U|    m^3/s
+ 5.0000E-4  d Srough                      -94.012   D Ph(U)  deg
+                                            0.59068 E Htot   W
+ideal           Solid type                  0.57753 F Edot   W
+!---------------------------------  3 ---------------------------------
+TBRANCH    
+-2.5622E+5  a Re(Zb) Pa-s/m^3 G           684.71    A |p|    Pa
+ 1.7433E+6  b Im(Zb) Pa-s/m^3 G           -90.881   B Ph(p)  deg
+                                         3.8860E-4  C |U|    m^3/s
+                                          170.76    D Ph(U)  deg
+                                        -1.9346E-2  E HtotBr W
+                                        -1.9346E-2  F EdotBr W
+                                            0.59687 G EdotTr W
+!---------------------------------  4 ---------------------------------
+VESPEAKER  FIRST DRIVER
+ 3.0000E-4  a Area   m^2                 3.7644E-11 A |p|    Pa
+    8.0000  b R      ohms                  91.558   B Ph(p)  deg
+ 5.0000E-3  c L      H                   3.8867E-4  C |U|    m^3/s
+    4.0000  d BLProd T-m                  170.75    D Ph(U)  deg
+ 2.0000E-2  e M      kg                    76.154   E Htot   W
+ 1.0000E+4  f K      N/m                 1.3718E-15 F Edot   W
+    1.0000  g Rm     N-s/m                 76.173   G WorkIn W
+   40.000   h |V|    V                     40.000   H Volts  V
+  105.00    i Ph(V)  deg                    4.3392  I Amps   A
+                                           28.630   J Ph(V/I) deg
+                                          684.71    K |Px|   Pa
+ideal           Solid type                 89.119   L Ph(Px) deg
+!---------------------------------  5 ---------------------------------
+RPN        driver resonance frequency
+     0.0000 a G or T                    112.54                    A Hz
+4f 4e / sqrt 2 / pi /
+!---------------------------------  6 ---------------------------------
+SOFTEND    backside of driver open to the room
+     0.0000 a Re(z)           =6G        3.7644E-11 A |p|    Pa
+     0.0000 b Im(z)           =6H          91.558   B Ph(p)  deg
+     0.0000 c Htot   W                   3.8867E-4  C |U|    m^3/s
+                                          170.75    D Ph(U)  deg
+                                           76.154   E Htot   W
+                                         1.3718E-15 F Edot   W
+                                         1.3513E-14 G Re(z)
+                                        -7.0786E-14 H Im(z)
+                                          300.00    I T      K
+!---------------------------------  7 ---------------------------------
+DUCT       SECOND QUARTER WAVELENGTH
+sameas   2a a Area   m^2      Mstr        700.52    A |p|    Pa
+    0.1121  b Perim  m        7a         -174.44    B Ph(p)  deg
+sameas   2c c Length m                   1.6905E-3  C |U|    m^3/s
+ 5.0000E-4  d Srough                      175.91    D Ph(U)  deg
+                                            0.61002 E Htot   W
+ideal           Solid type                  0.58374 F Edot   W
+!---------------------------------  8 ---------------------------------
+RPN        miscellaneous calculations, some needed later
+     0.0000 a G or T                    15.000                    A deg
+                                        1.0000                    B m long
+                                        1.9452                    C m lambd
+a f / ; 2c 7c + ; 4i 90 -
+!---------------------------------  9 ---------------------------------
+TBRANCH    
+-4.5837E+5  a Re(Zb) Pa-s/m^3 G           700.52    A |p|    Pa
+ 1.7440E+6  b Im(Zb) Pa-s/m^3 G          -174.44    B Ph(p)  deg
+                                         3.8849E-4  C |U|    m^3/s
+                                           80.838   D Ph(U)  deg
+                                        -3.4589E-2  E HtotBr W
+                                        -3.4589E-2  F EdotBr W
+                                            0.61833 G EdotTr W
+!--------------------------------- 10 ---------------------------------
+VESPEAKER  SECOND DRIVER
+sameas   4a a Area   m^2                 2.3075E-11 A |p|    Pa
+sameas   4b b R      ohms                 105.72    B Ph(p)  deg
+sameas   4c c L      H                   3.8857E-4  C |U|    m^3/s
+sameas   4d d BLProd T-m                   80.831   D Ph(U)  deg
+sameas   4e e M      kg                    76.129   E Htot   W
+sameas   4f f K      N/m                 4.0666E-15 F Edot   W
+sameas   4g g Rm     N-s/m                 76.163   G WorkIn W
+sameas   4h h |V|    V                     40.000   H Volts  V
+sameas   8A i Ph(V)  deg                    4.3385  I Amps   A
+                                           28.626   J Ph(V/I) deg
+                                          700.52    K |Px|   Pa
+ideal           Solid type                  5.5643  L Ph(Px) deg
+!--------------------------------- 11 ---------------------------------
+SOFTEND    backside of driver open to the room
+     0.0000 a Re(z)           =11G       2.3075E-11 A |p|    Pa
+     0.0000 b Im(z)           =11H        105.72    B Ph(p)  deg
+     0.0000 c Htot   W                   3.8857E-4  C |U|    m^3/s
+                                           80.831   D Ph(U)  deg
+                                           76.129   E Htot   W
+                                         4.0666E-15 F Edot   W
+                                         4.0080E-14 G Re(z)
+                                         1.8597E-14 H Im(z)
+                                          300.00    I T      K
+!--------------------------------- 12 ---------------------------------
+DUCT       THIRD AND FOURTH QUARTER WAVELENGTH
+sameas   7a a Area   m^2      Mstr        688.55    A |p|    Pa
+    0.1121  b Perim  m        12a       -0.92861    B Ph(p)  deg
+sameas   8B c Length m                   1.7186E-3  C |U|    m^3/s
+ 5.0000E-4  d Srough                        2.3823  D Ph(U)  deg
+                                            0.64461 E Htot   W
+ideal           Solid type                  0.59068 F Edot   W
+!--------------------------------- 13 ---------------------------------
+RPN        close the loop: |p1|
+sameas   0d a =A?                       688.55                    A Pa
+p1 mag
+!--------------------------------- 14 ---------------------------------
+RPN        close the loop: phase(p1)
+sameas   0e a =A?                       -0.92861                  A deg
+p1 arg
+!--------------------------------- 15 ---------------------------------
+RPN        close the loop: |U1|
+sameas   0f a =A?                       1.7186E-3                 A m3/s
+U1 mag
+!--------------------------------- 16 ---------------------------------
+RPN        close the loop: phase(U1)
+sameas   0g a =A?                       2.3823                    A deg
+U1 arg
+!--------------------------------- 17 ---------------------------------
+RPN        How much heat must be rejected somewhere, to close the loop?
+     0.0000 a G or T                    5.3935E-2                 A Watt
+Htot 1B -
+! The restart information below was generated by a previous run
+! and will be used by DeltaEC the next time it opens this file.
+guessz   0d   0e   0f   0g   3a   3b   9a   9b
+xprecn  3.4442E-3  -3.6377E-6  -2.3102E-8  -3.5458E-5      0.8622    -19.179      -4.0218    -37.849  
+targs    6a   6b  11a  11b  13a  14a  15a  16a
+hilite 0d 0e 0f 0g 1A
+mstr-slave 3 2 -2 7 -2 12 -2
+! Plot start, end, and step values.  May be edited if you wish.
+! Outer Loop:                       | Inner Loop .
+

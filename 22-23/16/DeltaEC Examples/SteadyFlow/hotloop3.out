@@ -1,0 +1,182 @@
+TITLE      hotloop3
+!->C:\Users\092710\Documents\DeltaEC\PySource\Examples\SteadyFlow\hotloop3.out
+!Created@10:42:36  17-Dec-2019 with DeltaEC version 6.4b2.8!under win32,
+using Win 6.1.7601 (Service Pack 1) under Python 2.7.9.
+!---------------------------------  0 ---------------------------------
+BEGIN      the setup
+ 3.1030E+6  a Mean P Pa                 
+   85.895   b Freq   Hz                 
+  325.00    c TBeg   K                  
+ 2.9837E+5  d |p|    Pa                 
+   -0.9353  e Ph(p)  deg                
+ 1.3300E-2  f |U|    m^3/s              
+   13.797   g Ph(U)  deg                
+ -316.07    h Htot   W                  
+     0.0000 i Ndot   mol/s              
+helium           Gas type               
+!---------------------------------  1 ---------------------------------
+STKSCREEN  Regenerator (pg 92 book 3) (Ks frac est:pg 20 book 4)
+ 6.2070E-3  a Area   m^2                 2.5369E+5  A |p|    Pa
+    0.7190  b VolPor                        1.9218  B Ph(p)  deg
+ 7.3000E-2  c Length m                   3.2324E-2  C |U|    m^3/s
+ 4.2200E-5  d rh     m                    -30.836   D Ph(U)  deg
+    0.3000  e ksFrac                     -316.07    E Htot   W
+                                         3448.0     F Edot   W
+                                          325.00    G TBeg   K
+                                          731.79    H TEnd   K
+stainless           Solid type           -316.07    I H2k    W
+!---------------------------------  2 ---------------------------------
+DUCT       top half of mixing chamber
+ 6.2000E-3  a Area   m^2      Mstr       2.5365E+5  A |p|    Pa
+    0.2791  b Perim  m        2a            1.9108  B Ph(p)  deg
+ 1.0000E-2  c Length m                   3.3238E-2  C |U|    m^3/s
+                                          -33.235   D Ph(U)  deg
+                                         -316.07    E Htot   W
+ideal           Solid type               3447.0     F Edot   W
+!---------------------------------  3 ---------------------------------
+TBRANCH    branch into hot loop
+ 5.8646E+7  a Re(Zb) Pa-s/m^3 G          2.5365E+5  A |p|    Pa
+ 3.9604E+7  b Im(Zb) Pa-s/m^3 G             1.9108  B Ph(p)  deg
+    0.7509  d NdotBr mol/s    G          3.5844E-3  C |U|    m^3/s
+                                          -32.121   D Ph(U)  deg
+                                         7116.2     E HtotBr W
+                                          376.74    F EdotBr W
+                                         3070.3     G EdotTr W
+!---------------------------------  4 ---------------------------------
+DUCT       quarter-wave duct from engine to diode
+ 7.0000E-4  a Area   m^2      Mstr       1.0458E+4  A |p|    Pa
+ 9.3748E-2  b Perim  m        4a         -163.76    B Ph(p)  deg
+    4.6000  c Length m                   5.5089E-2  C |U|    m^3/s
+ 5.0000E-4  d Srough                      -87.715   D Ph(U)  deg
+                                         7116.2     E Htot   W
+ideal           Solid type                 69.466   F Edot   W
+!---------------------------------  5 ---------------------------------
+RPN        calculate Borda-Carnot minor loss here
+     0.0000 a G or T                    0.18367                   A ChngeMe
+1 6a 4a / - sqrd
+!---------------------------------  6 ---------------------------------
+MINOR      asymmetric flow at gas diode
+ 4.0000E-4  a Area   m^2                 1.0171E+4  A |p|    Pa
+ 5.0000E-2  b K+                         -173.94    B Ph(p)  deg
+sameas   5A c K-                         5.5089E-2  C |U|    m^3/s
+                                          -87.715   D Ph(U)  deg
+                                         7116.2     E Htot   W
+                                           18.434   F Edot   W
+!---------------------------------  7 ---------------------------------
+CONE       expansion to plenum
+sameas   6a a AreaI  m^2      Mstr       2.0007E+4  A |p|    Pa
+ 7.0899E-2  b PerimI m        7a         -176.65    B Ph(p)  deg
+    0.4000  c Length m                   5.0316E-2  C |U|    m^3/s
+sameas   9a d AreaF  m^2      Mstr        -87.795   D Ph(U)  deg
+    0.4342  e PerimF m        7d         7116.2     E Htot   W
+ 5.0000E-4  f Srough                       10.021   F Edot   W
+ideal           Solid type              
+!---------------------------------  8 ---------------------------------
+RPN        watch that angle
+    5.0000  a G or T                    16.125                    A ChngeMe
+7e 7b - pi / 7c / atan
+!---------------------------------  9 ---------------------------------
+VXQ1       plenty of room for heat transfer
+ 1.5000E-2  a Area   m^2                 1.7461E+4  A |p|    Pa
+    0.4000  b GasA/A                     -176.04    B Ph(p)  deg
+    0.1000  c SolA/A                     5.7528E-2  C |U|    m^3/s
+ 1.0000E-2  d rh     m                     92.115   D Ph(U)  deg
+ 1.0000E-2  e LenTS1 m                   1.0028E+4  E Htot   W
+    6.0000  f Len P1 m                    -16.189   F Edot   W
+ 1.0000E-2  g LenTS2 m                    734.64    G TSolBeg P1 K
+ 2911.3     h HeatP1 W        G           921.29    H TSolEnd P1 K
+    1.0000  i FracQN                      376.74    I H2k    W
+stainless           Solid type          
+!--------------------------------- 10 ---------------------------------
+CONE       adapt between heat exchanger and quarter-wave tube
+sameas   7d a AreaI  m^2                 1.0768E+4  A |p|    Pa
+sameas   7e b PerimI m                   -174.3     B Ph(p)  deg
+sameas   7c c Length m                   6.1940E-2  C |U|    m^3/s
+sameas  11a d AreaF  m^2                   92.235   D Ph(U)  deg
+sameas  11b e PerimF m                   1.0028E+4  E Htot   W
+ 5.0000E-4  f Srough                      -20.133   F Edot   W
+ideal           Solid type              
+!--------------------------------- 11 ---------------------------------
+DUCT       quarter wave connection tube
+sameas   4a a Area   m^2                 2.5365E+5  A |p|    Pa
+sameas   4b b Perim  m                      1.9108  B Ph(p)  deg
+    5.0000  c Length m                   6.0623E-3  C |U|    m^3/s
+sameas   4d d Srough                      125.09    D Ph(U)  deg
+                                         1.0028E+4  E Htot   W
+ideal           Solid type               -420.79    F Edot   W
+!--------------------------------- 12 ---------------------------------
+SOFTEND    end of the branch; this will reconnect to trunk at UNION
+     0.0000 a Re(z)                      2.5365E+5  A |p|    Pa
+     0.0000 b Im(z)                         1.9108  B Ph(p)  deg
+     0.0000 c Htot   W                   6.0623E-3  C |U|    m^3/s
+                                          125.09    D Ph(U)  deg
+                                         1.0028E+4  E Htot   W
+                                         -420.79    F Edot   W
+                                           -5.5267  G Re(z)
+                                           -8.4518  H Im(z)
+                                          918.31    I T      K
+                                         1623.7     J p20DEC Pa
+!--------------------------------- 13 ---------------------------------
+UNION      reconnect the "final" end of the loop here
+ 12         a SegNum                     2.5365E+5  A |p|    Pa
+sameas  12A b |p|Sft Pa       =13A          1.9108  B Ph(p)  deg
+sameas  12B c Ph(p)S deg      =13B       2.4119E-2  C |U|    m^3/s
+sameas  12I d TSoft  K                    -28.075   D Ph(U)  deg
+sameas  12J e p20DES Pa       =13H       2595.2     E Htot   W
+                                         2649.5     F Edot   W
+                                          731.79    G T      K
+                                         1623.7     H p20DEC Pa
+!--------------------------------- 14 ---------------------------------
+DUCT       bottom half of mixing chamber
+sameas   2a a Area   m^2                 2.5363E+5  A |p|    Pa
+sameas   2b b Perim  m                      1.9024  B Ph(p)  deg
+sameas   2c c Length m                   2.4977E-2  C |U|    m^3/s
+                                          -31.362   D Ph(U)  deg
+                                         2595.2     E Htot   W
+ideal           Solid type               2648.5     F Edot   W
+!--------------------------------- 15 ---------------------------------
+SX         flow straightener (no heat input)
+sameas  14a a Area   m^2                 2.5345E+5  A |p|    Pa
+    0.6500  b VolPor                        1.9187  B Ph(p)  deg
+ 5.0000E-3  c Length m                   2.5136E-2  C |U|    m^3/s
+ 5.0000E-4  d rh     m                    -32.718   D Ph(U)  deg
+     0.0000 e HeatIn W                   2595.2     E Htot   W
+     0.0000 f SolidT K                   2620.9     F Edot   W
+                                          731.79    G GasT   K
+                                          731.79    H SolidT K
+ideal           Solid type               2595.2     I H2k    W
+!--------------------------------- 16 ---------------------------------
+JOIN       thermal buffer tube end effects
+                                         2.5345E+5  A |p|    Pa
+                                            1.9187  B Ph(p)  deg
+                                         2.4563E-2  C |U|    m^3/s
+                                          -32.718   D Ph(U)  deg
+                                         2595.2     E Htot   W
+                                         2561.1     F Edot   W
+                                          731.79    G TBeg   K
+                                          731.28    H TEnd   K
+!--------------------------------- 17 ---------------------------------
+STKDUCT    Straight section of pulse tube (pg 101 bk 4)
+ 7.0000E-3  a Area   m^2                 2.5115E+5  A |p|    Pa
+    0.2963  b Perim  m                      1.6538  B Ph(p)  deg
+    0.2400  c Length m                   6.1617E-2  C |U|    m^3/s
+ 1.1600E-3  d WallA  m^2                  -69.126   D Ph(U)  deg
+                                         2595.2     E Htot   W
+                                         2547.3     F Edot   W
+                                          731.28    G TBeg   K
+                                          300.00    H TEnd   K
+stainless           Solid type           2595.2     I H2k    W
+!--------------------------------- 18 ---------------------------------
+RPN        temperature target
+  300.00    a =A?                       300.00                    A K
+Tm
+! The restart information below was generated by a previous run
+! and will be used by DeltaEC the next time it opens this file.
+guessz   3a   3b   3d   9h
+xprecn   -68.372     -29.728   -3.0889E-6   1.3197E-2 
+targs   13b  13c  13e  18a
+hilite 17F
+mstr-slave 3 2 -2 4 -2 7 -9
+! Plot start, end, and step values.  May be edited if you wish.
+! Outer Loop:                       | Inner Loop .
+

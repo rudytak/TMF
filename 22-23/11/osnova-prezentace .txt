@@ -1,0 +1,8 @@
+1) Vysvětlení jevu, magnetostrikce atd.
+2) Způsob výčtu rezonanční frekvence, koef. restituce
+3) Vysvětlení stavby experimentu, fL, obvod atd.
+4) Výsledky ze sledování exp.
+5) Model, simulace
+6) porovnání histogramu realita/model
+7) kontaktní mechanika
+8) mez pevnosti, roztrhané ferity, obrázky

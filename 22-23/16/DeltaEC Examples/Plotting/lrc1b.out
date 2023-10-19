@@ -1,0 +1,87 @@
+TITLE     Example 1:  Plane-wave resonator
+!->E:\DeltaEC\TeXFiles\examples\Plotting\lrc1b.out
+!Created@12:46:03  25-Dec-2007 with DeltaEC version 6.1a12 under win32,
+using Win 5.1.2600 (Service Pack 2) under Python DeltaEC.
+!---------------------------------  0 ---------------------------------
+BEGIN      Initialize things
+ 1.0000E+05 a Mean P Pa                 
+  800.00    b Freq   Hz       OP        
+  300.00    c TBeg   K                  
+ 2000.0     d |p|    Pa                 
+     0.0000 e Ph(p)  deg                
+ 3.6557E-02 f |U|    m^3/s    G         
+  -23.881   g Ph(U)  deg      G         
+air           Gas type                  
+!---------------------------------  1 ---------------------------------
+TBRANCH    the split
+ 2.7878E+04 a Re(Zb) Pa-s/m^3 G          2000.0     A |p|    Pa                 
+ 7.2173E+04 b Im(Zb) Pa-s/m^3 G              0.0000 B Ph(p)  deg                
+     0.0000 c HtotBr W                   2.5850E-02 C |U|    m^3/s              
+                                          -68.881   D Ph(U)  deg                
+                                             0.0000 E HtotBr W                  
+                                            9.3140  F EdotBr W                  
+                                           24.113   G EdotTr W                  
+!---------------------------------  2 ---------------------------------
+IMPEDANCE  pure inertance
+     0.0000 a Re(Zs) Pa-s/m^3            1018.2     A |p|    Pa                 
+ 1.0000E+05 b Im(Zs) Pa-s/m^3            -113.83    B Ph(p)  deg                
+                                         2.5850E-02 C |U|    m^3/s              
+                                          -68.881   D Ph(U)  deg                
+                                             0.0000 E Htot   W                  
+                                            9.3140  F Edot   W                  
+!---------------------------------  3 ---------------------------------
+COMPLIANCE a compliance tank
+ 4.8360E-02 a SurfAr m^2                 1018.2     A |p|    Pa                 
+ 1.0000E-03 b Volume m^3                 -113.83    B Ph(p)  deg                
+                                         2.5850E-02 C |U|    m^3/s              
+                                         -158.88    D Ph(U)  deg                
+                                             0.0000 E Htot   W                  
+ideal           Solid type                  9.2970  F Edot   W                  
+!---------------------------------  4 ---------------------------------
+SOFTEND    this will reconnect at the UNION
+     0.0000 a Re(z)                      1018.2     A |p|    Pa                 
+     0.0000 b Im(z)                      -113.83    B Ph(p)  deg                
+     0.0000 c Htot   W                   2.5850E-02 C |U|    m^3/s              
+                                         -158.88    D Ph(U)  deg                
+                                             0.0000 E Htot   W                  
+                                            9.2970  F Edot   W                  
+                                           69.015   G Re(z)                     
+                                           69.141   H Im(z)                     
+                                          300.00    I T      K                  
+!---------------------------------  5 ---------------------------------
+IMPEDANCE  pure resistance
+ 1.0000E+05 a Re(Zs) Pa-s/m^3            1018.2     A |p|    Pa                 
+     0.0000 b Im(Zs) Pa-s/m^3            -113.83    B Ph(p)  deg                
+                                         2.5850E-02 C |U|    m^3/s              
+                                           21.119   D Ph(U)  deg                
+                                           33.427   E Htot   W                  
+                                           -9.297   F Edot   W                  
+!---------------------------------  6 ---------------------------------
+UNION      close the loop here
+  4         a SegNum                     1018.2     A |p|    Pa                 
+sameas   4A b |p|Sft Pa       =6A        -113.83    B Ph(p)  deg                
+sameas   4B c Ph(p)S deg      =6B        4.9838E-14 C |U|    m^3/s              
+sameas   4I d TSoft  K                    122.56    D Ph(U)  deg                
+                                           33.427   E Htot   W                  
+                                        -1.4045E-11 F Edot   W                  
+                                          300.00    G T      K                  
+!---------------------------------  7 ---------------------------------
+HARDEND    seal the final end of the resonator
+     0.0000 a R(1/z)          =7G        1018.2     A |p|    Pa                 
+     0.0000 b I(1/z)          =7H        -113.83    B Ph(p)  deg                
+     0.0000 c Htot   W                   4.9838E-14 C |U|    m^3/s              
+                                          122.56    D Ph(U)  deg                
+                                           33.427   E Htot   W                  
+                                        -1.4045E-11 F Edot   W                  
+                                        -1.0925E-14 G R(1/z)                    
+                                        -1.6436E-14 H I(1/z)                    
+! The restart information below was generated by a previous run
+! and will be used by DeltaEC the next time it opens this file.
+guessz   0f   0g   1a   1b
+xprecn  3.0895E-08  4.7013E-04 -0.42456        0.39199
+targs     6b   6c   7a   7b
+! Plot start, end, and step values.  May be edited if you wish.
+! Outer Loop:                       | Inner Loop .
+pltvar   0b  -1   0f   0g   1a   1b   3A
+     40     800      10 1.0 1.0 1.0
+

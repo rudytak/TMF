@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg12118"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="armature.svg"
+   inkscape:export-filename="armature.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview12120"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.062589"
+     inkscape:cx="207.51203"
+     inkscape:cy="300.6807"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs12115" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';fill:none;fill-opacity:0.716763;stroke:#000000;stroke-width:0.2;stroke-linecap:square;stroke-dasharray:none"
+       x="38.14566"
+       y="123.74324"
+       id="text9863"><tspan
+         sodipodi:role="line"
+         id="tspan9861"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.2"
+         x="38.14566"
+         y="123.74324">Driver circuit</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:square"
+       id="rect13355"
+       width="35.916012"
+       height="8.6198425"
+       x="35.11311"
+       y="117.53033" />
+    <rect
+       style="fill:#333333;stroke:#333333;stroke-width:0.2;stroke-linecap:square"
+       id="rect13461"
+       width="2.9552238"
+       height="55.96455"
+       x="79.236938"
+       y="76.651115" />
+    <path
+       style="fill:#b3b3b3;stroke:#b3b3b3;stroke-width:1.24342;stroke-linecap:square;stroke-dasharray:none"
+       d="m 79.36165,104.63339 h 28.90954"
+       id="path13725" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none"
+       d="m 70.92329,118.97013 h 15.419372 l -10.014736,2.66569 10.014736,-0.13061 -9.884132,3.13449 9.468765,-0.26121 -15.038702,0.32651"
+       id="path14144"
+       sodipodi:nodetypes="ccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-linecap:square;stroke-dasharray:none"
+       x="87.763115"
+       y="122.77534"
+       id="text14411"><tspan
+         sodipodi:role="line"
+         id="tspan14409"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="87.763115"
+         y="122.77534">Driving coil</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-linecap:square;stroke-dasharray:none"
+       x="78.795937"
+       y="-113.65244"
+       id="text14411-1"
+       transform="rotate(89.94626)"><tspan
+         sodipodi:role="line"
+         id="tspan14409-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="78.795937"
+         y="-113.65244">Armature</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="78.795937"
+         y="-109.02222"
+         id="tspan14496" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-linecap:square;stroke-dasharray:none"
+       x="66.258347"
+       y="91.508743"
+       id="text14411-6"><tspan
+         sodipodi:role="line"
+         id="tspan14409-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="66.258347"
+         y="91.508743">Ferrite</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-linecap:square;stroke-dasharray:none"
+       x="59.107666"
+       y="40.689606"
+       id="text14411-6-2"><tspan
+         sodipodi:role="line"
+         id="tspan14409-7-96"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="59.107666"
+         y="40.689606">Glass tube</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-linecap:square;stroke-dasharray:none"
+       x="83.44397"
+       y="109.34133"
+       id="text14411-6-1"><tspan
+         sodipodi:role="line"
+         id="tspan14409-7-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="83.44397"
+         y="109.34133">Cardboard</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-dasharray:none"
+       d="m 71.129119,137.91748 37.763781,0.13061 0.0306,-32.79299 V 42.054383 L 83.350495,41.793177"
+       id="path14467"
+       sodipodi:nodetypes="ccccc" />
+    <rect
+       style="fill:none;stroke:#00ffff;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none"
+       id="rect14550"
+       width="3.0552237"
+       height="67.639458"
+       x="79.236931"
+       y="8.4824877" />
+    <path
+       style="fill:#808080;stroke:none;stroke-width:0.38114;stroke-linecap:square;stroke-dasharray:none"
+       id="path14837"
+       sodipodi:type="arc"
+       sodipodi:cx="80.764542"
+       sodipodi:cy="59.074955"
+       sodipodi:rx="1.1644702"
+       sodipodi:ry="1.1644702"
+       sodipodi:start="0.26179939"
+       sodipodi:end="0"
+       sodipodi:arc-type="arc"
+       d="m 81.889333,59.376342 a 1.1644702,1.1644702 0 0 1 -1.351968,0.840708 1.1644702,1.1644702 0 0 1 -0.927331,-1.294089 1.1644702,1.1644702 0 0 1 1.230668,-1.009983 1.1644702,1.1644702 0 0 1 1.08831,1.161977"
+       sodipodi:open="true" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-linecap:square;stroke-dasharray:none"
+       x="60.622467"
+       y="60.146015"
+       id="text14411-6-2-2-3"><tspan
+         sodipodi:role="line"
+         id="tspan14409-7-96-8-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="60.622467"
+         y="60.146015">Steel ball</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="60.622467"
+         y="64.77623"
+         id="tspan15735" /></text>
+  </g>
+</svg>

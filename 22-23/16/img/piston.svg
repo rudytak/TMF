@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="piston.svg"
+   inkscape:export-filename="piston.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.71624579"
+     inkscape:cx="218.50041"
+     inkscape:cy="332.98625"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="713.44224"
+       y="693.89587"
+       width="640.84146"
+       height="603.14491"
+       id="rect3527" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:none"
+       d="m 97.522053,86.440299 v 60.027981 c 0,0 -0.554102,9.60448 7.757467,9.60448 7.57276,0 7.20336,-9.97388 7.20336,-9.97388 V 86.440299"
+       id="path236"
+       sodipodi:nodetypes="ccscc" />
+    <rect
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1.00148;stroke-dasharray:none"
+       id="rect1774"
+       width="12.692541"
+       height="27.958855"
+       x="98.653732"
+       y="70.499428"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.9375px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';opacity:1;fill:none;stroke:#000000;stroke-width:0.4;stroke-dasharray:none"
+       x="73.788246"
+       y="76.004662"
+       id="text1830"><tspan
+         sodipodi:role="line"
+         id="tspan1828"
+         style="stroke-width:0.4;stroke-dasharray:none"
+         x="73.788246"
+         y="76.004662" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.9375px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';opacity:1;fill:#000000;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       x="69.263054"
+       y="80.529846"
+       id="text1834"><tspan
+         sodipodi:role="line"
+         id="tspan1832"
+         style="fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="69.263054"
+         y="80.529846">Piston</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.9375px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';fill:#000000;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       x="142.92944"
+       y="89.172691"
+       id="text1834-1"><tspan
+         sodipodi:role="line"
+         id="tspan1832-1"
+         style="fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="142.92944"
+         y="89.172691">Stand</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.9375px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';fill:#000000;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       x="61.690296"
+       y="111.55132"
+       id="text1834-3"><tspan
+         sodipodi:role="line"
+         id="tspan1832-7"
+         style="fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="61.690296"
+         y="111.55132">Test-tube</tspan></text>
+    <path
+       style="opacity:1;fill:none;stroke:#ff0000;stroke-width:0.5;stroke-dasharray:none"
+       d="m 84.039179,134.83209 25.027051,-0.0923 -8.86567,2.86287 h 8.86567 l -8.58862,3.23228 h 8.31157 l -8.21922,2.49347 8.39774,0.39181 -24.896251,-0.0561"
+       id="path2022"
+       sodipodi:nodetypes="ccccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.9375px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';opacity:1;fill:none;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none"
+       x="53.286377"
+       y="138.24907"
+       id="text2026"><tspan
+         sodipodi:role="line"
+         id="tspan2024"
+         style="stroke-width:0.5;fill:none"
+         x="53.286377"
+         y="138.24907" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.9375px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';opacity:1;fill:none;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none"
+       x="36.570896"
+       y="140.56584"
+       id="text2030"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29167px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:0.5"
+         x="36.570896"
+         y="140.56584"
+         id="tspan2032">Electric heating coil</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.9375px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';fill:none;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none"
+       x="35.698338"
+       y="125.01657"
+       id="text2030-2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29167px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:0.5"
+         x="35.698338"
+         y="125.01657"
+         id="tspan2032-4">Coarse steel wool mesh</tspan></text>
+    <path
+       style="opacity:1;fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 99.092349,118.99393 11.774721,9.37361"
+       id="path2096" />
+    <path
+       style="opacity:1;fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 102.41697,118.79834 8.46727,7.02955"
+       id="path2206" />
+    <path
+       style="opacity:1;fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 105.43728,118.67284 5.44086,4.82078"
+       id="path2208" />
+    <path
+       style="opacity:1;fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 108.69682,118.41887 2.18742,1.91415"
+       id="path2210" />
+    <path
+       style="fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 108.12601,128.56313 -8.467274,-7.02955"
+       id="path2206-4" />
+    <path
+       style="fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 105.1057,128.68863 -5.440864,-4.82078"
+       id="path2208-6" />
+    <path
+       style="fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 101.84616,128.9426 -2.187424,-1.91415"
+       id="path2210-3" />
+    <path
+       style="fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 110.86707,118.99393 -11.774721,9.37361"
+       id="path2096-8" />
+    <path
+       style="fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 107.54245,118.79834 -8.467271,7.02955"
+       id="path2206-6" />
+    <path
+       style="fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 104.52214,118.67284 -5.440861,4.82078"
+       id="path2208-9" />
+    <path
+       style="fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 101.2626,118.41887 -2.187421,1.91415"
+       id="path2210-0" />
+    <path
+       style="fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 101.83341,128.56313 8.46727,-7.02955"
+       id="path2206-4-4" />
+    <path
+       style="fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 104.85372,128.68863 5.44086,-4.82078"
+       id="path2208-6-9" />
+    <path
+       style="fill:none;stroke:#333333;stroke-width:0.499999;stroke-dasharray:none"
+       d="m 108.11326,128.9426 2.18742,-1.91415"
+       id="path2210-3-2" />
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-dasharray:none"
+       d="m 112.48288,116.26959 h 23.99796 v 49.59708 H 88.941105 156.4632"
+       id="path2509" />
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1.50000004;stroke-dasharray:none"
+       d="M 136.48084,116.26959 V 33.434541 L 105,33.173334"
+       id="path2511" />
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:none"
+       d="m 105,70.499427 v -4.514818 l 1.98834,-1.154385 -3.87873,-1.847017 4.01725,-1.569961 m 0,0 -3.87873,-1.847017 4.01725,-1.569961 m 0,0 -3.87873,-1.847017 4.01725,-1.569961 m 0,0 -3.87873,-1.847017 4.01725,-1.569961 m 0,0 -3.87873,-1.847017 4.01725,-1.569961 m 0,0 -3.87873,-1.847017 4.01725,-1.569961 m 0,0 -3.87873,-1.847017 4.01725,-1.569961 m 0,0 -3.87873,-1.847017 4.01725,-1.569961 -2.77047,-1.292907 0.0251,-3.025246"
+       id="path2513"
+       sodipodi:nodetypes="cccccccccccccccccccccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.9375px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';fill:none;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none"
+       x="53.408642"
+       y="53.172638"
+       id="text2030-2-7"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29167px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:0.5"
+         x="53.408642"
+         y="53.172638"
+         id="tspan2032-4-4">Stabilization spring</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text3525"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect3527);display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none" />
+  </g>
+</svg>

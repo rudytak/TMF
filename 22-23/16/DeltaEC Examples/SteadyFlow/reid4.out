@@ -1,0 +1,147 @@
+TITLE      segments 1-7 < Bob 9/97; segs 8-14 < Hiller ntbk, pg one, 10/97
+!->C:\Users\092710\Documents\DeltaEC\PySource\Examples\SteadyFlow\reid4.aro.out
+!Created@16:14:21  10-Feb-2017 with DeltaEC version 6.4b2.4!under win32,
+using Win 6.1.7601 (Service Pack 1) under Python 2.7.9.
+!---------------------------------  0 ---------------------------------
+BEGIN      Initialize in main duct where drivers are attached
+ 3.2388E+5  a Mean P Pa                 
+   92.000   b Freq   Hz                 
+  303.00    c TBeg   K                  
+ 6500.0     d |p|    Pa                 
+   90.000   e Ph(p)  deg                
+ 5.5034E-2  f |U|    m^3/s    G         
+    8.7817  g Ph(U)  deg      G         
+    0.6700  i Ndot   mol/s              
+    0.9200  j nL                        
+HeAr           Gas type                 
+!---------------------------------  1 ---------------------------------
+DUCT       Pre-stack Duct
+ 1.8430E-2  a Area   m^2                 6234.3     A |p|    Pa
+    0.4813  b Perim  m                     89.692   B Ph(p)  deg
+    0.1494  c Length m                   7.3716E-2  C |U|    m^3/s
+                                            6.4552  D Ph(U)  deg
+                                           69.087   E Htot   W
+ideal           Solid type                 27.060   F Edot   W
+!---------------------------------  2 ---------------------------------
+RPN        display energies
+     0.0000 a G or T                    27.307                    A W H2k
+                                        69.087                    B W Htot
+Htot H2k
+!---------------------------------  3 ---------------------------------
+RPN        Fix Tm. Inp = frac of heat that should go to mean flow
+ 6.3995E-2  a G or T          G         302.38                    A K
+                                        35.997                    B W h2k
+H2k inp 5e * - =H2k ; inp 5e * Ndot / m / cp / Tm + =Tm
+!---------------------------------  4 ---------------------------------
+RPN        verify energy conservation
+     0.0000 a G or T                    35.997                    A W H2k
+                                        69.087                    B W Htot
+Htot H2k
+!---------------------------------  5 ---------------------------------
+HX         Ambient Heat exchanger
+ 1.7211E-2  a Area   m^2                 6169.2     A |p|    Pa
+    0.5227  b GasA/A                       89.798   B Ph(p)  deg
+ 1.2700E-2  c Length m                   7.4628E-2  C |U|    m^3/s
+ 6.3500E-4  d y0     m                      6.2352  D Ph(U)  deg
+ -135.8     e HeatIn W        G           -66.713   E Htot   W
+  300.00    f SolidT K        =5H          25.809   F Edot   W
+                                          302.38    G GasT   K
+                                          300.00    H SolidT K
+copper           Solid type               -99.802   I H2k    W
+!---------------------------------  6 ---------------------------------
+STKRECT    rectangular-pore stack
+ 1.8824E-2  a Area   m^2                 5547.8     A |p|    Pa
+    0.7050  b GasA/A                       93.314   B Ph(p)  deg
+    0.1524  c Length m                   9.1544E-2  C |U|    m^3/s
+ 4.0640E-4  d aa     m                      3.8385  D Ph(U)  deg
+ 1.1811E-4  e Lplate m                    -66.713   E Htot   W
+ 6.3500E-3  f bb     m                      2.3232  F Edot   W
+                                          302.38    G TBeg   K
+                                          295.21    H TEnd   K
+kapton           Solid type              8.7823E-12 I H2k    W
+!---------------------------------  7 ---------------------------------
+DUCT       From cold hx to bolt flange, + a half inch
+ 2.0180E-2  a Area   m^2                 5236.3     A |p|    Pa
+    0.5036  b Perim  m                     93.300   B Ph(p)  deg
+    0.1210  c Length m                      0.1057  C |U|    m^3/s
+                                            3.7433  D Ph(U)  deg
+                                          -66.713   E Htot   W
+ideal           Solid type                  2.1418  F Edot   W
+!---------------------------------  8 ---------------------------------
+DUCT       Duct, beginning 1/2 in below big bolt flange
+ 1.8485E-2  a Area   m^2                 4700.5     A |p|    Pa
+    0.4820  b Perim  m                     93.281   B Ph(p)  deg
+    0.1650  c Length m                      0.1220  C |U|    m^3/s
+                                            3.6585  D Ph(U)  deg
+                                          -66.713   E Htot   W
+ideal           Solid type                  1.8883  F Edot   W
+!---------------------------------  9 ---------------------------------
+DUCT       Elbow, 6 inch diam, 5 inch radius of curvature on centerline
+ 1.8240E-2  a Area   m^2                 3945.6     A |p|    Pa
+    0.4788  b Perim  m                     93.260   B Ph(p)  deg
+    0.2000  c Length m                      0.13898 C |U|    m^3/s
+                                            3.5895  D Ph(U)  deg
+                                          -66.713   E Htot   W
+ideal           Solid type                  1.5768  F Edot   W
+!--------------------------------- 10 ---------------------------------
+DUCT       straight part of big black cone
+ 1.8240E-2  a Area   m^2                 3580.0     A |p|    Pa
+    0.4788  b Perim  m                     93.251   B Ph(p)  deg
+ 8.9000E-2  c Length m                      0.14555 C |U|    m^3/s
+                                            3.5667  D Ph(U)  deg
+                                          -66.713   E Htot   W
+ideal           Solid type                  1.4374  F Edot   W
+!--------------------------------- 11 ---------------------------------
+CONE       The long black plastic cone
+sameas  10a a AreaI  m^2                 1137.8     A |p|    Pa
+sameas  10b b PerimI m                     93.222   B Ph(p)  deg
+    0.3635  c Length m                      0.15908 C |U|    m^3/s
+sameas  12a d AreaF  m^2                    3.5273  D Ph(U)  deg
+sameas  12b e PerimF m                    -66.713   E Htot   W
+ideal           Solid type                  0.48206 F Edot   W
+!--------------------------------- 12 ---------------------------------
+DUCT       little straight section of black cone
+ 8.1070E-3  a Area   m^2                  544.79    A |p|    Pa
+    0.3192  b Perim  m                     93.239   B Ph(p)  deg
+ 5.7200E-2  c Length m                      0.1595  C |U|    m^3/s
+                                            3.5277  D Ph(U)  deg
+                                          -66.713   E Htot   W
+ideal           Solid type                  0.21919 F Edot   W
+!--------------------------------- 13 ---------------------------------
+DUCT       half the white "tee", up to the symmetry midpoint
+ 9.8100E-3  a Area   m^2                 1.2120E-11 A |p|    Pa
+    0.3511  b Perim  m                    -74.049   B Ph(p)  deg
+ 6.3500E-2  c Length m                      0.15968 C |U|    m^3/s
+ 1.0000E-3  d Srough                        3.5289  D Ph(U)  deg
+                                          -66.713   E Htot   W
+ideal           Solid type               2.0815E-13 F Edot   W
+!--------------------------------- 14 ---------------------------------
+RPN        Expect Htot = Edot + Ndot*m*enth
+     0.0000 a G or T                    -66.713                   A W
+Edot Ndot m * enth * +
+!--------------------------------- 15 ---------------------------------
+SOFTEND    pressure node
+     0.0000 a Re(z)           =15G       1.2120E-11 A |p|    Pa
+     0.0000 b Im(z)           =15H        -74.049   B Ph(p)  deg
+sameas  14A c Htot   W        =15E          0.15968 C |U|    m^3/s
+                                            3.5289  D Ph(U)  deg
+                                          -66.713   E Htot   W
+                                         2.0815E-13 F Edot   W
+                                         2.2883E-16 G Re(z)
+                                        -1.0388E-15 H Im(z)
+                                          295.21    I T      K
+                                          -23.967   J p20HL  Pa
+                                            0.9200  K nL
+!--------------------------------- 16 ---------------------------------
+RPN        U mean here (liter/sec)
+  999.00    a G or T                    5.0776                    A ChngeMe
+Ndot m * rho / 1000 *
+! The restart information below was generated by a previous run
+! and will be used by DeltaEC the next time it opens this file.
+guessz   0f   0g   3a   5e
+xprecn -1.5063E-7   3.2218E-5  -4.3573E-7   4.6487E-4 
+targs    5f  15a  15b  15c
+hilite 6H
+! Plot start, end, and step values.  May be edited if you wish.
+! Outer Loop:                       | Inner Loop .
+

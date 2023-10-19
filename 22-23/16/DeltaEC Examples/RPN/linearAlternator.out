@@ -1,0 +1,193 @@
+TITLE      Example of IESPEAKER used as linear alternator
+!->C:\Users\092710\Documents\DeltaEC\PySource\Examples\TEMPORARY\linearAlternator.out
+!Created@18:45:00  22-Aug-2019 with DeltaEC version 6.4b2.8!under win32,
+using Win 6.1.7601 (Service Pack 1) under Python 2.7.9.
+!---------------------------------  0 ---------------------------------
+BEGIN      The Setup
+!I adopt the following point of view to choose guesses and targets:
+!We apply a known |p1| to the piston face,
+!and the alternator is wired to a known electrical load,
+!which is a resistor defined by an RPN input value
+!in series with a capacitor calculated to be resonant with the inductance.
+!What U1 and Edot will this setup consume?
+!What electrical current and voltage will be delivered?
+ 4.0000E+6  a Mean P Pa                 
+   88.000   b Freq   Hz                 
+  300.00    c TBeg   K                  
+ 3.5000E+5  d |p|    Pa                 
+     0.0000 e Ph(p)  deg                
+ 4.4139E-3  f |U|    m^3/s    G         
+  -81.263   g Ph(U)  deg      G         
+helium           Gas type               
+!---------------------------------  1 ---------------------------------
+RPN        incoming power here
+  350.00    a G or T                    117.33                    A watt
+Edot
+!---------------------------------  2 ---------------------------------
+TBRANCH    branch into piston seal leakage
+ 5.8849E+9  a Re(Zb) Pa-s/m^3 G          3.5000E+5  A |p|    Pa
+-6.3412E+7  b Im(Zb) Pa-s/m^3 G              0.0000 B Ph(p)  deg
+                                         5.9471E-5  C |U|    m^3/s
+                                            0.61735 D Ph(U)  deg
+                                           10.407   E HtotBr W
+                                           10.407   F EdotBr W
+                                          106.92    G EdotTr W
+!---------------------------------  3 ---------------------------------
+RPN        a = Seal Gap (m). A = Piston Diam (m)
+ 2.0000E-5  a G or T                    4.5135E-2                 A m diam
+8a pi / sqrt 2 *
+!---------------------------------  4 ---------------------------------
+RPN        a = Piston Skirt Length (m). A = Leakage Flow Impedance
+!Z = 12 x vsicosity x  length / "width" / gap cubed
+ 3.0000E-2  a G or T                    6.3275E+9                 A Pa-s/m3
+12 inp * pi 3A * / 3a 3 ^ / mu *
+!---------------------------------  5 ---------------------------------
+RPN        Verify Reynolds number is low enough for laminar calc of Z
+!Remember hydraulic diameter of a slit is 2 x gap.
+     0.0000 a G or T                    270.03                    A Reynold
+                                        20.970                    B m/s
+U1 mag pi 3A * / 3a / ; # 2 3a * * rho * mu /
+!---------------------------------  6 ---------------------------------
+IMPEDANCE  flow impedance of leakage gap around piston
+sameas   4A a Re(Zs) Pa-s/m^3            2.6590E+4  A |p|    Pa
+     0.0000 b Im(Zs) Pa-s/m^3            -171.23    B Ph(p)  deg
+                                         5.9471E-5  C |U|    m^3/s
+                                            0.61735 D Ph(U)  deg
+                                           10.407   E Htot   W
+                                        -0.78268    F Edot   W
+!---------------------------------  7 ---------------------------------
+SOFTEND    end of leakage
+     0.0000 a Re(z)                      2.6590E+4  A |p|    Pa
+     0.0000 b Im(z)                      -171.23    B Ph(p)  deg
+     0.0000 c Htot   W                   5.9471E-5  C |U|    m^3/s
+                                            0.61735 D Ph(U)  deg
+                                           10.407   E Htot   W
+                                        -0.78268    F Edot   W
+                                        -6.7662E-2  G Re(z)
+                                        -9.6940E-3  H Im(z)
+                                          300.00    I T      K
+!---------------------------------  8 ---------------------------------
+IESPEAKER  linear alternator 1S102, specs on Qdrive website
+ 1.6000E-3  a Area   m^2                 2.6590E+4  A |p|    Pa
+    7.0000  b R      ohms                -171.23    B Ph(p)  deg
+ 8.4000E-2  c L      H                   4.4075E-3  C |U|    m^3/s
+   50.000   d BLProd T-m                  -82.056   D Ph(U)  deg
+    0.5000  e M      kg                    24.070   E Htot   W
+ 3.3000E+4  f K      N/m                    0.84553 F Edot   W
+    4.5000  g Rm     N-s/m                -82.853   G WorkIn W
+    1.2873  h |I|    A        G           141.93    H Volts  V
+  -82.058   i Ph(I)  deg      G             1.2873  I Amps   A
+                                          155.09    J Ph(V/I) deg
+                                         3.7630E+5  K |Px|   Pa
+ideal           Solid type               -179.38    L Ph(Px) deg
+!---------------------------------  9 ---------------------------------
+RPN        stroke (mm peak-to-peak) Qdrive says 10 mm max
+     0.0000 a G or T                    9.9641                    A mm p-p
+U1 mag 8a / w / 2 * 1000 *
+!--------------------------------- 10 ---------------------------------
+RPN        What capacitance would "cancel" the alternator's inductance?
+     0.0000 a G or T                    3.8940E-5                 A Farad
+w sqrd 8c * inv
+!--------------------------------- 11 ---------------------------------
+RPN        a = Load Resistor (Ohm). A = complex load impedance
+  100.00    a G or T                    (100.00, -46.445)         A Ohm
+inp i w * 10A * inv +
+!--------------------------------- 12 ---------------------------------
+RPN        Target |V\I| = magnitude of electrical impedance
+     0.0000 a =A?                            0.0000               A Ohm
+8H 8I / 11A mag -
+!--------------------------------- 13 ---------------------------------
+RPN        Target phase(V/I) = phase(electrical impedance)
+     0.0000 a =A?                       -2.8422E-14               A deg
+8J 180 - 11A arg -
+!--------------------------------- 14 ---------------------------------
+UNION      return of piston-seal leakage "branch"
+  7         a SegNum                     2.6590E+4  A |p|    Pa
+sameas   7A b |p|Sft Pa       =14A       -171.23    B Ph(p)  deg
+sameas   7B c Ph(p)S deg      =14B       4.4154E-3  C |U|    m^3/s
+sameas   7I d TSoft  K                    -81.291   D Ph(U)  deg
+                                           34.477   E Htot   W
+                                         6.2850E-2  F Edot   W
+                                          300.00    G T      K
+!--------------------------------- 15 ---------------------------------
+COMPLIANCE enclosure for the alternator
+ 5.0000E-2  a SurfAr m^2                 2.6590E+4  A |p|    Pa
+ 2.0000E-3  b Volume m^3                 -171.23    B Ph(p)  deg
+                                         1.3126E-17 C |U|    m^3/s
+                                           82.405   D Ph(U)  deg
+                                           34.477   E Htot   W
+ideal           Solid type              -4.9169E-14 F Edot   W
+!--------------------------------- 16 ---------------------------------
+HARDEND    The enclosure is sealed. Htot is removed by a fan?
+     0.0000 a R(1/z)          =16G       2.6590E+4  A |p|    Pa
+     0.0000 b I(1/z)          =16H       -171.23    B Ph(p)  deg
+     0.0000 c Htot   W                   1.3126E-17 C |U|    m^3/s
+                                           82.405   D Ph(U)  deg
+                                           34.477   E Htot   W
+                                        -4.9169E-14 F Edot   W
+                                        -5.6862E-16 G R(1/z)
+                                        -1.9363E-15 H I(1/z)
+!--------------------------------- 17 ---------------------------------
+RPN        efficiency = electric power out / acoustic power in
+     0.0000 a G or T                    0.70615                   A effic
+8G ~ 1A /
+!--------------------------------- 18 ---------------------------------
+RPN        acoustic power (Watts) - summary
+     0.0000 a G or T                    117.33                    A incomin
+                                        11.189                    B pisLeak
+                                        5.7997                    C Ohmic
+                                        17.073                    D Rm
+                                        6.2850E-2                 E hyster
+                                        82.853                    F Electr
+8G ~ ; 14F ; 8C 8a / sqrd 8g * 2 / ; 8h sqrd 8b * 2 / ; 2F 7F - ; 1A
+!--------------------------------- 19 ---------------------------------
+RPN        Do those acoustic powers add up ok?
+!NO:  A fraction of a Watt is unaccounted for.
+!I wonder if that is thermal hysteresis on the front and back
+!surfaces of the IESPEAKER.  Calculate those in the segments below.
+     0.0000 a G or T                    0.35165                   A leftovr
+18A 18B 18C 18D 18E 18F + + + + -
+!--------------------------------- 20 ---------------------------------
+BEGIN      Restart at the beginning, for separate calculation
+sameas   0a a Mean P Pa                 
+sameas   0b b Freq   Hz                 
+sameas   0c c TBeg   K                  
+sameas   0d d |p|    Pa                 
+     0.0000 e Ph(p)  deg                
+     0.0000 f |U|    m^3/s              
+     0.0000 g Ph(U)  deg                
+helium           Gas type               
+!--------------------------------- 21 ---------------------------------
+SURFACE    Thermal hysteresis losses, high-pressure side of piston
+sameas   8a a Area   m^2                 3.5000E+5  A |p|    Pa
+                                             0.0000 B Ph(p)  deg
+                                         2.8159E-6  C |U|    m^3/s
+                                         -135.0     D Ph(U)  deg
+                                             0.0000 E Htot   W
+ideal           Solid type              -0.34845    F Edot   W
+!--------------------------------- 22 ---------------------------------
+RPN        Change to p1 at low-pressure side, and reset U1 to zero
+     0.0000 a G or T                    2.6590E+4                 A Pa
+                                             0.0000               B m3/s
+0 =U1 8A =p1
+!--------------------------------- 23 ---------------------------------
+SURFACE    Thermal hysteresis losses, low-pressure face of piston
+sameas   8a a Area   m^2                 2.6590E+4  A |p|    Pa
+                                             0.0000 B Ph(p)  deg
+                                         2.1393E-7  C |U|    m^3/s
+                                         -135.0     D Ph(U)  deg
+                                             0.0000 E Htot   W
+ideal           Solid type              -2.0112E-3  F Edot   W
+!--------------------------------- 24 ---------------------------------
+RPN        If this sum is zero, all Edot is accounted for!
+     0.0000 a G or T                    1.1888E-3                 A Watts
+19A 21F 23F + +
+! The restart information below was generated by a previous run
+! and will be used by DeltaEC the next time it opens this file.
+guessz   0f   0g   2a   2b   8h   8i
+xprecn  2.7356E-8  -1.5736E-4   2.7951E+4    351.21    -2.8506E-5  -2.0927E-5 
+targs   12a  13a  14b  14c  16a  16b
+hilite 1A 9A 17A
+! Plot start, end, and step values.  May be edited if you wish.
+! Outer Loop:                       | Inner Loop .
+

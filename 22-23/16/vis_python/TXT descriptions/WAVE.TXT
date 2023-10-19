@@ -1,0 +1,28 @@
+Traveling - standing wave animation
+
+This shows a wave in a duct;  initially it is a rightward
+traveling wave.
+
+Upper graphs show pressure and velocity in the duct.
+
+Marker lines in the gas in the duct show how the gas moves.
+
+You can change the wave, by changing the ratio 
+of amplitudes of rightward and leftward traveling waves that
+are superimposed to generate the animation.  Type "c" to
+initiate change sequence...
+
+Type "0" and hit Enter to make a leftward traveling wave.  
+
+Type "1" and hit Enter for rightward traveling wave.
+
+Type "0.5" and hit Enter for a standing wave, for which the right and
+leftward components have equal amplitude.  Note velocity and displacement
+nodes, which really only exist for a pure standing wave.
+
+Enter intermediate values to view other waves.
+
+While wave is running, type "v" to turn on/off p dV diagrams at a couple
+of typical locations in the wave.  When these circulate clockwise, acoustic
+power flows from left to right;  when they circulate counterclockwise,
+acoustic power flows from right to left.

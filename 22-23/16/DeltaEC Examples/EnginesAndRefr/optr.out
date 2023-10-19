@@ -1,0 +1,128 @@
+TITLE      a crude cooler design, not optimal
+!->C:\Users\092710\Documents\DeltaEC\PySource\Examples\TEMPORARY\optr.out
+!Created@18:47:27  22-Aug-2019 with DeltaEC version 6.4b2.8!under win32,
+using Win 6.1.7601 (Service Pack 1) under Python 2.7.9.
+!---------------------------------  0 ---------------------------------
+BEGIN      Start with 8% p osc
+ 3.0000E+6  a Mean P Pa                 
+  300.00    b Freq   Hz                 
+  300.10    c TBeg   K        G         
+ 2.4000E+5  d |p|    Pa                 
+     0.0000 e Ph(p)  deg                
+ 6.9644E-3  f |U|    m^3/s    G         
+   52.757   g Ph(U)  deg      G         
+helium           Gas type               
+!---------------------------------  1 ---------------------------------
+SX         Aftercooler
+ 1.0290E-3  a Area   m^2                 2.3018E+5  A |p|    Pa
+    0.6900  b VolPor                       -3.4878  B Ph(p)  deg
+ 1.2500E-2  c Length m                   5.8382E-3  C |U|    m^3/s
+ 6.4500E-5  d rh     m                     46.720   D Ph(U)  deg
+ -455.1     e HeatIn W        G            50.673   E Htot   W
+  300.00    f SolidT K        =1H         430.02    F Edot   W
+                                          300.10    G GasT   K
+copper           Solid type               300.00    H SolidT K
+!---------------------------------  2 ---------------------------------
+STKSCREEN  Regenerator
+sameas   1a a Area   m^2                 1.7213E+5  A |p|    Pa
+    0.7300  b VolPor                      -19.52    B Ph(p)  deg
+ 5.5000E-2  c Length m                   1.2329E-3  C |U|    m^3/s
+ 2.4000E-5  d rh     m                    -29.708   D Ph(U)  deg
+    0.3000  e ksFrac                       50.673   E Htot   W
+                                          104.43    F Edot   W
+                                          300.10    G TBeg   K
+stainless           Solid type            149.91    H TEnd   K
+!---------------------------------  3 ---------------------------------
+SX         Cold heat exchanger
+sameas   5a a Area   m^2                 1.1384E+5  A |p|    Pa
+    0.6900  b VolPor                      -14.776   B Ph(p)  deg
+ 2.0000E-3  c Length m                   1.2331E-3  C |U|    m^3/s
+ 6.4500E-5  d rh     m                    -30.018   D Ph(U)  deg
+   13.322   e HeatIn W        G            63.995   E Htot   W
+  150.00    f SolidT K        =3H          67.717   F Edot   W
+                                          149.91    G GasT   K
+copper           Solid type               150.00    H SolidT K
+!---------------------------------  4 ---------------------------------
+JOIN       pulse-tube end effects
+                                         1.1384E+5  A |p|    Pa
+                                          -14.776   B Ph(p)  deg
+                                         1.2178E-3  C |U|    m^3/s
+                                          -30.018   D Ph(U)  deg
+                                           63.995   E Htot   W
+                                           66.875   F Edot   W
+                                          149.91    G TBeg   K
+                                          149.89    H TEnd   K
+!---------------------------------  5 ---------------------------------
+STKDUCT    Pulse tube
+ 5.6870E-5  a Area   m^2      Mstr       1.0285E+5  A |p|    Pa
+ 2.6740E-2  b Perim  m        5a          -43.83    B Ph(p)  deg
+    0.2000  c Length m                   1.3033E-3  C |U|    m^3/s
+ 1.0000E-5  d WallA  m^2                  -51.016   D Ph(U)  deg
+                                           63.995   E Htot   W
+                                           66.496   F Edot   W
+                                          149.89    G TBeg   K
+stainless           Solid type            300.23    H TEnd   K
+!---------------------------------  6 ---------------------------------
+JOIN       pulse-tube end effects
+                                         1.0285E+5  A |p|    Pa
+                                          -43.83    B Ph(p)  deg
+                                         1.2883E-3  C |U|    m^3/s
+                                          -51.016   D Ph(U)  deg
+                                           63.995   E Htot   W
+                                           65.728   F Edot   W
+                                          300.23    G TBeg   K
+                                          300.20    H TEnd   K
+!---------------------------------  7 ---------------------------------
+SX         Hot heat exchanger
+sameas   5a a Area   m^2                 2.2039E+4  A |p|    Pa
+    0.6900  b VolPor                      -19.62    B Ph(p)  deg
+ 5.0000E-3  c Length m                   1.2890E-3  C |U|    m^3/s
+ 6.4500E-5  d rh     m                    -51.343   D Ph(U)  deg
+  -63.995   e HeatIn W        G         -1.4992E-12 E Htot   W
+  300.00    f SolidT K        =7H          12.082   F Edot   W
+                                          300.20    G GasT   K
+copper           Solid type               300.00    H SolidT K
+!---------------------------------  8 ---------------------------------
+IMPEDANCE  The orifice
+ 1.0000E+7  a Re(Zs) Pa-s/m^3            1.2984E+4  A |p|    Pa
+     0.0000 b Im(Zs) Pa-s/m^3              11.846   B Ph(p)  deg
+                                         1.2890E-3  C |U|    m^3/s
+                                          -51.343   D Ph(U)  deg
+                                        -1.4992E-12 E Htot   W
+                                            3.7744  F Edot   W
+!---------------------------------  9 ---------------------------------
+DUCT       inertance
+ 1.0000E-5  a Area   m^2      Mstr       2.2729E+4  A |p|    Pa
+ 1.1210E-2  b Perim  m        9a         -141.23    B Ph(p)  deg
+ 3.0000E-2  c Length m                   1.2882E-3  C |U|    m^3/s
+ 5.0000E-4  d Srough                      -51.357   D Ph(U)  deg
+                                        -1.4992E-12 E Htot   W
+ideal           Solid type               3.3124E-2  F Edot   W
+!--------------------------------- 10 ---------------------------------
+COMPLIANCE Reservoir volume
+ 1.2680E-2  a SurfAr m^2      10b        2.2729E+4  A |p|    Pa
+ 1.5000E-4  b Volume m^3      Mstr       -141.23    B Ph(p)  deg
+                                         1.6259E-11 C |U|    m^3/s
+                                         -177.98    D Ph(U)  deg
+                                        -1.4992E-12 E Htot   W
+ideal           Solid type               1.4806E-7  F Edot   W
+!--------------------------------- 11 ---------------------------------
+HARDEND    The end
+     0.0000 a R(1/z)          =11G       2.2729E+4  A |p|    Pa
+     0.0000 b I(1/z)          =11H       -141.23    B Ph(p)  deg
+     0.0000 c Htot   W        =11E       1.6259E-11 C |U|    m^3/s
+                                         -177.98    D Ph(U)  deg
+                                        -1.4992E-12 E Htot   W
+                                         1.4806E-7  F Edot   W
+                                         2.8112E-7  G R(1/z)
+                                        -2.0990E-7  H I(1/z)
+! The restart information below was generated by a previous run
+! and will be used by DeltaEC the next time it opens this file.
+guessz   0c   0f   0g   1e   3e   7e
+xprecn -2.9198E-3  -3.7672E-8   4.4090E-4   8.6690E-4   3.0826E-4  -1.7537E-4 
+targs    1f   3f   7f  11a  11b  11c
+hilite 3e
+mstr-slave 3 5 -2 9 -2 10 -5
+! Plot start, end, and step values.  May be edited if you wish.
+! Outer Loop:                       | Inner Loop .
+

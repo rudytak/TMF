@@ -1,0 +1,411 @@
+TITLE      Backhaus 1998 TASHE
+!->C:\Users\092710\Documents\DeltaEC\PySource\Examples\SteadyFlow\combo2examplesFolder-arch-noGT.out
+!Created@13:21:55  05-Apr-2021 with DeltaEC version 6.4b2.9!under win32,
+using Win 6.1.7601 (Service Pack 1) under Python 2.7.9.
+!---------------------------------  0 ---------------------------------
+BEGIN      the setup
+ 3.1030E+6  a Mean P Pa                 
+   89.094   b Freq   Hz                 
+  325.00    c TBeg   K                  
+ 3.1107E+5  d |p|    Pa                 
+     0.0000 e Ph(p)  deg                
+     0.0000 f |U|    m^3/s              
+     0.0000 g Ph(U)  deg                
+     0.0000 i Ndot   mol/s              
+helium           Gas type               
+!---------------------------------  1 ---------------------------------
+TBRANCH    Split up the flow
+-1.4788E+7  a Re(Zb) Pa-s/m^3            3.1107E+5  A |p|    Pa
+ 1.4632E+7  b Im(Zb) Pa-s/m^3                0.0000 B Ph(p)  deg
+     0.0000 d NdotBr mol/s               1.4953E-2  C |U|    m^3/s
+                                         -135.31    D Ph(U)  deg
+                                        -1653.3     E HtotBr W
+                                        -1653.3     F EdotBr W
+                                         1653.3     G EdotTr W
+!---------------------------------  2 ---------------------------------
+DUCT       180 bend plus brass connecting flange (pg 27 book 4)
+ 8.1500E-3  a Area   m^2                 3.0447E+5  A |p|    Pa
+    0.3200  b Perim  m                      0.22802 B Ph(p)  deg
+    0.3540  c Length m                      0.10764 C |U|    m^3/s
+ 6.0000E-4  d Srough                      -95.672   D Ph(U)  deg
+                                        -1653.3     E Htot   W
+stainless           Solid type          -1684.4     F Edot   W
+!---------------------------------  3 ---------------------------------
+CONE       4" to 3" Concentric reducer (pg 36 book 4)
+ 8.1070E-3  a AreaI  m^2                 2.9930E+5  A |p|    Pa
+    0.3190  b PerimI m                      0.32331 B Ph(p)  deg
+    0.1020  c Length m                      0.12847 C |U|    m^3/s
+sameas   4a d AreaF  m^2      Mstr        -94.731   D Ph(U)  deg
+    0.2390  e PerimF m        3d        -1653.3     E Htot   W
+ 6.0000E-4  f Srough                    -1693.7     F Edot   W
+stainless           Solid type          
+!---------------------------------  4 ---------------------------------
+DUCT       3" FB Duct - Length given in concept.skf
+ 4.5600E-3  a Area   m^2      Mstr       2.7776E+5  A |p|    Pa
+    0.2390  b Perim  m        4a            0.69062 B Ph(p)  deg
+    0.2600  c Length m                      0.1656  C |U|    m^3/s
+ 3.0000E-4  d Srough                      -93.61    D Ph(U)  deg
+                                        -1653.3     E Htot   W
+stainless           Solid type          -1724.7     F Edot   W
+!---------------------------------  5 ---------------------------------
+CONE       3.5" to 3" Long radius reducing elbow (pg 36 book 4)
+sameas   4a a AreaI  m^2      Mstr       2.5957E+5  A |p|    Pa
+    0.2390  b PerimI m        5a            0.99163 B Ph(p)  deg
+    0.2090  c Length m                      0.19819 C |U|    m^3/s
+ 6.2070E-3  d AreaF  m^2                  -92.918   D Ph(U)  deg
+    0.2790  e PerimF m                  -1653.3     E Htot   W
+ 6.0000E-4  f Srough                    -1754.0     F Edot   W
+stainless           Solid type          
+!---------------------------------  6 ---------------------------------
+MINOR      minor loss, small end of elbow
+sameas   5d a Area   m^2                 2.5959E+5  A |p|    Pa
+    0.1700  b K+                            1.0661  B Ph(p)  deg
+    0.1700  c K-                            0.19819 C |U|    m^3/s
+                                          -92.918   D Ph(U)  deg
+                                        -1653.3     E Htot   W
+                                        -1787.5     F Edot   W
+!---------------------------------  7 ---------------------------------
+DUCT       FB connector/part of tee (Pg 55 book 4 concept.skf)
+ 6.2070E-3  a Area   m^2                 2.5368E+5  A |p|    Pa
+    0.2790  b Perim  m                      1.1633  B Ph(p)  deg
+ 7.0000E-2  c Length m                      0.21029 C |U|    m^3/s
+ 6.0000E-4  d Srough                      -92.70    D Ph(U)  deg
+                                        -1653.3     E Htot   W
+stainless           Solid type          -1796.9     F Edot   W
+!---------------------------------  8 ---------------------------------
+SOFTEND    End of feedback branch
+     0.0000 a Re(z)                      2.5368E+5  A |p|    Pa
+     0.0000 b Im(z)                         1.1633  B Ph(p)  deg
+     0.0000 c Htot   W                      0.21029 C |U|    m^3/s
+                                          -92.70    D Ph(U)  deg
+                                        -1653.3     E Htot   W
+                                        -1796.9     F Edot   W
+                                        -0.10347    G Re(z)
+                                            1.5323  H Im(z)
+                                          325.00    I T      K
+                                        -0.48111    J p20DEC Pa
+!---------------------------------  9 ---------------------------------
+CONE       gas diode plate
+ 5.8880E-4  a AreaI  m^2                 3.1263E+5  A |p|    Pa
+    0.4210  b PerimI m                  -0.42643    B Ph(p)  deg
+ 2.5399E-2  c Length m                   1.4678E-2  C |U|    m^3/s
+ 2.0093E-4  d AreaF  m^2                   43.788   D Ph(U)  deg
+    0.1850  e PerimF m                   1653.3     E Htot   W
+ 5.0000E-4  f Srough                     1644.5     F Edot   W
+ideal           Solid type              
+!--------------------------------- 10 ---------------------------------
+MINOR      minor loss here
+sameas   9d a Area   m^2                 3.0940E+5  A |p|    Pa
+    0.8000  b K+                           -1.0112  B Ph(p)  deg
+ 7.0000E-2  c K-                         1.4678E-2  C |U|    m^3/s
+                                           43.788   D Ph(U)  deg
+                                         1653.3     E Htot   W
+                                         1611.2     F Edot   W
+!--------------------------------- 11 ---------------------------------
+DUCT       jetting space
+ 6.8250E-3  a Area   m^2                 3.0946E+5  A |p|    Pa
+    0.2930  b Perim  m                     -1.0251  B Ph(p)  deg
+ 1.9000E-2  c Length m                   1.2006E-2  C |U|    m^3/s
+ 5.0000E-4  d Srough                       28.915   D Ph(U)  deg
+                                         1653.3     E Htot   W
+ideal           Solid type               1609.7     F Edot   W
+!--------------------------------- 12 ---------------------------------
+TX         Main room temp water HX (pg 90 book 3)
+ 6.6580E-3  a Area   m^2                 3.0963E+5  A |p|    Pa
+    0.2275  b GasA/A                       -1.1022  B Ph(p)  deg
+ 2.0400E-2  c Length m                   1.1415E-2  C |U|    m^3/s
+ 1.2700E-3  d radius m                     24.238   D Ph(U)  deg
+-2154.5     e HeatIn W                   -501.17    E Htot   W
+  300.00    f SolidT K                   1597.1     F Edot   W
+                                          325.00    G GasT   K
+                                          283.00    H SolidT K
+stainless           Solid type           -501.17    I H2k    W
+!--------------------------------- 13 ---------------------------------
+DUCT       Regen cold end dead space due to ribs (pg 91 book 3)
+ 4.9700E-3  a Area   m^2                 3.0963E+5  A |p|    Pa
+    0.7400  b Perim  m                     -1.1054  B Ph(p)  deg
+ 3.1750E-3  c Length m                   1.1193E-2  C |U|    m^3/s
+                                           21.781   D Ph(U)  deg
+                                         -501.17    E Htot   W
+stainless           Solid type           1596.5     F Edot   W
+!--------------------------------- 14 ---------------------------------
+STKSCREEN  Regenerator (pg 92 book 3) (Ks frac est:pg 20 book 4)
+ 6.2070E-3  a Area   m^2                 2.5390E+5  A |p|    Pa
+    0.7190  b VolPor                        1.6708  B Ph(p)  deg
+ 7.3000E-2  c Length m                   4.0207E-2  C |U|    m^3/s
+ 4.2200E-5  d rh     m                    -25.288   D Ph(U)  deg
+    0.3000  e ksFrac                     -501.17    E Htot   W
+                                         4549.6     F Edot   W
+                                          325.00    G TBeg   K
+                                         1192.4     H TEnd   K
+stainless           Solid type           -501.17    I H2k    W
+!--------------------------------- 15 ---------------------------------
+DUCT       top half of mixing chamber
+ 6.2000E-3  a Area   m^2      Mstr       2.5388E+5  A |p|    Pa
+    0.2791  b Perim  m        15a           1.6616  B Ph(p)  deg
+ 1.0000E-2  c Length m                   4.1003E-2  C |U|    m^3/s
+ 6.0000E-4  d Srough                      -27.434   D Ph(U)  deg
+                                         -501.17    E Htot   W
+stainless           Solid type           4548.1     F Edot   W
+!--------------------------------- 16 ---------------------------------
+TBRANCH    branch into hot loop
+ 1.9914E+6  a Re(Zb) Pa-s/m^3            2.5388E+5  A |p|    Pa
+ 9.5516E+6  b Im(Zb) Pa-s/m^3               1.6616  B Ph(p)  deg
+  606.94    c HtotBr W                   2.6020E-2  C |U|    m^3/s
+    2.0239  d NdotBr mol/s                -76.562   D Ph(U)  deg
+                                          606.94    E HtotBr W
+                                          674.14    F EdotBr W
+                                         3873.9     G EdotTr W
+!--------------------------------- 17 ---------------------------------
+DUCT       quarter-wave duct from engine to diode
+ 7.0000E-4  a Area   m^2                 1.7309E+4  A |p|    Pa
+ 9.3748E-2  b Perim  m                   -168.07    B Ph(p)  deg
+    4.6000  c Length m                   7.4994E-2  C |U|    m^3/s
+ 5.0000E-4  d Srough                      -86.389   D Ph(U)  deg
+                                          606.94    E Htot   W
+ideal           Solid type                 93.941   F Edot   W
+!--------------------------------- 18 ---------------------------------
+RPN        calculate Borda-Carnot minor loss here
+     0.0000 a G or T                    0.18367                   A ChngeMe
+1 19a 17a / - sqrd
+!--------------------------------- 19 ---------------------------------
+MINOR      asymmetric flow at gas diode
+ 4.0000E-4  a Area   m^2                 1.7135E+4  A |p|    Pa
+ 5.0000E-2  b K+                         -174.55    B Ph(p)  deg
+sameas  18A c K-                         7.4994E-2  C |U|    m^3/s
+                                          -86.389   D Ph(U)  deg
+                                          606.94    E Htot   W
+                                           20.664   F Edot   W
+!--------------------------------- 20 ---------------------------------
+CONE       expansion to plenum
+sameas  19a a AreaI  m^2                 2.5685E+4  A |p|    Pa
+ 7.0899E-2  b PerimI m                   -175.98    B Ph(p)  deg
+    0.4000  c Length m                   6.8529E-2  C |U|    m^3/s
+sameas  22a d AreaF  m^2                  -86.384   D Ph(U)  deg
+    0.4342  e PerimF m                    606.94    E Htot   W
+ 5.0000E-4  f Srough                        6.1918  F Edot   W
+ideal           Solid type              
+!--------------------------------- 21 ---------------------------------
+RPN        watch that angle
+    5.0000  a G or T                    16.125                    A ChngeMe
+20e 20b - pi / 20c / atan
+!--------------------------------- 22 ---------------------------------
+VXQ1       plenty of room for heat transfer
+ 1.5000E-2  a Area   m^2                 2.6585E+4  A |p|    Pa
+    0.4000  b GasA/A                     -174.7     B Ph(p)  deg
+    0.1000  c SolA/A                     6.8199E-2  C |U|    m^3/s
+ 1.0000E-2  d rh     m                     92.526   D Ph(U)  deg
+ 1.0000E-2  e LenTS1 m                   4306.9     E Htot   W
+    6.0000  f Len P1 m                    -43.912   F Edot   W
+ 1.0000E-2  g LenTS2 m                   1197.1     G TSolBeg P1 K
+ 3700.0     h HeatP1 W                   1285.9     H TSolEnd P1 K
+    1.0000  i FracQN                    -3.6934E+4  I H2k    W
+stainless           Solid type          
+!--------------------------------- 23 ---------------------------------
+CONE       adapt between heat exchanger and quarter-wave tube
+sameas  20d a AreaI  m^2                 2.0535E+4  A |p|    Pa
+sameas  20e b PerimI m                   -173.54    B Ph(p)  deg
+sameas  20c c Length m                   7.5314E-2  C |U|    m^3/s
+sameas  24a d AreaF  m^2                   92.765   D Ph(U)  deg
+sameas  24b e PerimF m                   4306.9     E Htot   W
+ 5.0000E-4  f Srough                      -49.794   F Edot   W
+ideal           Solid type              
+!--------------------------------- 24 ---------------------------------
+DUCT       quarter wave connection tube
+sameas  17a a Area   m^2                 2.5067E+5  A |p|    Pa
+sameas  17b b Perim  m                      1.7071  B Ph(p)  deg
+    5.0000  c Length m                   2.2732E-2  C |U|    m^3/s
+sameas  17d d Srough                      104.93    D Ph(U)  deg
+                                         4306.9     E Htot   W
+ideal           Solid type               -651.91    F Edot   W
+!--------------------------------- 25 ---------------------------------
+SOFTEND    end of the branch; this will reconnect to trunk at UNION
+     0.0000 a Re(z)                      2.5067E+5  A |p|    Pa
+     0.0000 b Im(z)                         1.7071  B Ph(p)  deg
+     0.0000 c Htot   W                   2.2732E-2  C |U|    m^3/s
+                                          104.93    D Ph(U)  deg
+                                         4306.9     E Htot   W
+                                         -651.91    F Edot   W
+                                        -0.71901    G Re(z)
+                                           -3.0591  H Im(z)
+                                         1280.3     I T      K
+                                           50.874   J p20DEC Pa
+!--------------------------------- 26 ---------------------------------
+UNION      reconnect the "final" end of the loop here
+ 25         a SegNum                     2.5388E+5  A |p|    Pa
+sameas  25A b |p|Sft Pa                     1.6616  B Ph(p)  deg
+sameas  25B c Ph(p)S deg                 3.7484E-2  C |U|    m^3/s
+sameas  25I d TSoft  K                     49.213   D Ph(U)  deg
+sameas  25J e p20DES Pa                  3198.8     E Htot   W
+                                         3211.5     F Edot   W
+                                         1192.4     G T      K
+                                             0.0000 H p20DEC Pa
+!--------------------------------- 27 ---------------------------------
+DUCT       bottom half of mixing chamber
+sameas  15a a Area   m^2                 2.5391E+5  A |p|    Pa
+sameas  15b b Perim  m                      1.6550  B Ph(p)  deg
+sameas  15c c Length m                   3.6228E-2  C |U|    m^3/s
+                                           47.395   D Ph(U)  deg
+                                         3198.8     E Htot   W
+ideal           Solid type               3209.9     F Edot   W
+!--------------------------------- 28 ---------------------------------
+SX         flow straightener (no heat input)
+sameas  27a a Area   m^2                 2.5375E+5  A |p|    Pa
+    0.6500  b VolPor                        1.6079  B Ph(p)  deg
+ 5.0000E-3  c Length m                   3.5500E-2  C |U|    m^3/s
+ 5.0000E-4  d rh     m                     46.687   D Ph(U)  deg
+     0.0000 e HeatIn W                   3198.8     E Htot   W
+     0.0000 f SolidT K                   3180.5     F Edot   W
+                                         1192.4     G GasT   K
+                                         1192.4     H SolidT K
+ideal           Solid type               3198.8     I H2k    W
+!--------------------------------- 29 ---------------------------------
+JOIN       thermal buffer tube end effects
+                                         2.5375E+5  A |p|    Pa
+                                            1.6079  B Ph(p)  deg
+                                         3.4804E-2  C |U|    m^3/s
+                                           46.687   D Ph(U)  deg
+                                         3198.8     E Htot   W
+                                         3118.2     F Edot   W
+                                         1192.4     G TBeg   K
+                                         1202.8     H TEnd   K
+!--------------------------------- 30 ---------------------------------
+STKDUCT    Straight section of pulse tube (pg 101 bk 4)
+ 7.0000E-3  a Area   m^2      Mstr       2.5368E+5  A |p|    Pa
+    0.2963  b Perim  m        30a           1.4186  B Ph(p)  deg
+    0.2400  c Length m                   3.2471E-2  C |U|    m^3/s
+ 1.1600E-3  d WallA  m^2                  -40.225   D Ph(U)  deg
+                                         3198.8     E Htot   W
+                                         3077.8     F Edot   W
+                                         1202.8     G TBeg   K
+                                          456.59    H TEnd   K
+stainless           Solid type           3198.8     I H2k    W
+!--------------------------------- 31 ---------------------------------
+JOIN       thermal buffer tube end effects
+                                         2.5368E+5  A |p|    Pa
+                                            1.4186  B Ph(p)  deg
+                                         3.1798E-2  C |U|    m^3/s
+                                          -40.225   D Ph(U)  deg
+                                         3198.8     E Htot   W
+                                         3013.9     F Edot   W
+                                          456.59    G TBeg   K
+                                          458.80    H TEnd   K
+!--------------------------------- 32 ---------------------------------
+RPN        how much heat must be rejected here? Resonator is insulated
+     0.0000 a G or T                    -1545.5                   A ChngeMe
+22h 12e + ~
+!--------------------------------- 33 ---------------------------------
+TX         Small water Xger
+ 6.6580E-3  a Area   m^2                 2.5342E+5  A |p|    Pa
+    0.2690  b GasA/A                        1.3631  B Ph(p)  deg
+ 1.0160E-2  c Length m                   3.2131E-2  C |U|    m^3/s
+ 2.2860E-3  d radius m                    -40.967   D Ph(U)  deg
+sameas  32A e HeatIn W                   1653.3     E Htot   W
+  290.00    f SolidT K                   3009.8     F Edot   W
+                                          458.80    G GasT   K
+                                          361.60    H SolidT K
+ideal           Solid type               1653.3     I H2k    W
+!--------------------------------- 34 ---------------------------------
+DUCT       PT connector (see pg 55 book 4 and concept.skf)
+ 6.2070E-3  a Area   m^2                 2.5303E+5  A |p|    Pa
+    0.2790  b Perim  m                      1.2826  B Ph(p)  deg
+ 5.1000E-2  c Length m                   3.8513E-2  C |U|    m^3/s
+ 6.0000E-4  d Srough                      -50.619   D Ph(U)  deg
+                                         1653.3     E Htot   W
+stainless           Solid type           3006.3     F Edot   W
+!--------------------------------- 35 ---------------------------------
+UNION      Rejoin
+  8         a SegNum                     2.5303E+5  A |p|    Pa
+sameas   8A b |p|Sft Pa                     1.2826  B Ph(p)  deg
+sameas   8B c Ph(p)S deg                    0.24026 C |U|    m^3/s
+sameas   8I d TSoft  K                    -86.533   D Ph(U)  deg
+sameas   8J e p20DES Pa                  2.0691E-11 E Htot   W
+                                         1158.7     F Edot   W
+                                          458.80    G T      K
+                                           -7.9438  H p20DEC Pa
+!--------------------------------- 36 ---------------------------------
+DUCT       Section of 3.5" tee
+ 6.2070E-3  a Area   m^2                 2.4607E+5  A |p|    Pa
+    0.2790  b Perim  m                      1.2334  B Ph(p)  deg
+ 9.5300E-2  c Length m                      0.25631 C |U|    m^3/s
+ 6.0000E-4  d Srough                      -86.689   D Ph(U)  deg
+                                         2.0691E-11 E Htot   W
+stainless           Solid type           1143.1     F Edot   W
+!--------------------------------- 37 ---------------------------------
+CONE       3.5" to 4" cone to adapt to resonator (pg 93 book 4)
+ 6.2070E-3  a AreaI  m^2                 2.3898E+5  A |p|    Pa
+    0.2790  b PerimI m                      1.1824  B Ph(p)  deg
+    0.1040  c Length m                      0.27583 C |U|    m^3/s
+ 8.1070E-3  d AreaF  m^2                  -86.854   D Ph(U)  deg
+    0.3200  e PerimF m                   2.0691E-11 E Htot   W
+ 3.0000E-4  f Srough                     1129.1     F Edot   W
+stainless           Solid type          
+!--------------------------------- 38 ---------------------------------
+DUCT       Initial section of resonator
+ 8.1070E-3  a Area   m^2                 2.3543E+5  A |p|    Pa
+    0.3200  b Perim  m                      1.1576  B Ph(p)  deg
+ 5.6000E-2  c Length m                      0.28753 C |U|    m^3/s
+ 6.0000E-4  d Srough                      -86.944   D Ph(U)  deg
+                                         2.0691E-11 E Htot   W
+stainless           Solid type           1121.3     F Edot   W
+!--------------------------------- 39 ---------------------------------
+BRANCH     RC dissipator
+ 4.0368E+7  a Re(Zb) Pa-s/m^3            2.3543E+5  A |p|    Pa
+     0.0000 b Im(Zb) Pa-s/m^3               1.1576  B Ph(p)  deg
+     0.0000 c HtotBr W                      0.28739 C |U|    m^3/s
+                                          -88.106   D Ph(U)  deg
+                                         2.0691E-11 E Htot   W
+                                          434.83    F Edot   W
+                                          686.51    G EdotBr W
+!--------------------------------- 40 ---------------------------------
+DUCT       Continuation of resonator
+sameas  38a a Area   m^2                 5.3543E+4  A |p|    Pa
+    0.3189  b Perim  m                      1.3585  B Ph(p)  deg
+    1.8500  c Length m                      0.53751 C |U|    m^3/s
+sameas  38d d Srough                      -88.611   D Ph(U)  deg
+                                         2.0691E-11 E Htot   W
+stainless           Solid type              7.5798  F Edot   W
+!--------------------------------- 41 ---------------------------------
+CONE       7 degree cone - 10.02" final diameter
+sameas  40a a AreaI  m^2      Mstr       8619.7     A |p|    Pa
+    0.3194  b PerimI m        41a        -179.96    B Ph(p)  deg
+    1.2502  c Length m                      0.55877 C |U|    m^3/s
+ 5.0870E-2  d AreaF  m^2                  -88.555   D Ph(U)  deg
+    0.8000  e PerimF m                   2.0691E-11 E Htot   W
+sameas  40d f Srough                      -59.023   F Edot   W
+stainless           Solid type          
+!--------------------------------- 42 ---------------------------------
+DUCT       10" duct P8
+ 5.0870E-2  a Area   m^2                 1.8066E+4  A |p|    Pa
+    0.8000  b Perim  m                   -179.25    B Ph(p)  deg
+    0.4850  c Length m                      0.52297 C |U|    m^3/s
+sameas  40d d Srough                      -88.487   D Ph(U)  deg
+                                         2.0691E-11 E Htot   W
+stainless           Solid type            -62.762   F Edot   W
+!--------------------------------- 43 ---------------------------------
+SURFACE    end cap of resonator
+ 5.0900E-2  a Area   m^2                 1.8066E+4  A |p|    Pa
+                                         -179.25    B Ph(p)  deg
+                                            0.52296 C |U|    m^3/s
+                                          -88.486   D Ph(U)  deg
+                                         2.0691E-11 E Htot   W
+ideal           Solid type                -62.825   F Edot   W
+!--------------------------------- 44 ---------------------------------
+HARDEND    end of duct
+     0.0000 a R(1/z)                     1.8066E+4  A |p|    Pa
+     0.0000 b I(1/z)                     -179.25    B Ph(p)  deg
+     0.0000 c Htot   W                      0.52296 C |U|    m^3/s
+     0.0000 d Ndot   mol/s                -88.486   D Ph(U)  deg
+                                         2.0691E-11 E Htot   W
+                                          -62.825   F Edot   W
+                                        -3.1053E-2  G R(1/z)
+                                            2.3348  H I(1/z)
+                                             0.0000 I Ndot   mol/s
+! The restart information below was generated by a previous run
+! and will be used by DeltaEC the next time it opens this file.
+hilite 0d
+mstr-slave 6 3 -3 4 -2 5 -2 15 -2 30 -2 41 -2
+! Plot start, end, and step values.  May be edited if you wish.
+! Outer Loop:                       | Inner Loop .
+pltOparsOnly   0b   0d   1a   1b   9d  12e  16a  16b  16d
+

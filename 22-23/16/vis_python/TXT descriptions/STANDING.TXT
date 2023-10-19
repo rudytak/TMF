@@ -1,0 +1,65 @@
+"Standing":  Standing-wave thermoacoustic refrigerator and engine animation. 10/96, 6/98, 5/14 gws.
+
+First frame shows a central cross section of a long resonator,
+with plots of pressure and velocity of the fundamental mode 
+in the resonator.  Lines in the gas in the resonator show how 
+elements of gas move in the standing wave.  Imagine tracer particles.
+
+Second frame adds a stack, partway between velocity node and pressure
+node.  
+
+We must look more closely to see the details of thermoacoustic action.
+Yellow circle in third frame shows region of interest, which is
+magnified below, where short fragments of two plates in the stack are
+shown.
+
+Fourth frame adds a highlighted typical parcel of gas, which
+moves back and forth, its volume changing in response to pressure
+and its temperature.  [Note: We are neglecting viscosity throughout
+this animation.]
+
+From here on, you can select the order of display by typing the first
+letter of any of the words displayed at the bottom of the screen.  I 
+will assume that you hit the keys in the following order:  (f)lat, (f)lat, 
+(r)efrigerator, (c)ritical, (e)ngine, (q)uit.
+
+Fifth frame plots pressure against volume of the parcel of gas we are
+inspecting.  As in animation "thermal", the oscillations are hysteretic;
+the standing wave is doing work on the parcel of gas.
+
+To aid in understanding the cause of the hysteresis, sixth frame shows
+temperature of the parcel (as function of its position; blue trace) and 
+that of the nearby plate in the stack (white line). When the gas is hotter 
+than the plate, heat flows (shown as red arrows) go from gas to plate;  
+when the gas is cooler, the heat flows go inn the other direction.  Magnitude
+of heat, proportional to temperature difference between gas and plate, is
+indicated by width of red arrows.  Note that most of the parcel temperature
+is just due to adiabatic pressure oscillation;  thermal contact with the
+plate modifies this slightly, opening up a little area in the temperature-
+vs-location loop.  Note also that, from the point of view of the plate,
+the parcel of gas picks up heat from one area, and deposits it in an area 
+farther to the left.  A sort of right-to-left heat transfer mechanism,
+performed by all parcels of gas in the stack.
+
+Seventh frame shows that the processes of the seventh frame are qualitatively
+unchanged if a slight temperature gradient exists along the plates of the
+stack.  The parcel of gas absorbs PV work from the standing wave, and the 
+parcel moves heat from right to left along the plates, from cooler to
+warmer regions of the stack.  This is a thermoacoustic refrigerator.  We
+have added a heat exchanger at each end of the stack, indicating the need
+for a means of heat transfer between stack ends and the outside world in
+order to make this a useful refrigerator.
+
+Eighth frame shows what happens if the temperature gradient along the
+stack is a little steeper, so that it matches the temperature profile
+of the gas parcel as it moves adiabatically in the standing wave.  No
+temperature difference between parcel and plate;  hence no heat transfer;
+hence no work either.  The PV trace is now simply an adiabat.  This is
+called the critical temperature gradient.
+
+Ninth frame shows what happens if the temperature gradient along the 
+stack is even steeper.  The signs of everything--temperature differences,
+heat flows, work--are opposite from what they were for the refrigerator.
+This is a thermoacoustic engine (or "prime mover"), in which the parcel of
+gas does work on the standing wave, and heat is carried down the temperature
+gradient.

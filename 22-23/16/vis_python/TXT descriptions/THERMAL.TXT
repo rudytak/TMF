@@ -1,0 +1,51 @@
+Thermal penetration depth animation (rev October 1996, rev May 2014)
+
+First frame shows a central cross section of a long resonator,
+with plots of pressure and velocity of the fundamental mode 
+in the resonator.
+
+Second frame adds lines in the gas in the resonator, showing how 
+elements of gas move in the standing wave.  Imagine tracer particles.
+Also displays temperature throughout the resonator instead of
+velocity.
+
+But this temperature plot shows a nonzero oscillating temperature at 
+the walls, which is not true if the walls are massive and hence have
+substantial heat capacity.  This coarse view has assumed a negligibly 
+small thermal penetration depth. (or perfectly insulating walls!)  
+Yellow circles in third frame show region to be magnified in the 
+next frame.
+
+Fourth frame shows solution to 2-dimensional heat-transfer equation, 
+in low-amplitude approximation, assuming these boundary conditions:  
+an isothermal, stationary wall at the left side, and uniform oscillating 
+pressure with no motion of the gas in the vertical direction. 
+Each horizontal tic mark is one thermal penetration depth.
+The moving, wavy line is the temperature in the gas as a function of
+position and time.  The moving horizontal line is the pressure, and the
+moving vertical lines are tracer-particle lines in the gas.
+
+The pressure oscillations in this thermal boundary layer are lossy;  the
+"spring" of the compressible gas is hysteretic, because the adiabatic and
+isothermal compressibilities are different.  To see this, imagine in the 
+fifth frame that one of the tracer lines is replaced by a piston, and
+ask how much work does that piston do on all the gas to its left.  
+
+The work per cycle is the cyclic integral of pressure times differential
+in volume p dV.  Since the intersection of the pressure line and the 
+piston-face line mark pressure and volume at each instant of time, the area 
+traced out by that intersection, shown in the sixth frame, is the desired 
+integral.  Direction of rotation around the loop gives the sign of the work.
+
+We could have put our imaginary piston at some other location, and obtained
+a different value for the work done on all gas to its left.  Bottom trace 
+in the seventh frame shows that work as a function of location of the
+imaginary piston.
+
+The derivative of that work with respect to y is displayed in the eighth 
+frame. This shows the dissipation per unit volume as a function of y.  It is
+greatest about one thermal penetration depth from the wall, which is where
+the gas is farthest from both of the two ideal, reversible cases: adiabatic
+and isothermal oscillations.  Note also the interesting fact that the gas 
+roughly 4 penetration depths from the surface does work on its 
+surroundings, rather than dissipating work.

@@ -1,0 +1,100 @@
+TITLE      Five-Inch Thermoacoustic Engine
+!->C:\Users\092710\Documents\DeltaEC\PySource\Examples\TEMPORARY\5inch.out
+!Created@18:46:56  22-Aug-2019 with DeltaEC version 6.4b2.8!under win32,
+using Win 6.1.7601 (Service Pack 1) under Python 2.7.9.
+!---------------------------------  0 ---------------------------------
+BEGIN      Initial
+ 1.3800E+6  a Mean P Pa                 
+  121.15    b Freq   Hz       G         
+  557.87    c TBeg   K        G         
+ 7.3534E+4  d |p|    Pa       G         
+     0.0000 e Ph(p)  deg                
+     0.0000 f |U|    m^3/s              
+     0.0000 g Ph(U)  deg                
+helium           Gas type               
+!---------------------------------  1 ---------------------------------
+SURFACE    Hot End
+ 1.2920E-2  a Area   m^2                 7.3534E+4  A |p|    Pa
+                                             0.0000 B Ph(p)  deg
+                                         4.7101E-5  C |U|    m^3/s
+                                         -135.0     D Ph(U)  deg
+                                             0.0000 E Htot   W
+ideal           Solid type                 -1.2245  F Edot   W
+!---------------------------------  2 ---------------------------------
+DUCT       Hot Duct
+sameas   1a a Area   m^2                 7.2670E+4  A |p|    Pa
+    0.4030  b Perim  m                   5.5078E-3  B Ph(p)  deg
+    0.2790  c Length m                   8.7705E-2  C |U|    m^3/s
+                                          -90.208   D Ph(U)  deg
+                                             0.0000 E Htot   W
+ideal           Solid type                -11.90    F Edot   W
+!---------------------------------  3 ---------------------------------
+HX         Hot HX
+sameas   1a a Area   m^2                 7.1503E+4  A |p|    Pa
+    0.3930  b GasA/A                        0.38767 B Ph(p)  deg
+ 6.0000E-2  c Length m                   9.6771E-2  C |U|    m^3/s
+ 4.8300E-4  d y0     m                    -91.199   D Ph(U)  deg
+ 2210.0     e HeatIn W                   2210.0     E Htot   W
+  999.00    f SolidT K                    -95.81    F Edot   W
+                                          557.87    G GasT   K
+ideal           Solid type                563.76    H SolidT K
+!---------------------------------  4 ---------------------------------
+STKCIRC    Honey Stack
+sameas   1a a Area   m^2                 6.5684E+4  A |p|    Pa
+    0.8100  b GasA/A                        2.7536  B Ph(p)  deg
+    0.2790  c Length m                      0.1599  C |U|    m^3/s
+ 5.0000E-4  d radius m                    -85.385   D Ph(U)  deg
+ 5.0000E-5  e Lplate m                   2210.0     E Htot   W
+                                          170.57    F Edot   W
+                                          557.87    G TBeg   K
+stainless           Solid type            306.39    H TEnd   K
+!---------------------------------  5 ---------------------------------
+HX         Ambient HX
+ 1.2670E-2  a Area   m^2                 6.3066E+4  A |p|    Pa
+    0.4860  b GasA/A                        3.2517  B Ph(p)  deg
+ 5.0800E-2  c Length m                      0.16757 C |U|    m^3/s
+ 4.0600E-4  d y0     m                    -85.828   D Ph(U)  deg
+-2125.1     e HeatIn W        G            84.860   E Htot   W
+  303.00    f SolidT K        =5H          84.860   F Edot   W
+                                          306.39    G GasT   K
+ideal           Solid type                303.00    H SolidT K
+!---------------------------------  6 ---------------------------------
+ANCHOR     subsequent duct is water jacketed
+!---------------------------------  7 ---------------------------------
+DUCT       Ambient Duct
+sameas   5a a Area   m^2                 6.9637E+4  A |p|    Pa
+    0.3990  b Perim  m                   -176.59    B Ph(p)  deg
+    3.6500  c Length m                   2.6157E-5  C |U|    m^3/s
+                                         -131.59    D Ph(U)  deg
+                                            0.64401 E Htot   W
+ideal           Solid type                  0.64401 F Edot   W
+!---------------------------------  8 ---------------------------------
+SURFACE    Ambient End
+sameas   5a a Area   m^2                 6.9637E+4  A |p|    Pa
+                                         -176.59    B Ph(p)  deg
+                                         3.1574E-17 C |U|    m^3/s
+                                          102.10    D Ph(U)  deg
+                                         1.6596E-13 E Htot   W
+ideal           Solid type               1.6596E-13 F Edot   W
+!---------------------------------  9 ---------------------------------
+HARDEND    target this to seal the end
+     0.0000 a R(1/z)          =9G        6.9637E+4  A |p|    Pa
+     0.0000 b I(1/z)          =9H        -176.59    B Ph(p)  deg
+                                         3.1574E-17 C |U|    m^3/s
+                                          102.10    D Ph(U)  deg
+                                         1.6596E-13 E Htot   W
+                                         1.6596E-13 F Edot   W
+                                         1.2064E-17 G R(1/z)
+                                        -7.8998E-17 H I(1/z)
+!--------------------------------- 10 ---------------------------------
+RPN        ensure all ambient-duct dissipation goes to water jacket
+     0.0000 a =A?                       -1.1369E-13               A ChngeMe
+5E 5F -
+! The restart information below was generated by a previous run
+! and will be used by DeltaEC the next time it opens this file.
+guessz   0b   0c   0d   5e
+xprecn  3.4602E-4  -1.7448E-4   6.2673E-2  -3.9663E-2 
+targs    5f   9a   9b  10a
+! Plot start, end, and step values.  May be edited if you wish.
+! Outer Loop:                       | Inner Loop .
+

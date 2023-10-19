@@ -1,0 +1,223 @@
+              Notes to go with computer animation of feedback PTR
+                              gws Sept 1998
+                             revised May 2001
+                             revised May 2014
+
+        Type "m" when prompted at the bottom of the
+initial display.  This will ensure that the menu line
+is always displayed, so you know what your options are.  When you're really 
+familiar with this animation and are using it to explain this stuff to 
+newcomers, you may want to suppress the menu line so it doesn't distract 
+the newcomers from the meaningful parts of the display.  Typing any 
+character other than "m" will suppress the menu display.
+
+        Thereafter, typing a letter will access a particular display:
+
+s   stirling refrigerator
+o   piston-driven optr
+O   optr driven by off-screen pressure source (e.g. thermoacoustic engine)
+f   feedback ptr, ie a traveling-wave Stirling refrigerator
+
+v   toggles the display of P dV ellipses on and off
+d   toggles the display of 4-step words on and off (in Stirling only)
+
+c   cold heat exchanger details, magnified
+r   regenerator details, magnified
+p   pulse tube details, magnified
+
+F   faster
+S   slower
+
+q   quit
+
+        In the discussion here, I'll do them in the order listed above....        
+but you can select them in any order.  
+
+        Stirling, optr, and Optr show the parts, the helium motion and 
+pressure, and the mean temperature profile.
+
+        v (short for volume toggle) turns on and off several p dV ellipses.  
+It works during stirling, optr, and Optr modes.
+
+        When switching among stirling, optr, and Optr, the change is 
+immediate;  when one of the magnified views is invoked, a slow zoom action 
+takes you from one view to another.  (To stay oriented, I am in the habit 
+of going back to "optr" or "stirling" after each magnified view, but you can 
+actually zoom directly from one magnified view to another.)
+
+        You can also change the period of oscillation by hitting "F" for 
+faster or "S" for slower.  Each time you hit one of those keys you change 
+speed by a factor of 2.  The cold heat exchanger display seems to be 
+clearer to most people if you go a little more slowly than 10 seconds.
+
+        Quit at any time, and return to the operating system, by hitting "q".
+
+
+***** stirling *****
+
+        This is a traditional two-piston Stirling cryocooler.  The pistons 
+move with different amplitudes and phases, such that the gas is compressed, 
+displaced rightward, expanded, and displaced leftward.  The upper trace shows
+the pressure as a function of time.  Viscosity in the regenerator causes a
+small pressure gradient in the regenerator, in phase with the velocity.
+The vertical moving blue lines in the refrigerator are tracer lines 
+in the gas---imagine thin wisps of smoke.  They crowd closer together
+when the pressure is high, signifying increased density.
+
+        The red arrows show heat rejection and absorption at the heat 
+exchangers.
+
+        When "v" is toggled on, ellipses are drawn that trace the
+pressure and piston-face position for each piston.  Since the volume in
+front of a piston is the product of area and position (with suitable choice 
+of the zero of position), the area of each ellipse represents the 
+cycle-integral of P dV, i.e. the work.  Think about the signs carefully.  
+Both pistons move to the right when pressure is high and move to the left
+when pressure is low.  This means that the sense of work flow is from left
+to right.  Hence, the left piston does work on the gas, while the right
+piston absorbs work from the gas.   Note that the work absorbed by the
+right piston is smaller than the work delivered by the left piston, as 
+required by the second law of thermodynamics.  The work absorbed by the
+right piston from the gas is usually fed back to the hot piston, thereby
+reducing the work that the motor must deliver to the refrigerator.
+Sometimes the work is fed back via the crankshaft and other mechanical
+linkages;  that is what you should imagine when viewing this animation.
+(However, in Stirling machines having a "displacer" piston, the cold gas
+does work on the cold end of the displacer piston, and the hot end of
+the displacer piston delivers that same work to the hot gas space between
+the hot piston and the hot heat exchanger;  this reduces the work required
+of the hot piston.)
+
+***** optr *****
+
+        This is a piston-driven orifice pulse tube refrigerator, with 
+phasing appropriate for inertance plus resistance at the right end.
+
+        From left to right, we have the drive piston, aftercooler, 
+regenerator, cold heat exchanger, pulse tube, orifice/inertance, and 
+reservoir volume. 
+
+        When "v" is toggled on, we can imagine p dV ellipses for imaginary
+pistons at various places in the apparatus.  At any location of a blue 
+gas-position marker, we can imagine instead a thin piston with the same 
+motion.  The work associated with that piston is the cycle integral of 
+the pressure at that location d position.  This work is absorbed from the 
+gas on the left of the imaginary piston by the left face of the 
+imaginary piston and the same work is delivered to the gas on the right of
+the imaginary piston by the right face of the imaginary piston.  Note
+that the work flow at the left and right ends of the pulse tube are equal
+(because there is no dissipation inbetween) although the details are 
+different (tilt of ellipse changes due to compressibility of gas inbetween).
+In the reservoir volume = adiabatic compliance, the gas moves adiabatically 
+so the work flow is zero and the corresponding "ellipse" is a reciprocating
+line enclosing no area.  
+
+***** Optr *****
+
+        This is the same as the optr display, except that the hot piston is
+out of the picture.  Any source of oscillating pressure can be imagined
+off screen left.
+
+***** fptr *****
+
+        The feedback ptr recovers the acoustic power that is dissipated
+in the orifice of the optr.  In this recovery, it is similar to the Stirling
+refrigerator, whose cold piston recovers pV power just to the right of
+the cold heat exchanger, feeding that power into the crankshaft (or
+whatever mechanism) and thence to the hot piston to reduce the power required
+of the motor.
+
+        The components in the upper half of the display are the same as
+those of the optr (or Optr) displays.  In fact, the pressure and gas
+displacement as functions of time and position are identical to those
+of the stirling, optr, and Optr displays.
+
+        The new components in the fptr display are a compliance (the 180
+degree bend at the left), an inertance (the narrow neck at bottom-center),
+and the union at the right.  We will see later how these new components
+conspire to maintain the desired magnitudes and phases of pressure and
+gas displacement in the upper half of the display.
+        
+        The acoustic oscillations are caused by a driver (a piston, a
+standing-wave thermoacoustic engine, or a traveling-wave thermoacoustic
+engine) somewhere off the
+right edge of the screen.  At the coarsest level of approximation, this
+driver causes the pressure to oscillate throughout the parts of the
+refrigerator shown on the screeen.  The driver pushes gas into the picture,
+raising the pressure;  the driver pulls gas out of the picture, lowering
+the pressure.
+
+        Next consider the pressure difference between the left and right
+halves of the screen.  The pressure plots are identical at their left
+and right extremes, as they must be because the corresponding hardware
+components are "connected" via the compliance at the left and the union
+at the right, neither of which can sustain a pressure difference.  The
+left-to-right pressure difference occurs across the inertance in the
+lower part of the display and across the regenerator and heat exchangers
+in the upper part of the display.  Note how the pressure difference peaks
+in time at the temporal extremes of the pressure oscillation.  The
+regenerator is necessarily a resistive component, because it must have
+tiny passages to ensure the good thermal contact necessary for efficient
+Stirling cycle operation.  Hence the pressure difference across the
+regenerator is in phase with the velocity through it;  the pressure
+difference is largest when the gas motion is fastest.  In contrast, we
+want the inertance to experience as little dissipation as possible, and
+hence to have as little resistance as possible.  If it is a pure inertance,
+the pressure difference across it is largest when the gas acceleration is
+largest, i.e. when the gas velocity is zero.  So the gas motion
+in the lower part of the figure leads the gas motion in the upper half
+by about 90 degrees.
+
+When "v" is enabled, the areas of the pV loops show the acoustic power
+flowing past each point.  Note that the loops in the lower half circulate
+counterclockwise, signifying power flow from right to left, while those
+in the upper half circulate clockwise, signifying power flow from left to
+right.  The left-upper, left-lower, and center-lower ellipses have equal
+areas, signifying equal powers, because there is no dissipation between
+them in this idealized animation.  Their area is the sum of the areas
+of the two ellipses representing the powers flowing into the union (the
+driver power and the power at the hot end of the pulse tube).  The driver
+power is therefore less than it would be in the absense of power feedback.
+
+
+***** regenerator *****
+
+        In the regenerator, gaps between solid parts are small, much smaller
+than a thermal penetration depth.  Hence the gas blob is always in excellent
+thermal contact with the adjacent solid parts, so the temperatures of gas 
+and adjacent solid always match.  To accomplish this, heat must flow 
+between gas and solid as shown by the red arrows.  This process 
+consumes work, so the loop in the pressure-volume diagram circulates 
+counterclockwise.  Note that this pressure-volume diagram refers to a 
+particular mass element of gas;  this is a different concept than the 
+pressure-volume diagrams toggled on and off with the "v" command, which
+are associated with pistons or imaginary pistons.
+
+
+***** cold heat exchanger *****
+
+        As in the regenerator, the gaps are small
+so thermal contact is good.  The gas leaves the cold heat exchanger and
+goes out into open spaces to the right.  The pressure then goes down, so
+the blob's volume increases and its temperature decreases.  Hence it is
+pretty cold when it re-enters the cold heat exchanger, so it can extract
+a lot of heat (big red arrows) from the cold heat exchanger.  It then 
+cruises in and out of the regenerator, exchanging heat there 
+cyclically just like the gas in the "regenerator" display does.
+
+        
+***** pulse tube *****
+
+        This region acts like an adiabatic thermal buffer.  The gas
+is not in good thermal contact with any solid.  Hence the temperature
+of a given blob of gas just goes up and down with the pressure, 
+adiabatically.  Nearby blobs are at slightly different temperatures, and 
+they also experience adiabatic temperature oscillations.  The overall
+picture is of a smooth temperature gradient that moves with the gas and
+rises and falls a little with the pressure oscillations.  No work is 
+absorbed by this isolated, adiabatic blob, so its pV diagram is simply
+a reciprocating adiabat with zero area.  Note the distinction between this
+pV diagram for a given mass element of gas vs the pV power transmitted 
+along the pulse tube which is visible in the overall "o"ptr view when 
+"v"olume is toggled on.
+
