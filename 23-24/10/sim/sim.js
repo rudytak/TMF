@@ -61,7 +61,6 @@ function v(x, y, z = 0) {
 
 // Constants
 const PI = Math.PI;
-let dt = 1e-2; // 1 ms
 
 // spinner
 let r_0 = 0.04; // effective radius of the spinners
@@ -73,7 +72,8 @@ let V = 0.005 ** 3; // volume of magnet [m^3] (5mm cubed)
 let m_mag = (1 / μ_0) * B_r_mag * V; // magnitude of magnetic moment [A*m^2]
 
 // rotation
-let λ = 1 / 100; // approximate decay rate - TODO
+let α = 0.218;
+let γ = 0.000259;
 let I_0 = (1 / 2) * 0.06 * 0.03; // appproximate moment of inertia - TODO
 
 // spinner
@@ -151,8 +151,8 @@ function dω(m_ex, P_ex, s) {
 }
 
 // spinner creation
-let s1 = new spinner(v(0, 0, 0), 0, 0);
-let s2 = new spinner(v(0.1, 0, 0), PI * 0.99, 0);
+let s1 = new spinner(v(0, 0, 0), 0, 115);
+let s2 = new spinner(v(10, 0, 0), PI * 0.99, 0);
 
 // sim iteration
 function step() {
@@ -173,19 +173,32 @@ function step() {
   s2.phi += s2.ω * dt;
 
   // omega damping
-  s1.ω *= Math.exp(-λ * dt);
-  s2.ω *= Math.exp(-λ * dt);
+  s1.ω += dt * (-α - γ * s1.ω ** 2);
+  s2.ω += dt * (-α - γ * s1.ω ** 2);
 }
 
 // TODO - RK4
 
+let dt = 1e-3; // 1 ms
+let run_time = 170
+let save_freq = Math.ceil(1e-2/dt + 1) - 1
+console.log(save_freq)
+let out_path = `out${dt}.csv`;
+
 const fs = require("fs");
-fs.writeFileSync(`out${dt}.csv`, "t, ω_1, EK_1, ω_2, EK_2 \n");
+fs.writeFileSync(out_path, "t, ω_1, EK_1 \n");
 
 // running sim
-for (var t = 0; t < 10; t += dt) {
+let frame = 0;
+for (var t = 0; t < run_time; t += dt) {
   step();
 
-  fs.appendFileSync(`out${dt}.csv`, `${t}, ${s1.ω}, ${1/2 * s1.ω**2}, ${s2.ω}, ${1/2 * s2.ω**2} \n`);
+  if(frame % save_freq == 0){
+    fs.appendFileSync(
+      out_path,
+      `${t}, ${s1.ω}, ${(1 / 2) * s1.ω ** 2} \n`
+    );
+  }
 
+  frame++;
 }
