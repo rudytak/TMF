@@ -32,6 +32,51 @@ $$
 \omega(t) = -\sqrt{\frac{\alpha}{\gamma}} \tan{(\sqrt{\alpha\gamma}(t+c_1))}
 $$
 
+#### Maximum runtime
+
+$$
+c_1(\omega_0) = -\frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{\gamma}{\alpha}} \omega_0 \bigg)} \\
+
+c_1(E) = -\frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{2 \gamma E}{\alpha I}} \bigg)} \\
+$$
+
+#### Maximum runtime of a system
+The maximum runtime of a system of $n$ spinners with starting energies $E_1, E_2 ... E_n$ is: 
+
+$$c_1(E_1+E_2+...+E_n)$$
+
+Proof:
+$$
+H_{c_1} \in \mathbb{R}^- \\
+c_1 \text{ is a decresing function and represents the runtime $t_{max} = -c_1$} \\
+E_1, E_2 \in \mathbb{R}^+ \\
+\text{WLOG: } E_1>E_2 \\
+$$
+
+<!--
+$$
+E_1 = \frac{1}{2}I\omega_1^2 \\
+E_2 = \frac{1}{2}I\omega_2^2 \\
+E_1 + E_2 = \frac{1}{2}I\omega_1^2 + \frac{1}{2}I\omega_2^2 = \frac{1}{2}I(\omega_1^2 + \omega_2^2) \\
+$$
+-->
+
+$$
+c_1(E_1+E_2) \stackrel{?}{<} \min(c_1(E_1), c_1(E_2)) \\
+$$
+
+$$
+c_1(E_1+E_2) < c_1(E_1) \\
+-\frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{2 \gamma (E_1+E_2)}{\alpha I}} \bigg)} < -\frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{2 \gamma E_1}{\alpha I}} \bigg)} \\
+\arctan{ \bigg( \sqrt{\frac{2 \gamma (E_1+E_2)}{\alpha I}} \bigg)} > \arctan{ \bigg( \sqrt{\frac{2 \gamma E_1}{\alpha I}} \bigg)} \\
+\sqrt{\frac{2 \gamma (E_1+E_2)}{\alpha I}} > \sqrt{\frac{2 \gamma E_1}{\alpha I}}\\
+\sqrt{\frac{2 \gamma }{\alpha I}} \sqrt{E_1+E_2} > \sqrt{\frac{2 \gamma}{\alpha I}} \sqrt{E_1}\\
+\sqrt{E_1+E_2} > \sqrt{E_1}\\
+E_1+E_2 > E_1\\
+E_2 > 0\\
+\text{QED}
+$$
+
 <!--
 $$
 \omega(t) = \omega_0 e^{-\lambda t} \\

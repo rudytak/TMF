@@ -151,7 +151,7 @@ function dω(m_ex, P_ex, s) {
 }
 
 // spinner creation
-let s1 = new spinner(v(0, 0, 0), 0, 115);
+let s1 = new spinner(v(0, 0, 0), 0, 100);
 let s2 = new spinner(v(10, 0, 0), PI * 0.99, 0);
 
 // sim iteration
@@ -179,26 +179,34 @@ function step() {
 
 // TODO - RK4
 
-let dt = 1e-3; // 1 ms
-let run_time = 170
-let save_freq = Math.ceil(1e-2/dt + 1) - 1
+let dt = 1e-2; // 1 ms
+let run_time = 500
+let save_freq = Math.ceil(1e-2 / dt + 1) - 1
 console.log(save_freq)
-let out_path = `out${dt}.csv`;
+let out_path = `out.csv`;
 
 const fs = require("fs");
-fs.writeFileSync(out_path, "t, ω_1, EK_1 \n");
+// fs.writeFileSync(out_path, "t, ω_1, EK_1 \n");
 
 // running sim
 let frame = 0;
 for (var t = 0; t < run_time; t += dt) {
-  step();
+  // if (frame % save_freq == 0) {
+  //   fs.appendFileSync(
+  //     out_path,
+  //     `${t}, ${s1.ω}, ${(1 / 2) * s1.ω ** 2} \n`
+  //   );
+  // }
 
-  if(frame % save_freq == 0){
+  if (s1.ω < 2) {
     fs.appendFileSync(
       out_path,
-      `${t}, ${s1.ω}, ${(1 / 2) * s1.ω ** 2} \n`
+      `${t}, ${a} \n`
     );
+    break;
   }
+
+  step();
 
   frame++;
 }
