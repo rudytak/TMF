@@ -7,7 +7,7 @@ $S$ ... centerpoint of the spinner (also position of axis of rotation)
 $\varphi$ ... angle of rotation \
 $\omega$ ... angular velocity \
 $\alpha$ ... angular acceleration \
-$I$ ... moment of inertia of the spinner \
+$I$ ... moment of inertia of the spinner
 
 
 The $i$-th magnet is positioned at $P(i)$:
