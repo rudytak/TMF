@@ -72,18 +72,27 @@ let V = 0.005 ** 3; // volume of magnet [m^3] (5mm cubed)
 let m_mag = (1 / μ_0) * B_r_mag * V; // magnitude of magnetic moment [A*m^2]
 
 // rotation
-let α = 0.853;
-let γ = 0.000680;
-// let I_0 = (1 / 2) * 0.06 * 0.03; // 0.0009 appproximate moment of inertia - TODO
-let I_0 = 0.00178;
+let α = 0.714;
+let γ = 0.00068;
+// let I_0 = (1 / 2) * 0.06 * 0.03; // guessed moment of inertia
+let I_0 = 0.00005; // stolen from here https://www.wired.com/2017/05/physics-of-a-fidget-spinner/
+// let I_0 = 0.00178; // measured moment of inertia INCORRECT??
 
 // spinner
 class spinner {
-  constructor(center, phi0, ω0, magnet_count = 3, _r = r_0, _I = I_0, _m_mag = m_mag) {
+  constructor(
+    center,
+    phi0,
+    ω0,
+    magnet_count = 3,
+    _r = r_0,
+    _I = I_0,
+    _m_mag = m_mag
+  ) {
     this.S = center;
     this.phi = phi0; // angle
     this.ω = ω0; // angular velocity
-    this.I = _I; // moment of inertia (cca)
+    this.I = _I; // moment of inertia
     this.r = _r; // 4 cm
     this.n = magnet_count; // 3
     this.m_mag = _m_mag;
@@ -95,6 +104,18 @@ class spinner {
       this.S.y + this.r * Math.sin(this.phi + (2 * PI * i) / this.n),
       this.S.z
     );
+  }
+
+  draw() {
+    stroke("yellow");
+    strokeWeight(0.02);
+    point(this.S.x, this.S.y);
+    stroke("white");
+    strokeWeight(0.01);
+    for (let j = 0; j < this.n; j++) {
+      let _p = this.P(j);
+      point(_p.x, _p.y);
+    }
   }
 
   m(i) {
@@ -120,7 +141,7 @@ function F(r, m1, m2) {
 function B(r, m) {
   let ru = r.unit();
   return ru
-    .mult(3 * v3.dot(m, ru))
+    .mult(3 * v3.dot(ru, m))
     .sub(m)
     .mult(μ_0 / (4 * PI * r.mag() ** 3));
 }
@@ -148,13 +169,21 @@ function dω(m_ex, P_ex, s) {
   }
 
   τ_tot = τ_tot.mult(dt / s.I);
-
+  
   return τ_tot;
 }
 
 // spinner creation
-let s1 = new spinner(v(0, 0, 0), 0, 42.8);
-let s2 = new spinner(v(0.085, 0, 0), 0, 0, 1, 0, 1000000000, (1 / μ_0) * B_r_mag * V * 0.044 * 0.022 * 0.0095);
+let s1 = new spinner(v(0, 0, 0), -1.3452221419413335, 9.48266437263682);
+let s2 = new spinner(
+  v(0, -0.065, 0),
+  0,
+  0,
+  1,
+  0,
+  1000000000,
+  (1 / μ_0) * B_r_mag * 0.044 * 0.022 * 0.0095
+);
 
 // rozměry velký magent
 // 47x22x9.5 mm**3
@@ -175,29 +204,31 @@ function step() {
     let P_ex = s2.P(j);
     s1.ω += dω(m_ex, P_ex, s1).z;
   }
-
+  
   // rotation
   s1.phi += s1.ω * dt;
   s2.phi += s2.ω * dt;
 
+  
   // omega damping
-  if (Math.abs(s1.ω) > α / 10) {
-    s1.ω += dt * (-α - γ * s1.ω ** 2) * Math.sign(s1.ω);
-  } else {
-    s1.ω = 0;
+  // s1.ω += dt * (-α - γ * s1.ω ** 2);
+  // s2.ω += dt * (-α - γ * s2.ω ** 2);
+  
+  let damp_1 = dt * (-α - γ * s1.ω ** 2) * Math.sign(s1.ω);
+  let damp_2 =  dt * (-α - γ * s2.ω ** 2) * Math.sign(s2.ω)
+  
+  if(Math.abs(s1.ω) > 2 * Math.abs(damp_1)){
+      s1.ω += damp_1;
   }
-
-  if (Math.abs(s2.ω) > α / 10) {
-    s2.ω += dt * (-α - γ * s2.ω ** 2) * Math.sign(s2.ω);
-  } else {
-    s2.ω = 0;
-  }
+  if(Math.abs(s2.ω) > 2 * Math.abs(damp_2)){
+      s1.ω += damp_2;
+  }  
 }
 // TODO - RK4
 
 let dt = 1e-3; // 1 ms
-let run_time = 50;
-let save_freq = (Math.ceil(1e-2 / dt + 1) - 1);
+let run_time = 2;
+let save_freq = Math.ceil(1e-3 / dt + 1) - 1;
 let out_path = `out.csv`;
 
 const fs = require("fs");
