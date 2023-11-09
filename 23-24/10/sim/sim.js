@@ -72,11 +72,12 @@ let V = 0.005 ** 3; // volume of magnet [m^3] (5mm cubed)
 let m_mag = (1 / μ_0) * B_r_mag * V; // magnitude of magnetic moment [A*m^2]
 
 // rotation
-let α = 0.714;
+let α = 0.868;
 let γ = 0.00068;
 // let I_0 = (1 / 2) * 0.06 * 0.03; // guessed moment of inertia
-let I_0 = 0.00005; // stolen from here https://www.wired.com/2017/05/physics-of-a-fidget-spinner/
+// let I_0 = 0.000045; // stolen from here https://www.wired.com/2017/05/physics-of-a-fidget-spinner/
 // let I_0 = 0.00178; // measured moment of inertia INCORRECT??
+let I_0 = 4.525e-5; // measured
 
 // spinner
 class spinner {
@@ -174,16 +175,8 @@ function dω(m_ex, P_ex, s) {
 }
 
 // spinner creation
-let s1 = new spinner(v(0, 0, 0), -1.3452221419413335, 9.48266437263682);
-let s2 = new spinner(
-  v(0, -0.065, 0),
-  0,
-  0,
-  1,
-  0,
-  1000000000,
-  (1 / μ_0) * B_r_mag * 0.044 * 0.022 * 0.0095
-);
+let s1 = new spinner(v(0, 0, 0), 0, -7.5);
+let s2 = new spinner(v(0.08, 0, 0), 0, 10);
 
 // rozměry velký magent
 // 47x22x9.5 mm**3
@@ -204,6 +197,8 @@ function step() {
     let P_ex = s2.P(j);
     s1.ω += dω(m_ex, P_ex, s1).z;
   }
+  
+  s2.ω = 10;
   
   // rotation
   s1.phi += s1.ω * dt;
@@ -227,7 +222,7 @@ function step() {
 // TODO - RK4
 
 let dt = 1e-3; // 1 ms
-let run_time = 2;
+let run_time = 25;
 let save_freq = Math.ceil(1e-3 / dt + 1) - 1;
 let out_path = `out.csv`;
 
@@ -238,15 +233,8 @@ fs.writeFileSync(out_path, "t, ω_1 \n");
 let frame = 0;
 for (var t = 0; t < run_time; t += dt) {
   if (frame % save_freq == 0) {
-    fs.appendFileSync(
-      out_path,
-      `${t}, ${s1.ω}\n`
-    );
+    fs.appendFileSync(out_path, `${t}, ${s1.ω}\n`);
   }
-
-  // if (s1.ω == 0 || s2.ω == 0) {
-  //   break;
-  // }
 
   step();
 
@@ -255,17 +243,16 @@ for (var t = 0; t < run_time; t += dt) {
 
 // FFT
 
-// var fft = require('fft-js').fft,
-//     fftUtil = require('fft-js').util,
-//     signal = [1,0,1,0];
+let data = fs.readFileSync(out_path, 'utf8')
+let dataArray = data.split(/\r?\n/).map(r=>r.split(", ").map(x=>parseFloat(x))).slice(1, -2);  //Be careful if you are in a \r\n world...
 
-// var phasors= fft(signal);
+var signal = dataArray.map(r=>r[1])
+const FFT = require('fft.js');
+const f = new FFT(4096);
 
-// var frequencies = fftUtil.fftFreq(phasors, 8000), // Sample rate and coef is just used for length, and frequency step
-//     magnitudes = fftUtil.fftMag(phasors); 
+const out = f.createComplexArray();
+f.realTransform(out, signal);
 
-// var both = frequencies.map(function (f, ix) {
-//     return {frequency: f, magnitude: magnitudes[ix]};
-// });
+console.log(out)
 
 // console.log(both);
