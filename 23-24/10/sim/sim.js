@@ -67,7 +67,7 @@ let r_0 = 0.035; // effective radius of the spinners
 
 // magnetism
 let μ_0 = PI * 4e-7; // permeability of vacuum [H/m]
-let B_r_mag = 1.23; // magnitude residual flux density [T]
+let B_r_mag = 1.4; // magnitude residual flux densitty [T]
 let V = 0.005 ** 3; // volume of magnet [m^3] (5mm cubed)
 let m_mag = (1 / μ_0) * B_r_mag * V; // magnitude of magnetic moment [A*m^2]
 
@@ -204,7 +204,6 @@ function step() {
   s1.phi += s1.ω * dt;
   s2.phi += s2.ω * dt;
 
-  
   // omega damping
   // s1.ω += dt * (-α - γ * s1.ω ** 2);
   // s2.ω += dt * (-α - γ * s2.ω ** 2);
@@ -227,7 +226,7 @@ let save_freq = Math.ceil(1e-3 / dt + 1) - 1;
 let out_path = `out.csv`;
 
 const fs = require("fs");
-fs.writeFileSync(out_path, "t, ω_1 \n");
+fs.writeFileSync(out_path, "t, ω_1, ω_2 \n");
 
 // running sim
 let frame = 0;
