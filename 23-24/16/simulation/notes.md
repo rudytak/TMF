@@ -9,12 +9,5 @@ Vak
 Mikroten
     - slabina - hrany (folds) - zalepit izolepou
 
-
-Dokonale pružný ráz (to co simulujeme)
-    - m1/m2 = 1    -> energie 1 => 1
-    - m1/m2 = 2    -> energie 1 => 16/18
-    - m1/m2 = 1    -> energie 1 => 
-    - m1/m2 = 1    -> energie 1 => 
-
 ![Alt text](image.png)
-dokonale pružný znamená $e = 1$
+dokonale pružný je pro $e = 1$
