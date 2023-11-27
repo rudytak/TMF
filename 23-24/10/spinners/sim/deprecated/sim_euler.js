@@ -1,4 +1,4 @@
-const { v3, v } = require("./vec.js");
+const { v3, v } = require("../vec.js");
 
 // Constants
 const PI = Math.PI;
@@ -111,13 +111,13 @@ function dω(m_ex, P_ex, s) {
   }
 
   τ_tot = τ_tot.mult(dt / s.I);
-  
+
   return τ_tot;
 }
 
 // spinner creation
-let s1 = new spinner(v(0, 0, 0), 0, -7.5);
-let s2 = new spinner(v(0.08, 0, 0), 0, 10);
+let s1 = new spinner(v(0, 0, 0), 0, 100);
+let s2 = new spinner(v(800, 0, 0), 0, 10);
 
 // rozměry velký magent
 // 47x22x9.5 mm**3
@@ -138,33 +138,33 @@ function step() {
     let P_ex = s2.P(j);
     s1.ω += dω(m_ex, P_ex, s1).z;
   }
-  
+
   s2.ω = 10;
-  
-  // rotation
-  s1.phi += s1.ω * dt;
-  s2.phi += s2.ω * dt;
 
   // omega damping
   // s1.ω += dt * (-α - γ * s1.ω ** 2);
   // s2.ω += dt * (-α - γ * s2.ω ** 2);
-  
+
   let damp_1 = dt * (-α - γ * s1.ω ** 2) * Math.sign(s1.ω);
-  let damp_2 =  dt * (-α - γ * s2.ω ** 2) * Math.sign(s2.ω)
-  
-  if(Math.abs(s1.ω) > 2 * Math.abs(damp_1)){
-      s1.ω += damp_1;
+  let damp_2 = dt * (-α - γ * s2.ω ** 2) * Math.sign(s2.ω)
+
+  if (Math.abs(s1.ω) > 2 * Math.abs(damp_1)) {
+    s1.ω += damp_1;
   }
-  if(Math.abs(s2.ω) > 2 * Math.abs(damp_2)){
-      s1.ω += damp_2;
-  }  
+  // if (Math.abs(s2.ω) > 2 * Math.abs(damp_2)) {
+  //   s2.ω += damp_2;
+  // }
+
+  // rotation
+  s1.phi += s1.ω * dt;
+  s2.phi += s2.ω * dt;
 }
 // TODO - RK4
 
 let dt = 1e-3; // 1 ms
 let run_time = 25;
 let save_freq = Math.ceil(1e-3 / dt + 1) - 1;
-let out_path = `out_eu.csv`;
+let out_path = `out_eu_old.csv`;
 
 const fs = require("fs");
 fs.writeFileSync(out_path, "t, ω_1, ω_2 \n");
@@ -173,7 +173,7 @@ fs.writeFileSync(out_path, "t, ω_1, ω_2 \n");
 let frame = 0;
 for (var t = 0; t < run_time; t += dt) {
   if (frame % save_freq == 0) {
-    fs.appendFileSync(out_path, `${t}, ${s1.ω}\n`);
+    fs.appendFileSync(out_path, `${t}, ${s1.ω}, ${s2.ω}\n`);
   }
 
   step();
@@ -183,16 +183,16 @@ for (var t = 0; t < run_time; t += dt) {
 
 // FFT
 
-let data = fs.readFileSync(out_path, 'utf8')
-let dataArray = data.split(/\r?\n/).map(r=>r.split(", ").map(x=>parseFloat(x))).slice(1, -2);  //Be careful if you are in a \r\n world...
+// let data = fs.readFileSync(out_path, 'utf8')
+// let dataArray = data.split(/\r?\n/).map(r=>r.split(", ").map(x=>parseFloat(x))).slice(1, -2);  //Be careful if you are in a \r\n world...
 
-var signal = dataArray.map(r=>r[1])
-const FFT = require('fft.js');
-const f = new FFT(4096);
+// var signal = dataArray.map(r=>r[1])
+// const FFT = require('fft.js');
+// const f = new FFT(4096);
 
-const out = f.createComplexArray();
-f.realTransform(out, signal);
+// const out = f.createComplexArray();
+// f.realTransform(out, signal);
 
-console.log(out)
+// console.log(out)
 
-// console.log(both);
+// // console.log(both);

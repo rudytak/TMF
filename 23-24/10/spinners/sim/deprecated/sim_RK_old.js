@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { v3, v } = require("./vec.js");
+const { v3, v } = require("../vec.js");
 
 // ΑαΔδΗηΒβΕεΘθΓγΖζΙιΚκΝνΠπΛλΞξΡρΜμΟοΣςΤτΧχσΥυΨψΦφΩωϜϝ
 
@@ -61,6 +61,25 @@ class spinner {
     }
   }
 
+  copy() {
+    let ns = new spinner(
+      this.S,
+      this.phi,
+      this.ω,
+      this.n,
+      this.r,
+      this.I,
+      this.m_mag,
+      this.mag_orientation,
+      this.α,
+      this.γ,
+      this.constant_ω
+    )
+    ns.ω_0 = this.ω_0;
+
+    return ns
+  }
+
   draw() {
     stroke("yellow");
     strokeWeight(0.02);
@@ -81,6 +100,29 @@ class RK_matrix {
   static get Euler() {
     return new RK_matrix([], [1], [0]);
   }
+  static get Midpoint() {
+    return RK_matrix.Second_Order(1 / 2);
+  }
+  static get Heun2() {
+    return RK_matrix.Second_Order(1);
+  }
+  static get Ralston2() {
+    return RK_matrix.Second_Order(2 / 3);
+  }
+  static get Ralston4() {
+    return new RK_matrix(
+      [[.4], [.29697761, .15875964], [.21810040, -3.05096516, 3.83286476]],
+      [.17476028, -.55148066, 1.20553560, .17118478],
+      [0, .4, .45573725, 1]
+    );
+  }
+  static get RK_3_8() {
+    return new RK_matrix(
+      [[1 / 3], [-1 / 3, 1], [1, -1, 1]],
+      [1 / 8, 3 / 8, 3 / 8, 1 / 8],
+      [0, 1 / 3, 2 / 3, 1]
+    );
+  }
   static get RK4() {
     return new RK_matrix(
       [[1 / 2], [0, 1 / 2], [0, 0, 1]],
@@ -88,6 +130,17 @@ class RK_matrix {
       [0, 1 / 2, 1 / 2, 1]
     );
   }
+
+  static Second_Order(alp) {
+    // https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods#Second-order_methods_with_two_stages
+
+    return new RK_matrix(
+      [[alp]],
+      [1 - 1 / (2 * alp), 1 / (2 * alp)],
+      [0, alp]
+    );
+  }
+
   constructor(a, b, c) {
     this.a = a;
     this.b = b;
@@ -104,8 +157,7 @@ class RK_matrix {
     for (let i = 0; i < a.length; i++) {
       if (a[i].length <= i) {
         throw new Error(
-          `The row number ${
-            i + 1
+          `The row number ${i + 1
           } in the RK matrix "a" components is not sufficiently long.`
         );
       }
@@ -115,12 +167,12 @@ class RK_matrix {
 
 // in this case th input are all of the spinner positions
 // and the outputs are their new angular velocities
-class sim_state {
+class sim_omeg_state {
   constructor(dt, spinners, auto_calc = true) {
     this.dt = dt;
     this.spinners = spinners;
 
-    this.omegs = [];
+    this.d_omegs = [];
 
     if (auto_calc) {
       this.calculate();
@@ -170,13 +222,13 @@ class sim_state {
       τ_tot = τ_tot.add(τ_F);
     }
 
-    τ_tot = τ_tot.mult(this.dt / s.I);
+    τ_tot = τ_tot.mult(1 / s.I);
 
     return τ_tot;
   }
 
   calculate() {
-    let ang_vel_array = this.spinners.map((s) => 0);
+    let ang_acc_array = this.spinners.map((s) => 0);
 
     for (let i = 0; i < this.spinners.length; i++) {
       // select spinner 1
@@ -195,7 +247,7 @@ class sim_state {
             let P_ex = s1.P(k);
 
             // the change in angular velocity done to s2
-            ang_vel_array[j] += this.dω(m_ex, P_ex, s2).z;
+            ang_acc_array[j] += this.dω(m_ex, P_ex, s2).z;
           }
         }
       }
@@ -206,53 +258,87 @@ class sim_state {
 
       // if the spinner should be kept at a constant omega, keep it at that
       if (s.constant_ω) {
-        ang_vel_array[i] = 0;
+        ang_acc_array[i] = 0;
       } else {
         // get the value of the spinners new angular velocity
-        let new_sω = s.ω + ang_vel_array[i];
+        let new_sω = s.ω + ang_acc_array[i];
 
         // omega damping
         // s.ω += dt * (-α - γ * s.ω ** 2);
         // damping acceleration
-        let damp = this.dt * (-s.α - s.γ * new_sω ** 2) * Math.sign(new_sω);
+        let damp = (-s.α - s.γ * new_sω ** 2) * Math.sign(new_sω);
 
         // perform dampening only when  the omega is not practically 0
-        if (Math.abs(new_sω) > 2 * Math.abs(damp)) {
-          ang_vel_array[i] += damp;
+        if (Math.abs(new_sω) > 2 * Math.abs(damp) * this.dt) {
+          ang_acc_array[i] += damp;
         }
       }
     }
 
     // save the output
-    this.omegs = ang_vel_array;
-    console.log("state: ", this.dt, this.omegs)
+    this.d_omegs = ang_acc_array;
   }
 
-  static sum_states(states, weights = []) {
-    let sum = states[0].omegs.map((o) => 0);
+  static sum_omeg_states(states, weights = []) {
+    let sum = states[0].d_omegs.map((o) => 0);
 
-    states.forEach((s, s_id)=>{
-      s.omegs.forEach((omeg, id) => {
-        if (weights.length >= states.length) {
-          sum[id] += omeg * weights[s_id];
-        } else {
-          sum[id] += omeg / states.length;
-        }
+    states.forEach((state, s_id) => {
+      state.d_omegs.forEach((d_omeg, id) => {
+        sum[id] += d_omeg * weights[s_id];
       });
     });
 
-    let out_state = new sim_state(0, [], false);
-    out_state.omegs = sum;
-    console.log("sum: ", sum)
+    let out_state = new sim_omeg_state(0, [], false);
+    out_state.d_omegs = sum;
     return out_state;
   }
 
-  static apply_to_spinners(dt, spinners, state) {
+  static apply_omeg_to_spinners(dt, spinners, state) {
     // rotation
     spinners.forEach((s, id) => {
-      s.ω += state.omegs[id];
-      // euler-like omega => phi calc
+      s.ω += state.d_omegs[id] * dt;
       s.phi += s.ω * dt;
+    });
+
+    return spinners;
+  }
+}
+
+class sim_phi_state {
+  constructor(dt, spinners, auto_calc = true) {
+    this.dt = dt;
+    this.spinners = spinners;
+
+    this.d_phis = [];
+
+    if (auto_calc) {
+      this.calculate();
+    }
+  }
+
+  calculate() {
+    // save the output
+    this.d_phis = this.spinners.map(s => s.ω * this.dt);
+  }
+
+  static sum_phi_states(states, weights) {
+    let sum = states[0].d_phis.map((p) => 0);
+
+    states.forEach((state, s_id) => {
+      state.d_phis.forEach((d_phi, id) => {
+        sum[id] += d_phi * weights[s_id];
+      });
+    });
+
+    let out_state = new sim_phi_state(0, [], false);
+    out_state.d_phis = sum;
+    return out_state;
+  }
+
+  static apply_phi_to_spinners(dt, spinners, state) {
+    spinners.forEach((s, id) => {
+      // euler-like omega => phi calc
+      s.phi += state.d_phis[id] * dt;
     });
 
     return spinners;
@@ -311,17 +397,12 @@ class sim_instance {
     this.spinners = [];
   }
 
-  copy_spinners() {
-    let arr = [];
+  reset_spinners() {
+    this.spinners = [];
     // re-instantiate the spinner instances
     for (let params of this.spinner_params) {
-      arr.push(new spinner(...params));
+      this.spinners.push(new spinner(...params));
     }
-    return arr;
-  }
-
-  reset_spinners() {
-    this.spinners = this.copy_spinners();
   }
 
   add_spinner(
@@ -359,41 +440,40 @@ class sim_instance {
     this.reset_spinners();
   }
 
-  step() {
-    let dt = this.sim_run_params.dt;
-
+  calc_omegas(dt) {
     // RK calculation
-    let k = [new sim_state(0, this.spinners)];
+    let k = [new sim_omeg_state(0, this.spinners)];
     for (var i = 1; i < this.RKmatrix.b.length; i++) {
       let c = this.RKmatrix.c[i];
       let as = this.RKmatrix.a[i - 1];
 
-      let spins = sim_state.apply_to_spinners(
+      let spins = sim_omeg_state.apply_omeg_to_spinners(
         dt,
-        this.copy_spinners(),
-        sim_state.sum_states(k, as)
+        this.spinners.map(s => s.copy()), // make a copy of the current spinner objects
+        sim_omeg_state.sum_omeg_states(k, as)
       );
-      let k_i = new sim_state(c * dt, spins);
-
-      // console.log(c, as, k_i.omegs, k[0].omegs)
-
+      let k_i = new sim_omeg_state(c * dt, spins);
       k.push(k_i);
     }
 
-    // save the new calculated step
-    this.spinners = sim_state.apply_to_spinners(
+    return sim_omeg_state.apply_omeg_to_spinners(
       dt,
-      this.spinners,
-      sim_state.sum_states(k, this.RKmatrix.b)
+      this.spinners.map(s => s.copy()),
+      sim_omeg_state.sum_omeg_states(k, this.RKmatrix.b)
     );
-    console.log(this.spinners.map(s=>s.ω))
+  }
+
+  step() {
+    let dt = this.sim_run_params.dt;
+    // save the new calculated step
+    this.spinners = this.calc_omegas(dt);
   }
 
   run() {
     // init run
     this.reset_spinners();
     let frame = 0;
-    fs.writeFileSync(this.sim_run_params.out_path, "t, ω_1, ω_2 \n");
+    fs.writeFileSync(this.sim_run_params.out_path, "t, ω_1, phi_1 \n");
 
     for (
       // time variable
@@ -407,7 +487,7 @@ class sim_instance {
       if (frame % this.sim_run_params.save_freq == 0) {
         fs.appendFileSync(
           this.sim_run_params.out_path,
-          `${t}, ${this.spinners[0].phi}, ${this.spinners[1].phi}\n`
+          `${t}, ${this.spinners[0].ω}, ${this.spinners[0].phi}\n`
         );
       }
       frame++;
@@ -415,23 +495,7 @@ class sim_instance {
   }
 }
 
-// spinner creation
-let si = new sim_instance({run_time: 10});
-si.add_spinner(v(0, 0, 0), 0, -7.5);
-si.add_spinner(v(0.08, 0, 0), 0, 10, true);
-
-si.run();
-
-// // FFT
-// let data = fs.readFileSync(out_path, "utf8");
-// let dataArray = data
-//   .split(/\r?\n/)
-//   .map((r) => r.split(", ").map((x) => parseFloat(x)))
-//   .slice(1, -2); //Be careful if you are in a \r\n world...
-
-// var signal = dataArray.map((r) => r[1]);
-// const FFT = require("fft.js");
-// const f = new FFT(4096);
-
-// const out = f.createComplexArray();
-// f.realTransform(out, signal);
+module.exports = {
+  sim_instance,
+  RK_matrix
+};
