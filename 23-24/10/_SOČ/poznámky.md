@@ -17,5 +17,6 @@
 3. Kap 2: magnetické převodovky
 
 # TODO
+1. ~~RK implementace~~
 2. Stabilní webové rozhraní
-3. určení remanance magnetů
+3. určení remanance magnetů 
