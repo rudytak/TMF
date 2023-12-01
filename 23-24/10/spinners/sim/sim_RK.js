@@ -371,7 +371,7 @@ class sim_instance {
     this.defaults = {
       // these defaults don't really have a reason to be changed
       r: 0.035, // effective radius of the spinners
-      B_r: 1.4, // magnitude residual flux densitty [T]
+      B_r: 1.1, // magnitude residual flux densitty [T]
       V: 0.005 ** 3, // volume of magnet [m^3] (5mm cubed)
       I: 4.525e-5, // measured
       get m_mag() {
