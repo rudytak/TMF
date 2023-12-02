@@ -21,6 +21,10 @@
         2. $J$
         3. $B_r$
     4. Vývoj simulace (RK4)
+        1. Datová struktury
+        2. RK
+        3. $\omega$-stavy a $\varphi$-stavy
+        4. komplexita
     5. Tření bez magnetů
         1. Úvaha hlavních třecích sil
         2. Analytické řešení
