@@ -29,15 +29,15 @@ $$
 
 $$
 \omega'(t) = - \alpha - \gamma \omega(t)^2 \\
-\omega(t) = -\sqrt{\frac{\alpha}{\gamma}} \tan{(\sqrt{\alpha\gamma}(t+c_1))}
+\omega(t) = -\sqrt{\frac{\alpha}{\gamma}} \tan{(\sqrt{\alpha\gamma}(t-c_1))}
 $$
 
 #### Maximum runtime
 
 $$
-c_1(\omega_0) = -\frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{\gamma}{\alpha}} \omega_0 \bigg)} \\
+c_1(\omega_0) = \frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{\gamma}{\alpha}} \omega_0 \bigg)} \\
 
-c_1(E) = -\frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{2 \gamma E}{\alpha I}} \bigg)} \\
+c_1(E) = \frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{2 \gamma E}{\alpha I}} \bigg)} \\
 $$
 
 #### Maximum runtime of a system
@@ -47,8 +47,8 @@ $$c_1(E_1+E_2+...+E_n)$$
 
 Proof:
 $$
-H_{c_1} \in \mathbb{R}^- \\
-c_1 \text{ is a decresing function and represents the runtime $t_{max} = -c_1$} \\
+H_{c_1} \in \mathbb{R}^+ \\
+c_1 \text{ is a decresing function and represents the runtime $t_{max} = c_1$} \\
 E_1, E_2 \in \mathbb{R}^+ \\
 \text{WLOG: } E_1>E_2 \\
 $$
@@ -62,12 +62,12 @@ $$
 -->
 
 $$
-c_1(E_1+E_2) \stackrel{?}{<} \min(c_1(E_1), c_1(E_2)) \\
+c_1(E_1+E_2) \stackrel{?}{>} \min(c_1(E_1), c_1(E_2)) \\
 $$
 
 $$
-c_1(E_1+E_2) < c_1(E_1) \\
--\frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{2 \gamma (E_1+E_2)}{\alpha I}} \bigg)} < -\frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{2 \gamma E_1}{\alpha I}} \bigg)} \\
+c_1(E_1+E_2) > c_1(E_1) \\
+\frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{2 \gamma (E_1+E_2)}{\alpha I}} \bigg)} > \frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{2 \gamma E_1}{\alpha I}} \bigg)} \\
 \arctan{ \bigg( \sqrt{\frac{2 \gamma (E_1+E_2)}{\alpha I}} \bigg)} > \arctan{ \bigg( \sqrt{\frac{2 \gamma E_1}{\alpha I}} \bigg)} \\
 \sqrt{\frac{2 \gamma (E_1+E_2)}{\alpha I}} > \sqrt{\frac{2 \gamma E_1}{\alpha I}}\\
 \sqrt{\frac{2 \gamma }{\alpha I}} \sqrt{E_1+E_2} > \sqrt{\frac{2 \gamma}{\alpha I}} \sqrt{E_1}\\

@@ -6,10 +6,14 @@ const {
 
 // spinner creation
 let si = new sim_instance(
-    { dt: 1e-2, run_time: 30, out_path: "out_latest.csv" }, 
-    RK_matrix.RK4
+    { dt: 1e-2, run_time: 175, out_path: "out.csv" },
+    RK_matrix.RK4,
+    {
+        α: 0.218,
+        γ: 0.000259
+    }
 );
-si.add_spinner(v(0, 0, 0), 0, 7.5);
+si.add_spinner(v(0, 0, 0), 0, 115.41914281371224);
 // si.add_spinner(v(0.08, 0, 0), 0, -10, true);
 
 // large permanent magnet

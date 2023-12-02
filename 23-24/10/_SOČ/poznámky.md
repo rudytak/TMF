@@ -70,7 +70,9 @@
 1. ~~RK implementace~~
 2. Stabilní webové rozhraní
 3. ~~určení remanance magnetů~~
-4. rerun simulací (vše s _todo...)
+4. rerun simulací (vše s _todo...) a výtažek plotů
+    1. ~~spinner decay rate~~
+    2. 
 5. predefinování $c_1$, aby bylo kladné
 6. **PŘEVODOVKY!!!**
 6. **Doměření přenosu momentu síly!!!**
