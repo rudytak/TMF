@@ -73,7 +73,12 @@
 4. rerun simulací (vše s _todo...) a výtažek plotů
     1. ~~spinner decay rate~~
     2. ~~decay rate in magnetic field~~
-    3. 
-5. predefinování $c_1$, aby bylo kladné
+    3. slowmotion spinner in magnetic field
+    4. magnetically coupled spinners vernier ??
+    5. magentically coupled spinners laser
+    6. torque transfer
+5. ~~predefinování $c_1$, aby bylo kladné ~~
+6. Add RK optimisation for spinners that should be ignored
+7. Add sim selectable output parameters => retrofit everything ofc
 6. **PŘEVODOVKY!!!**
 6. **Doměření přenosu momentu síly!!!**

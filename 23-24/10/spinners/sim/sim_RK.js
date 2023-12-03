@@ -15,8 +15,9 @@ class spinner {
     _m_mag,
     magnet_orientation,
     α,
+    β,
     γ,
-    constant_ω = false
+    constant_ω
   ) {
     this.S = center;
     this.phi = phi0; // angle
@@ -29,6 +30,7 @@ class spinner {
     this.mag_orientation = magnet_orientation;
 
     this.α = α;
+    this.β = β;
     this.γ = γ;
     this.constant_ω = constant_ω;
   }
@@ -72,6 +74,7 @@ class spinner {
       this.m_mag,
       this.mag_orientation,
       this.α,
+      this.β,
       this.γ,
       this.constant_ω
     )
@@ -183,7 +186,7 @@ class sim_omeg_state {
     let p1 = m2.mult(v3.dot(m1, r));
     let p2 = m1.mult(v3.dot(m2, r));
     let p3 = r.mult(v3.dot(m1, m2));
-    let p4 = r.mult((-5 * v3.dot(m1, r) * v3.dot(m2, r)) / r.mag() ** 2);
+    let p4 = r.mult((-5 * v3.dot(m1, r) * v3.dot(m2, r)) / (r.mag() ** 2));
 
     return p1
       .add(p2)
@@ -264,9 +267,9 @@ class sim_omeg_state {
         let new_sω = s.ω + ang_acc_array[i];
 
         // omega damping
-        // s.ω += dt * (-α - γ * s.ω ** 2);
+        // s.ω += dt * (-α - β * s.ω - γ * s.ω ** 2);
         // damping acceleration
-        let damp = (-s.α - s.γ * new_sω ** 2) * Math.sign(new_sω);
+        let damp = (-s.α - s.β * new_sω - s.γ * new_sω ** 2) * Math.sign(new_sω);
 
         // perform dampening only when  the omega is not practically 0
         if (Math.abs(new_sω) > 2 * Math.abs(damp) * this.dt) {
@@ -359,6 +362,7 @@ class sim_instance {
     this.sim_run_params = {
       dt: 1e-3, // 1 ms
       run_time: 1,
+      start_time: 0,
       get save_freq() {
         return Math.ceil(1e-3 / this.dt + 1) - 1;
       },
@@ -383,6 +387,7 @@ class sim_instance {
 
       // these defaults can be overriden
       α: 0.868,
+      β: 0,
       γ: 0.00068,
 
       // apply the overrides
@@ -412,6 +417,7 @@ class sim_instance {
 
     constant_ω = false,
     α = this.defaults.α,
+    β = this.defaults.β,
     γ = this.defaults.γ,
     magnet_orientation = this.defaults.magnet_orientation,
 
@@ -430,6 +436,7 @@ class sim_instance {
       m_mag,
       magnet_orientation,
       α,
+      β,
       γ,
       constant_ω,
     ]);
@@ -498,7 +505,7 @@ class sim_instance {
 
     for (
       // time variable
-      var t = 0;
+      var t = this.sim_run_params.start_time;
       t < this.sim_run_params.run_time;
       t += this.sim_run_params.dt
     ) {
@@ -513,6 +520,8 @@ class sim_instance {
       }
       frame++;
     }
+
+    console.log(`${this.sim_run_params.out_path} simulation finished`)
   }
 }
 
