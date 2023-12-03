@@ -77,8 +77,9 @@
     4. magnetically coupled spinners vernier ??
     5. magentically coupled spinners laser
     6. torque transfer
-5. ~~predefinování $c_1$, aby bylo kladné ~~
-6. Add RK optimisation for spinners that should be ignored
-7. Add sim selectable output parameters => retrofit everything ofc
-6. **PŘEVODOVKY!!!**
-6. **Doměření přenosu momentu síly!!!**
+5. ~~predefinování $c_1$, aby bylo kladné~~
+6. ~~$\alpha\beta\gamma$ damping~~
+7. ~~Add RK optimisation for spinners that should be ignored~~
+8. ~~Add sim selectable output parameters => retrofit everything ofc~~
+9. **PŘEVODOVKY!!!**
+10. **Doměření přenosu momentu síly!!!**

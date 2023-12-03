@@ -7,7 +7,12 @@ const {
 //simulation for spinner C0000
 {
     let si = new sim_instance(
-        { dt: 1e-3, run_time: 25, out_path: "C0000_SIM.csv", start_time: 1 },
+        { 
+            dt: 1e-3, 
+            run_time: 25, 
+            out_path: "C0000_SIM_test.csv", 
+            start_time: 1,
+        },
         RK_matrix.RK4,
         {
             // α: 0.868,
