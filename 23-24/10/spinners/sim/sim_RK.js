@@ -365,7 +365,7 @@ class sim_instance {
   ) {
     this.sim_run_params = {
       dt: 1e-3, // 1 ms
-      run_time: 1,
+      end_time: 1,
       start_time: 0,
       get save_freq() {
         return Math.ceil(1e-3 / this.dt + 1) - 1;
@@ -511,7 +511,7 @@ class sim_instance {
     for (
       // time variable
       var t = this.sim_run_params.start_time;
-      t < this.sim_run_params.run_time;
+      t < this.sim_run_params.end_time;
       t += this.sim_run_params.dt
     ) {
       this.step();

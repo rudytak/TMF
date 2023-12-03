@@ -6,7 +6,7 @@ const {
 
 //simulation for spinner 1
 let si = new sim_instance(
-    { dt: 2.5e-5, run_time: 35, out_path: "sim_spinner_magnetic1.csv" },
+    { dt: 2.5e-5, end_time: 35, out_path: "sim_spinner_magnetic1.csv" },
     RK_matrix.RK4,
     {
         α: 0.868,
@@ -31,7 +31,7 @@ si.run();
 
 // simulation for spinner 1 with beta component
 let si_lin = new sim_instance(
-    { dt: 2.5e-5, run_time: 35, out_path: "sim_spinner_magnetic1_with_beta.csv" },
+    { dt: 2.5e-5, end_time: 35, out_path: "sim_spinner_magnetic1_with_beta.csv" },
     RK_matrix.RK4,
     {
         α: 0.8682001074296083,
