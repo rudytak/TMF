@@ -72,7 +72,8 @@
 3. ~~určení remanance magnetů~~
 4. rerun simulací (vše s _todo...) a výtažek plotů
     1. ~~spinner decay rate~~
-    2. 
+    2. ~~decay rate in magnetic field~~
+    3. 
 5. predefinování $c_1$, aby bylo kladné
 6. **PŘEVODOVKY!!!**
 6. **Doměření přenosu momentu síly!!!**
