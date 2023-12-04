@@ -37,13 +37,13 @@
         1. 1 spinner, pouze tření
             1. vysvětlení aparatury s Vernier magnetometrem
             2. vysvětlení algoritmu pro přibližné $\omega$ z peaků
-            3. **! porovnání se simulací !**
+            3. porovnání se simulací
         2. 1 spinner, pouze tření v quasi-homogenním magnetickém poli
-            1. **! porovnání se simulací !**
+            1. porovnání se simulací
         3. slow motion video
-            <!-- 1. 1 spinner, oscilace v quasi-homogenním magnetickém poli (slow-mo C0000) -->
-            2. 1 spinner, rotace v quasi-homogenním magnetickém poli (slow-mo C0002, C0004, C0007)
-            3. **! porovnání se simulací !**
+            1. 1 spinner, oscilace v quasi-homogenním magnetickém poli (slow-mo C0000)
+            2. 1 spinner, rotace v quasi-homogenním magnetickém poli; pomalé a rychlé otáčky (slow-mo C0002, C0004, C0007)
+            3. porovnání se simulací
         4. 2 spinners, magnetic coupling of different orders
             1. určení "možných poměrů" vzheldem k rozměrům spinneru
             2. vysvětlen aparatury s hnaným osc. a Vernier magnetometrem
@@ -73,7 +73,7 @@
 4. rerun simulací (vše s _todo...) a výtažek plotů
     1. ~~spinner decay rate~~
     2. ~~decay rate in magnetic field~~
-    3. slowmotion spinner in magnetic field
+    3. ~~slowmotion spinner in magnetic field~~
     4. magnetically coupled spinners vernier ??
     5. magentically coupled spinners laser
     6. torque transfer
