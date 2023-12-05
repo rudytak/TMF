@@ -74,7 +74,7 @@
     1. ~~spinner decay rate~~
     2. ~~decay rate in magnetic field~~
     3. ~~slowmotion spinner in magnetic field~~
-    4. magnetically coupled spinners vernier ??
+    4. ~~magnetically coupled spinners vernier ??~~
     5. magentically coupled spinners laser
     6. torque transfer
 5. ~~predefinování $c_1$, aby bylo kladné~~
