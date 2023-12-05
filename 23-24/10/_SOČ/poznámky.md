@@ -76,7 +76,7 @@
     3. ~~slowmotion spinner in magnetic field~~
     4. ~~magnetically coupled spinners vernier ??~~
     5. magentically coupled spinners laser
-    6. torque transfer
+    6. ~~torque transfer~~
 5. ~~predefinování $c_1$, aby bylo kladné~~
 6. ~~$\alpha\beta\gamma$ damping~~
 7. ~~Add RK optimisation for spinners that should be ignored~~
