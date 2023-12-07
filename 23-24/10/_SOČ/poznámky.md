@@ -25,6 +25,7 @@
         2. RK
         3. $\omega$-stavy a $\varphi$-stavy
         4. komplexita
+        5. _Webové rozhraní ??_
     5. Tření bez magnetů
         1. Úvaha hlavních třecích sil
         2. Analytické řešení
@@ -65,6 +66,10 @@
     8. _Heatmap stavů ze simulace ???_
 
 3. Kap 2: magnetické převodovky
+    1. simulace p5es FEMM
+    2. 3D model
+    3. měření max torque
+    4. Možné využití v mikrostrukturách
 
 # TODO
 1. ~~RK implementace~~
@@ -225,3 +230,7 @@ $K$ ... RK matrix degree \
 $U$ ... the amount of RK integrations we do in each step ($U=2$ in our case, because: $\tau \implies \omega \implies \varphi$)
 
 $\mathcal{O} \bigg( \bigg( \dfrac{S}{\tau} \bigg) \cdot (N M)^2 \cdot K^U \bigg)$
+
+# Transmissions
+
+## 3D model
