@@ -70,7 +70,7 @@
 1. ~~RK implementace~~
 2. _Stabilní webové rozhraní ???_
 3. ~~určení remanance magnetů~~
-4. rerun simulací (vše s _todo...) a výtažek plotů
+4. ~~rerun simulací (vše s _todo...) a výtažek plotů~~
     1. ~~spinner decay rate~~
     2. ~~decay rate in magnetic field~~
     3. ~~slowmotion spinner in magnetic field~~
@@ -82,6 +82,7 @@
 7. ~~Add RK optimisation for spinners that should be ignored~~
 8. ~~Add sim selectable output parameters => retrofit everything ofc~~
 9. **PŘEVODOVKY!!!**
+9. *Heatmap stavů ???*
 10. ~~Doměření přenosu momentu síly!!!~~
 
 <!-- ---------------------------------------------------------------------------------------------------------------------- -->
