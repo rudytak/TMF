@@ -221,8 +221,8 @@ $$
 ### Change of angular velocity
 
 $$
-\frac{dL}{dt} = I\frac{d\omega}{dt} = \tau_F + \tau_{mag} \\
-\tau_F = \sum_{j=0}^{n} F_m(P_{external}- P(j), m(j), m_{external}) \times (P(i) - S)\\
+\frac{dL}{dt} = I\frac{d\omega}{dt} = \sum_{external} (\tau_F + \tau_{mag}) \\
+\tau_F = \sum_{j=0}^{n} F_m(P_{external}- P(j), m(j), m_{external}) \times (P(j) - S)\\
 \tau_{mag} = \sum_{j=0}^{n} m(j) \times B(P(j)-P_{external},m_{external})\\
 $$
 
