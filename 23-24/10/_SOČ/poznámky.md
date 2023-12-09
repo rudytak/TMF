@@ -3,7 +3,7 @@
 1. Úvod
     1. Nomenklatura
     2. Motivace
-    3. Určení základních myšlenek a relevantní parametrů
+    3. Určení základních myšlenek a relevantních parametrů
 
 2. Kap 1: Spinnery
     1. Úvodní kvalitativní sledování
@@ -18,7 +18,7 @@
             1. Působení momentů síly na spinner jakožto tuhé těleso
     3. Měření základních parametrů spinnerů pro simulaci a vzorce
         1. Rozměry
-        2. $J$
+        2. $I$
         3. $B_r$
     4. Vývoj simulace (RK4)
         1. Datové struktury
@@ -66,7 +66,7 @@
     8. _Heatmap stavů ze simulace ???_
 
 3. Kap 2: magnetické převodovky
-    1. simulace p5es FEMM
+    1. simulace přes FEMM
     2. 3D model
     3. měření max torque
     4. Možné využití v mikrostrukturách
@@ -88,6 +88,7 @@
 8. ~~Add sim selectable output parameters => retrofit everything ofc~~
 9. **PŘEVODOVKY!!!**
 9. *Heatmap stavů ???*
+9. *Magnet grade comparison ???*
 10. ~~Doměření přenosu momentu síly!!!~~
 
 <!-- ---------------------------------------------------------------------------------------------------------------------- -->
@@ -129,6 +130,8 @@ https://www.wolframalpha.com/input?i2d=true&i=y%27%5C%2840%29t%5C%2841%29+%3D+-a
 -->
 $$
 \omega'(t) = - \alpha - \gamma \omega(t)^2 \\
+$$
+$$
 \omega(t) = -\sqrt{\frac{\alpha}{\gamma}} \tan{(\sqrt{\alpha\gamma}(t-c_1))}
 $$
 
@@ -190,7 +193,9 @@ $$
 https://www.wolframalpha.com/input?i2d=true&i=y%27%5C%2840%29t%5C%2841%29+%3D+-a-b*y%5C%2840%29t%5C%2841%29-c*y%5C%2840%29t%5C%2841%29**2 
 -->
 $$
-\omega'(t) = - \alpha -\beta \omega(t) - \gamma \omega(t)^2 \\
+\omega'(t) = - \alpha -\beta \omega(t) - \gamma \omega(t)^2
+$$
+$$
 \omega(t) = -\frac{\sqrt{4\alpha\gamma - \beta^2} \tan{(\frac{1}{2}\sqrt{4\alpha\gamma - \beta^2}(t-c_1)})-\beta}{2\gamma}
 $$
 
@@ -206,8 +211,11 @@ F_m (r,m_1,m_2) = \frac{3\mu_0}{4\pi ||r||^5}
     (m_1\cdot m_2) r -
     \frac{5(m_1\cdot r)(m_2\cdot r)}{||r||^2} r
 \bigg] \\
+$$
 
-B (r, m) = \frac{\mu_0}{4\pi}\frac{3 \hat{r}(\hat{r}\cdot m) - m}{|r|^3}
+$$
+B (r, m) = \frac{\mu_0}{4\pi}\frac{3 \hat{r}(\hat{r}\cdot m) - m}{|r|^3} \\
+\tau = m_2 \times B(r, m_1)
 $$
 
 ### Change of angular velocity
@@ -216,6 +224,15 @@ $$
 \frac{dL}{dt} = I\frac{d\omega}{dt} = \tau_F + \tau_{mag} \\
 \tau_F = \sum_{j=0}^{n} F_m(P_{external}- P(j), m(j), m_{external}) \times (P(i) - S)\\
 \tau_{mag} = \sum_{j=0}^{n} m(j) \times B(P(j)-P_{external},m_{external})\\
+$$
+
+### Magnetic dipole model
+
+$V [m^3]$ ... volume of the magent \
+$B_r [T]$ ... remanence / remanent magnetization
+
+$$
+m = \frac{1}{\mu_0}B_rV
 $$
 
 ## Simulation
