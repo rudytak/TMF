@@ -90,7 +90,7 @@
 9. *Heatmap stavů ???*
 9. *Magnet grade comparison ???*
 9. *Coupling limits ???*
-9. *Škálování ?*
+9. *Škálování - mikrostruktury ?*
 10. ~~Doměření přenosu momentu síly!!!~~
 
 <!-- ---------------------------------------------------------------------------------------------------------------------- -->
