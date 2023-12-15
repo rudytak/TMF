@@ -86,11 +86,13 @@
 6. ~~$\alpha\beta\gamma$ damping~~
 7. ~~Add RK optimisation for spinners that should be ignored~~
 8. ~~Add sim selectable output parameters => retrofit everything ofc~~
-9. **PŘEVODOVKY!!!**
+9. ~~**PŘEVODOVKY!!!**~~
 9. *Heatmap stavů ???*
 9. *Magnet grade comparison ???*
 9. *Coupling limits ???*
 9. *Škálování - mikrostruktury ?*
+9. *LEPŠÍ PREVODOVKY?*
+9. fix torque transfer efficiency!
 10. ~~Doměření přenosu momentu síly!!!~~
 
 <!-- ---------------------------------------------------------------------------------------------------------------------- -->
