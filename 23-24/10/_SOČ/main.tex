@@ -583,10 +583,46 @@ Dalším dosazením do předchozí rovnice \ref{eq:mom_inert} získáváme výsl
 
 \subsection{Popis skriptu}
 
+V níže připnutém ústřižku kódu \ref{code:1} nejdříve načteme použité knihovny: 
+\texttt{numpy} \cite{numpy} pro provedení konvoluce, 
+\texttt{matplotlib} pro vytvoření grafu \ref{fig:spinner_pendulum_recording} \cite{matplotlib} a nakonec
+\texttt{scipy}, kde využijeme funkce \texttt{find\_peaks}, jak již bylo zmíněno.
+
+Prvním krokem je načtení dat ze souboru \texttt{kyvadlo.csv} a jejich převedení z textového fomrátu do 2D pole pojmenovaného \texttt{data}.
+Dále izolujeme data jednotlivých os do separátních proměnných \texttt{xdata}, \texttt{ydata}.
+
+\texttt{ydata} vyhladíme, abychom se zbavili šumu a to pomocí konvoluce skrze funkci \texttt{numpy.convolve}.
+Délku 1D konvoluční matice jsme zvolili $m = 15$ a konvoluční matice délky $m$ v našem případě vypadá obecně takto:
+
+\begin{equation}
+    \label{eq:conv_matrix_avg}
+    M_{conv} = 
+    \underbrace{
+        \begin{pmatrix}
+            \frac{1}{m} & \frac{1}{m} & ... & \frac{1}{m}
+        \end{pmatrix}
+    }_{m\text{ krát}}
+\end{equation}
+
+Tato konvoluční matice přesněji provádí aritmetický průměr $m$ za sebou jdoucích hodnot.
+
+Nyní provedeme hledání peaků na vyhlazenách datech pomocí funkce \texttt{find\_peaks}, která akceptuje další dobrovolné argumenty:
+\begin{enumerate}[topsep=0pt, partopsep=0pt]
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}%
+    \item height: určuje minimální absolutní velikost peaku
+    \item threshold: minimální rozdíl dvou sousedních hodnot, aby bod mohl být peakem
+    \item distance: minimální indeová vzdálensot dvou peaků
+\end{enumerate}
+
+Poté určíme časový interval, kde se peaky nacházejí (a přidáme na každou stranu 0.5 sekundy pro přehlednost grafu),
+a vygrafujeme půdovní naměřená data (modře) společně s pozicemi peaků (červeně). Dále ozačíme osy.
+
+Nakonec dopočítáme frekvenci kmitů kyvadla podle vzorce \ref{eq:freq_from_peaks} a vypíšeme ji.
+
 \lstinputlisting[language=Python]{./prilohy/snippets/c1.py}
-\begin{lstlisting}[language=Python, caption=Kód k analyzování spinenrového kyvadla]
+\begin{lstlisting}[language=Python, caption=Kód k analyzování spinnerového kyvadla, label=code:1]
 \end{lstlisting}
-\label{code:1}
 
 \section{Remanence $\vec{B}_r$}
 \label{sec:remanence_measurement}
@@ -605,10 +641,11 @@ K získání výsledku jednoduše odečteme rozdíl naměřených hodnot, což b
 Je zřejmé, že tímto odstraníme z meření jiné, neměnné, zdroje magnetických polí.
 
 Kromě provádění měření pro různé počty a velikosti magnetů, budeme také meřit pole v různých vzdálenostech od magnetu, abychom dále potvrdili, zda je měření a náš model konzistetní.
+Celkem provedeme tedy měření 2 magnetů, 3 magnetů a velkého magnetu pro vzdálenosti $5cm$, $10cm$, $20cm$ a $30cm$.
 
 \subsection{Analýza měření}
 Výstupem aplikace \texttt{Phyphox} jsou sobory typu \texttt{.csv}, neboli \textit{"Comma separated values"} \cite{csv}.
-Toto je poměrně čitelný a přívětivý formát ukládání dat, která v \texttt{Pythonovém} skriptu načteme pomocí funkce \texttt{open()}.
+Toto je poměrně čitelný a přívětivý formát ukládání dat, která v \texttt{Pythonovém} skriptu načteme pomocí funkce \texttt{open()}, stejně jako v kódu \ref{code:1}.
 
 
 %% literatura

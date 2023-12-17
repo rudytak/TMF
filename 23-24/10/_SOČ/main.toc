@@ -13,6 +13,6 @@
 \contentsline {subsection}{\numberline {3.2.1}Aparatura}{10}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Analýza měření a výsledky}{10}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Popis skriptu}{11}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Remanence $\vec {B}_r$}{12}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Určení remanence přes magnetické pole}{12}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.3}Remanence $\vec {B}_r$}{13}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Určení remanence přes magnetické pole}{13}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Analýza měření}{13}{subsection.3.3.2}%
