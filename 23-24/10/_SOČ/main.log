@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.16)  17 DEC 2023 02:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.16)  17 DEC 2023 23:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -254,64 +254,90 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@erf=\skip59
 \f@nch@O@olf=\skip60
 \f@nch@O@orf=\skip61
+) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count285
+\lst@gtempboxa=\box53
+\lst@token=\toks23
+\lst@length=\count286
+\lst@currlwidth=\dimen171
+\lst@column=\count287
+\lst@pos=\count288
+\lst@lostspace=\dimen172
+\lst@width=\dimen173
+\lst@newlines=\count289
+\lst@lineno=\count290
+\lst@maxwidth=\dimen174
+ (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count291
+\lst@skipnumbers=\count292
+\lst@framebox=\box54
+) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/chngcntr\chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
 ) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen171
-\ar@mcellbox=\box53
-\extrarowheight=\dimen172
-\NC@list=\toks23
+\col@sep=\dimen175
+\ar@mcellbox=\box55
+\extrarowheight=\dimen176
+\NC@list=\toks24
 \extratabsurround=\skip62
 \backup@length=\skip63
-\ar@cellbox=\box54
+\ar@cellbox=\box56
 )
-\TX@col@width=\dimen173
-\TX@old@table=\dimen174
-\TX@old@col=\dimen175
-\TX@target=\dimen176
-\TX@delta=\dimen177
-\TX@cols=\count285
-\TX@ftn=\toks24
+\TX@col@width=\dimen177
+\TX@old@table=\dimen178
+\TX@old@col=\dimen179
+\TX@target=\dimen180
+\TX@delta=\dimen181
+\TX@cols=\count293
+\TX@ftn=\toks25
 ) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen178
-\lightrulewidth=\dimen179
-\cmidrulewidth=\dimen180
-\belowrulesep=\dimen181
-\belowbottomsep=\dimen182
-\aboverulesep=\dimen183
-\abovetopsep=\dimen184
-\cmidrulesep=\dimen185
-\cmidrulekern=\dimen186
-\defaultaddspace=\dimen187
-\@cmidla=\count286
-\@cmidlb=\count287
-\@aboverulesep=\dimen188
-\@belowrulesep=\dimen189
-\@thisruleclass=\count288
-\@lastruleclass=\count289
-\@thisrulewidth=\dimen190
+\heavyrulewidth=\dimen182
+\lightrulewidth=\dimen183
+\cmidrulewidth=\dimen184
+\belowrulesep=\dimen185
+\belowbottomsep=\dimen186
+\aboverulesep=\dimen187
+\abovetopsep=\dimen188
+\cmidrulesep=\dimen189
+\cmidrulekern=\dimen190
+\defaultaddspace=\dimen191
+\@cmidla=\count294
+\@cmidlb=\count295
+\@aboverulesep=\dimen192
+\@belowrulesep=\dimen193
+\@thisruleclass=\count296
+\@lastruleclass=\count297
+\@thisrulewidth=\dimen194
 ) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
 Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 ) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count290
-\calc@Bcount=\count291
-\calc@Adimen=\dimen191
-\calc@Bdimen=\dimen192
+\calc@Acount=\count298
+\calc@Bcount=\count299
+\calc@Adimen=\dimen195
+\calc@Bdimen=\dimen196
 \calc@Askip=\skip64
 \calc@Bskip=\skip65
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count292
+\calc@Ccount=\count300
 \calc@Cskip=\skip66
 ) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen193
-\ESO@tempdimb=\dimen194
+\ESO@tempdima=\dimen197
+\ESO@tempdimb=\dimen198
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
@@ -329,20 +355,20 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 ))
-\AM@pagewidth=\dimen195
-\AM@pageheight=\dimen196
-\AM@fboxrule=\dimen197
+\AM@pagewidth=\dimen199
+\AM@pageheight=\dimen256
+\AM@fboxrule=\dimen257
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
 File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count293
-\AM@pagebox=\box55
-\AM@global@opts=\toks25
-\AM@pagecnt=\count294
-\AM@toc@title=\toks26
-\AM@lof@heading=\toks27
-\c@AM@survey=\count295
-\AM@templatesizebox=\box56
+\pdfpages@includegraphics@status=\count301
+\AM@pagebox=\box57
+\AM@global@opts=\toks26
+\AM@pagecnt=\count302
+\AM@toc@title=\toks27
+\AM@lof@heading=\toks28
+\c@AM@survey=\count303
+\AM@templatesizebox=\box58
 ) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/was\upgreek.sty
 Package: upgreek 2003/02/12 v2.0 (WaS)
 Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
@@ -358,59 +384,59 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2021/08/26 v2.01 AMS text
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks28
-\ex@=\dimen198
+\@emptytoks=\toks29
+\ex@=\dimen258
 )) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen199
+\pmbraise@=\dimen259
 ) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count296
+\inf@bad=\count304
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count297
-\leftroot@=\count298
+\uproot@=\count305
+\leftroot@=\count306
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count299
-\DOTSCASE@=\count300
+\classnum@=\count307
+\DOTSCASE@=\count308
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box57
-\strutbox@=\box58
+\Mathstrutbox@=\box59
+\strutbox@=\box60
 LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen256
+\big@size=\dimen260
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count301
+\macc@depth=\count309
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count302
+\c@MaxMatrixCols=\count310
 \dotsspace@=\muskip17
-\c@parentequation=\count303
-\dspbrk@lvl=\count304
-\tag@help=\toks29
-\row@=\count305
-\column@=\count306
-\maxfields@=\count307
-\andhelp@=\toks30
-\eqnshift@=\dimen257
-\alignsep@=\dimen258
-\tagshift@=\dimen259
-\tagwidth@=\dimen260
-\totwidth@=\dimen261
-\lineht@=\dimen262
-\@envbody=\toks31
+\c@parentequation=\count311
+\dspbrk@lvl=\count312
+\tag@help=\toks30
+\row@=\count313
+\column@=\count314
+\maxfields@=\count315
+\andhelp@=\toks31
+\eqnshift@=\dimen261
+\alignsep@=\dimen262
+\tagshift@=\dimen263
+\tagwidth@=\dimen264
+\totwidth@=\dimen265
+\lineht@=\dimen266
+\@envbody=\toks32
 \multlinegap=\skip68
 \multlinetaggap=\skip69
-\mathdisplay@stack=\toks32
+\mathdisplay@stack=\toks33
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 ) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/yhmath\yhmath.sty
@@ -462,45 +488,45 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 ) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip70
-\enit@outerparindent=\dimen263
-\enit@toks=\toks33
-\enit@inbox=\box59
-\enit@count@id=\count308
-\enitdp@description=\count309
+\enit@outerparindent=\dimen267
+\enit@toks=\toks34
+\enit@inbox=\box61
+\enit@count@id=\count316
+\enitdp@description=\count317
 ) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2023-12-08 L3 programming layer (loader) 
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count310
-\l__pdf_internal_box=\box60
+\l__color_backend_stack_int=\count318
+\l__pdf_internal_box=\box62
 ))
 Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count311
-\l__lipsum_a_int=\count312
-\l__lipsum_b_int=\count313
+\g__lipsum_par_int=\count319
+\l__lipsum_a_int=\count320
+\l__lipsum_b_int=\count321
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -538,17 +564,17 @@ LaTeX Font Info:    ... okay on input line 105.
 
 (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count314
-\scratchdimen=\dimen264
-\scratchbox=\box61
-\nofMPsegments=\count315
-\nofMParguments=\count316
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count317
-\MPscratchDim=\dimen265
-\MPnumerator=\count318
-\makeMPintoPDFobject=\count319
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count322
+\scratchdimen=\dimen268
+\scratchbox=\box63
+\nofMPsegments=\count323
+\nofMParguments=\count324
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count325
+\MPscratchDim=\dimen269
+\MPnumerator=\count326
+\makeMPintoPDFobject=\count327
+\everyMPtoPDFconversion=\toks36
 ) (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -557,13 +583,15 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 105.
+Package hyperref Info: Link coloring OFF on input line 138.
  (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
+\c@lstlisting=\count328
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
@@ -577,7 +605,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 {C:/Users/ondra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 164--169
+Underfull \hbox (badness 10000) in paragraph at lines 197--202
 
  []
 
@@ -588,24 +616,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--169
 ] [7] [8
 
 ]<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 214.
+LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 247.
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/yhmath\omxyhex.fd
 File: OMXyhex.fd 
 File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 214.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 247.
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 214.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 247.
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+esint on input line 214.
+LaTeX Font Info:    Trying to load font information for U+esint on input line 247.
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/esint\uesint.fd
 File: uesint.fd 
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 214.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 247.
  (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [9] [10
@@ -629,62 +657,62 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 Kapitola 1.
 [3]
-Overfull \hbox (7.52928pt too wide) in paragraph at lines 295--295
+Overfull \hbox (7.52928pt too wide) in paragraph at lines 328--328
 []|\T1/cmr/bx/n/12 Jednotka| 
  []
 
 
-Overfull \hbox (0.56953pt too wide) in paragraph at lines 295--295
+Overfull \hbox (0.56953pt too wide) in paragraph at lines 328--328
 []|$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m; m; \OT1/cmr/m/n/12 0)$| 
  []
 
 
-Overfull \hbox (0.56953pt too wide) in paragraph at lines 295--295
+Overfull \hbox (0.56953pt too wide) in paragraph at lines 328--328
 []|$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m; m; \OT1/cmr/m/n/12 0)$| 
  []
 
 
-Underfull \hbox (badness 3884) in paragraph at lines 295--295
+Underfull \hbox (badness 3884) in paragraph at lines 328--328
 []|\T1/cmr/m/n/12 Koeficient rych-lostn¥ ne-zá-vis-lého
  []
 
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 295.
+LaTeX Warning: Reference `' on page 4 undefined on input line 328.
 
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 295.
+LaTeX Warning: Reference `' on page 4 undefined on input line 328.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--295
+Underfull \hbox (badness 10000) in paragraph at lines 328--328
 []|\T1/cmr/m/n/12 Koeficient kva-d-ra-ticky zá-vis-lého
  []
 
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 295.
+LaTeX Warning: Reference `' on page 4 undefined on input line 328.
 
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 295.
+LaTeX Warning: Reference `' on page 4 undefined on input line 328.
 
 
-Overfull \hbox (8.16888pt too wide) in alignment at lines 295--295
+Overfull \hbox (8.16888pt too wide) in alignment at lines 328--328
 [][][][] 
  []
 
 
-Overfull \hbox (7.52928pt too wide) in paragraph at lines 310--310
+Overfull \hbox (7.52928pt too wide) in paragraph at lines 343--343
 []|\T1/cmr/bx/n/12 Jednotka| 
  []
 
 
-Overfull \hbox (2.68436pt too wide) in paragraph at lines 310--310
+Overfull \hbox (2.68436pt too wide) in paragraph at lines 343--343
 []|$\OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; []; []\OT1/cmr/m/n/12 )$| 
  []
 
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 310.
+LaTeX Warning: Reference `' on page 4 undefined on input line 343.
 
 
-Overfull \hbox (25.23637pt too wide) in alignment at lines 310--310
+Overfull \hbox (25.23637pt too wide) in alignment at lines 343--343
 [][][][] 
  []
 
@@ -699,15 +727,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Kapitola 2.
-<imgs/osazeny_spinner.png, id=161, 207.77625pt x 220.57407pt>
+<imgs/osazeny_spinner.png, id=206, 207.77625pt x 220.57407pt>
 File: imgs/osazeny_spinner.png Graphic file (type png)
 <use imgs/osazeny_spinner.png>
-Package pdftex.def Info: imgs/osazeny_spinner.png  used on input line 317.
+Package pdftex.def Info: imgs/osazeny_spinner.png  used on input line 350.
 (pdftex.def)             Requested size: 136.57462pt x 144.9937pt.
-<imgs/3spinnery.png, id=165, 443.40656pt x 403.5075pt>
+<imgs/3spinnery.png, id=210, 443.40656pt x 403.5075pt>
 File: imgs/3spinnery.png Graphic file (type png)
 <use imgs/3spinnery.png>
-Package pdftex.def Info: imgs/3spinnery.png  used on input line 331.
+Package pdftex.def Info: imgs/3spinnery.png  used on input line 364.
 (pdftex.def)             Requested size: 159.33821pt x 145.00398pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -715,13 +743,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [5
 
  <./imgs/osazeny_spinner.png> <./imgs/3spinnery.png>]
-<imgs/orientace_magnetu.png, id=178, 298.86656pt x 566.86781pt>
+<imgs/orientace_magnetu.png, id=223, 298.86656pt x 566.86781pt>
 File: imgs/orientace_magnetu.png Graphic file (type png)
 <use imgs/orientace_magnetu.png>
-Package pdftex.def Info: imgs/orientace_magnetu.png  used on input line 365.
+Package pdftex.def Info: imgs/orientace_magnetu.png  used on input line 398.
 (pdftex.def)             Requested size: 136.57462pt x 259.04971pt.
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 401--401
+Overfull \hbox (24.0pt too wide) in alignment at lines 434--434
 [][] 
  []
 
@@ -734,13 +762,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6 <./imgs/orientace_magnetu.png>]
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 412.
+LaTeX Warning: Reference `' on page 7 undefined on input line 445.
 
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 422.
-
-
-LaTeX Warning: Reference `' on page 7 undefined on input line 425.
+LaTeX Warning: Reference `' on page 7 undefined on input line 458.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -750,8 +775,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
 [7]
+Overfull \hbox (6.19025pt too wide) detected at line 497
+[]
+ []
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 441.
+
+Overfull \hbox (29.3747pt too wide) detected at line 497
+[][][][]
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -763,51 +794,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 473.
- (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
-[]\T1/cmr/m/n/12 Jasper. \T1/cmr/m/it/12 Shorthand error no-tation (with brackets) accros de-
+Kapitola 3.
+<imgs/dims.png, id=274, 446.11111pt x 447.89555pt>
+File: imgs/dims.png Graphic file (type png)
+<use imgs/dims.png>
+Package pdftex.def Info: imgs/dims.png  used on input line 514.
+(pdftex.def)             Requested size: 204.85846pt x 205.67223pt.
+
+Overfull \hbox (9.91676pt too wide) in paragraph at lines 529--529
+|\T1/cmr/bx/sc/17.28 3.2 Mo-ment se-tr-va£-nosti| 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
-\T1/cmr/m/it/12 ci-mal point [du-pli-cate] \T1/cmr/m/n/12 [on-line]. [cit. 2023-12-16]. Do-stupné
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
-\T1/cmr/m/n/12 z: []$\T1/cmtt/m/n/12 https : / / physics . stackexchange . com / questions / 445141 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 482--483
-[]\T1/cmr/m/it/12 Neodymium Mag-net Gra-des \T1/cmr/m/n/12 [on-line]. [cit. 2023-12-16]. Do-stupné
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 482--483
-\T1/cmr/m/n/12 z: []$\T1/cmtt/m/n/12 https : / / totalelement . com / blogs / about-[]neodymium-[]magnets /
- []
-
+<imgs/mom_inert_setup.png, id=278, 599.99156pt x 636.87938pt>
+File: imgs/mom_inert_setup.png Graphic file (type png)
+<use imgs/mom_inert_setup.png>
+Package pdftex.def Info: imgs/mom_inert_setup.png  used on input line 546.
+(pdftex.def)             Requested size: 204.85846pt x 217.44962pt.
 [9
 
-]
+ <./imgs/dims.png>]
+Overfull \hbox (7.08809pt too wide) in paragraph at lines 558--558
+|\T1/cmr/bx/n/14.4 3.2.2 Ana-lýza m¥-°ení a vý-sledky| 
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 559.
+(C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+<imgs/spin_pendulum_field_rec.png, id=292, 617.30624pt x 342.5297pt>
+File: imgs/spin_pendulum_field_rec.png Graphic file (type png)
+<use imgs/spin_pendulum_field_rec.png>
+Package pdftex.def Info: imgs/spin_pendulum_field_rec.png  used on input line 564.
+(pdftex.def)             Requested size: 455.24411pt x 252.61084pt.
 
-[10
-
-] (main.lof)
-\tf@lof=\write5
-\openout5 = `main.lof'.
-
- [11]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.04742pt, for example:
@@ -815,13 +834,94 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
-[12
+[10 <./imgs/mom_inert_setup.png> <./imgs/spin_pendulum_field_rec.png>] (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 586.
+ (prilohy/snippets/c1.py
 
-] (main.lot)
-\tf@lot=\write6
-\openout6 = `main.lot'.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
- [13]
+[11
+
+])
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 591.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 591.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 591.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.93668pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.93668pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.93668pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.93668pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.93668pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.93668pt}.
+
+[13]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.93668pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.93668pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.93668pt}.
+
+[14
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 623--624
+[]\T1/cmr/m/n/12 Jasper. \T1/cmr/m/it/12 Shorthand error no-tation (with brackets) accros de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 623--624
+\T1/cmr/m/it/12 ci-mal point [du-pli-cate] \T1/cmr/m/n/12 [on-line]. [cit. 2023-12-16]. Do-stupné
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 623--624
+\T1/cmr/m/n/12 z: []$\T1/cmtt/m/n/12 https : / / physics . stackexchange . com / questions / 445141 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
+[]\T1/cmr/m/it/12 Neodymium Mag-net Gra-des \T1/cmr/m/n/12 [on-line]. [cit. 2023-12-16]. Do-stupné
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
+\T1/cmr/m/n/12 z: []$\T1/cmtt/m/n/12 https : / / totalelement . com / blogs / about-[]neodymium-[]magnets /
+ []
+
+
+Underfull \hbox (badness 7273) in paragraph at lines 626--627
+[]\T1/cmr/m/n/12 REICHL, Ja-ro-slav a Mar-tin V’E-TIƒKA. \T1/cmr/m/it/12 Fy-zické ky-va-dlo \T1/cmr/m/n/12 [on-line]. [cit.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
+\T1/cmr/m/n/12 2023-12-16]. Do-stupné z: []$\T1/cmtt/m/n/12 http : / / fyzika . jreichl . com / main . article / view /
+ []
+
+[15]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -829,9 +929,51 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14
+[16] (main.lof)
+\tf@lof=\write5
+\openout5 = `main.lof'.
 
-] [15] (main.aux)
+ [17
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[18
+
+] (main.lot)
+\tf@lot=\write6
+\openout6 = `main.lot'.
+
+ [19]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20
+
+] (main.lol)
+\tf@lol=\write7
+\openout7 = `main.lol'.
+
+ [21]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[22
+
+] [23] (main.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-08>
@@ -841,20 +983,20 @@ L3 programming layer <2023-12-08>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 01A5CD1BDB047AD0BA47F2A92F587768;1391.
+(rerunfilecheck)             Checksum: 37E508981F4E22243AAD1A965CC60640;2805.
  ) 
 Here is how much of TeX's memory you used:
- 16008 strings out of 474491
- 262117 string characters out of 5743833
- 1947473 words of memory out of 5000000
- 37876 multiletter control sequences out of 15000+600000
- 583243 words of font info for 105 fonts, out of 8000000 for 9000
+ 18024 strings out of 474491
+ 289778 string characters out of 5743833
+ 2142473 words of memory out of 5000000
+ 39773 multiletter control sequences out of 15000+600000
+ 586782 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,17n,93p,539b,560s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1728.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (25 pages, 1027665 bytes).
+ 79i,19n,93p,539b,2239s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1728.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/yhmath/yhcmex.pfb>
+Output written on main.pdf (33 pages, 1430209 bytes).
 PDF statistics:
- 917 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
- 100 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1225 PDF objects out of 1440 (max. 8388607)
+ 158 named destinations out of 1000 (max. 500000)
+ 187 words of extra memory for PDF output out of 10000 (max. 10000000)
 

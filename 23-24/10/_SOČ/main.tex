@@ -54,6 +54,9 @@
 \setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{4}
 \usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{chngcntr}
+
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{1pt}
 
@@ -72,7 +75,6 @@
 \usepackage{tabularx} % in the preamble
 
 \usepackage{booktabs}
-
 \usepackage{url}
 
 %% Balíčky co se můžou hodit :) 
@@ -88,6 +90,37 @@
 \usepackage{esint}     %% pro sazbu různých integrálů (např \oiint)
 \usepackage{mathrsfs}
 \usepackage{enumitem}
+
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\lstset{numberbychapter=false}
+\renewcommand{\lstlistingname}{Ústřižek kódu}
+\renewcommand{\lstlistlistingname}{Seznam ústřižků}
 
 %% makra pro sazbu matematiky
 \newcommand{\dif}{\mathrm{d}} %% makro pro sazbu diferenciálu, místo toho
@@ -419,7 +452,7 @@ V našem případě jsem se zaměřili převážně na systémy, kde se všechny
 Druhou, složitější, částí popisu našeho systému je jeho pohyb a chování v čase.
 Zde se nevyhneme úhlovým rychlostem jednotlivých spinnerů, které budeme značit $\omega_1, \omega_2,...$.
 Poté by nás přirozeně napadlo úhlové zrychlení $\alpha_1, \alpha_2, ...$, ale pro náš případ bude šikovnější využít toho, že $\tau = I\alpha$, kde $\tau$ značí moment síly a $I$ značí moment setrvačnosti\footnote{Někdy také značeno $J$} spinneru.
-Moment setrvačnosti určíme později ve své vlastní kapitole (viz kap. \ref{}).
+Moment setrvačnosti určíme později ve své vlastní kapitole (viz kap. \ref{sec:moment_of_inertia}).
 
 Posledním parametrem, který zmíníme, je tření v ložiscích spinnerů a jiné odporové síly.
 Těm se budeme do hloubky věnovat v kapitole \ref{}.
@@ -438,34 +471,144 @@ Zároveň existuje velmi elegantní způsob, jak vypočítat velikost magnetick�
     |\vec{m}_0| = \frac{1}{\mu_0}|\vec{B}_r|V
 \end{equation}
 
-Tabulkové hodnoty pro remanenci NdFeB magnetů jsou sice známé, ale v našem případě budeme přesnou hodnotu $|\vec{B}_r|$ našich magnetů měřit později, v kapitole \ref{}.
+Tabulkové hodnoty pro remanenci NdFeB magnetů jsou sice známé, ale v našem případě budeme přesnou hodnotu $|\vec{B}_r|$ našich magnetů měřit později, v kapitole \ref{sec:remanence_measurement}.
 
 \section{Popis magnetických interakcí}
 
 Jelikož k popisu magnetů používáme idealizaci pomocí magnetických dipólů, můžeme popsat interakce mezi nimi pomocí následujících rovnic.
+Hlavní interakce mezi dvěma magnetickými dipóly jsou:
+\begin{enumerate}[topsep=0pt, partopsep=0pt]
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}%
 
-1. Silové interakce \cite{magnetic_force} mezi dvěma momenty $\vec{m}_1$ a $\vec{m}_2$, které jsou od sebe vzdáleny $\vec{r}$ \footnote{$\vec{r} = P_1 - P_2$}:
+    \item Silové interakce \cite{magnetic_force} mezi dvěma momenty $\vec{m}_1$ a $\vec{m}_2$, které jsou od sebe vzdáleny $\vec{r}$ \footnote{$\vec{r} = P_1 - P_2$}:
 
+    \begin{equation}
+        \label{eq:F_m}
+        \begin{split}
+            F_m (r,m_1,m_2) = \frac{3\mu_0}{4\pi ||r||^5} 
+            \bigg[
+                (m_1\cdot r) m_2 +
+                (m_2\cdot r) m_1 +
+                (m_1\cdot m_2) r -
+                \frac{5(m_1\cdot r)(m_2\cdot r)}{||r||^2} r
+            \bigg] \\
+        \end{split}
+    \end{equation}
+
+    \item Magnetické interakce, neboli působení momentu síly \cite{magnetic_torque} na $\vec{m}_2$ z důvodu vytvoření magnetické indukce $B(r, m_1)$ momentem $\vec{m}_1$ \cite{magnetic_force}:
+
+    \begin{equation}
+        \label{eq:B}
+        \begin{split}
+            B (r, m) = \frac{\mu_0}{4\pi}\frac{3 \hat{r}(\hat{r}\cdot m) - m}{|r|^3} \\
+            \tau = m_2 \times B(r, m_1)
+        \end{split}
+    \end{equation}
+\end{enumerate}
+
+\chapter{Měření parametrů}
+\label{chap:param}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \includegraphics[width=0.45\textwidth]{imgs/dims.png}
+    \centering
+    \caption{Ilustrace spinneru společně s vyznačenými rozměry}
+    \label{fig:spinner_size}
+\end{wrapfigure}
+
+\section{Rozměry spinneru}
+\label{sec:spinner_size}
+K popsání spinneru nejdříve určíme jeho rozměry (viz Obr. \ref{fig:spinner_size}).
+Nejdůležitější rozměr pro nás bude vzdálenost osy otáčení od místa, kde budou umístěny magnety.
+To je v našem případě $r = 35.9(1)mm$. 
+
+Vzhledem k tomu, že na sebe spinnery mohou vzájemně působit pouze magnetickými silami, jak je řečeno v zadání, není třeba řešit zbytek geometrie spinneru v budoucích modelech.
+Spinner budeme dále modelovat pouze jako $n$ magnetických dipólů, které se otáčejí kolem středu $S$ a pevně si udržují své relativní pozice.
+Tomuto celkovému systému definujeme moment setrvačnosti podle následujícího měření.
+\section{Moment setrvačnosti}
+\label{sec:moment_of_inertia}
+{\raggedright
+K určení momentu setrvačnosti spinneru bylo využito idealizace spinneru jakožto fyzického kyvadla, pro které platí: \cite{physical_pendulum}
+}
 \begin{equation}
-    \label{eq:F_m}
-    F_m (r,m_1,m_2) = \frac{3\mu_0}{4\pi ||r||^5} 
-    \bigg[
-        (m_1\cdot r) m_2 +
-        (m_2\cdot r) m_1 +
-        (m_1\cdot m_2) r -
-        \frac{5(m_1\cdot r)(m_2\cdot r)}{||r||^2} r
-    \bigg] \\
+    \label{eq:mag_pend}
+    \omega = \sqrt{\frac{mgr}{I}}
+\end{equation}
+A po vyjádření z rovnice \ref{eq:mag_pend} tedy získáváme:
+\begin{equation}
+    \label{eq:mom_inert}
+    I = \frac{mgr}{\omega^2} = \frac{mgr}{4\pi^2f^2}
+\end{equation}
+Nyní stačí změřit frekvenci kmitů zavěšeného spinneru s několika magnety na jednom z jeho ramen.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \includegraphics[width=0.45\textwidth]{imgs/mom_inert_setup.png}
+    \centering
+    \caption{Ilustrace aparatury pro měření frekvence kmitů spinneru}
+    \label{fig:spinner_pendulum_aparature}
+\end{wrapfigure}
+\subsection{Aparatura}
+Po připevnění šesti neodymových magnetů o jednotkové hmotnosti $0.92(1) g$ byl spinner připevněn pevně ve své ose otáčení.
+Pod takto zavěšený spinner bylo umístěno Magnetické čidlo Vernier MG-BTA, které zaznamenávalo, jak blízko se magnety nacházejí.
+Po umístění spinneru mimo rovnovážnou polohu byl ponechán oscilovat a záznam průběhu magnetické indukce v čase byl čidlem nasnímán (viz \ref{fig:spinner_pendulum_recording}).
+\vspace{40pt}
+
+{\raggedright
+\subsection{Analýza měření a výsledky}
+Průběh následně analyzujeme pomocí programovacího jazyka \texttt{Python} \cite{python} a knihovny \texttt{scipy} \cite{scipy}.
+Námi kýžená maxima vyhledáme použitím funkce \texttt{scipy.signal.find\_peaks} a z jejich počtu jsme schopni určit počet period, kterými kyvadlo prošlo za určený čas.
+}
+
+\begin{wrapfigure}{r}{1\textwidth}
+    \includegraphics[width=1\textwidth]{imgs/spin_pendulum_field_rec.png}
+    \centering
+    \caption[Nasnímaný průběh magnetické indukce v čase pro spinnerové kyvadlo]{Nasnímaný průběh magnetické indukce v čase (modře) pro spinnerové kyvadlo. Peaky, označující uplynutí jedné půlperiody, jsou vyznačeny červeně.}
+    \label{fig:spinner_pendulum_recording}
+\end{wrapfigure}
+
+\clearpage
+
+Máme-li tedy pole $p$\footnote{$|p|$ označuje počet prvků pole $p$; $p_{min}$ označuje čas prvního peaku; $p_{max}$ označuje čas prvního peaku} všech časů nalezených peaků, je výpočet frekvence následující:
+\begin{equation}
+    \label{eq:freq_from_peaks}
+    f = \frac{ |p| - 1}{2(p_{max} - p_{min})} = 1.00(1)Hz
 \end{equation}
 
-2. Magnetické interakce, neboli působení momentu síly \cite{magnetic_torque} na $\vec{m}_2$ z důvodu vytvoření magnetické indukce $B(r, m_1)$ momentem $\vec{m}_1$ \cite{magnetic_force}:
-
+Dalším dosazením do předchozí rovnice \ref{eq:mom_inert} získáváme výslednou hodnotu:
 \begin{equation}
-    \label{eq:B}
-    \begin{split}
-        B (r, m) = \frac{\mu_0}{4\pi}\frac{3 \hat{r}(\hat{r}\cdot m) - m}{|r|^3} \\
-        \tau = m_2 \times B(r, m_1)
-    \end{split}
+    \label{eq:mom_inert_results}
+    I = 4.80(50) \cdot 10^{-5} kg \cdot m^2
 \end{equation}
+
+\subsection{Popis skriptu}
+
+\lstinputlisting[language=Python]{./prilohy/snippets/c1.py}
+\begin{lstlisting}[language=Python, caption=Kód k analyzování spinenrového kyvadla]
+\end{lstlisting}
+\label{code:1}
+
+\section{Remanence $\vec{B}_r$}
+\label{sec:remanence_measurement}
+
+K určení remanence našich magnetů využijeme dvou různých metod. Jedna z nich bude založena na silové interakci magnetů a jedna na magnetem vytvořeném poli.
+
+\subsection{Určení remanence přes magnetické pole}
+
+Prvním způsobem, jak určit přesnou hodnotu remanentní magentizace našich magnetů, je měření magnetického pole pomocí magnetometru mobilního telefonu.
+Aplikace \texttt{Phyphox} umožňuje čtení těchto dat, která následně analyzujeme.
+
+Měření provedeme pro sloupce 2 a 3 magnetů, abychom oveřili, zda je náš způsob měření konsistentní.
+Dále také měříme větší neodymový magnet, jehož parametry nám nejsou známé, a který budeme používat v některých budoucích experimentech.
+Abychom odstranili pozadí tvořené magnetickým polem země, provedeme měření magnetického pole jednou a poté magnet otočíme.
+K získání výsledku jednoduše odečteme rozdíl naměřených hodnot, což bude dvojnásobek velikosti magnetického pole tvořeného magnetem.
+Je zřejmé, že tímto odstraníme z meření jiné, neměnné, zdroje magnetických polí.
+
+Kromě provádění měření pro různé počty a velikosti magnetů, budeme také meřit pole v různých vzdálenostech od magnetu, abychom dále potvrdili, zda je měření a náš model konzistetní.
+
+\subsection{Analýza měření}
+Výstupem aplikace \texttt{Phyphox} jsou sobory typu \texttt{.csv}, neboli \textit{"Comma separated values"} \cite{csv}.
+Toto je poměrně čitelný a přívětivý formát ukládání dat, která v \texttt{Pythonovém} skriptu načteme pomocí funkce \texttt{open()}.
 
 
 %% literatura
@@ -480,6 +623,16 @@ Jelikož k popisu magnetů používáme idealizaci pomocí magnetických dipól�
     \bibitem{shorthand_error_notation_stack_exchange} Jasper. \textit{Shorthand error notation (with brackets) accros decimal point [duplicate]} [online]. [cit. 2023-12-16]. Dostupné z: \url{https://physics.stackexchange.com/questions/445141/shorthand-error-notation-with-brackets-accros-decimal-point}
     \bibitem{tmf_tasks} \textit{Turnaj mladých fyziků} [online]. [cit. 2023-12-16]. Dostupné z: \url{https://tmf.fzu.cz/tasks.php?y}
     \bibitem{magnet_grades} \textit{Neodymium Magnet Grades} [online]. [cit. 2023-12-16]. Dostupné z: \url{https://totalelement.com/blogs/about-neodymium-magnets/neodymium-rare-earth-magnet-grades}
+    \bibitem{physical_pendulum} REICHL, Jaroslav a Martin VŠETIČKA. \textit{Fyzické kyvadlo} [online]. [cit. 2023-12-16]. Dostupné z: \url{http://fyzika.jreichl.com/main.article/view/206-fyzicke-kyvadlo}
+
+
+    \bibitem{python} VAN ROSSUM, Guido, Drake VAN ROSSUM a L. FRED. \textit{Python 3 Reference Manual.} Scotts Valley, CA: CreateSpace, 2009. ISBN 1441412697.
+    \bibitem{scipy} VIRTANEN, Pauli. SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python. \textit{Nature Methods}. 2020(17), 261-272.
+    \bibitem{numpy} HARRIS, Charles R. Array programming with NumPy. \textit{Nature.} 2020(585), 357–362.
+    \bibitem{matplotlib} HUNTER, John D. Matplotlib: A 2D graphics environment. \textit{Computing in science \& engineering}. 2007, 9(3), 90-95.
+    \bibitem{pymath} VAN ROSSUM, Guido. \textit{The Python Library Reference, release 3.8.2.} Python Software Foundation, 2020.
+    \bibitem{phyphox} STAACKS, S; HÜTZ, S; HEINKE, H a STAMPFER, C. Advanced tools for smartphone-based experiments: phyphox. Online. \textit{Physics Education}. 2018, roč. 53, č. 4. ISSN 0031-9120. Dostupné z: \url{https://doi.org/10.1088/1361-6552/aac05e}. [cit. 2023-12-17].
+    \bibitem{csv} SHAFRANOVICH, Yakov. Common format and MIME type for comma-separated values (CSV) files. \textit{RFC 4180, October}. 2005.
 \end{thebibliography}
 
 %% obrázky 
@@ -487,6 +640,9 @@ Jelikož k popisu magnetů používáme idealizaci pomocí magnetických dipól�
 
 %% tabulky
 \listoftables
+
+%% snippety
+\lstlistoflistings
 
 \chapter*{Přílohy}
 \begin{enumerate}[topsep=0pt, partopsep=0pt]
