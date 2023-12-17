@@ -1,0 +1,499 @@
+% ŠABLONA PRO PSANÍ SOČ
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Autor: Jakub Dokulil (kubadokulil99@gmail.com)
+% Tato šablona byla vytvořena tak, aby pomocí ní mohli v systému LaTeX soutěžící sázet své práce a zároveň odpovídala požadavkům na formátování vyplývajícím z wordové šablony umístěné na webu soc.cz.
+%
+
+% !TEX root = ./main.tex
+
+\documentclass[12pt, a4paper,
+  %oneside,      %% -- odkomentujte, pokud chcete svou práci mít pouze jednostrannou, mezera pro hřbet pak automaticky bude pouze na levé straně
+ twoside,        %% -- pro oboustranné práce, mezera pro hřbet následně střídá strany.
+ openright
+]{report}
+
+%% Nutné balíčky a nastavení
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Proměnné
+\newcommand\city{Praha} %% vyplň oficiální název města
+\newcommand\district{Hlavní město Praha} %% vyplň oficiální název kraje
+\newcommand\specialization{Obor č. 2: Fyzika} %% -- napiš číslo a název tvého oboru
+\newcommand\school{Gymnázium Christiana Dopplera} %% vyplň název školy
+\newcommand\schoolAddress{Zborovská 621, 150 00 Malá Strana} %% vyplň název školy
+\newcommand\consultant{RNDr. Pavel Josef, CSc.} %% vyplň jméno svého konzultanta
+\newcommand\authorName{Ondřej Sedláček}  %% vyplň své jméno
+\newcommand\publicationYear{2023} %% vyplň rok
+\newcommand\mainTitle{Počítačové modelování dynamických magnetických systémů} %% vyplň název své práce
+\newcommand\mainTitleEN{Computer modelling of dynamic magnetic systems} %% vyplň název své práce
+
+\title{\mainTitle} %% -- Název tvé práce
+\author{\authorName} %% -- tvé jméno
+\date{\publicationYear} %% -- rok, kdy píšeš SOČku
+
+\usepackage[top=2.5cm, bottom=2.5cm, left=3.5cm, right=1.5cm]{geometry} %% nastaví okraje, left -- vnitřní okraj, right -- vnější okraj
+
+\usepackage[czech]{babel} %% balík babel pro sazbu v češtině
+\usepackage[utf8]{inputenc} %% balíky pro kódování textu
+\usepackage[T1]{fontenc}
+\usepackage{cmap} %% balíček zajišťující, že vytvořené PDF bude prohledávatelné a kopírovatelné
+
+\usepackage{graphicx} %% balík pro vkládání obrázků
+
+\usepackage{subcaption} %% balíček pro vkládání podobrázků
+\usepackage{wrapfig}
+\usepackage{hyperref} %% balíček, který v PDF vytváří odkazy
+
+\linespread{1.15} %% řádkování
+
+\usepackage[pagestyles]{titlesec} %% balíček pro úpravu stylu kapitol a sekcí
+\titleformat{\chapter}[block]{\scshape\bfseries\LARGE}{\thechapter}{10pt}{\vspace{0pt}}[\vspace{-22pt}]
+\titleformat{\section}[block]{\scshape\bfseries\Large}{\thesection}{10pt}{\vspace{0pt}}
+\titleformat{\subsection}[block]{\bfseries\large}{\thesubsection}{10pt}{\vspace{0pt}}
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{4}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{1pt}
+
+\addto\captionsczech{\renewcommand{\figurename}{Obr.}}
+\addto\captionsczech{\renewcommand{\tablename}{Tab.}}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{equation}{chapter}
+\counterwithout{footnote}{chapter}
+
+\setlength{\parskip}{12pt}%
+\setlength{\parindent}{0pt}%
+
+% \usepackage[]{nomencl}
+% % makeindex main.nlo -s nomencl.ist -o main.nls
+\usepackage{tabularx} % in the preamble
+
+\usepackage{booktabs}
+
+\usepackage{url}
+
+%% Balíčky co se můžou hodit :) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{pdfpages} %% Balíček umožňující vkládat stránky z PDF souborů, 
+
+\usepackage{upgreek} %% Balíček pro sazbu stojatých řeckých písmen, třeba u jednotky mikrometr. Například stojaté mí: \upmu, stojaté pí: \uppi
+
+\usepackage{amsmath}    %% Balíčky amsmath a amsfonts 
+\usepackage{yhmath}    %% Balíčky amsmath a amsfonts 
+\usepackage{amsfonts}   %% pro sazbu matematických symbolů
+\usepackage{esint}     %% pro sazbu různých integrálů (např \oiint)
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+
+%% makra pro sazbu matematiky
+\newcommand{\dif}{\mathrm{d}} %% makro pro sazbu diferenciálu, místo toho
+%% abych musel psát '\mathrm{d}' mi stačí napsat '\dif' což je mnohem 
+%% kratší a mohu si tak usnadnit práci
+
+%% Bordel pro práci - můžeš smáznout :) 
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage{lipsum} %% balíček který píše lipsum (nesmyslný text, který se používá pro kontrolu typografie)
+
+%% Začátek dokumentu
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+\pagenumbering{Roman}
+
+% PŘEDNÍ STRANA
+\begin{titlepage}
+    \bfseries{ %%% písmo na stránce je tučně
+        \begin{center}
+            \LARGE{STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}
+
+            \vspace{14pt}
+            \large{ %%%%
+                \specialization
+            } %%%%
+
+            \vspace{0.3 \textheight}
+
+            \LARGE{ %%%%
+                \mainTitle
+            }%%%%
+
+            \vspace{0.35 \textheight}
+        \end{center}
+
+        \noindent\Large{\authorName}
+
+        \noindent\Large{\district \hspace{\stretch{1}}  \city, \publicationYear}
+
+
+    } %%%
+\end{titlepage}
+\cleardoublepage
+
+% ÚVODNÍ STRANA
+% \begin{}
+%% Úvodní stránka s informacemi
+{\bfseries %%% písmo na stránce je tučně
+    \begin{center}
+        \LARGE{STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}
+
+        \vspace{14pt}
+        {\large %%%%
+            \specialization %% -- napiš číslo a název tvého oboru
+        } %%%%
+
+        \vspace{0.20 \textheight}
+
+        \LARGE{ %%%%
+            \mainTitle
+        }
+
+        \LARGE{ %%%%
+            \mainTitleEN
+        }%%%%
+
+        \vspace{0.25\textheight}
+    \end{center}
+}%%%
+{\Large %%%
+    \noindent\textbf{Jméno:} \authorName\\
+    \textbf{Škola:} \school, \schoolAddress\\
+    \textbf{Kraj:} \district\\
+    \textbf{Konzultant:} \consultant\\
+} %%%
+
+\noindent \city, \publicationYear
+% \end{}
+\cleardoublepage
+
+% PROHLÁŠENÍ
+% \begin{}
+\noindent{\Large{\bfseries{Prohlášení}}}
+
+\noindent Prohlašuji, že jsem svou práci SOČ vypracoval samostatně a použil jsem pouze prameny a literaturu uvedené v seznamu bibliografických záznamů.
+
+\noindent Prohlašuji, že tištěná verze a elektronická verze soutěžní práce SOČ jsou shodné.
+
+\noindent Nemám závažný důvod proti zpřístupňování této práce v souladu se zákonem č. 121/2000 Sb., o právu autorském, o právech souvisejících s právem autorským a o změně některých zákonů (autorský zákon) ve znění pozdějších předpisů.
+
+\vspace{24 pt}
+
+\noindent V Praze dne 9. září 2023 \dotfill{}\hspace{\stretch{0.9}}
+
+\hspace{6cm} \authorName
+% \end{}
+\cleardoublepage
+
+% PODĚKOVÁNÍ TODO
+% \begin{}
+\vspace*{0.0\textheight}
+% \vspace*{0.8\textheight}
+\noindent{\Large{\bfseries{Poděkování}}}
+
+\noindent
+Chtěl bych poděkovat ...
+% \end{}
+\cleardoublepage
+
+% ANOTACE TODO
+% \begin{}
+\noindent{\Large{\bfseries{Anotace}}}
+
+\noindent Sem napíšeš svůj abstrakt. \lipsum[1] %% přepiš!!
+
+\vspace{18pt}
+
+% TODO - keywords
+\noindent{\Large{\bfseries{Klíčová slova}}}
+
+\noindent Šablona, \LaTeX, SOČ, \dots
+
+\vspace{18pt}
+
+% TODO - abstrakt EN
+\noindent{\Large{\bfseries{Annotation}}}
+
+\noindent Write your abstract here! \lipsum[1] %% přepiš!!
+
+\vspace{18pt}
+
+% TODO - keywords EN
+\noindent{\Large{\bfseries{Keywords}}}
+
+\noindent Template, \LaTeX, High school proffessional activity, \dots
+% \end{}
+\cleardoublepage
+
+% TABLE OF CONTENTS
+% \begin{}
+\setlength{\parskip}{0pt}%
+\tableofcontents
+\setlength{\parskip}{12pt}%
+
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\setcounter{page}{1}
+% \end{}
+
+\chapter{Úvod}
+\label{chap:introduction}
+Motivací pro tuto práci byla úloha mezinárodní fyzikální soutěže zvané \textit{"International Young Physicists Tournament"}, neboli IYPT.
+U nás je avšak tato soutěž známější pod zkratkou TMF vycházející z překladu původního názvu - \textit{"Turnaj mladých fyziků"}.
+Soutěž se v České republice kéná pod záštitout Fakulty jaderné a fyzikálně inženýrské ČVUT, FZU AV ČR, MŠMT a JČMT a z podstaty soutěže je cílem úloh dovést středoškolské studenty k vědeckému sledování nejrůznějších jevů ze všech částí fyziky.
+
+Úloha, kterou jsem se zabýval, je v pořadí desáta úloha letošního, tedy 37., ročníku. Zadání je následovné \cite{tmf_tasks}:
+
+\textbf{10. Magnetický převod}
+
+\textit{"Vezměte několik identických prstových točítek \footnote{Z překladu anglického "Fidget spinner"} a připevněte k jejich koncům neodymové magnety. Pokud umístíte točítka v rovině vedle sebe a točíte jedním z nich, ostatní se začnou otáčet jen vlivem magnetického pole. Prozkoumejte a vysvětlete tento jev."}
+
+Zadání úlohy je, jak je pro TMF tradiční, velmi otevřené a je tedy na řešiteli, aby si vymezil přesnou oblast svého zkoumání.
+Tato práce se bude zabívat:
+
+\begin{enumerate}[topsep=0pt, partopsep=0pt]
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}%
+    \item Určením vlastností \textit{prstových točítek} (dále "fidget spinner" či pouze "spinner")
+    \item Popisem třecích sil působících na spinner
+    \item Vývojem simulace chování systémů více fidget spinnerů a porovnáním této simulace s realitou
+    \item Přenosem úhlové rychlosti
+    \item Přenosem momentu síly
+    \item Možným využím získaných poznatků k vývoji efektivnějších magnetických převodů
+\end{enumerate}
+
+\clearpage
+
+\section[Nomenklatura]{Nomenklatura}
+\label{sec:nomenclature}
+V tabulce \ref{tab:nomenclature} definujeme symboly, které budeme používat v průběhu celé práce, společně s jejich významem:
+
+\begin{table}[!ht]
+    \captionsetup{justification=raggedright,singlelinecheck=off}
+    \caption{Nomenklatura}
+    \label{tab:nomenclature}
+
+    \centering{\textbf{Vlastnosti spinneru}} \\
+    \begin{tabularx}{\textwidth}{m{0.1\textwidth} m{0.1\textwidth} p{0.4\textwidth} p{5cm} }
+        \textbf{Symbol}  & \textbf{Jednotka}         & \textbf{Popis}                                                & \textbf{Poznámka}                              \\
+        \hline
+        $n$              &                           & Celkový počet ramen                                           & Ekvivaletní počtu magnetů                      \\
+        $r$              & $m$                       & Poloměr spinneru                                              & Ekvivaletní vzdálenosti osy otáčení od magnetů \\
+        $S$              & $(m,m,0)$                 & Střed spinneru v rovině                                       & (tzn. pozice osy otáčení)                      \\
+        $P(i)$           & $(m,m,0)$                 & Pozice $i$. magnetu spinneru                                  & Funkce indexu magnetu                          \\
+        $\varphi$        & $\text{rad}$              & Úhel rotace spinneru                                                                                           \\
+        $\omega$         & $\text{rad} \cdot s^{-1}$ & Úhlová rychlost spinneru                                                                                       \\
+        $I$              & $kg \cdot m^2$            & Moment setrvačnosti spinneru                                                                                   \\
+        $\alpha$         & $\text{rad} \cdot s^{-2}$ & Koeficient rychlostně nezávislého brzdného úhlového zrychlení & viz \ref{}                                     \\
+        $\beta$          & $s^{-1}$                  & Koeficient lineárně závislého brzdného úhlového zrychlení     & viz \ref{}                                     \\
+        $\gamma$         & $\text{rad}^{-1}$         & Koeficient kvadraticky závislého brzdného úhlového zrychlení  & viz \ref{}                                     \\
+        $c_1$, $t_{max}$ & $s$                       & Celková délka otáčení spinneru                                & viz \ref{}                                     \\
+    \end{tabularx}
+
+    \vspace{24pt}
+
+    \centering{\textbf{Vlastnosti magnetu}} \\
+    \begin{tabularx}{\textwidth}{m{0.15\textwidth} m{0.1\textwidth} p{0.45\textwidth} p{4cm} }
+        \textbf{Symbol}                      & \textbf{Jednotka}                                                            & \textbf{Popis}                                                                              & \textbf{Poznámka}                      \\
+        \hline
+        $\vec{m}$                            & $A \cdot m^2$                                                                & Magnetický moment                                                                                                                    \\
+        $\vec{B}_r$                          & $T$                                                                          & Remanentní magentizace                                                                      & (tzv. remanence)                       \\
+        $V$                                  & $m^3$                                                                        & Objem magnetu                                                                                                                        \\
+        $F_m(\vec{r}, \vec{m_1}, \vec{m_2})$ & $N$                                                                          & Silová interakce mezi magnetickými momenty $\vec{m_1}$ a $\vec{m_2}$ vzdálenými o $\vec{r}$ & \cite{magnetic_force}                  \\
+        $B(\vec{r}, \vec{m})$                & $T$                                                                          & Magnetická indukce tvořená magnetickými momentem $\vec{m}$ ve vzdálenosti $\vec{r}$         & \cite{magnetic_force, magnetic_torque} \\
+        $\tau_F, \tau_{mag}$                 & $Nm$
+                                             & Momenty sil působící na spinner vycházející ze silové a magnetické interakce & \cite{magnetic_torque,torque_def}, viz \ref{}                                                                                        \\
+    \end{tabularx}
+\end{table}
+
+Dále stojí za zmínku, že pro vyjádření chyby měření je v textu používána tzv. \textit{shorthand error notation} \cite{shorthand_error_notation} (pro naše účely zkráceno na SEN). Pro jasnost uvedeme příklad, kde zápis pomocí SEN vypadá takto: $11.5(12)$, a ekvivalentní přepis do standardní notace je: $11.5 \pm 1.2$. Tímto zjednodušíme zápis: $11.5 \pm 1.2 = 11.5(12)$ \cite{shorthand_error_notation_stack_exchange}.
+
+\chapter{Úvodní sledování}
+\begin{wrapfigure}{r}{0.4\textwidth}
+    \includegraphics[width=0.3\textwidth]{imgs/osazeny_spinner.png}
+    \centering
+    \caption{Spinner osazeným neodymovými magnety}
+    \label{fig:1spinner}
+\end{wrapfigure}
+
+Prvním krokem v řešení této úlohy bylo kvalitativní sledování jejich chování v co největším rozpětí konfigurací, abychom mohli určit relevantní parametry a odstranit nezajímavé konfigurace.
+
+Hlavním poznatkem je změna chování systému dvou pinnerů v závislosti na jejich relativních rychlostech.
+Máme-li na stole 2 spinnery, ze kterých je jeden nehybný, a druhý roztočíme na nízké otáčky, dojde po krátké chvíli k silné, ale chaotické, interakci (viz příloha \ref{attachment_1}).
+Naopak, roztočíme-li druhý spinner znatelně rychleji, nedochází téměř k žádné interakci (viz příloha \ref{attachment_2}).
+Druhý spinner se prvnímu spinneru efektivně jeví jako permanentí magnet - druhý magnet se tedy nanejvýše umístí do energeticky nejvýhodnější polohy a dále zůstává nehybný.
+
+\begin{wrapfigure}{l}{0.45\textwidth}
+    \includegraphics[width=0.35\textwidth]{imgs/3spinnery.png}
+    \centering
+    \caption{Tři interagující spinnery}
+    \label{fig:3spinners}
+\end{wrapfigure}
+Dalším cenným poznatkem je, že při interakci více spinnerů se systém chová chaoticky téměř vždy (viz příloha \ref{attachment_3}).
+Toto pro nás dělá měření interakcí více jak dvou spinnerů nepříznivé a k získání použitelných výsledků je důležité omezit naše bádání pouze na jeden či dva spinnery.
+Poté, co kvalitně popíšeme menší počet spinnerů, se můžeme pomocí simulace pokusit o extrapolování našeho modelu na více spinnerů.
+
+Z přesného zadání můžeme také vyčíst nějaké důležité předpoklady.
+Jmenovitě se jedná o
+umístění všech spinnerů v jedné \textit{"rovině vedle sebe"}, což z velké míry usnadní budoucí výpočty,
+točením pouze \textit{"jedním z nich"} a
+omezení interakcí mezi spinnery pouze na \textit{"vlivy magentického pole"}.
+Neměli bychom opomenout ani skutečnost, že všechny spinnery mají být \textit{"identické"}.
+
+\section{Určení parametrů}
+
+Z úvodního sledování není těžké určit relevantní parametry a vybrat, které z nich je možné s naším vybavením měřit.
+
+\subsection{Parametry týkající se konfigurace spinnerů}
+Jakožto nejdůležitější bychom určitě označili relativní pozice všech spinnerů, které popíšeme pomocí jejich středů $S_1, S_2,...$ (každý střed je braný jako vektor ve spinnerové rovině) a jejich poloměrů $r_1, r_2, ...$.
+Dále bude k přesnému určení pozicí magnetů nezbytné znát okamžité úhly rotace spinnerů, které ozačíme $\varphi_1, \varphi_2,...$.
+Nakonec k popsání spinneru musíme určit počet ramen, neboli počet připevněných magnetů. Tento počet označíme $n$ a pro naše spinnery platí $n=3$.
+
+Pomocí těchto údajů je triviální vyjádřit pozici $P(i)$ libovolného magnetu pomocí jeho indexu $i$ (kde $0 \leq i < n$):
+
+\begin{equation}
+    \label{eq:magnet_pos}
+    P(i) = S + \biggr(r\cos{\bigg(\varphi + \frac{2\pi i}{n}\bigg)},
+    r\sin{\bigg(\varphi+\frac{2\pi i}{n}}\bigg), 0 \biggr)
+\end{equation}
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+    \includegraphics[width=0.3\textwidth]{imgs/orientace_magnetu.png}
+    \centering
+    \caption{Tři námi vyhranění orientace magnetů}
+    \label{fig:mag_orientations}
+\end{wrapfigure}
+
+Kromě pozice magnetu hraje také klíčovou roli nasměrování jeho pólů. Zde definujeme 3 důležité orientace pólů (viz Obr. \ref{fig:mag_orientations}):
+
+\begin{enumerate}[topsep=0pt, partopsep=0pt]
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}%
+    \item \textbf{Vertikální (\textit{vertical})}
+    \item Odstředivá (\textit{eccentric})
+    \item Tečná (\textit{tangent})
+\end{enumerate}
+
+V našich experimentech jsme používali převážně vertikální konfiguraci, jelikož takto bylo uchycení magnetů nejjednodušší.
+Magnety se totiž samy připevnily ke kovovému závaží v každém z ramen spinneru (viz Obr. \ref{fig:1spinner}), které je zde z důvodu zvýšení momentu setrvačnosti.
+
+Tyto konfigurace jsme také schopni popsat a to opět jakožto funkci indexu magnetu.
+Nejdříve vyjádříme směrový vektor $\vec{u}(i)$ pro $i$. magnet v každé konfiguraci:
+
+\vspace{24pt}
+
+\begin{table}[!ht]
+    \captionsetup{justification=raggedright,singlelinecheck=off}
+    \caption{Směrové vektory pro různé konfigurace}
+    \label{tab:mag_dir_vec}
+
+    \def\arraystretch{1.5}
+    \begin{tabularx}{\textwidth}{p{0.50\textwidth} p{0.50\textwidth} }
+        \textbf{Konfigurace} & \textbf{Směrový vektor magnetu}                    \\
+        \hline
+        Vertikální           & $\vec{u}(i) = (0,0,1)$                             \\
+        Odstředivá           & $\vec{u}(i) = \widehat{P(i) - S}$                  \\
+        Tečná                & $\vec{u}(i) = (0,0,1) \times \widehat{(P(i) - S)}$ \\
+    \end{tabularx}
+\end{table}
+
+{\raggedright
+Když nyní zvolíme velikost magnetického momentu našich magnetů $|\vec{m}_0|$, jsme schopni popsat magnetický moment včetně jeho velikosti \footnote{Všimněme si, že $u(i) = \hat{u}(i)$}:}
+
+\begin{equation}
+    \label{eq:magnet_moment_orientation}
+    \vec{m} = |\vec{m}_0| \cdot \vec{u}(i)
+\end{equation}
+
+Velikost magentických momentů bude záviset na teplotě, velikosti a materiálových vlastnostech magnetů (např. jejich chemickém složení a kvalitě), ale to, jaká je pravá velikost magnetických momentů $|\vec{m}_0|$, je momentálně nepodstatné a určíme ji později (viz kap. \ref{}).
+
+Posledním parametrem, který zmíníme, ale nebudeme se jím zabývat, je přitahování, či odpuzování magnetů.
+V našem případě jsem se zaměřili převážně na systémy, kde se všechny magnety odpuzují.
+
+\subsection{Parametry týkající se pohybu spinnerů}
+
+Druhou, složitější, částí popisu našeho systému je jeho pohyb a chování v čase.
+Zde se nevyhneme úhlovým rychlostem jednotlivých spinnerů, které budeme značit $\omega_1, \omega_2,...$.
+Poté by nás přirozeně napadlo úhlové zrychlení $\alpha_1, \alpha_2, ...$, ale pro náš případ bude šikovnější využít toho, že $\tau = I\alpha$, kde $\tau$ značí moment síly a $I$ značí moment setrvačnosti\footnote{Někdy také značeno $J$} spinneru.
+Moment setrvačnosti určíme později ve své vlastní kapitole (viz kap. \ref{}).
+
+Posledním parametrem, který zmíníme, je tření v ložiscích spinnerů a jiné odporové síly.
+Těm se budeme do hloubky věnovat v kapitole \ref{}.
+
+\clearpage
+
+\section{Modelování magnetů}
+V průběhu našich experimentů používáme neodymové (NdFeB) magnety krychlového tvaru o hraně 5mm a jakosti N35. \footnote{Jakosti neodymových magnetů se pohybují od N35 do N55 \cite{magnet_grades}.}
+Toto označení jakosti neodymových magnetů popisuje jejich chemické složení, tepelnou odolonost a hlavně sílu \cite{magnet_grades}, která je popsána pomocí tzv. remanentní magnetizace, neboli remanence.
+
+Jelikož jsou magnety poměrně malé, můžeme je ve větších vzdálenostech aproximovat jakožto magnetické dipóly.
+Zároveň existuje velmi elegantní způsob, jak vypočítat velikost magnetického dipólu z jeho remanence \cite{magnetic_torque}:
+
+\begin{equation}
+    \label{eq:mag_mom_remanence}
+    |\vec{m}_0| = \frac{1}{\mu_0}|\vec{B}_r|V
+\end{equation}
+
+Tabulkové hodnoty pro remanenci NdFeB magnetů jsou sice známé, ale v našem případě budeme přesnou hodnotu $|\vec{B}_r|$ našich magnetů měřit později, v kapitole \ref{}.
+
+\section{Popis magnetických interakcí}
+
+Jelikož k popisu magnetů používáme idealizaci pomocí magnetických dipólů, můžeme popsat interakce mezi nimi pomocí následujících rovnic.
+
+1. Silové interakce \cite{magnetic_force} mezi dvěma momenty $\vec{m}_1$ a $\vec{m}_2$, které jsou od sebe vzdáleny $\vec{r}$ \footnote{$\vec{r} = P_1 - P_2$}:
+
+\begin{equation}
+    \label{eq:F_m}
+    F_m (r,m_1,m_2) = \frac{3\mu_0}{4\pi ||r||^5} 
+    \bigg[
+        (m_1\cdot r) m_2 +
+        (m_2\cdot r) m_1 +
+        (m_1\cdot m_2) r -
+        \frac{5(m_1\cdot r)(m_2\cdot r)}{||r||^2} r
+    \bigg] \\
+\end{equation}
+
+2. Magnetické interakce, neboli působení momentu síly \cite{magnetic_torque} na $\vec{m}_2$ z důvodu vytvoření magnetické indukce $B(r, m_1)$ momentem $\vec{m}_1$ \cite{magnetic_force}:
+
+\begin{equation}
+    \label{eq:B}
+    \begin{split}
+        B (r, m) = \frac{\mu_0}{4\pi}\frac{3 \hat{r}(\hat{r}\cdot m) - m}{|r|^3} \\
+        \tau = m_2 \times B(r, m_1)
+    \end{split}
+\end{equation}
+
+
+%% literatura
+\begin{thebibliography}{99}
+    \bibitem{magnetic_force} YUNG, Kar W.; LANDECKER, Peter B. a VILLANI, Daniel D. An Analytic Solution for the Force Between Two Magnetic Dipoles. [Online]. \textit{Magnetic and Electrical Separation.} 1998, roč. 9, č. 1, s. 39-52. ISSN 1055-6915. Dostupné z: \url{https://doi.org/10.1155/1998/79537}. [cit. 2023-12-16].
+    \bibitem{magnetic_torque} CULLITY, B. D. a GRAHAM, C. D. \textit{Introduction to magnetic materials.} Second edition. Hoboken: IEEE Press, [2009]. ISBN 978-0-471-47741-9.
+    \bibitem{torque_def} SERWAY, Raymond A. a JEWETT, John W. Jr. \textit{Physics for scientists and engineers.} 6th ed. Belmont: Thomson-Brooks/Cole, 2004. ISBN 0-534-40842-7.
+    % https://www.physicsforums.com/threads/modeling-a-permanent-magnetic-as-a-dipole.594949/#google_vignette
+    % https://hal.science/hal-02905104/document
+    \bibitem{magnet_dipole_approx} YE, Jianhe; ZHAN, Pengfei; ZENG, Jincheng; KUANG, Honglin; DENG, Yongfang et al. Concise magnetic force model for Halbach-type magnet arrays and its application in permanent magnetic guideway optimization. [Online.] \textit{Journal of Magnetism and Magnetic Materials.} 2023, roč. 587. ISSN 03048853. Dostupné z: \url{https://doi.org/10.1016/j.jmmm.2023.171301}. [cit. 2023-12-16].
+    \bibitem{shorthand_error_notation} NATIONAL INSTITUTE OF STANDARDS AND TECHNOLOGY. \textit{Standard Uncertainty and Relative Standard Uncertainty} [online]. [cit. 2023-12-16]. Dostupné z: \url{https://physics.nist.gov/cgi-bin/cuu/Info/Constants/definitions.html}
+    \bibitem{shorthand_error_notation_stack_exchange} Jasper. \textit{Shorthand error notation (with brackets) accros decimal point [duplicate]} [online]. [cit. 2023-12-16]. Dostupné z: \url{https://physics.stackexchange.com/questions/445141/shorthand-error-notation-with-brackets-accros-decimal-point}
+    \bibitem{tmf_tasks} \textit{Turnaj mladých fyziků} [online]. [cit. 2023-12-16]. Dostupné z: \url{https://tmf.fzu.cz/tasks.php?y}
+    \bibitem{magnet_grades} \textit{Neodymium Magnet Grades} [online]. [cit. 2023-12-16]. Dostupné z: \url{https://totalelement.com/blogs/about-neodymium-magnets/neodymium-rare-earth-magnet-grades}
+\end{thebibliography}
+
+%% obrázky 
+\listoffigures
+
+%% tabulky
+\listoftables
+
+\chapter*{Přílohy}
+\begin{enumerate}[topsep=0pt, partopsep=0pt]
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}%
+    \item \label{attachment_1} Videozáznam interakce nehybného a pomalého spinneru \dotfill \textbf{VID1}
+    \item \label{attachment_2} Videozáznam interakce nehybného a rychláho spinneru \dotfill \textbf{VID2}
+    \item \label{attachment_3} Videozáznam interakce 3 spinnerů \dotfill \textbf{VID3}
+\end{enumerate}
+\end{document}
