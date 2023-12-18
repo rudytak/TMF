@@ -639,7 +639,7 @@ K získání výsledku jednoduše odečteme rozdíl naměřených hodnot, což b
 Je zřejmé, že tímto odstraníme z meření jiné, neměnné, zdroje magnetických polí.
 
 Kromě provádění měření pro různé počty a velikosti magnetů, budeme také meřit pole v různých vzdálenostech od magnetu, abychom dále potvrdili, zda je měření a náš model konzistetní.
-Celkem provedeme tedy měření 2 magnetů, 3 magnetů a velkého magnetu pro vzdálenosti $5cm$, $10cm$, $20cm$ a $30cm$.
+Celkem provedeme tedy měření 2 magnetů, 3 magnetů a velkého magnetu pro vzdálenosti 5 cm, 10 cm, 20 cm a 30 cm.
 
 \subsection{Analýza měření}
 Výstupem aplikace \texttt{Phyphox} jsou sobory typu \texttt{.csv}, neboli \textit{"Comma separated values"} \cite{csv}.
@@ -652,14 +652,17 @@ Jinak budeme používat tyto knihovny:
 Poté ručně určíme názvy všech datových souborů a časové intervaly, na kterých jsou magnety orientovány k snímači a od snímače.
 
 Po načtení dat vyjmeme pouze hodnoty ve dříve zmíněných intervalech a najdeme jejich průměrnou hodnotu a odchylky. 
-Z rozdílu průměrných hodnot magnetického pole v obou otočeních magnetů určíme velikost magnetického pole generovaného pouze magnetem (očištěného od pozadí). Z odchylek také určíme celkovou odchylku výsledné hodnoty.
+Z rozdílu průměrných hodnot magnetického pole v obou otočeních magnetů určíme velikost magnetického pole generovaného pouze magnetem (očištěného od pozadí). 
+Z odchylek také určíme celkovou odchylku výsledné hodnoty.
+
+Následně pro každé měření vytvoříme graf (příkladem je Obr. \ref{fig:mag_field_recording_2mag_10cm}).
 
 \lstinputlisting[language=Python, caption=Kód k určení průměrné hodnoty magnetického pole a odchylek, label=code:2]{./prilohy/snippets/c2.py}
 
 \begin{wrapfigure}{r}{1\textwidth}
-    \includegraphics[width=1\textwidth]{imgs/meag_field_emasurement_2mag_10cm.png}
+    \includegraphics[width=1\textwidth]{imgs/mag_field_measurement_2mag_10cm.png}
     \centering
-    \caption[Nasnímaný průběh magnetické indukce v čase pro spinnerové kyvadlo]{Nasnímaný průběh magnetické indukce v čase (modře) pro spinnerové kyvadlo. Peaky, označující uplynutí jedné půlperiody, jsou vyznačeny červeně.}
+    \caption[Nasnímaný průběh magnetické indukce v čase pro měření remanence]{Nasnímaný průběh magnetické indukce v čase pro měření remanence (modře). Průměrné hodnoty horní orientace (zeleně čerchovaně) a dolní orientace (modře čerchovaně). Odpovídající odchylky jsou znázorněny tečkovaně. Výsledná hodnota magnetické indukce tohoto příkladu, tedy dvou magnetů ve vzálenosti 10 cm je: $B = 1.01(8) \cdot 10^{-5} T$}
     \label{fig:mag_field_recording_2mag_10cm}
 \end{wrapfigure}
 
