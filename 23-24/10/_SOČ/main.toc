@@ -18,3 +18,4 @@
 \contentsline {subsubsection}{Analýza měření}{13}{section*.10}%
 \contentsline {subsection}{\numberline {3.3.2}Určení remanence přes sílu}{15}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Výsledky}{16}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {4}Tření}{17}{chapter.4}%
