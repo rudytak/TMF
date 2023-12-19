@@ -391,7 +391,7 @@ Pomocí těchto údajů je triviální vyjádřit pozici $P(i)$ libovolného mag
 \begin{equation}
     \label{eq:magnet_pos}
     P(i) = S + \biggr(r\cos{\bigg(\varphi + \frac{2\pi i}{n}\bigg)},
-    r\sin{\bigg(\varphi+\frac{2\pi i}{n}}\bigg), 0 \biggr)
+    r\sin{\bigg(\varphi+\frac{2\pi i}{n}}\bigg), 0 \bigg)
 \end{equation}
 
 \begin{wrapfigure}{r}{0.4\textwidth}
@@ -442,7 +442,7 @@ Když nyní zvolíme velikost magnetického momentu našich magnetů $|\vec{m}_0
     \vec{m} = |\vec{m}_0| \cdot \vec{u}(i)
 \end{equation}
 
-Velikost magentických momentů bude záviset na teplotě, velikosti a materiálových vlastnostech magnetů (např. jejich chemickém složení a kvalitě), ale to, jaká je pravá velikost magnetických momentů $|\vec{m}_0|$, je momentálně nepodstatné a určíme ji později (viz kap. \ref{}).
+Velikost magentických momentů bude záviset na teplotě, velikosti a materiálových vlastnostech magnetů (např. jejich chemickém složení a kvalitě), ale to, jaká je pravá velikost magnetických momentů $|\vec{m}_0|$, je momentálně nepodstatné a určíme ji později (viz kap. \ref{sec:remanence_measurement}).
 
 Posledním parametrem, který zmíníme, ale nebudeme se jím zabývat, je přitahování, či odpuzování magnetů.
 V našem případě jsem se zaměřili převážně na systémy, kde se všechny magnety odpuzují.
@@ -641,7 +641,7 @@ Je zřejmé, že tímto odstraníme z meření jiné, neměnné, zdroje magnetic
 Kromě provádění měření pro různé počty a velikosti magnetů, budeme také meřit pole v různých vzdálenostech od magnetu, abychom dále potvrdili, zda je měření a náš model konzistetní.
 Celkem provedeme tedy měření 2 magnetů, 3 magnetů a velkého magnetu pro vzdálenosti 5 cm, 10 cm, 20 cm a 30 cm.
 
-\subsection{Analýza měření}
+\subsubsection{Analýza měření}
 Výstupem aplikace \texttt{Phyphox} jsou sobory typu \texttt{.csv}, neboli \textit{"Comma separated values"} \cite{csv}.
 Toto je poměrně čitelný a přívětivý formát ukládání dat, která v \texttt{Pythonovém} skriptu načteme pomocí funkce \texttt{open}, stejně jako v kódu \ref{code:1}.
 Jinak budeme používat tyto knihovny: 
@@ -649,7 +649,7 @@ Jinak budeme používat tyto knihovny:
 \texttt{matplotlib} pro vytvoření grafu \ref{fig:mag_field_recording_2mag_10cm},
 \texttt{scipy}, kde využijeme funkce \texttt{curve\_fit}, a 
 \texttt{math} \cite{pymath}.
-Poté ručně určíme názvy všech datových souborů a časové intervaly, na kterých jsou magnety orientovány k snímači a od snímače.
+Poté ručně určíme názvy všech datových souborů a časov  é intervaly, na kterých jsou magnety orientovány k snímači a od snímače.
 
 Po načtení dat vyjmeme pouze hodnoty ve dříve zmíněných intervalech a najdeme jejich průměrnou hodnotu a odchylky. 
 Z rozdílu průměrných hodnot magnetického pole v obou otočeních magnetů určíme velikost magnetického pole generovaného pouze magnetem (očištěného od pozadí). 
@@ -659,12 +659,91 @@ Následně pro každé měření vytvoříme graf (příkladem je Obr. \ref{fig:
 
 \lstinputlisting[language=Python, caption=Kód k určení průměrné hodnoty magnetického pole a odchylek, label=code:2]{./prilohy/snippets/c2.py}
 
-\begin{wrapfigure}{r}{1\textwidth}
+\begin{wrapfigure}{c}{1\textwidth}
     \includegraphics[width=1\textwidth]{imgs/mag_field_measurement_2mag_10cm.png}
     \centering
-    \caption[Nasnímaný průběh magnetické indukce v čase pro měření remanence]{Nasnímaný průběh magnetické indukce v čase pro měření remanence (modře). Průměrné hodnoty horní orientace (zeleně čerchovaně) a dolní orientace (modře čerchovaně). Odpovídající odchylky jsou znázorněny tečkovaně. Výsledná hodnota magnetické indukce tohoto příkladu, tedy dvou magnetů ve vzálenosti 10 cm je: $B = 1.01(8) \cdot 10^{-5} T$}
+    \caption[Nasnímaný průběh magnetické indukce v čase pro účely měření remanence]{Nasnímaný průběh magnetické indukce v čase (modře) pro určení remanence. Průměrné hodnoty horní orientace (zeleně čerchovaně) a dolní orientace (modře čerchovaně). Odpovídající odchylky jsou znázorněny tečkovaně. Výsledná hodnota magnetické indukce tohoto příkladu, tedy dvou magnetů ve vzdálenosti 10 cm, je: $B = 1.01(8) \cdot 10^{-5} T$}
     \label{fig:mag_field_recording_2mag_10cm}
 \end{wrapfigure}
+
+\clearpage
+
+Po zanalyzování všech měření můžeme vytvořit graf závislosti $B$ na vzdálenosti (graf \ref{fig:B_in_dist}):
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \includegraphics[width=0.45\textwidth]{imgs/B_field_in_distance.png}
+    \centering
+    \caption[Závislost magnetické indukce na vzdálenosti]{Závislost magnetické indukce na vzdálenosti. Sledujeme, že $B \propto r^{-3}$}
+    \label{fig:B_in_dist}
+\end{wrapfigure}
+
+Pro určení $B_r$ z naměřených hodnot provedeme zjednodušení vzorce \ref{eq:B}, kdy nahradíme vektory pouze jejich velikostmi:
+
+\begin{equation}
+    \label{eq:B_reduced}
+    |B| = \frac{{\mu}_0 |m|}{2\pi r^3}
+\end{equation}
+
+Zde si všímáme úměrnosti $B \propto r^{-3}$, kterou také sledujeme v našich naměřených datech.
+Následným dosazením rovnice \ref{eq:mag_mom_remanence} a vyjádřením remanence získáváme:
+
+\begin{equation}
+    \label{eq:Br_from_B}
+    |B_r| = \frac{2\pi r^3 |B|}{V}
+\end{equation}
+
+Pro každou naměřenou hodnotu $B$ dopočítáme odpovídající $B_r$ a výsledky zobrazíme v jednotném grafu \ref{fig:rem_final}.
+
+\subsection{Určení remanence přes sílu}
+
+Druhý způsob, kterým jsme schopni určit remanenci, je skrze přitahování (resp. odpuzování) jednoho magnetu k (resp. od) druhého magnetu. Posazením jednoho magnetu na váhu a sledováním změny měřené hmotnosti jsme z gravitačního zrychlení schopni dopočítat působící sílu druhého magnetu, který je umístěn v určité výšce. Zároveň první magnet podložíme lehkou, tlustou a nemagnetickou vrstvou (např. blokem polystyrenu), abychom zabránili interakci magnetu s kovovými částmi váhy.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \includegraphics[width=0.45\textwidth]{imgs/F_in_distance.png}
+    \centering
+    \caption[Závislost magnetické síly na vzdálenosti]{Závislost magnetické síly na vzdálenosti. Sledujeme, že $F \propto r^{-4}$}
+    \label{fig:mag_force_in_dist}
+\end{wrapfigure}
+
+Výhodou této metody je, že jsme schopni přesněji měřit slabší magnety, jelikož je můžeme dát blíže. V předchozí kapitole jsme nebyli schopni přiblížit magnety dostatečně blízko ke snímači telefonu kvůli jeho rozměrům. 
+Toto měření provádíme pouze pro 1 magnet, jelikož pro ten nám chybí výsledky z měření pomocí magnetického pole (ze dříve zmíněných důvodů). Výsledky můžeme vidět na grafu \ref{fig:mag_force_in_dist}.
+
+\clearpage
+
+Výpočet remanence provedeme podobně jako u rovnice \ref{eq:B_reduced} a to náhradou vektorů za jejich velikosti v rovnici \ref{eq:F_m}. Tím jsme ji schopni zjednodušit na následující podobu:
+
+\begin{equation}
+    \label{eq:F_reduced}
+    |F| =  \frac{3 {\mu}_0}{2\pi r^4}|m|^2
+\end{equation}
+
+Po dosazení rovnice \ref{eq:mag_mom_remanence} a vyjádřením remanence získáváme:
+
+\begin{equation}
+    \label{eq:Br_from_F}
+    B_r = \sqrt{\frac{2\pi {\mu}_0 r^4 F}{3 V^2}}
+\end{equation}
+
+Výsledné hodnoty $B_r$ zobrazíme v jednotném grafu \ref{fig:rem_final}.
+
+\subsection{Výsledky}
+
+Výsledky obou způsobů měření sjednotíme do grafu závislosti $B_r$ na vzdálenosti (graf \ref{fig:rem_final}).
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \includegraphics[width=0.5\textwidth]{imgs/Final_remanence.png}
+    \centering
+    \caption[Souhrnný graf všech měření remanence]{Souhrnný graf všech měření remanence. Ve výpočtu výsledné hodnoty $B_r$ není započítávána remanence velkého magnetu, jelikož není součástí stejné várky magnetů a budeme s ním nakládat později jinak.}
+    \label{fig:rem_final}
+\end{wrapfigure}
+
+Očekávali bychom, že se $B_r$ v závislosti na vzdálenosti nebude měnit, a pro každé měření určíme pomocí optimalizace fitu konstantní funkcí souhrnnou hodnotu. Výsledkem všech měření bude aritmetický průměr těchto souhrnných hodnot.
+
+Tento průměr je:
+$$
+B_r = 1.10(1) T
+$$
+
 
 
 %% literatura

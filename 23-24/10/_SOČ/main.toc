@@ -15,4 +15,6 @@
 \contentsline {subsection}{\numberline {3.2.3}Popis skriptu}{11}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Remanence $\vec {B}_r$}{13}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Určení remanence přes magnetické pole}{13}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Analýza měření}{13}{subsection.3.3.2}%
+\contentsline {subsubsection}{Analýza měření}{13}{section*.10}%
+\contentsline {subsection}{\numberline {3.3.2}Určení remanence přes sílu}{15}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Výsledky}{16}{subsection.3.3.3}%

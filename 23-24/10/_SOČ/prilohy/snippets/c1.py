@@ -3,10 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.signal as sig
 
-# helper function to convert the map iterator to a list
+# helper function to convert the map and filter iterators to a list
 lmap = lambda f,x : list(map(f, x))
-# peaks start and end points
-peaks_s, peaks_e = 0
+lfilt = lambda f,x : list(filter(f, x))
 
 with open("./kyvadlo.csv", "r") as read:
     data = read.readlines()[1:] # load all the value rows
