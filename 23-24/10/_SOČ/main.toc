@@ -19,3 +19,6 @@
 \contentsline {subsection}{\numberline {3.3.2}Určení remanence přes sílu}{15}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Výsledky}{16}{subsection.3.3.3}%
 \contentsline {chapter}{\numberline {4}Tření}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Analytický popis}{18}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Maximální doba otáčení}{18}{subsection.4.1.1}%
+\contentsline {subsubsection}{Horní limit doby otáčení $n$ spinnerů}{19}{equation.4.1.20}%
