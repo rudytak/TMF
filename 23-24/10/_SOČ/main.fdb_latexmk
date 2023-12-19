@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1703029535 "c:/Users/ondra/Plocha/TMF/23-24/10/_SOČ/main.tex" "main.pdf" "main" 1703029537 0
+["pdflatex"] 1703030077 "c:/Users/ondra/Plocha/TMF/23-24/10/_SOČ/main.tex" "main.pdf" "main" 1703030078 0
   "C:/Users/ondra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1702849896 80937 69c9fe62dbfcb9bfda3cad7108b482e4 ""
   "C:/Users/ondra/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbi1200.pk" 1702770324 42728 f945d13f328f2d56f90439cedabad3cc ""
   "C:/Users/ondra/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1668902960 31952 b5ff1535ff10e6483e2e87bc56d0b3b3 ""
@@ -189,7 +189,7 @@
   "C:/Users/ondra/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/ondra/AppData/Local/Programs/MiKTeX/tex/latex/yhmath/omxyhex.fd" 1584531306 433 6f009616205848d6bf5a6cf4ba5366c1 ""
   "C:/Users/ondra/AppData/Local/Programs/MiKTeX/tex/latex/yhmath/yhmath.sty" 1584531306 4974 0d87ecb9c52cb398cf8866a2c0fb9d8d ""
-  "c:/Users/ondra/Plocha/TMF/23-24/10/_SOČ/main.tex" 1703029535 52780 97c31f22b516c4eab0a646c1f43a6ab4 ""
+  "c:/Users/ondra/Plocha/TMF/23-24/10/_SOČ/main.tex" 1703030074 53016 426a6aa3f3be38ea6da07288154987d9 ""
   "imgsLR/3spinnery.png" 1703016934 316299 0c6c08136fc9611b56310520ac29d172 ""
   "imgsLR/B_field_in_distance.png" 1703016935 48401 95990ee3a2b097fd71b5f9b0ef6c4850 ""
   "imgsLR/F_in_distance.png" 1703016937 34586 6b1624f86af3d890d9f210d9428b6d50 ""
@@ -200,13 +200,13 @@
   "imgsLR/orientace_magnetu.png" 1703016939 120911 08ee1545661aaeea4c0fc2077d8435b5 ""
   "imgsLR/osazeny_spinner.png" 1703016939 267211 f552f75d807e7c0fb3974ed3c094b8af ""
   "imgsLR/spin_pendulum_field_rec.png" 1703016940 100337 33f0bcf719a5bf6d1468bafe9486e03a ""
-  "main.aux" 1703029537 11235 07add0453b9aa14ccc69db0057934a04 "pdflatex"
-  "main.lof" 1703029537 1402 3377fae82950b79d1b809cc200b57d20 "pdflatex"
-  "main.lol" 1703029537 265 fb9c1ff990e54ad602625adf7b57f91f "pdflatex"
-  "main.lot" 1703029537 313 edc92c57e602a9a27c5e32ae8a0a79cb "pdflatex"
-  "main.out" 1703029537 3803 5c8010e524bf44d506cbca5b4c8e48ce "pdflatex"
-  "main.tex" 1703029535 52780 97c31f22b516c4eab0a646c1f43a6ab4 ""
-  "main.toc" 1703029537 1992 afb750c4b592c04d89b1ea1772df0925 "pdflatex"
+  "main.aux" 1703030078 11731 00cfbcc53b535f5d6f4d71d383d755b3 "pdflatex"
+  "main.lof" 1703030078 1402 3377fae82950b79d1b809cc200b57d20 "pdflatex"
+  "main.lol" 1703030078 265 fb9c1ff990e54ad602625adf7b57f91f "pdflatex"
+  "main.lot" 1703030078 313 edc92c57e602a9a27c5e32ae8a0a79cb "pdflatex"
+  "main.out" 1703030078 4743 10c1a03dfb32358c3406e2195cd2edaa "pdflatex"
+  "main.tex" 1703030074 53016 426a6aa3f3be38ea6da07288154987d9 ""
+  "main.toc" 1703030078 2396 9643139086d8a5a482cb0ab2d7dc5c8a "pdflatex"
   "prilohy/snippets/c1.py" 1703015763 1721 34175ca953cb4337bf1b9938062e8140 ""
   "prilohy/snippets/c2.py" 1702941114 737 739ecc83320896e2e482592c5dbfac73 ""
   (generated)
