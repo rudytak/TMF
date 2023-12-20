@@ -323,10 +323,10 @@ V tabulce \ref{tab:nomenclature} definujeme symboly, které budeme používat v 
         $\varphi$        & $\text{rad}$              & Úhel rotace spinneru                                                                                           \\
         $\omega$         & $\text{rad} \cdot s^{-1}$ & Úhlová rychlost spinneru                                                                                       \\
         $I$              & $kg \cdot m^2$            & Moment setrvačnosti spinneru                                                                                   \\
-        $\alpha$         & $\text{rad} \cdot s^{-2}$ & Koeficient rychlostně nezávislého brzdného úhlového zrychlení & viz \ref{chap:drag}                                     \\
-        $\beta$          & $s^{-1}$                  & Koeficient lineárně závislého brzdného úhlového zrychlení     & viz \ref{chap:drag}                                     \\
-        $\gamma$         & $\text{rad}^{-1}$         & Koeficient kvadraticky závislého brzdného úhlového zrychlení  & viz \ref{chap:drag}                                     \\
-        $c_1$, $t_{max}$ & $s$                       & Celková délka otáčení spinneru                                & viz \ref{chap:drag}                                     \\
+        $\alpha$         & $\text{rad} \cdot s^{-2}$ & Koeficient rychlostně nezávislého brzdného úhlového zrychlení & viz \ref{chap:drag}                            \\
+        $\beta$          & $s^{-1}$                  & Koeficient lineárně závislého brzdného úhlového zrychlení     & viz \ref{chap:drag}                            \\
+        $\gamma$         & $\text{rad}^{-1}$         & Koeficient kvadraticky závislého brzdného úhlového zrychlení  & viz \ref{chap:drag}                            \\
+        $c_1$, $t_{max}$ & $s$                       & Celková délka otáčení spinneru                                & viz \ref{chap:drag}                            \\
     \end{tabularx}
 
     \vspace{24pt}
@@ -349,6 +349,7 @@ Dále stojí za zmínku, že pro vyjádření chyby měření je v textu použí
 
 \chapter{Úvodní sledování}
 \begin{wrapfigure}{r}{0.4\textwidth}
+    \vspace*{1cm}
     \includegraphics[width=0.3\textwidth]{osazeny_spinner.png}
     \centering
     \caption{Spinner osazeným neodymovými magnety}
@@ -363,6 +364,7 @@ Naopak, roztočíme-li druhý spinner znatelně rychleji, nedochází téměř k
 Druhý spinner se prvnímu spinneru efektivně jeví jako permanentí magnet - druhý magnet se tedy nanejvýše umístí do energeticky nejvýhodnější polohy a dále zůstává nehybný.
 
 \begin{wrapfigure}{l}{0.45\textwidth}
+    \vspace*{0.5cm}
     \includegraphics[width=0.35\textwidth]{3spinnery.png}
     \centering
     \caption{Tři interagující spinnery}
@@ -397,6 +399,7 @@ Pomocí těchto údajů je triviální vyjádřit pozici $P(i)$ libovolného mag
 \end{equation}
 
 \begin{wrapfigure}{r}{0.4\textwidth}
+    \vspace*{-0.5cm}
     \includegraphics[width=0.3\textwidth]{orientace_magnetu.png}
     \centering
     \caption{Tři námi vyhranění orientace magnetů}
@@ -485,34 +488,35 @@ Hlavní interakce mezi dvěma magnetickými dipóly jsou:
 
     \item Silové interakce \cite{magnetic_force} mezi dvěma momenty $\vec{m}_1$ a $\vec{m}_2$, které jsou od sebe vzdáleny $\vec{r}$ \footnote{$\vec{r} = P_1 - P_2$}:
 
-    \begin{equation}
-        \label{eq:F_m}
-        \begin{split}
-            F_m (r,m_1,m_2) = \frac{3\mu_0}{4\pi ||r||^5} 
-            \bigg[
-                (m_1\cdot r) m_2 +
-                (m_2\cdot r) m_1 +
-                (m_1\cdot m_2) r -
-                \frac{5(m_1\cdot r)(m_2\cdot r)}{||r||^2} r
-            \bigg] \\
-        \end{split}
-    \end{equation}
+          \begin{equation}
+              \label{eq:F_m}
+              \begin{split}
+                  F_m (r,m_1,m_2) = \frac{3\mu_0}{4\pi ||r||^5}
+                  \bigg[
+                      (m_1\cdot r) m_2 +
+                      (m_2\cdot r) m_1 +
+                      (m_1\cdot m_2) r -
+                      \frac{5(m_1\cdot r)(m_2\cdot r)}{||r||^2} r
+                      \bigg] \\
+              \end{split}
+          \end{equation}
 
     \item Magnetické interakce, neboli působení momentu síly \cite{magnetic_torque} na $\vec{m}_2$ z důvodu vytvoření magnetické indukce $B(r, m_1)$ momentem $\vec{m}_1$ \cite{magnetic_force}:
 
-    \begin{equation}
-        \label{eq:B}
-        \begin{split}
-            B (r, m) = \frac{\mu_0}{4\pi}\frac{3 \hat{r}(\hat{r}\cdot m) - m}{|r|^3} \\
-            \tau = m_2 \times B(r, m_1)
-        \end{split}
-    \end{equation}
+          \begin{equation}
+              \label{eq:B}
+              \begin{split}
+                  B (r, m) = \frac{\mu_0}{4\pi}\frac{3 \hat{r}(\hat{r}\cdot m) - m}{|r|^3} \\
+                  \tau = m_2 \times B(r, m_1)
+              \end{split}
+          \end{equation}
 \end{enumerate}
 
 \chapter{Měření parametrů}
 \label{chap:param}
 
 \begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace*{0.75cm}
     \includegraphics[width=0.45\textwidth]{dims.png}
     \centering
     \caption{Ilustrace spinneru společně s vyznačenými rozměry}
@@ -523,7 +527,7 @@ Hlavní interakce mezi dvěma magnetickými dipóly jsou:
 \label{sec:spinner_size}
 K popsání spinneru nejdříve určíme jeho rozměry (viz Obr. \ref{fig:spinner_size}).
 Nejdůležitější rozměr pro nás bude vzdálenost osy otáčení od místa, kde budou umístěny magnety.
-To je v našem případě $r = 35.9(1)mm$. 
+To je v našem případě $r = 35.9(1)mm$.
 
 Vzhledem k tomu, že na sebe spinnery mohou vzájemně působit pouze magnetickými silami, jak je řečeno v zadání, není třeba řešit zbytek geometrie spinneru v budoucích modelech.
 Spinner budeme dále modelovat pouze jako $n$ magnetických dipólů, které se otáčejí kolem středu $S$ a pevně si udržují své relativní pozice.
@@ -531,7 +535,7 @@ Tomuto celkovému systému definujeme moment setrvačnosti podle následujícíh
 \section{Moment setrvačnosti}
 \label{sec:moment_of_inertia}
 {\raggedright
-K určení momentu setrvačnosti spinneru bylo využito idealizace spinneru jakožto fyzického kyvadla, pro které platí: \cite{physical_pendulum}
+    K určení momentu setrvačnosti spinneru bylo využito idealizace spinneru jakožto fyzického kyvadla, pro které platí: \cite{physical_pendulum}
 }
 \begin{equation}
     \label{eq:mag_pend}
@@ -545,6 +549,7 @@ A po vyjádření z rovnice \ref{eq:mag_pend} tedy získáváme:
 Nyní stačí změřit frekvenci kmitů zavěšeného spinneru s několika magnety na jednom z jeho ramen.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace*{-0.75cm}
     \includegraphics[width=0.45\textwidth]{mom_inert_setup.png}
     \centering
     \caption{Ilustrace aparatury pro měření frekvence kmitů spinneru}
@@ -557,9 +562,9 @@ Po umístění spinneru mimo rovnovážnou polohu byl ponechán oscilovat a záz
 \vspace{40pt}
 
 {\raggedright
-\subsection{Analýza měření a výsledky}
-Průběh následně analyzujeme pomocí programovacího jazyka \texttt{Python} \cite{python} a knihovny \texttt{scipy} \cite{scipy}.
-Námi kýžená maxima vyhledáme použitím funkce \texttt{scipy.signal.find\_peaks} a z jejich počtu jsme schopni určit počet period, kterými kyvadlo prošlo za určený čas.
+    \subsection{Analýza měření a výsledky}
+    Průběh následně analyzujeme pomocí programovacího jazyka \texttt{Python} \cite{python} a knihovny \texttt{scipy} \cite{scipy}.
+    Námi kýžená maxima vyhledáme použitím funkce \texttt{scipy.signal.find\_peaks} a z jejich počtu jsme schopni určit počet period, kterými kyvadlo prošlo za určený čas.
 }
 
 \begin{wrapfigure}{r}{1\textwidth}
@@ -585,8 +590,8 @@ Dalším dosazením do předchozí rovnice \ref{eq:mom_inert} získáváme výsl
 
 \subsection{Popis skriptu}
 
-V níže připnutém ústřižku kódu \ref{code:1} nejdříve načteme použité knihovny: 
-\texttt{numpy} \cite{numpy} pro provedení konvoluce, 
+V níže připnutém ústřižku kódu \ref{code:1} nejdříve načteme použité knihovny:
+\texttt{numpy} \cite{numpy} pro provedení konvoluce,
 \texttt{matplotlib} pro vytvoření grafu \ref{fig:spinner_pendulum_recording} \cite{matplotlib} a nakonec
 \texttt{scipy}, kde využijeme funkce \texttt{find\_peaks}, jak již bylo zmíněno.
 
@@ -598,7 +603,7 @@ Délku 1D konvoluční matice jsme zvolili $m = 15$ a konvoluční matice délky
 
 \begin{equation}
     \label{eq:conv_matrix_avg}
-    M_{conv} = 
+    M_{conv} =
     \underbrace{
         \begin{pmatrix}
             \frac{1}{m} & \frac{1}{m} & ... & \frac{1}{m}
@@ -646,15 +651,15 @@ Celkem provedeme tedy měření 2 magnetů, 3 magnetů a velkého magnetu pro vz
 \subsubsection{Analýza měření}
 Výstupem aplikace \texttt{Phyphox} jsou sobory typu \texttt{.csv}, neboli \textit{"Comma separated values"} \cite{csv}.
 Toto je poměrně čitelný a přívětivý formát ukládání dat, která v \texttt{Pythonovém} skriptu načteme pomocí funkce \texttt{open}, stejně jako v kódu \ref{code:1}.
-Jinak budeme používat tyto knihovny: 
-\texttt{numpy}, 
+Jinak budeme používat tyto knihovny:
+\texttt{numpy},
 \texttt{matplotlib} pro vytvoření grafu \ref{fig:mag_field_recording_2mag_10cm},
-\texttt{scipy}, kde využijeme funkce \texttt{curve\_fit}, a 
+\texttt{scipy}, kde využijeme funkce \texttt{curve\_fit}, a
 \texttt{math} \cite{pymath}.
 Poté ručně určíme názvy všech datových souborů a časov  é intervaly, na kterých jsou magnety orientovány k snímači a od snímače.
 
-Po načtení dat vyjmeme pouze hodnoty ve dříve zmíněných intervalech a najdeme jejich průměrnou hodnotu a odchylky. 
-Z rozdílu průměrných hodnot magnetického pole v obou otočeních magnetů určíme velikost magnetického pole generovaného pouze magnetem (očištěného od pozadí). 
+Po načtení dat vyjmeme pouze hodnoty ve dříve zmíněných intervalech a najdeme jejich průměrnou hodnotu a odchylky.
+Z rozdílu průměrných hodnot magnetického pole v obou otočeních magnetů určíme velikost magnetického pole generovaného pouze magnetem (očištěného od pozadí).
 Z odchylek také určíme celkovou odchylku výsledné hodnoty.
 
 Následně pro každé měření vytvoříme graf (příkladem je Obr. \ref{fig:mag_field_recording_2mag_10cm}).
@@ -673,6 +678,7 @@ Následně pro každé měření vytvoříme graf (příkladem je Obr. \ref{fig:
 Po zanalyzování všech měření můžeme vytvořit graf závislosti $B$ na vzdálenosti (graf \ref{fig:B_in_dist}):
 
 \begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace*{0.5cm}
     \includegraphics[width=0.45\textwidth]{B_field_in_distance.png}
     \centering
     \caption[Závislost magnetické indukce na vzdálenosti]{Závislost magnetické indukce na vzdálenosti. Sledujeme, že $B \propto r^{-3}$}
@@ -701,13 +707,14 @@ Pro každou naměřenou hodnotu $B$ dopočítáme odpovídající $B_r$ a výsle
 Druhý způsob, kterým jsme schopni určit remanenci, je skrze přitahování (resp. odpuzování) jednoho magnetu k (resp. od) druhého magnetu. Posazením jednoho magnetu na váhu a sledováním změny měřené hmotnosti jsme z gravitačního zrychlení schopni dopočítat působící sílu druhého magnetu, který je umístěn v určité výšce. Zároveň první magnet podložíme lehkou, tlustou a nemagnetickou vrstvou (např. blokem polystyrenu), abychom zabránili interakci magnetu s kovovými částmi váhy.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace*{-1cm}
     \includegraphics[width=0.45\textwidth]{F_in_distance.png}
     \centering
     \caption[Závislost magnetické síly na vzdálenosti]{Závislost magnetické síly na vzdálenosti. Sledujeme, že $F \propto r^{-4}$}
     \label{fig:mag_force_in_dist}
 \end{wrapfigure}
 
-Výhodou této metody je, že jsme schopni přesněji měřit slabší magnety, jelikož je můžeme dát blíže. V předchozí kapitole jsme nebyli schopni přiblížit magnety dostatečně blízko ke snímači telefonu kvůli jeho rozměrům. 
+Výhodou této metody je, že jsme schopni přesněji měřit slabší magnety, jelikož je můžeme dát blíže. V předchozí kapitole jsme nebyli schopni přiblížit magnety dostatečně blízko ke snímači telefonu kvůli jeho rozměrům.
 Toto měření provádíme pouze pro 1 magnet, jelikož pro ten nám chybí výsledky z měření pomocí magnetického pole (ze dříve zmíněných důvodů). Výsledky můžeme vidět na grafu \ref{fig:mag_force_in_dist}.
 
 \clearpage
@@ -731,24 +738,24 @@ Výsledné hodnoty $B_r$ zobrazíme v jednotném grafu \ref{fig:rem_final}.
 \subsection{Výsledky}
 
 Výsledky obou způsobů měření sjednotíme do grafu závislosti $B_r$ na vzdálenosti (graf \ref{fig:rem_final}).
+Očekávali bychom, že se $B_r$ v závislosti na vzdálenosti nebude měnit, a pro každé měření určíme pomocí optimalizace fitu konstantní funkcí souhrnnou hodnotu. Výsledkem všech měření bude aritmetický průměr těchto souhrnných hodnot.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace*{-0.5cm}
     \includegraphics[width=0.5\textwidth]{Final_remanence.png}
     \centering
     \caption[Souhrnný graf všech měření remanence]{Souhrnný graf všech měření remanence. Ve výpočtu výsledné hodnoty $B_r$ není započítávána remanence velkého magnetu, jelikož není součástí stejné várky magnetů a budeme s ním nakládat později jinak.}
     \label{fig:rem_final}
 \end{wrapfigure}
 
-Očekávali bychom, že se $B_r$ v závislosti na vzdálenosti nebude měnit, a pro každé měření určíme pomocí optimalizace fitu konstantní funkcí souhrnnou hodnotu. Výsledkem všech měření bude aritmetický průměr těchto souhrnných hodnot.
-
 Výsledná hodnota remanence našich krychlových magnetů je \footnote{Námi naměřené hodnoty jsou srovnatelné s externími zdroji (viz. \cite{magnet_grades}).}:
 $$
-B_r = 1.10(13) T
+    B_r = 1.10(13) T
 $$
 
 a našeho velkého magnetu je:
 $$
-B_{r_{xl}} = 0.87(5)T
+    B_{r_{xl}} = 0.87(5)T
 $$
 
 Důvodem, proč je remanence většího magentu znatelně nižší, může být skutečnost, že takto velký magnet náš model není schopen popsat jako jediný magnetický dipól, nebo například jeho stáří.
@@ -758,7 +765,7 @@ Důvodem, proč je remanence většího magentu znatelně nižší, může být 
 \chapter{Tření}
 \label{chap:drag}
 
-O třecích jevech při otáčení spinneru jsme si již byli schopni udělat představu při úvodním kvalitativním sledování. Tření bude hrát značnou roli v našem systému, jelikož to bude hlavní limitující faktor průběhu chaotického chování. Dalším využitím, kromě našeho úhlavního záměru - zpřesnění popisu chování, bude také například možnost odhadnutí maximálního času, než se spinnery zastaví a systém ztratí všechnu svou energii. Zajímavým, a lehko měřitelným, pro nás bude průběh úhlové rychlosti $\omega$ (resp. změna úhlové rychlosti \footnote{$\dot{\omega} = \tau$}) v čase, ze kterého tkví i náš popis těchto třecích složek. 
+O třecích jevech při otáčení spinneru jsme si již byli schopni udělat představu při úvodním kvalitativním sledování. Tření bude hrát značnou roli v našem systému, jelikož to bude hlavní limitující faktor průběhu chaotického chování. Dalším využitím, kromě našeho úhlavního záměru - zpřesnění popisu chování, bude také například možnost odhadnutí maximálního času, než se spinnery zastaví a systém ztratí všechnu svou energii. Zajímavým, a lehko měřitelným, pro nás bude průběh úhlové rychlosti $\omega$ (resp. změna úhlové rychlosti \footnote{$\dot{\omega} = \tau$}) v čase, ze kterého tkví i náš popis těchto třecích složek.
 
 Zajímá-li nás tedy změna rychlosti, dovolíme si odhadnout, že hlavními zdroji tření bude ložisko a odpor vzduchu. Provedeme idealizaci ložiska a řekneme, že jeho třecí moment síly bude neměnný v čase a nezávislý na rychlosti. Toto nemusí být vždy pravda, např. objeví-li se v našem, přirozeně neideálním, ložisku nějaké nechtěné oscilace (které jsme sledovali) nebo je-li na ložisko působeno nějakou externí silou mířící kolmo na osu otáčením (jako například když se od sebe velmi silně odpuzují magnety ze dvou blízkých spinnerů). Oba tyto příklady jsou příliš složité k popsání a nejsme je edy schopni zkoumat. Tento třecí moment síly nezávislý na otáčkách spinneru označíme $\alpha$.
 
@@ -773,19 +780,19 @@ Poslední složkou, pro kterou nejsme schopni najít fyzikální podstatu, ale k
 Všech tři dříve zmíněné složky dohromady tedy popisuje řídící závislost systému: \footnote{Záporná znaménka používáme čistě z toho důvodu, aby nám koeficienty $\alpha$, $\beta$ a $gamma$ vycházely kladně, jelikož očekáváme, že systém bude zpomalovat.}:
 \begin{equation}
     \label{eq:drag_diff_wlin}
-    \dot{\omega}(t) = - \alpha - \beta \omega(t) - \gamma \omega^2(t) 
+    \dot{\omega}(t) = - \alpha - \beta \omega(t) - \gamma \omega^2(t)
 \end{equation}
 
 Pokud bychom odstranili lineární komponent, získáváme:
 \begin{equation}
     \label{eq:drag_diff}
-    \dot{\omega}(t) = - \alpha - \gamma \omega^2(t) 
+    \dot{\omega}(t) = - \alpha - \gamma \omega^2(t)
 \end{equation}
 
 Obě tyto diferencialní rovnice jsou analyticky řešitelné a jejich řešení pro $\omega$ jsou v tomtéž pořadí \footnote{Všimněme si, že rovnice \ref{eq:drag_res_wlin} je ekvivalentní rovnici \ref{eq:drag_res}, když $\beta = 0$.}:
 \begin{equation}
     \label{eq:drag_res_wlin}
-    \omega(t) = -\frac{\sqrt{4\alpha\gamma - \beta^2} \tan{(\frac{1}{2}\sqrt{4\alpha\gamma - \beta^2}(t-c_1)})-\beta}{2\gamma} 
+    \omega(t) = -\frac{\sqrt{4\alpha\gamma - \beta^2} \tan{(\frac{1}{2}\sqrt{4\alpha\gamma - \beta^2}(t-c_1)})-\beta}{2\gamma}
 \end{equation}
 a
 \begin{equation}
@@ -873,10 +880,22 @@ Dále pouhou analogií pro libovolné dvojice, větší $k$-tice a konečně cel
 \begin{equation}
     \label{eq:max_runtime_proof_p5}
     \begin{gathered}
-        \forall E_j; (1 \leq j \leq n): c_1(E_j) \leq c_1 \Bigg(\sum_{i=1}^n E_i \Bigg) \\ 
+        \forall E_j; (1 \leq j \leq n): c_1(E_j) \leq c_1 \Bigg(\sum_{i=1}^n E_i \Bigg) \\
         \Updownarrow \\
-        t_{max} \leq c_1 \Bigg(\sum_{i=1}^n E_i \Bigg) \\ 
+        t_{max} \leq c_1 \Bigg(\sum_{i=1}^n E_i \Bigg) \\
         \text{QED}
+    \end{gathered}
+\end{equation}
+
+\subsection{Určení jednotek parametrů $\alpha$, $\beta$ a $\gamma$}
+
+Přepsáním rovnice \ref{eq:drag_diff_wlin} pouhými jednotkami jsme jednoduše schopni určit jednotky koeficientů $\alpha$, $\beta$ a $\gamma$:
+\begin{equation}
+    \label{eq:drag_units}
+    \begin{gathered}
+        [rad \cdot s^{-2}] = - [\alpha] - [\beta] [rad \cdot s{-1}] - [\gamma] [rad \cdot s]^2 \\
+        [rad \cdot s^{-2}] = - [rad \cdot s^{-2}] - [s^{-1}] [rad \cdot s{-1}] - [rad^{-1}] [rad^2 \cdot s^{-2}] \\
+        \implies [\alpha] = [rad \cdot s^{-2}]; [\beta] = [s^{-1}]; [\gamma] = [rad^{-1}]
     \end{gathered}
 \end{equation}
 
@@ -884,9 +903,61 @@ Dále pouhou analogií pro libovolné dvojice, větší $k$-tice a konečně cel
 
 \subsection{Experiment pro potvrzení analytického řešení}
 
+Abychom ověřili, zda výsledky našich diferencialních rovnic odpovídají realitě, budeme sledovat jak se snižuje úhlová rychlost každého z našich spinnerů. K tomu využijeme opět magnetického čidla Vernier MG-BTA, které bude sledovat momenty, kdy se kolem něj mihne jeden z magnetů připevněných na ramenou spinneru (velmi podobně jako u \ref{fig:spinner_pendulum_aparature}). Časová hustota těchto vrcholů je úměrná úhlové rychlosti - přesněji 1 vrchol za sekundu se rovná $\frac{2}{3}\pi$ $rad/s$.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace*{-1.5cm}
+    \includegraphics[width=0.45\textwidth]{drag_setup.png}
+    \centering
+    \caption{Ilustrace aparatury pro měření přibližné úhlové rychlosti spinneru}
+    \label{fig:spinner_drag_aparature}
+\end{wrapfigure}
+
+\subsubsection{Aparatura}
+Aparatura tohoto experimetu (vyobrazená na Obr. \ref{fig:spinner_drag_aparature}) je velmi podobná té na Obr. \ref{fig:spinner_pendulum_aparature}. Jediným rozdílem je, že nyní má spinner osazená všechna ramena a to pouze jedním magentem. Zároveň není zavěšen ve své ose, ale leží na podložce a je tedy jeho osa otáčení kolmá na prodložku (resp. rovnoběžná se směrem gravitačního zrychlení). V této orientaci budou prováděna i všechna následující měření v dalších kapitolách.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace*{3cm}
+    \includegraphics[width=0.5\textwidth]{peak_find_alg_drawing.png}
+    \centering
+    \caption{Ilustrace fungování algoritmu pro hledání peaků}
+    \label{fig:peak_find_alg_drawing}
+\end{wrapfigure}
+\subsubsection{Zpracování dat}
+Ke zpracování dat opět použijeme jazyka \texttt{Python} a stejných knihoven jako doposud.
+Prvním úkolem je převedení průběhů kmitů magnetického pole (způsobených mihnutím magnetu před čidlem) do průběhu úhlové rychlosti v čase.
+K tomto bude potřeba určit peaky a jejich pozici v čase a následně konvolucí počítat množství peaků na určitých intervalech.
+Pozice peaků určíme tak, že budeme sledovat kdy naměřená hodnota překročí nějaký práh. Toto bude začátek našeho peaku.
+Když půjde zpět pod hodnotu prahu, ukončíme peak a pozici maxima řekneme, že je ve středu tohoto časového intervalu (viz Obr. \ref{fig:peak_find_alg_drawing}).
+
+\clearpage
+\lstinputlisting[language=Python, caption=Kód k hledání pozic peaků, label=code:3]{./prilohy/snippets/c3.py}
+Druhým krokem je projít celý čas měření a rozdělit ho na menší intervaly. V těchto intervalech spočítáme počet peaků a přepočtem $1$ $peak = \frac{2\pi}{3}$ $rad/s$ určíme přibližnou průměrnou rychlost v tomto okolí.
+
+\clearpage
+\lstinputlisting[language=Python, caption=Pokračování kódu \ref{code:3} - výpočet úhlové rychlosti pomocí konvoluce, label=code:4]{./prilohy/snippets/c4.py}
+
 \subsection{Výsledky a porovnání se simulací}
+Po analýze všech naměřených dat výše uvedeným algorimem (celkem 7 měření, protože máme 7 různých spinnerů) a provedením fitu funkcí dle rovnice \ref{eq:drag_res_wlin} získáváme koeficienty v následucících rozmezích:
+\begin{equation}
+    \label{eq:drag_coef_res}
+    \begin{gathered}
+        0.220 \leq \alpha \leq 0.927 \\
+        0.0 \cdot 10^{-15} \leq \beta \leq 2.5 \cdot 10^{-3} \\
+        2.22 \cdot 10^{-4} \leq \gamma \leq 3.17 \cdot 10^{-4} \\
+    \end{gathered}
+\end{equation}
 
 \subsection{Zhodnocení použití lineárního koeficientu}
+
+Nyní je na řadě prozkoumání významu a užitečnosti lineárního brzdného koeficientu. Získané výsledky pro $\beta$ z předchozích sedmi měření se pohybují velmi nahodile a mezi měřeními zaznamenáváme řádové rozdíly. Toto je prvním indikátorem toho, že linerání složka nebude součástí dobrého popisu.
+
+\begin{wrapfigure}{r}{1\textwidth}
+    \includegraphics[width=1\textwidth]{spinner_decay_with_beta.png}
+    \centering
+    \caption[Příklad grafu naměřeného průběhu $\omega$ v $\t$ s $\beta \neq 0$]{Příklad grafu naměřeného průběhu úhlové rychlosti v čase (zeleně) v porovnání s fitem užívajícím všech tří brzdných složek (červeně). Simulace \footnote{K návrhu, implementaci a testování simulace se dostaneme později, v kapitole \ref{}.} modře.}
+    \label{eq:drag_fit_wlin}
+\end{wrapfigure}
 
 %% literatura
 \begin{thebibliography}{99}
@@ -910,7 +981,7 @@ Dále pouhou analogií pro libovolné dvojice, větší $k$-tice a konečně cel
     \bibitem{pymath} VAN ROSSUM, Guido. \textit{The Python Library Reference, release 3.8.2.} Python Software Foundation, 2020.
     \bibitem{phyphox} STAACKS, S; HÜTZ, S; HEINKE, H a STAMPFER, C. Advanced tools for smartphone-based experiments: phyphox. Online. \textit{Physics Education}. 2018, roč. 53, č. 4. ISSN 0031-9120. Dostupné z: \url{https://doi.org/10.1088/1361-6552/aac05e}. [cit. 2023-12-17].
     \bibitem{csv} SHAFRANOVICH, Yakov. Common format and MIME type for comma-separated values (CSV) files. \textit{RFC 4180, October}. 2005.
-    
+
     \bibitem{spinner_mom_inert_external} ALLAIN, Rhett. Let’s Explore the Physics of Rotational Motion With a Fidget Spinner. \textit{WIRED} [online]. 2017, \textbf{2017}, 1-1 [cit. 2023-12-19]. Dostupné z: \url{https://www.wired.com/2017/05/physics-of-a-fidget-spinner/}
 \end{thebibliography}
 
