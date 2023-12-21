@@ -73,20 +73,20 @@
 % \usepackage[]{nomencl}
 % % makeindex main.nlo -s nomencl.ist -o main.nls
 \usepackage{tabularx} % in the preamble
-
+\usepackage{float}
 \usepackage{booktabs}
 \usepackage{url}
 
-%% Balíčky co se můžou hodit :) 
+%% Balíčky co se můžou hodit :)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{pdfpages} %% Balíček umožňující vkládat stránky z PDF souborů, 
+\usepackage{pdfpages} %% Balíček umožňující vkládat stránky z PDF souborů,
 
 \usepackage{upgreek} %% Balíček pro sazbu stojatých řeckých písmen, třeba u jednotky mikrometr. Například stojaté mí: \upmu, stojaté pí: \uppi
 
-\usepackage{amsmath}    %% Balíčky amsmath a amsfonts 
-\usepackage{amssymb}    %% Balíčky amsmath a amsfonts 
-\usepackage{yhmath}    %% Balíčky amsmath a amsfonts 
+\usepackage{amsmath}    %% Balíčky amsmath a amsfonts
+\usepackage{amssymb}    %% Balíčky amsmath a amsfonts
+\usepackage{yhmath}    %% Balíčky amsmath a amsfonts
 \usepackage{amsfonts}   %% pro sazbu matematických symbolů
 \usepackage{esint}     %% pro sazbu různých integrálů (např \oiint)
 \usepackage{mathrsfs}
@@ -100,21 +100,21 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
+    backgroundcolor=\color{backcolour},
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,
     tabsize=2
 }
 
@@ -125,10 +125,10 @@
 
 %% makra pro sazbu matematiky
 \newcommand{\dif}{\mathrm{d}} %% makro pro sazbu diferenciálu, místo toho
-%% abych musel psát '\mathrm{d}' mi stačí napsat '\dif' což je mnohem 
+%% abych musel psát '\mathrm{d}' mi stačí napsat '\dif' což je mnohem
 %% kratší a mohu si tak usnadnit práci
 
-%% Bordel pro práci - můžeš smáznout :) 
+%% Bordel pro práci - můžeš smáznout :)
 %%%%%%%%%%%%%%%%%%%
 
 \usepackage{lipsum} %% balíček který píše lipsum (nesmyslný text, který se používá pro kontrolu typografie)
@@ -950,14 +950,63 @@ Po analýze všech naměřených dat výše uvedeným algorimem (celkem 7 měře
 
 \subsection{Zhodnocení použití lineárního koeficientu}
 
-Nyní je na řadě prozkoumání významu a užitečnosti lineárního brzdného koeficientu. Získané výsledky pro $\beta$ z předchozích sedmi měření se pohybují velmi nahodile a mezi měřeními zaznamenáváme řádové rozdíly. Toto je prvním indikátorem toho, že linerání složka nebude součástí dobrého popisu (alespoň pro tento případ)...
-
-\begin{wrapfigure}{r}{1\textwidth}
-    \includegraphics[width=1\textwidth]{spinner_decay_with_beta.png}
+\begin{wrapfigure}{r}{0.6\textwidth}
+    \vspace*{0cm}
+    \includegraphics[width=0.6\textwidth]{spinner_decay_with_beta.png}
     \centering
-    \caption[Příklad grafu naměřeného průběhu $\omega$ v $\t$ s $\beta \neq 0$]{Příklad grafu naměřeného průběhu úhlové rychlosti v čase (zeleně) v porovnání s fitem užívajícím všech tří brzdných složek (červeně). Simulace \footnote{K návrhu, implementaci a testování simulace se dostaneme později, v kapitole \ref{}.} modře.}
-    \label{eq:drag_fit_wlin}
+    \caption[Příklad grafu měřeného průběhu $\omega$ v $t$ s $\beta \neq 0$]{Příklad grafu měřeného průběhu úhlové rychlosti v čase (zeleně) v porovnání s fitem užívajícím všech tří brzdných složek (červeně). Simulace modře.}
+    \label{fig:drag_fit_wlin}
 \end{wrapfigure}
+
+Nyní je na řadě prozkoumání významu a užitečnosti lineárního brzdného koeficientu. Získané výsledky pro $\beta$ z předchozích sedmi měření se pohybují velmi nahodile a mezi měřeními zaznamenáváme řádové rozdíly. Toto je prvním indikátorem toho, že lineární složka nebude součástí dobrého popisu tření (alespoň pro tento případ).
+
+Fitujeme-li stejná data funkcí bez lineární složky získáváme graf \ref{fig:drag_fit}. Vidíme, že simulace, jejíž implementací se budeme zabývat v kap. \ref{chap:sim}, v tomto případě viditelně lépe kopíruje naměřené hodnoty.
+\begin{wrapfigure}{r}{1\textwidth}
+    \includegraphics[width=1\textwidth]{spinner_decay.png}
+    \centering
+    \caption[Příklad grafu měřeného průběhu $\omega$ v $t$ s $\beta = 0$]{Příklad grafu měřeného průběhu úhlové rychlosti v čase (zeleně) v porovnání s fitem užívajícím pouze složek $\alpha$ a $\gamma$ (červeně). Simulace modře.}
+    \label{fig:drag_fit}
+\end{wrapfigure}
+
+\clearpage
+
+Poslední měření, které jsme k účelům porovnání těchto dvou metod provedli, bylo sledování úhlové rychlosti, když jsme spinner umístili do blízkosti našeho velkého magnetu. Velký magnet jsme upevnili 8cm od středu spinneru a stejnou aparaturou jako v minulém experimentu jsme sledovali jeho chování. Zde jsme prováděli pouze jedno měření a fitovali jsme ho opět oběma způsoby, které porovnáváme níže:
+\begin{figure}[H]
+    \includegraphics[width=0.65\textwidth]{sim_spinner_magnetic_with_beta.png}
+    \centering
+    \caption[Příklad grafu měřeného průběhu $\omega$ v $t$ s $\beta \neq 0$ v magnetickém poli]{Graf měřeného úhlové rychlosti v čase v porovnání s fitem užívajícím všech tří složek. (barevné schéma jako v Obr. \ref{fig:drag_fit_wlin})}
+    \label{fig:drag_fit_mag_wlin}
+\end{figure}
+Jak můžeme vidět na Obr. \ref{fig:drag_fit_mag_wlin}, koeficient $\beta$ nám vychází efektivně nulový a průběhy fitů, ani simulací se od sebe téměř neliší.
+Z těchto měření tedy ověřujeme naši předchozí představu, že lineární komponent tření není fyzikálně signifikantní.
+\begin{figure}[H]
+    \includegraphics[width=0.65\textwidth]{sim_spinner_magnetic.png}
+    \centering
+    \caption[Příklad grafu měřeného průběhu $\omega$ v $t$ s $\beta = 0$ v magnetickém poli]{Graf měřeného úhlové rychlosti v čase v porovnání s fitem užívajícím složek $\alpha$ a $\gamma$. (barevné schéma jako v Obr. \ref{fig:drag_fit})}
+    \label{fig:drag_fit_mag}
+\end{figure}
+
+\chapter{Simulace}
+\label{chap:sim}
+
+% Jak již bylo zmíněno v předchozí kapitole a jak vychází z názvu této práce, značnou částí našeho zkoumání bylo také počítačové simulování těchto systémů.
+% }
+
+% \vspace*{10cm}
+
+% \section{Popis způsobu simulování}
+
+% \subsection{Runge-Kutta metody}
+
+% \section{Implementace}
+
+% \subsection{Použité datové struktury}
+
+% \subsection{Implementace Runge-Kutta metod}
+
+% \subsection{Popis iteračního kroku}
+
+% \subsection{Časová komplexita}
 
 %% literatura
 \begin{thebibliography}{99}
@@ -985,7 +1034,7 @@ Nyní je na řadě prozkoumání významu a užitečnosti lineárního brzdného
     \bibitem{spinner_mom_inert_external} ALLAIN, Rhett. Let’s Explore the Physics of Rotational Motion With a Fidget Spinner. \textit{WIRED} [online]. 2017, \textbf{2017}, 1-1 [cit. 2023-12-19]. Dostupné z: \url{https://www.wired.com/2017/05/physics-of-a-fidget-spinner/}
 \end{thebibliography}
 
-%% obrázky 
+%% obrázky
 \listoffigures
 
 %% tabulky
