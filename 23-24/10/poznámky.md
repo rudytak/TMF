@@ -252,7 +252,7 @@ $M$ ... amount of spinners \
 $K$ ... RK matrix degree \
 $U$ ... the amount of RK integrations we do in each step ($U=2$ in our case, because: $\tau \implies \omega \implies \varphi$)
 
-$\mathcal{O} \bigg( \bigg( \dfrac{S}{\tau} \bigg) \cdot (N M)^2 \cdot K^U \bigg)$
+$\mathcal{O} \bigg( \bigg( \dfrac{T}{\tau} \bigg) \cdot (N M)^2 \cdot K^U \bigg)$
 
 # Transmissions
 

@@ -12,7 +12,7 @@ class spinner {
     magnet_count = 3,
     _r,
     _I,
-    _m_mag,
+    _m_0,
     magnet_orientation,
     α,
     β,
@@ -20,13 +20,14 @@ class spinner {
     constant_ω
   ) {
     this.S = center;
+    this.φ0 = φ0; // angle
     this.φ = φ0; // angle
     this.ω0 = ω0; // angular velocity
     this.ω = ω0; // angular velocity
     this.I = _I; // moment of inertia
     this.r = _r; // 4 cm
     this.n = magnet_count; // 3
-    this.m_mag = _m_mag;
+    this.m_0 = _m_0;
     this.mag_orientation = magnet_orientation;
 
     this.α = α;
@@ -49,16 +50,16 @@ class spinner {
         return v3
           .cross(v(0, 0, 1), this.P(i).sub(this.S))
           .unit()
-          .mult(this.m_mag);
+          .mult(this.m_0);
         break;
 
       case "radial":
-        return this.P(i).sub(this.S).unit().mult(this.m_mag);
+        return this.P(i).sub(this.S).unit().mult(this.m_0);
         break;
 
       default:
       case "vertical":
-        return v(0, 0, this.m_mag);
+        return v(0, 0, this.m_0);
         break;
     }
   }
@@ -71,7 +72,7 @@ class spinner {
       this.n,
       this.r,
       this.I,
-      this.m_mag,
+      this.m_0,
       this.mag_orientation,
       this.α,
       this.β,
@@ -381,11 +382,11 @@ class sim_instance {
 
     this.defaults = {
       // these defaults don't really have a reason to be changed
-      r: 0.035, // effective radius of the spinners
+      r: 0.0359, // effective radius of the spinners
       B_r: 1.1049, // magnitude residual flux densitty [T]
       V: 0.005 ** 3, // volume of magnet [m^3] (5mm cubed)
       I: 4.80e-5, // measured
-      get m_mag() {
+      get m_0() {
         // magnitude of magnetic moment [A*m^2]
         return (1 / sim_instance.constants.μ_0) * this.B_r * this.V;
       },
@@ -431,7 +432,7 @@ class sim_instance {
     magnet_count = this.defaults.magnet_count,
     r = this.defaults.r,
     I = this.defaults.I,
-    m_mag = this.defaults.m_mag
+    m_0 = this.defaults.m_0
   ) {
     this.spinner_params.push([
       S,
@@ -440,7 +441,7 @@ class sim_instance {
       magnet_count,
       r,
       I,
-      m_mag,
+      m_0,
       magnet_orientation,
       α,
       β,
