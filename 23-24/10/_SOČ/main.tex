@@ -1143,8 +1143,7 @@ Níže vypíšeme Butcherovy tabulky několika základních metod, které pozdě
 \end{table}
 
 \section{Popisující interakce}
-
-Řídícími interakcemi našeho simulovaného modelu budou opět popsány rovnicemi \ref{eq:F_m} a \ref{eq:B}. V simulaci se však zaměříme na interakce celých spinnerů, ne pouze 2 dipólů. Pro popsání spinneru $\mathbb{S}$ musíme určit několik vlastností týkajících se:
+Řídícími interakcemi našeho simulovaného modelu budou opět popsány rovnicemi \ref{eq:F_m} a \ref{eq:B}. V simulaci se však zaměříme na interakce celých spinnerů, ne pouze 2 dipólů. Pro popsání spinneru musíme určit několik vlastností týkajících se:
 \begin{enumerate}[topsep=0pt, partopsep=0pt]
     \setlength{\itemsep}{0pt}%
     \setlength{\parskip}{0pt}%
@@ -1164,7 +1163,7 @@ Naším cílem je popisovat rotaci jednotlivých spinnerů v čase. Toto provede
 
 Ve výše uvedených rovnicí $\tau_F$ popisuje moment síly pocházející ze silové interakce, kterým na spinner (neboli na všechny jeho magnety) působí nějaký externí magnetický moment $m_{external}$ umístěný v prostoru na pozici $P_{external}$. Moment síly určíme pomocí ramene $r$, přes které síla $F$ na spinner působí: $\vec{\tau} = \vec{F} \times \vec{r}$.
 
-$\tau_{mag}$ popisuje moment síly pocházející z toho, že na každý magnet spinneru působí externí magnetické pole $B(r, m_{external})$ tvořené externím magnetickým momentem $m_{external}$ umístěný v prostoru na pozici $P_{external}$.
+$\tau_{mag}$ popisuje moment síly pocházející z toho, že na každý magnet spinneru působí externí magnetické pole $B(r, m_{external})$ tvořené externím magnetickým momentem $m_{external}$ umístěný v prostoru na pozici $P_{external}$. Pomocí momentu magentu umístěného na spinneru jednoduše dopočítáme moment síly podle rovnice \ref{eq:B}: $\tau = m \times B(r, m_{external})$.
 
 Předpisy $\tau_F$ a $\tau_{mag}$ jsou:
 \begin{equation}
@@ -1176,14 +1175,62 @@ Předpisy $\tau_F$ a $\tau_{mag}$ jsou:
 \end{equation}
 
 \section{Implementace}
+K implementaci naší simulace použijeme sotwarový systém zvaný \texttt{Node.js}, který používá programovací jazyk \texttt{JavaScript (JS)} \cite{JS}. K tomuto rozhodnutí jsme došli, jelikož \texttt{Node.js} je rychlejší než \texttt{Python}, ale stále nabízí větší množství programátorsky nápomocných prvků. Pro nás to bude ideální kompromis mezi jednoduchostí implementace a rychlostí. V průběhu implementace také používáme datového formátu \texttt{JSON} \cite{JSON} a nativní knihovnu \texttt{Node.js} zvanou \texttt{fs (File System)}, pomocí které budeme naše výsledky exportovat do \texttt{.csv} souborů pro další zpracování. Použití jazyka \texttt{JavaScript} také nabízí jednoduché znovupoužití již napsaného kódu k vytvoření webového rozhraní s vizualizací simulovaného systému. Toto rozhraní je skvělé k odstraňování chyb v průběhu vývoje a zároveň zjednodušuje interpretaci generovaných výsledků.
 
 \subsection{Použité datové struktury}
+
+\subsubsection{3D vektory}
+
+První datovou strukturou, kterou budeme používat v našich výpočtech jsou 3D vektory. Jejich implementace společně s užitečnými funkcemi (sčítání, odčítání, vektorov a skalární násobení, apod.) je triviální. 
+
+3D vektory v našem kódu budou instancí třídy pojmenované \textbf{\texttt{v3}} a jejich jediné vlastnosti jsou jejich $x,y$ a $z$ komponenty vyjádřené jako 64-bitová čísla podle standardu \texttt{IEEE 754} \cite{IEEE-754}.
+
+\subsubsection{Spinnery}
+
+Další strukturou jsou jednotlivé spinnery, které budeme označovat symbolem $\mathbb{S}$ a případně odpovídajícím číselným indexem, či jiným identifikátorem v pravém dolním indexu. Je-li z kontextu zřejmé, o jaký spinner se jedná, můžeme k jeho vlastnosnostem referovat čistě podle znaků určených v nomenklatuře (viz kap. \ref{sec:nomenclature}). Je-li potřeba oddělovat jednotlivé spinnery, budeme k jejich vlastnostem referovat exakktně a to skrze horní index; například, chtěli bychom-li určit počet ramen (značeno písmenem $n$) nějakého externího spinneru, použili bychom $\mathbb{S}_{external}^{n}$. Pokud bychom chtěli získat pozici 1. magnetu 3. spinneru, použili bychom $\mathbb{S}_{3}^{P}(1)$, jelikož $P(i)$ je funkce. Pomocí tohoto způsobu zápisu také v průběhu následujících kapitolá konkretizujeme rovnice \ref{eq:sim_equations} a \ref{eq:sim_equations2}.
+
+V kódu jsou spinnery instancí třídy \textbf{\texttt{spinner}}, jejíž vlastnosti jsou vypsány v tabulce \ref{tab:sim_spinner_properties}.
+
+\begin{table}[!ht]
+    \captionsetup{justification=raggedright,singlelinecheck=off}
+    \caption[Výpis vlastností třídy \textbf{\texttt{spinner}}]{Výpis vlastností třídy \textbf{\texttt{spinner}}:}
+    \label{tab:sim_spinner_properties}
+
+    \begin{tabularx}{\textwidth}{p{0.2\textwidth} p{0.2\textwidth} p{0.6\textwidth}}
+        \textbf{Symbol} & \textbf{Datový typ} & \textbf{Iniciální hodnota}                    \\
+        \hline
+        S & v3 & žádná \\
+        φ_0 & float64 & žádná \\
+        ω_0 & float64 & žádná \\
+    
+        constant_ω & bool & false \\
+        α = this.defaults.α,
+        β = this.defaults.β,
+        γ = this.defaults.γ,
+        magnet_orientation = this.defaults.magnet_orientation,
+    
+        magnet_count = this.defaults.magnet_count,
+        r = this.defaults.r,
+        I = this.defaults.I,
+        m_mag = this.defaults.m_mag
+    \end{tabularx}
+\end{table}
+
+
+\subsubsection{$\Omega$ stavy}
+
+Další důležitou datovou strukturou
+
+\subsubsection{$\varPhi$ stavy}
+
 
 \subsection{Implementace Runge-Kutta metod}
 
 \subsection{Popis iteračního kroku}
 
 \subsection{Časová komplexita}
+
+\subsection{Webové rozhraní}
 
 %% literatura
 \begin{thebibliography}{99}
@@ -1214,6 +1261,11 @@ Předpisy $\tau_F$ a $\tau_{mag}$ jsou:
     \bibitem{RK_def} PRESS, William H. \textit{Numerical recipes: the art of scientific computing.} 3rd ed. Cambridge: Cambridge University Press, 2007. ISBN 978-0-521-88068-8.
     \bibitem{Butcher_tab_def} ISERLES, A. \textit{A first course in the numerical analysis of differential equations.} Cambridge: Cambridge University Press, 1996. ISBN 978-0-521-55655-2.
     \bibitem{RK_methods_list} PCC, Ben. WIKIMEDIA FOUNDATION. \textit{List of Runge–Kutta methods} [online]. 2007, 2023-12-20 [cit. 2023-12-22]. Dostupné z: \url{https://en.wikipedia.org/wiki/Runge–Kutta_methods}
+
+    \bibitem{JS} FLANAGAN. \textit{JavaScript: the definitive guide.} O'Reilly Media, 2006.
+    \bibitem{JSON} PEZOA, Felipe; REUTTER, Juan L.; SUAREZ, Fernando; UGARTE, Martín a VRGOČ, Domagoj. Foundations of JSON Schema. Online. In: \textit{Proceedings of the 25th International Conference on World Wide Web.} Republic and Canton of Geneva, Switzerland: International World Wide Web Conferences Steering Committee, 2016, s. 263-273. ISBN 9781450341431. Dostupné z: \url{https://doi.org/10.1145/2872427.2883029}. [cit. 2023-12-22].
+    \bibitem{NodeJS} PEREIRA, Caio Ribeiro a PEREIRA, Caio Ribeiro. Introduction to Node.js. Online. In: \textit{Building APIs with Node.js}. Berkeley, CA: Apress, 2016, s. 1-3. ISBN 978-1-4842-2441-0. Dostupné z: \url{https://doi.org/10.1007/978-1-4842-2442-7_1}. [cit. 2023-12-22].
+    \bibitem{IEEE-754}GANSSLE, Jack. IEEE 754 Floating Point Numbers. Online. In: \textit{The Firmware Handbook.} Elsevier, 2004, s. 203-205. ISBN 9780750676069. Dostupné z: \url{https://doi.org/10.1016/B978-075067606-9/50019-9}. [cit. 2023-12-22].
 \end{thebibliography}
 
 %% obrázky

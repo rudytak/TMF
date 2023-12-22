@@ -384,7 +384,7 @@ class sim_instance {
       r: 0.035, // effective radius of the spinners
       B_r: 1.1049, // magnitude residual flux densitty [T]
       V: 0.005 ** 3, // volume of magnet [m^3] (5mm cubed)
-      I: 4.525e-5, // measured
+      I: 4.80e-5, // measured
       get m_mag() {
         // magnitude of magnetic moment [A*m^2]
         return (1 / sim_instance.constants.μ_0) * this.B_r * this.V;

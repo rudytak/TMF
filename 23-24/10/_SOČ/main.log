@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  22 DEC 2023 11:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  22 DEC 2023 17:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -505,11 +505,7 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count317
 \l__lipsum_a_int=\count318
 \l__lipsum_b_int=\count319
- (c:/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (./main.aux
-
-LaTeX Warning: Label `eq:RK_def' multiply defined.
-
-)
+ (c:/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
@@ -591,7 +587,6 @@ Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 139.
- (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -642,21 +637,14 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 249
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [9] [10
 
-] (./main.toc [11
-
-])
+]
+No file main.toc.
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
+[1
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[1]
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -668,7 +656,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Kapitola 1.
+
+LaTeX Warning: Citation `tmf_tasks' on page 3 undefined on input line 284.
+
 [3]
+
+LaTeX Warning: Reference `tab:nomenclature' on page 4 undefined on input line 308.
+
+
 Overfull \hbox (7.52928pt too wide) in paragraph at lines 330--330
 []|\T1/cmr/bx/n/12 Jednotka| 
  []
@@ -689,9 +684,21 @@ Underfull \hbox (badness 3884) in paragraph at lines 330--330
  []
 
 
+LaTeX Warning: Reference `chap:drag' on page 4 undefined on input line 330.
+
+
+LaTeX Warning: Reference `chap:drag' on page 4 undefined on input line 330.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 330--330
 []|\T1/cmr/m/n/12 Koeficient kva-d-ra-ticky z�-vis-l�ho
  []
+
+
+LaTeX Warning: Reference `chap:drag' on page 4 undefined on input line 330.
+
+
+LaTeX Warning: Reference `chap:drag' on page 4 undefined on input line 330.
 
 
 Overfull \hbox (8.16888pt too wide) in alignment at lines 330--330
@@ -709,12 +716,33 @@ Overfull \hbox (2.68436pt too wide) in paragraph at lines 345--345
  []
 
 
+LaTeX Warning: Citation `magnetic_force' on page 4 undefined on input line 345.
+
+
+LaTeX Warning: Citation `magnetic_force' on page 4 undefined on input line 345.
+
+
+LaTeX Warning: Citation `magnetic_torque' on page 4 undefined on input line 345.
+
+
+LaTeX Warning: Citation `magnetic_torque' on page 4 undefined on input line 345.
+
+
+LaTeX Warning: Citation `torque_def' on page 4 undefined on input line 345.
+
+
 LaTeX Warning: Reference `' on page 4 undefined on input line 345.
 
 
 Overfull \hbox (25.23637pt too wide) in alignment at lines 345--345
 [][][][] 
  []
+
+
+LaTeX Warning: Citation `shorthand_error_notation' on page 4 undefined on input line 348.
+
+
+LaTeX Warning: Citation `shorthand_error_notation_stack_exchange' on page 4 undefined on input line 348.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -727,27 +755,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Kapitola 2.
-<./imgsLR/osazeny_spinner.png, id=334, 501.875pt x 531.9875pt>
+<./imgsLR/osazeny_spinner.png, id=99, 501.875pt x 531.9875pt>
 File: ./imgsLR/osazeny_spinner.png Graphic file (type png)
 <use ./imgsLR/osazeny_spinner.png>
 Package pdftex.def Info: ./imgsLR/osazeny_spinner.png  used on input line 353.
 (pdftex.def)             Requested size: 136.57462pt x 144.76686pt.
-<./imgsLR/3spinnery.png, id=338, 501.875pt x 456.70625pt>
+
+LaTeX Warning: Reference `attachment_1' on page 5 undefined on input line 362.
+
+
+LaTeX Warning: Reference `attachment_2' on page 5 undefined on input line 363.
+
+<./imgsLR/3spinnery.png, id=101, 501.875pt x 456.70625pt>
 File: ./imgsLR/3spinnery.png Graphic file (type png)
 <use ./imgsLR/3spinnery.png>
 Package pdftex.def Info: ./imgsLR/3spinnery.png  used on input line 368.
 (pdftex.def)             Requested size: 159.33821pt x 144.99913pt.
+
+LaTeX Warning: Reference `attachment_3' on page 5 undefined on input line 373.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5
 
  <./imgsLR/osazeny_spinner.png> <./imgsLR/3spinnery.png>]
-<./imgsLR/orientace_magnetu.png, id=351, 501.875pt x 951.555pt>
+<./imgsLR/orientace_magnetu.png, id=112, 501.875pt x 951.555pt>
 File: ./imgsLR/orientace_magnetu.png Graphic file (type png)
 <use ./imgsLR/orientace_magnetu.png>
 Package pdftex.def Info: ./imgsLR/orientace_magnetu.png  used on input line 404.
 (pdftex.def)             Requested size: 136.57462pt x 258.9415pt.
+
+
+LaTeX Warning: Reference `fig:mag_orientations' on page 6 undefined on input line 410.
+
+
+LaTeX Warning: Reference `fig:1spinner' on page 6 undefined on input line 421.
+
 
 Overfull \hbox (24.0pt too wide) in alignment at lines 440--440
 [][] 
@@ -762,6 +806,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6 <./imgsLR/orientace_magnetu.png>]
 
+LaTeX Warning: Reference `sec:remanence_measurement' on page 7 undefined on input line 451.
+
+
+LaTeX Warning: Reference `sec:moment_of_inertia' on page 7 undefined on input line 462.
+
+
+LaTeX Warning: Reference `chap:drag' on page 7 undefined on input line 465.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.04742pt, for example:
 (fancyhdr)                \setlength{\headheight}{15.04742pt}.
@@ -769,6 +822,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
 [7]
+
+LaTeX Warning: Citation `magnet_grades' on page 8 undefined on input line 470.
+
+
+LaTeX Warning: Citation `magnet_grades' on page 8 undefined on input line 471.
+
+
+LaTeX Warning: Citation `magnetic_torque' on page 8 undefined on input line 474.
+
+
+LaTeX Warning: Reference `sec:remanence_measurement' on page 8 undefined on input line 481.
+
+
+LaTeX Warning: Citation `magnetic_force' on page 8 undefined on input line 491.
+
+
 Overfull \hbox (6.19025pt too wide) detected at line 504
 []
  []
@@ -777,6 +846,12 @@ Overfull \hbox (6.19025pt too wide) detected at line 504
 Overfull \hbox (29.3747pt too wide) detected at line 504
 [][][][]
  []
+
+
+LaTeX Warning: Citation `magnetic_torque' on page 8 undefined on input line 506.
+
+
+LaTeX Warning: Citation `magnetic_force' on page 8 undefined on input line 506.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -789,17 +864,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Kapitola 3.
-<./imgsLR/dims.png, id=405, 501.875pt x 503.8825pt>
+<./imgsLR/dims.png, id=156, 501.875pt x 503.8825pt>
 File: ./imgsLR/dims.png Graphic file (type png)
 <use ./imgsLR/dims.png>
 Package pdftex.def Info: ./imgsLR/dims.png  used on input line 522.
 (pdftex.def)             Requested size: 204.85846pt x 205.6782pt.
 
+LaTeX Warning: Reference `fig:spinner_size' on page 9 undefined on input line 530.
+
+
 Overfull \hbox (9.91676pt too wide) in paragraph at lines 537--537
 |\T1/cmr/bx/sc/17.28 3.2 Mo-ment se-tr-va�-nosti| 
  []
 
-<./imgsLR/mom_inert_setup.png, id=409, 501.875pt x 531.9875pt>
+
+LaTeX Warning: Citation `physical_pendulum' on page 9 undefined on input line 540.
+
+
+LaTeX Warning: Reference `eq:mag_pend' on page 9 undefined on input line 546.
+
+<./imgsLR/mom_inert_setup.png, id=157, 501.875pt x 531.9875pt>
 File: ./imgsLR/mom_inert_setup.png Graphic file (type png)
 <use ./imgsLR/mom_inert_setup.png>
 Package pdftex.def Info: ./imgsLR/mom_inert_setup.png  used on input line 555.
@@ -807,6 +891,10 @@ Package pdftex.def Info: ./imgsLR/mom_inert_setup.png  used on input line 555.
 [9
 
  <./imgsLR/dims.png>]
+
+LaTeX Warning: Reference `fig:spinner_pendulum_recording' on page 10 undefined on input line 563.
+
+
 Overfull \hbox (7.08809pt too wide) in paragraph at lines 567--567
 |\T1/cmr/bx/n/14.4 3.2.2 Ana-l�za m�-�en� a v�-sledky| 
  []
@@ -815,12 +903,17 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 56
 (c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-<./imgsLR/spin_pendulum_field_rec.png, id=422, 501.875pt x 272.01625pt>
+
+LaTeX Warning: Citation `python' on page 10 undefined on input line 568.
+
+
+LaTeX Warning: Citation `scipy' on page 10 undefined on input line 568.
+
+<./imgsLR/spin_pendulum_field_rec.png, id=172, 501.875pt x 272.01625pt>
 File: ./imgsLR/spin_pendulum_field_rec.png Graphic file (type png)
 <use ./imgsLR/spin_pendulum_field_rec.png>
 Package pdftex.def Info: ./imgsLR/spin_pendulum_field_rec.png  used on input line 573.
 (pdftex.def)             Requested size: 455.24411pt x 246.75485pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.04742pt, for example:
@@ -829,9 +922,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
 [10 <./imgsLR/mom_inert_setup.png> <./imgsLR/spin_pendulum_field_rec.png>]
+
+LaTeX Warning: Reference `eq:mom_inert' on page 11 undefined on input line 587.
+
+
+LaTeX Warning: Citation `spinner_mom_inert_external' on page 11 undefined on input line 587.
+
+
+LaTeX Warning: Reference `code:1' on page 11 undefined on input line 595.
+
+
+LaTeX Warning: Citation `numpy' on page 11 undefined on input line 596.
+
+
+LaTeX Warning: Reference `fig:spinner_pendulum_recording' on page 11 undefined on input line 597.
+
+
+LaTeX Warning: Citation `matplotlib' on page 11 undefined on input line 597.
+
+
 Overfull \hbox (28.69438pt too wide) in paragraph at lines 603--605
 []\T1/cmtt/m/n/12 ydata \T1/cmr/m/n/12 vy-hla-d�me, abychom se zba-vili �umu a to po-moc� kon-vo-luce skrze funkci \T1/cmtt/m/n/12 numpy.convolve\T1/cmr/m/n/12 .
  []
+
+
+LaTeX Warning: Reference `eq:freq_from_peaks' on page 11 undefined on input line 630.
 
 (c:/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -872,6 +987,21 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 653.
 
+
+LaTeX Warning: Citation `csv' on page 13 undefined on input line 654.
+
+
+LaTeX Warning: Reference `code:1' on page 13 undefined on input line 655.
+
+
+LaTeX Warning: Reference `fig:mag_field_recording_2mag_10cm' on page 13 undefined on input line 658.
+
+
+LaTeX Warning: Citation `pymath' on page 13 undefined on input line 660.
+
+
+LaTeX Warning: Reference `fig:mag_field_recording_2mag_10cm' on page 13 undefined on input line 667.
+
 (./prilohy/snippets/c2.py
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -881,7 +1011,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.93668pt}.
 
 [13])
-<./imgsLR/mag_field_measurement_2mag_10cm.png, id=528, 501.875pt x 316.18124pt>
+<./imgsLR/mag_field_measurement_2mag_10cm.png, id=262, 501.875pt x 316.18124pt>
 File: ./imgsLR/mag_field_measurement_2mag_10cm.png Graphic file (type png)
 <use ./imgsLR/mag_field_measurement_2mag_10cm.png>
 Package pdftex.def Info: ./imgsLR/mag_field_measurement_2mag_10cm.png  used on input line 672.
@@ -895,7 +1025,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.93668pt}.
 
 [14 <./imgsLR/mag_field_measurement_2mag_10cm.png>]
-<./imgsLR/B_field_in_distance.png, id=552, 501.875pt x 389.455pt>
+
+LaTeX Warning: Reference `fig:B_in_dist' on page 15 undefined on input line 680.
+
+<./imgsLR/B_field_in_distance.png, id=286, 501.875pt x 389.455pt>
 File: ./imgsLR/B_field_in_distance.png Graphic file (type png)
 <use ./imgsLR/B_field_in_distance.png>
 Package pdftex.def Info: ./imgsLR/B_field_in_distance.png  used on input line 684.
@@ -905,11 +1038,23 @@ Underfull \hbox (badness 1067) in paragraph at lines 686--686
 []\T1/cmr/m/n/12 Obr. 8: |Z�-vis-lost mag-ne-tick� in-dukce na
  []
 
-<./imgsLR/F_in_distance.png, id=556, 501.875pt x 385.44pt>
+
+LaTeX Warning: Reference `eq:B' on page 15 undefined on input line 690.
+
+
+LaTeX Warning: Reference `eq:mag_mom_remanence' on page 15 undefined on input line 698.
+
+
+LaTeX Warning: Reference `fig:rem_final' on page 15 undefined on input line 705.
+
+<./imgsLR/F_in_distance.png, id=287, 501.875pt x 385.44pt>
 File: ./imgsLR/F_in_distance.png Graphic file (type png)
 <use ./imgsLR/F_in_distance.png>
 Package pdftex.def Info: ./imgsLR/F_in_distance.png  used on input line 713.
 (pdftex.def)             Requested size: 204.85846pt x 157.33154pt.
+
+LaTeX Warning: Reference `fig:mag_force_in_dist' on page 15 undefined on input line 720.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.93668pt, for example:
@@ -920,11 +1065,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [15
 
  <./imgsLR/B_field_in_distance.png> <./imgsLR/F_in_distance.png>]
-<./imgsLR/Final_remanence.png, id=574, 501.875pt x 352.31625pt>
+
+LaTeX Warning: Reference `eq:B_reduced' on page 16 undefined on input line 724.
+
+
+LaTeX Warning: Reference `eq:F_m' on page 16 undefined on input line 724.
+
+
+LaTeX Warning: Reference `eq:mag_mom_remanence' on page 16 undefined on input line 731.
+
+
+LaTeX Warning: Reference `fig:rem_final' on page 16 undefined on input line 738.
+
+
+LaTeX Warning: Reference `fig:rem_final' on page 16 undefined on input line 742.
+
+<./imgsLR/Final_remanence.png, id=300, 501.875pt x 352.31625pt>
 File: ./imgsLR/Final_remanence.png Graphic file (type png)
 <use ./imgsLR/Final_remanence.png>
 Package pdftex.def Info: ./imgsLR/Final_remanence.png  used on input line 747.
 (pdftex.def)             Requested size: 227.62206pt x 159.79343pt.
+
+LaTeX Warning: Citation `magnet_grades' on page 16 undefined on input line 753.
+
 
 Overfull \hbox (0.1525pt too wide) in paragraph at lines 753--754
 [][]\T1/cmr/m/n/12 V�sledn� hod-nota re-ma-nence na-�ich krych-
@@ -950,6 +1113,15 @@ Kapitola 4.
 
 
 ]
+
+LaTeX Warning: Reference `eq:drag_res_wlin' on page 18 undefined on input line 794.
+
+
+LaTeX Warning: Reference `eq:drag_res' on page 18 undefined on input line 794.
+
+
+LaTeX Warning: Reference `sec:moment_of_inertia' on page 18 undefined on input line 813.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.04742pt, for example:
@@ -1019,6 +1191,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 892.
 
 
+LaTeX Warning: Reference `eq:drag_diff_wlin' on page 20 undefined on input line 894.
+
+
 Package amsmath Warning: Bracket group [rad \cdot s^{-2}] at formula start!
 (amsmath)                It could be a misspelled positional argument.
 (amsmath)                If it belongs to the formula add a \relax in
@@ -1034,21 +1209,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [20
 
 ]
-<./imgsLR/drag_setup.png, id=631, 501.875pt x 531.9875pt>
+
+LaTeX Warning: Reference `fig:spinner_pendulum_aparature' on page 21 undefined on input line 908.
+
+<./imgsLR/drag_setup.png, id=357, 501.875pt x 531.9875pt>
 File: ./imgsLR/drag_setup.png Graphic file (type png)
 <use ./imgsLR/drag_setup.png>
 Package pdftex.def Info: ./imgsLR/drag_setup.png  used on input line 912.
 (pdftex.def)             Requested size: 204.85846pt x 217.1503pt.
 
+LaTeX Warning: Reference `fig:spinner_drag_aparature' on page 21 undefined on input line 919.
+
+
+LaTeX Warning: Reference `fig:spinner_pendulum_aparature' on page 21 undefined on input line 919.
+
+
 Overfull \hbox (0.80925pt too wide) in paragraph at lines 919--920
 \T1/cmr/m/n/12 no-b��n� se sm�-rem gra-vi-ta�-n�ho zrych-len�).
  []
 
-<./imgsLR/peak_find_alg_drawing.png, id=634, 501.875pt x 333.245pt>
+<./imgsLR/peak_find_alg_drawing.png, id=358, 501.875pt x 333.245pt>
 File: ./imgsLR/peak_find_alg_drawing.png Graphic file (type png)
 <use ./imgsLR/peak_find_alg_drawing.png>
 Package pdftex.def Info: ./imgsLR/peak_find_alg_drawing.png  used on input line 923.
 (pdftex.def)             Requested size: 227.62206pt x 151.14363pt.
+
+LaTeX Warning: Reference `fig:peak_find_alg_drawing' on page 21 undefined on input line 933.
+
 
 Overfull \hbox (0.8399pt too wide) in paragraph at lines 929--934
 \T1/cmr/m/n/12 Prv-n�m �ko-lem je p�e-ve-den� pr�-b�h� kmit�
@@ -1079,12 +1266,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [22
 
 ] (./prilohy/snippets/c4.py)
-<./imgsLR/spinner_decay_with_beta.png, id=691, 501.875pt x 344.28625pt>
+
+LaTeX Warning: Reference `code:3' on page 23 undefined on input line 940.
+
+
+LaTeX Warning: Reference `code:3' on page 23 undefined on input line 940.
+
+
+LaTeX Warning: Reference `eq:drag_res_wlin' on page 23 undefined on input line 943.
+
+<./imgsLR/spinner_decay_with_beta.png, id=416, 501.875pt x 344.28625pt>
 File: ./imgsLR/spinner_decay_with_beta.png Graphic file (type png)
 <use ./imgsLR/spinner_decay_with_beta.png>
 Package pdftex.def Info: ./imgsLR/spinner_decay_with_beta.png  used on input line 957.
 (pdftex.def)             Requested size: 273.14923pt x 187.388pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.04742pt, for example:
@@ -1100,9 +1295,15 @@ Underfull \hbox (badness 1688) in paragraph at lines 963--964
  []
 
 
+LaTeX Warning: Reference `fig:drag_fit' on page 24 undefined on input line 965.
+
+
+LaTeX Warning: Reference `chap:sim' on page 24 undefined on input line 965.
+
+
 Package wrapfig Warning: Collision between wrapping environments on input line 966.
 
-<./imgsLR/spinner_decay.png, id=732, 501.875pt x 341.275pt>
+<./imgsLR/spinner_decay.png, id=456, 501.875pt x 341.275pt>
 File: ./imgsLR/spinner_decay.png Graphic file (type png)
 <use ./imgsLR/spinner_decay.png>
 Package pdftex.def Info: ./imgsLR/spinner_decay.png  used on input line 967.
@@ -1123,16 +1324,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
 [24 <./imgsLR/spinner_decay_with_beta.png> <./imgsLR/spinner_decay.png>]
-<./imgsLR/sim_spinner_magnetic_with_beta.png, id=741, 501.875pt x 346.29375pt>
+<./imgsLR/sim_spinner_magnetic_with_beta.png, id=465, 501.875pt x 346.29375pt>
 File: ./imgsLR/sim_spinner_magnetic_with_beta.png Graphic file (type png)
 <use ./imgsLR/sim_spinner_magnetic_with_beta.png>
 Package pdftex.def Info: ./imgsLR/sim_spinner_magnetic_with_beta.png  used on input line 977.
 (pdftex.def)             Requested size: 295.90588pt x 204.18471pt.
-<./imgsLR/sim_spinner_magnetic.png, id=745, 501.875pt x 348.30125pt>
+
+
+LaTeX Warning: Reference `fig:drag_fit_wlin' on page 25 undefined on input line 979.
+
+
+LaTeX Warning: Reference `fig:drag_fit_wlin' on page 25 undefined on input line 979.
+
+
+LaTeX Warning: Reference `fig:drag_fit_mag_wlin' on page 25 undefined on input line 982.
+
+<./imgsLR/sim_spinner_magnetic.png, id=466, 501.875pt x 348.30125pt>
 File: ./imgsLR/sim_spinner_magnetic.png Graphic file (type png)
 <use ./imgsLR/sim_spinner_magnetic.png>
 Package pdftex.def Info: ./imgsLR/sim_spinner_magnetic.png  used on input line 985.
 (pdftex.def)             Requested size: 295.90588pt x 205.36841pt.
+
+LaTeX Warning: Reference `fig:drag_fit' on page 25 undefined on input line 987.
+
+
+LaTeX Warning: Reference `fig:drag_fit' on page 25 undefined on input line 987.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1156,9 +1372,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 Kapitola 5.
 
+LaTeX Warning: Citation `sim_methods' on page 27 undefined on input line 998.
+
+
+LaTeX Warning: Citation `RK_def' on page 27 undefined on input line 1002.
+
+
 Overfull \hbox (1.40813pt too wide) in paragraph at lines 1002--1003
 \T1/cmr/m/n/12 Runge-Kutta me-tody, po-jme-no-van� po Carlu Da-vidu Tolm� Run-ge-ovi a Mar-tinu Wilhelmu
  []
+
+
+LaTeX Warning: Citation `Butcher_tab_def' on page 27 undefined on input line 1013.
 
 
 Underfull \hbox (badness 10000) in alignment at lines 1028--1028
@@ -1166,6 +1391,13 @@ Underfull \hbox (badness 10000) in alignment at lines 1028--1028
  []
 
 [27]
+
+LaTeX Warning: Citation `Butcher_tab_def' on page 28 undefined on input line 1031.
+
+
+LaTeX Warning: Citation `RK_methods_list' on page 28 undefined on input line 1041.
+
+
 Underfull \vbox (badness 3250) has occurred while \output is active []
 
 
@@ -1178,6 +1410,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [28]
 
+LaTeX Warning: Reference `eq:F_m' on page 29 undefined on input line 1146.
+
+
+LaTeX Warning: Reference `eq:B' on page 29 undefined on input line 1146.
+
+
+LaTeX Warning: Reference `sub:param_konf' on page 29 undefined on input line 1150.
+
+
+LaTeX Warning: Reference `sec:moment_of_inertia' on page 29 undefined on input line 1151.
+
+
+LaTeX Warning: Reference `chap:drag' on page 29 undefined on input line 1151.
+
+
+LaTeX Warning: Reference `sec:remanence_measurement' on page 29 undefined on input line 1152.
+
+
+LaTeX Warning: Reference `fig:mag_orientations' on page 29 undefined on input line 1152.
+
+
+LaTeX Warning: Reference `eq:B' on page 29 undefined on input line 1166.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.61858pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.61858pt}.
@@ -1186,6 +1442,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [29]
 
+LaTeX Warning: Citation `JS' on page 30 undefined on input line 1178.
+
+
+LaTeX Warning: Citation `JSON' on page 30 undefined on input line 1178.
+
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 1182.
+
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1186.
+
+LaTeX Warning: Citation `IEEE-754' on page 30 undefined on input line 1186.
+
+
+LaTeX Warning: Reference `sec:nomenclature' on page 30 undefined on input line 1190.
+
+
+LaTeX Warning: Reference `eq:sim_equations' on page 30 undefined on input line 1190.
+
+
+LaTeX Warning: Reference `eq:sim_equations2' on page 30 undefined on input line 1190.
+
+
+Underfull \vbox (badness 1895) has occurred while \output is active []
+
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1193,41 +1477,769 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+
+LaTeX Warning: Reference `tab:sim_spinner_properties' on page 31 undefined on input line 1192.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character φ (U+03C6)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character ω (U+03C9)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.1216     \end{tabularx}
+                         
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character ω (U+03C9)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing } inserted.
+<inserted text> 
+                }
+l.1216     \end{tabularx}
+                         
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character α (U+03B1)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character α (U+03B1)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character β (U+03B2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character β (U+03B2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character φ (U+03C6)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character ω (U+03C9)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.1216     \end{tabularx}
+                         
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character ω (U+03C9)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing } inserted.
+<inserted text> 
+                }
+l.1216     \end{tabularx}
+                         
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character α (U+03B1)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character α (U+03B1)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character β (U+03B2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character β (U+03B2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character φ (U+03C6)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character ω (U+03C9)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.1216     \end{tabularx}
+                         
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character ω (U+03C9)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing } inserted.
+<inserted text> 
+                }
+l.1216     \end{tabularx}
+                         
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character α (U+03B1)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character α (U+03B1)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character β (U+03B2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character β (U+03B2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216     \end{tabularx}
+                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1216--1216
+[]|\T1/cmr/m/n/12 = this.defaults.,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1216--1216
+\T1/cmr/m/n/12 = this.defaults.,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1216--1216
+\T1/cmr/m/n/12 = this.defaults.,
+ []
+
+
+Overfull \hbox (17.29916pt too wide) in paragraph at lines 1216--1216
+\T1/cmr/m/n/12 magnet$[]\OML/cmm/m/it/12 rientation \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (81.54295pt too wide) in paragraph at lines 1216--1216
+\OML/cmm/m/it/12 this:defaults:magnet[]rientation;$ 
+ []
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/ASUS/Desktop/TMF/23-24/10/_SOČ/main.tex:1216: Missing $ inserted.
+<inserted text> 
+                $
+l.1216     \end{tabularx}
+                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 5847) in paragraph at lines 1216--1216
+[]\T1/cmr/m/n/12 magnet$[]\OML/cmm/m/it/12 ount \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (71.38815pt too wide) in paragraph at lines 1216--1216
+\OML/cmm/m/it/12 this:defaults:magnet[]ount; r \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (9.88159pt too wide) in paragraph at lines 1216--1216
+\OML/cmm/m/it/12 this:defaults:r; I \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (35.43404pt too wide) in paragraph at lines 1216--1216
+\OML/cmm/m/it/12 this:defaults:I; m[]ag \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (11.57248pt too wide) in paragraph at lines 1216--1216
+\OML/cmm/m/it/12 this:defaults:m[]ag|$ 
+ []
+
+
+Overfull \hbox (35.99997pt too wide) in alignment at lines 1216--1216
+[][][] 
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Omega' on input line 1220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1224.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\varPhi' on input line 1224.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1224.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[31]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1245
 []\T1/cmr/m/n/12 Jasper. \T1/cmr/m/it/12 Shorthand error no-tation (with brackets) accros de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1245
 \T1/cmr/m/it/12 ci-mal point [du-pli-cate] \T1/cmr/m/n/12 [on-line]. [cit. 2023-12-16]. Do-stupn�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1245
 \T1/cmr/m/n/12 z: []$\T1/cmtt/m/n/12 https : / / physics . stackexchange . com / questions / 445141 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
+Underfull \hbox (badness 10000) in paragraph at lines 1246--1247
 []\T1/cmr/m/it/12 Neodymium Mag-net Gra-des \T1/cmr/m/n/12 [on-line]. [cit. 2023-12-16]. Do-stupn�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
+Underfull \hbox (badness 10000) in paragraph at lines 1246--1247
 \T1/cmr/m/n/12 z: []$\T1/cmtt/m/n/12 https : / / totalelement . com / blogs / about-[]neodymium-[]magnets /
  []
 
 
-Underfull \hbox (badness 7273) in paragraph at lines 1200--1201
+Underfull \hbox (badness 7273) in paragraph at lines 1247--1248
 []\T1/cmr/m/n/12 REICHL, Ja-ro-slav a Mar-tin V�E-TI�KA. \T1/cmr/m/it/12 Fy-zick� ky-va-dlo \T1/cmr/m/n/12 [on-line]. [cit.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1200--1201
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1248
 \T1/cmr/m/n/12 2023-12-16]. Do-stupn� z: []$\T1/cmtt/m/n/12 http : / / fyzika . jreichl . com / main . article / view /
  []
 
-[31
+[33
 
 ]
 
@@ -1237,27 +2249,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[32] (./main.lof)
-\tf@lof=\write5
-\openout5 = `main.lof'.
-
- [33
-
-]
+[34]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.04742pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[34
-
-] (./main.lot)
-\tf@lot=\write6
-\openout6 = `main.lot'.
-
- [35]
+[35]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1267,11 +2267,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [36
 
-] (./main.lol)
-\tf@lol=\write7
-\openout7 = `main.lol'.
+]
+No file main.lof.
+\tf@lof=\write5
+\openout5 = `main.lof'.
 
- [37]
+[37]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.04742pt, for example:
@@ -1281,29 +2282,68 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [38
 
-] [39] (./main.aux)
+]
+No file main.lot.
+\tf@lot=\write6
+\openout6 = `main.lot'.
+
+[39]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[40
+
+] (./main.lol
+
+LaTeX Warning: Reference `code:3' on page 41 undefined on input line 4.
+
+)
+\tf@lol=\write7
+\openout7 = `main.lol'.
+
+ [41]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[42
+
+] [43] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3305AEE9191DD70E23CA4DA62ECD5821;6710.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  A71A5D0BF64BB3815714F5279D92F67E;7273.
  ) 
 Here is how much of TeX's memory you used:
- 18653 strings out of 476093
- 297494 string characters out of 5795582
+ 18628 strings out of 476093
+ 296972 string characters out of 5795582
  2226787 words of memory out of 5000000
- 38267 multiletter control sequences out of 15000+600000
- 543457 words of font info for 123 fonts, out of 8000000 for 9000
+ 38239 multiletter control sequences out of 15000+600000
+ 544233 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,19n,85p,832b,2244s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (50 pages, 2147801 bytes).
+ 72i,19n,85p,1068b,2244s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
+Output written on main.pdf (53 pages, 2157994 bytes).
 PDF statistics:
- 1083 PDF objects out of 1200 (max. 8388607)
- 926 compressed objects within 10 object streams
- 340 named destinations out of 1000 (max. 500000)
- 413 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 820 PDF objects out of 1000 (max. 8388607)
+ 683 compressed objects within 7 object streams
+ 350 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
