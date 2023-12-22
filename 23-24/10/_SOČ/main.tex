@@ -386,6 +386,7 @@ Neměli bychom opomenout ani skutečnost, že všechny spinnery mají být \text
 Z úvodního sledování není těžké určit relevantní parametry a vybrat, které z nich je možné s naším vybavením měřit.
 
 \subsection{Parametry týkající se konfigurace spinnerů}
+\label{sub:param_konf}
 Jakožto nejdůležitější bychom určitě označili relativní pozice všech spinnerů, které popíšeme pomocí jejich středů $S_1, S_2,...$ (každý střed je braný jako vektor ve spinnerové rovině) a jejich poloměrů $r_1, r_2, ...$.
 Dále bude k přesnému určení pozicí magnetů nezbytné znát okamžité úhly rotace spinnerů, které ozačíme $\varphi_1, \varphi_2,...$.
 Nakonec k popsání spinneru musíme určit počet ramen, neboli počet připevněných magnetů. Tento počet označíme $n$ a pro naše spinnery platí $n=3$.
@@ -453,6 +454,7 @@ Posledním parametrem, který zmíníme, ale nebudeme se jím zabývat, je přit
 V našem případě jsem se zaměřili převážně na systémy, kde se všechny magnety odpuzují.
 
 \subsection{Parametry týkající se pohybu spinnerů}
+\label{sub:param_move}
 
 Druhou, složitější, částí popisu našeho systému je jeho pohyb a chování v čase.
 Zde se nevyhneme úhlovým rychlostem jednotlivých spinnerů, které budeme značit $\omega_1, \omega_2,...$.
@@ -1008,13 +1010,174 @@ Runge-Kutta metody, pojmenované po Carlu Davidu Tolmé Rungeovi a Martinu Wilhe
 
 V tomto předpisu jednotlivé znamenají: $t_n$ je čas stavu $y_n$ a $\Delta t$ je krátký časový krok; $s$ je stupeň RK metody; $a_{m,j}$, $b_i$ a $c_m$ jsou specifické koeficinty dané RK metody; $y_n$ je stávající stav a $y_{n+1}$ je budoucí, předpovídaný, stav; $k_m$ je pomocný sub-stav; $f(t,y) = \dot{y}$.
 
+Specifick0 koeficienty se nejčastěji zapisují pomocí tzv. Butcherových tabulek \cite{Butcher_tab_def} (pojmenovaných po Johnu Charlesovi Butcherovi). Zápis obecné Butcherovy tabulky pro RK metodu $s$. stupně je:
+\begin{table}[!ht]
+    \centering
+    \captionsetup{singlelinecheck=off}
+    \caption{Zápis obecné Butcherovy tabulky pro RK metodu $s$. stupně}
+    \label{tab:Butch_tab}
 
+    \begin{tabularx}{7cm}{c | c c c c c}
+        $c_1 = 0$ \\
+        $c_2$ & $a_{2, 1}$ \\
+        $c_3$ & $a_{3, 1}$ & $a_{3, 2}$ \\
+        $\vdots$ & $\vdots$ & & $\ddots$ \\
+        $c_s$ & $a_{s, 1}$ & $a_{s, 2}$ & $\cdots$ & $a_{s, s-1}$ \\
+        \hline
+        & $b_1$ & $b_2$ & $\cdots$ & $b_{s-1}$ & $b_s$ \\
+    \end{tabularx}
+\end{table}
+
+Některé z podmínek, které sice nezaručují konzistentnost a stabilitu metody, ale dobrými základními pravidly jsou \cite{Butcher_tab_def}:
+
+\begin{equation}
+    \label{eq:RK_def}
+    \begin{gathered}
+        \text{1)} \quad \quad \qquad \qquad \sum_{i=1}^{s} b_i = 1 \qquad \qquad \\
+        \text{2)} \quad \quad \sum_{j=1}^{i-1} a_{i,j} = c_i \quad (i \in \{2,...,s\})
+    \end{gathered}
+\end{equation}
+
+Níže vypíšeme Butcherovy tabulky několika základních metod, které později implementujeme \cite{RK_methods_list}:
+
+\begin{table}[H]
+    \parbox{.45\linewidth}{
+        \centering
+        \caption[Butcherova tabulka Eulerovy metody]{\textbf{Eulerova metoda}}
+        \begin{tabular}{c | c}
+            0 & \\
+            \hline
+            & 1 \\
+        \end{tabular}
+    }
+    \hfill
+    \parbox{.45\linewidth}{
+        \centering
+        \caption[Butcherova tabulka metody středního bodu]{Metoda středního bodu}
+        \begin{tabular}{c | c c}
+            0 & \\
+            1/2 & 1/2\\
+            \hline
+            & 0 & 1 \\
+        \end{tabular}
+    }
+\end{table}
+\begin{table}[H]
+    \parbox{.3\linewidth}{
+        \centering
+        \caption[Butcherova tabulka Heunovy metody]{Heunova metoda}
+        \begin{tabular}{c | c c}
+            0 & \\
+            1 & 1\\
+            \hline
+            & 1/2 & 1/2 \\
+        \end{tabular}
+    }
+    \hfill
+    \parbox{.3\linewidth}{
+        \centering
+        \caption[Butcherova tabulka Ralstonovy metody]{Ralstonova metoda}
+        \begin{tabular}{c | c c}
+            0 & \\
+            2/3 & 2/3\\
+            \hline
+            & 1/4 & 3/4 \\
+        \end{tabular}
+    }
+    \hfill
+    \parbox{.3\linewidth}{
+        \centering
+        \caption[Butcherova tabulka obecné metody 2. stupně]{Obecná metoda 2. stupně}
+        \begin{tabular}{c | c c}
+            0 & \\
+            $\alpha$ & $\alpha$\\
+            \hline
+            & $1 - \frac{1}{2\alpha}$ & $\frac{1}{2\alpha}$ \\
+        \end{tabular}
+    }
+\end{table}
+
+\begin{table}[H]
+    \parbox{.45\linewidth}{
+        \centering
+        \caption[Butcherova tabulka Simpsonova pravidla 3/8]{Simpsonovo pravidlo 3/8}
+        \begin{tabular}{c | c c c c c}
+            0 & \\
+            1/3 & 1/3\\
+            2/3 & -1/3 & 1\\
+            1 & 1 & -1 & 1\\
+            \hline
+            & 1/8 & 3/8 & 3/8 & 1/8 \\
+        \end{tabular}
+    }
+    \hfill
+    \parbox{.45\linewidth}{
+        \centering
+        \caption[Butcherova tabulka RK4]{\textbf{Standardní Runge-Kutta metoda 4. stupně (neboli RK4)}}
+        \begin{tabular}{c | c c c c c}
+            0 & \\
+            1/2 & 1/2\\
+            1/2 & 0 & 1/2\\
+            1 & 0 & 0 & 1\\
+            \hline
+            & 1/6 & 2/6 & 2/6 & 1/6 \\
+        \end{tabular}
+    }
+\end{table}
+
+\begin{table}[H]
+    \hfill
+    \parbox{.8\linewidth}{
+        \centering
+        \caption[Butcherova tabulka Ralstonovy metody 4. stupně]{Ralstonova metoda 4. stupně}
+        \begin{tabular}{c | c c c c c}
+            0 & \\
+            0.4 & 0.4\\
+            0.45573725 & 0.29697761 & 0.15875964\\
+            1 & 0.21810040 & -3.05096516 & 3.83286476\\
+            \hline
+            & 0.17476028 & -0.55148066 & 1.20553560 & 0.17118478 \\
+        \end{tabular}
+    }
+    \hfill
+\end{table}
+
+\section{Popisující interakce}
+
+Řídícími interakcemi našeho simulovaného modelu budou opět popsány rovnicemi \ref{eq:F_m} a \ref{eq:B}. V simulaci se však zaměříme na interakce celých spinnerů, ne pouze 2 dipólů. Pro popsání spinneru $\mathbb{S}$ musíme určit několik vlastností týkajících se:
+\begin{enumerate}[topsep=0pt, partopsep=0pt]
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}%
+    \item Konfigurace: pozice, velikosti, počet ramen (viz kap. \ref{sub:param_konf})
+    \item Pohyb: úhlová rychlost, moment setrvačnosti (viz kap. \ref{sec:moment_of_inertia}), třecí koeficienty (viz kap. \ref{chap:drag})
+    \item Magnetů: velikost momentů, remanence (viz kap. \ref{sec:remanence_measurement}), orientace (viz Obr. \ref{fig:mag_orientations})
+\end{enumerate}
+
+Naším cílem je popisovat rotaci jednotlivých spinnerů v čase. Toto provedeme určením celkového momentu sílu jakožto součtu silových a magnetických složek přes všechny externí magnetické momenty. Popisující rovnice spinneru jsou tedy \footnote{První rovnice vychází z definice momentu síly: $\dot{L} = I \dot{\omega} = \tau$}:
+\begin{equation}
+    \label{eq:sim_equations}
+    \begin{gathered}
+        I\dot{\omega} = \sum_{external} (\tau_F + \tau_{mag}) \\
+        \dot{\varphi} = \omega \\
+    \end{gathered}
+\end{equation}
+
+Ve výše uvedených rovnicí $\tau_F$ popisuje moment síly pocházející ze silové interakce, kterým na spinner (neboli na všechny jeho magnety) působí nějaký externí magnetický moment $m_{external}$ umístěný v prostoru na pozici $P_{external}$. Moment síly určíme pomocí ramene $r$, přes které síla $F$ na spinner působí: $\vec{\tau} = \vec{F} \times \vec{r}$.
+
+$\tau_{mag}$ popisuje moment síly pocházející z toho, že na každý magnet spinneru působí externí magnetické pole $B(r, m_{external})$ tvořené externím magnetickým momentem $m_{external}$ umístěný v prostoru na pozici $P_{external}$.
+
+Předpisy $\tau_F$ a $\tau_{mag}$ jsou:
+\begin{equation}
+    \label{eq:sim_equations2}
+    \begin{gathered}
+        \tau_F = \sum_{j=0}^{n} F_m(P_{external}- P(j), m(j), m_{external}) \times (P(j) - S)\\
+        \tau_{mag} = \sum_{j=0}^{n} m(j) \times B(P(j)-P_{external},m_{external})\\
+    \end{gathered}
+\end{equation}
 
 \section{Implementace}
 
 \subsection{Použité datové struktury}
-
-\subsection{Popisující interakce}
 
 \subsection{Implementace Runge-Kutta metod}
 
@@ -1049,6 +1212,8 @@ V tomto předpisu jednotlivé znamenají: $t_n$ je čas stavu $y_n$ a $\Delta t$
 
     \bibitem{sim_methods} STEWART, Robinson. \textit{Simulation – The practice of model development and use.} 1. John Wiley, 2004. ISBN 978-0-470-84772-5.
     \bibitem{RK_def} PRESS, William H. \textit{Numerical recipes: the art of scientific computing.} 3rd ed. Cambridge: Cambridge University Press, 2007. ISBN 978-0-521-88068-8.
+    \bibitem{Butcher_tab_def} ISERLES, A. \textit{A first course in the numerical analysis of differential equations.} Cambridge: Cambridge University Press, 1996. ISBN 978-0-521-55655-2.
+    \bibitem{RK_methods_list} PCC, Ben. WIKIMEDIA FOUNDATION. \textit{List of Runge–Kutta methods} [online]. 2007, 2023-12-20 [cit. 2023-12-22]. Dostupné z: \url{https://en.wikipedia.org/wiki/Runge–Kutta_methods}
 \end{thebibliography}
 
 %% obrázky
