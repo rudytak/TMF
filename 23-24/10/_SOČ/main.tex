@@ -989,24 +989,38 @@ Z těchto měření tedy ověřujeme naši předchozí představu, že lineárn�
 \chapter{Simulace}
 \label{chap:sim}
 
-% Jak již bylo zmíněno v předchozí kapitole a jak vychází z názvu této práce, značnou částí našeho zkoumání bylo také počítačové simulování těchto systémů.
-% }
+Jak již bylo zmíněno v předchozí kapitole a jak vychází z názvu této práce, značnou částí našeho zkoumání bylo také počítačové simulování těchto systémů.
 
-% \vspace*{10cm}
+\section{Popis způsobu simulování}
 
-% \section{Popis způsobu simulování}
+Naším cílem bude vytvoření tzv. \textit{"Discrete event simulation"} neboli \textit{DES} \cite{sim_methods}. Jedná se o druh simulační metody, která popisuje náš stav pomocí diskrétních stavů, které existují v daném čase. Z jednoho určitého stavu poté pomocí určitých pravidel popisujících náš systém simulační algoritmus provádí odhad toho, jak bude vypadat další stav po uplynutí $\Delta t$ sekund, kde $\Delta t$ je velmi malé. Toto nazveme nejdím simulačním krokem. Poté stačí opakovat simulační kroky dle libosti.
 
-% \subsection{Runge-Kutta metody}
+\subsection{Runge-Kutta metody}
 
-% \section{Implementace}
+Runge-Kutta metody, pojmenované po Carlu Davidu Tolmé Rungeovi a Martinu Wilhelmu Kuttovi, jsou rodinou metod používaných k řešení implicitních a explicitních diferenciálních rovnic. Implicitní metody popisující budoucí stav systému z předchozího stavu, stejně jak budeme dělat my v naší \textit{DES}. Runge-Kutta metody (také ornačované pouze RK metody) jsou tedy ideálním nástrojem pro simulování našeho problému. nejjednodušším příkladem RK metody je například Eulerova metoda. Těchto metod je nespočet, ale jejich obecný předpis je následující \cite{RK_def}:
+\begin{equation}
+    \label{eq:RK_def}
+    \begin{gathered}
+        y_{n+1} = y_n + \Delta t \sum_{i=1}^{s} b_i k_i \\
+        k_m = f \Bigg(t_n + c_m \Delta t, y_n + \Bigg(\sum_{j=1}^{s-1} k_j a_{m,j} \Bigg) \Delta t \Bigg)
+    \end{gathered}
+\end{equation}
 
-% \subsection{Použité datové struktury}
+V tomto předpisu jednotlivé znamenají: $t_n$ je čas stavu $y_n$ a $\Delta t$ je krátký časový krok; $s$ je stupeň RK metody; $a_{m,j}$, $b_i$ a $c_m$ jsou specifické koeficinty dané RK metody; $y_n$ je stávající stav a $y_{n+1}$ je budoucí, předpovídaný, stav; $k_m$ je pomocný sub-stav; $f(t,y) = \dot{y}$.
 
-% \subsection{Implementace Runge-Kutta metod}
 
-% \subsection{Popis iteračního kroku}
 
-% \subsection{Časová komplexita}
+\section{Implementace}
+
+\subsection{Použité datové struktury}
+
+\subsection{Popisující interakce}
+
+\subsection{Implementace Runge-Kutta metod}
+
+\subsection{Popis iteračního kroku}
+
+\subsection{Časová komplexita}
 
 %% literatura
 \begin{thebibliography}{99}
@@ -1032,6 +1046,9 @@ Z těchto měření tedy ověřujeme naši předchozí představu, že lineárn�
     \bibitem{csv} SHAFRANOVICH, Yakov. Common format and MIME type for comma-separated values (CSV) files. \textit{RFC 4180, October}. 2005.
 
     \bibitem{spinner_mom_inert_external} ALLAIN, Rhett. Let’s Explore the Physics of Rotational Motion With a Fidget Spinner. \textit{WIRED} [online]. 2017, \textbf{2017}, 1-1 [cit. 2023-12-19]. Dostupné z: \url{https://www.wired.com/2017/05/physics-of-a-fidget-spinner/}
+
+    \bibitem{sim_methods} STEWART, Robinson. \textit{Simulation – The practice of model development and use.} 1. John Wiley, 2004. ISBN 978-0-470-84772-5.
+    \bibitem{RK_def} PRESS, William H. \textit{Numerical recipes: the art of scientific computing.} 3rd ed. Cambridge: Cambridge University Press, 2007. ISBN 978-0-521-88068-8.
 \end{thebibliography}
 
 %% obrázky

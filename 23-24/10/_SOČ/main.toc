@@ -30,3 +30,11 @@
 \contentsline {subsection}{\numberline {4.1.4}Výsledky a porovnání se simulací}{23}{subsection.4.1.4}%
 \contentsline {subsection}{\numberline {4.1.5}Zhodnocení použití lineárního koeficientu}{24}{subsection.4.1.5}%
 \contentsline {chapter}{\numberline {5}Simulace}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Popis způsobu simulování}{27}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Runge-Kutta metody}{27}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Implementace}{28}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Použité datové struktury}{28}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Popisující interakce}{28}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Implementace Runge-Kutta metod}{28}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Popis iteračního kroku}{28}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Časová komplexita}{28}{subsection.5.2.5}%
