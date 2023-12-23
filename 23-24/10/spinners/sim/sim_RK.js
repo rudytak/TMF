@@ -173,19 +173,25 @@ class RK_matrix {
 
 // in this case th input are all of the spinner positions
 // and the outputs are their new angular velocities
-class sim_omeg_state {
+class omega_state {
   constructor(dt, spinners, auto_calc = true) {
     this.dt = dt;
     this.spinners = spinners;
 
-    this.d_omegs = [];
+    this.spinners.forEach(
+      s =>{
+        s.φ += this.dt * s.ω
+      }
+    )
+
+    this.ang_accelerations = [];
 
     if (auto_calc) {
       this.calculate();
     }
   }
 
-  F(r, m1, m2) {
+  static F(r, m1, m2) {
     let p1 = m2.mult(v3.dot(m1, r));
     let p2 = m1.mult(v3.dot(m2, r));
     let p3 = r.mult(v3.dot(m1, m2));
@@ -198,7 +204,7 @@ class sim_omeg_state {
       .mult((3 * sim_instance.constants.μ_0) / (4 * Math.PI * r.mag() ** 5));
   }
 
-  B(r, m) {
+  static B(r, m) {
     let ru = r.unit();
     return ru
       .mult(3 * v3.dot(ru, m))
@@ -206,7 +212,7 @@ class sim_omeg_state {
       .mult(sim_instance.constants.μ_0 / (4 * Math.PI * r.mag() ** 3));
   }
 
-  dω(m_ex, P_ex, s) {
+  static τ(m_ex, P_ex, s) {
     let τ_tot = v(0, 0, 0);
 
     for (let j = 0; j < s.n; j++) {
@@ -215,13 +221,13 @@ class sim_omeg_state {
 
       // magnetic force interactions
       let r = P_ex.sub(P_in);
-      let f = this.F(r, m_in, m_ex);
+      let f = omega_state.F(r, m_in, m_ex);
       let force_arm = P_in.sub(s.S);
       let τ_F = v3.cross(f, force_arm);
 
       // magnetic moment interactions
       let r_neg = r.mult(-1);
-      let B_ex = this.B(r_neg, m_ex);
+      let B_ex = omega_state.B(r_neg, m_ex);
       let τ_mag = v3.cross(m_in, B_ex);
 
       τ_tot = τ_tot.add(τ_mag);
@@ -234,7 +240,7 @@ class sim_omeg_state {
   }
 
   calculate() {
-    let ang_acc_array = this.spinners.map((s) => 0);
+    let torques = this.spinners.map((s) => 0);
 
     for (let i = 0; i < this.spinners.length; i++) {
       // select spinner 1
@@ -248,7 +254,7 @@ class sim_omeg_state {
 
         if (i != j) {
           if (s2.constant_ω) {
-            ang_acc_array[j] = 0;
+            torques[j] = 0;
           } else {
             for (let k = 0; k < s1.n; k++) {
               // go through each magnet on s1 and calculates it's effect on s2
@@ -256,7 +262,7 @@ class sim_omeg_state {
               let P_ex = s1.P(k);
 
               // the change in angular velocity done to s2
-              ang_acc_array[j] += this.dω(m_ex, P_ex, s2).z;
+              torques[j] += omega_state.τ(m_ex, P_ex, s2).z;
             }
           }
         }
@@ -268,10 +274,10 @@ class sim_omeg_state {
 
       // if the spinner should be kept at a constant omega, keep it at that
       if (s.constant_ω) {
-        ang_acc_array[i] = 0;
+        torques[i] = 0;
       } else {
         // get the value of the spinners new angular velocity
-        let new_sω = s.ω + ang_acc_array[i];
+        let new_sω = s.ω + torques[i];
 
         // omega damping
         // s.ω += dt * (-α - β * s.ω - γ * s.ω ** 2);
@@ -280,33 +286,33 @@ class sim_omeg_state {
 
         // perform dampening only when  the omega is not practically 0
         if (Math.abs(new_sω) > 2 * Math.abs(damp) * this.dt) {
-          ang_acc_array[i] += damp;
+          torques[i] += damp;
         }
       }
     }
 
     // save the output
-    this.d_omegs = ang_acc_array;
+    this.ang_accelerations = torques;
   }
 
   static sum_omeg_states(states, weights = []) {
-    let sum = states[0].d_omegs.map((o) => 0);
+    let sum = states[0].ang_accelerations.map((o) => 0);
 
     states.forEach((state, s_id) => {
-      state.d_omegs.forEach((d_omeg, id) => {
+      state.ang_accelerations.forEach((d_omeg, id) => {
         sum[id] += d_omeg * weights[s_id];
       });
     });
 
-    let out_state = new sim_omeg_state(0, [], false);
-    out_state.d_omegs = sum;
+    let out_state = new omega_state(0, [], false);
+    out_state.ang_accelerations = sum;
     return out_state;
   }
 
   static apply_omeg_to_spinners(dt, spinners, state) {
     // rotation
     spinners.forEach((s, id) => {
-      s.ω += state.d_omegs[id] * dt;
+      s.ω += state.ang_accelerations[id] * dt;
       s.φ += s.ω * dt;
     });
 
@@ -314,12 +320,18 @@ class sim_omeg_state {
   }
 }
 
-class sim_φ_state {
+class phi_state {
   constructor(dt, spinners, auto_calc = true) {
     this.dt = dt;
     this.spinners = spinners;
 
-    this.d_φs = [];
+    this.spinners.forEach(
+      s =>{
+        s.φ += this.dt * s.ω
+      }
+    )
+
+    this.ωs = [];
 
     if (auto_calc) {
       this.calculate();
@@ -328,27 +340,27 @@ class sim_φ_state {
 
   calculate() {
     // save the output
-    this.d_φs = this.spinners.map(s => s.ω * this.dt);
+    this.ωs = this.spinners.map(s => s.ω * this.dt);
   }
 
   static sum_φ_states(states, weights) {
-    let sum = states[0].d_φs.map((p) => 0);
+    let sum = states[0].ωs.map((p) => 0);
 
     states.forEach((state, s_id) => {
-      state.d_φs.forEach((d_φ, id) => {
-        sum[id] += d_φ * weights[s_id];
+      state.ωs.forEach((ω, id) => {
+        sum[id] += ω * weights[s_id];
       });
     });
 
-    let out_state = new sim_φ_state(0, [], false);
-    out_state.d_φs = sum;
+    let out_state = new phi_state(0, [], false);
+    out_state.ωs = sum;
     return out_state;
   }
 
   static apply_φ_to_spinners(dt, spinners, state) {
     spinners.forEach((s, id) => {
       // euler-like omega => φ calc
-      s.φ += state.d_φs[id] * dt;
+      s.φ += state.ωs[id] * dt;
     });
 
     return spinners;
@@ -457,24 +469,24 @@ class sim_instance {
 
   calc_omegas(dt) {
     // RK calculation
-    let k = [new sim_omeg_state(0, this.spinners)];
+    let k = [new omega_state(0, this.spinners)];
     for (var i = 1; i < this.RKmatrix.b.length; i++) {
       let c = this.RKmatrix.c[i];
       let as = this.RKmatrix.a[i - 1];
 
-      let spins = sim_omeg_state.apply_omeg_to_spinners(
-        dt,
+      let spins = omega_state.apply_omeg_to_spinners(
+        c * dt,
         this.spinners.map(s => s.copy()), // make a copy of the current spinner objects
-        sim_omeg_state.sum_omeg_states(k, as)
+        omega_state.sum_omeg_states(k, as)
       );
-      let k_i = new sim_omeg_state(c * dt, spins);
+      let k_i = new omega_state(0, spins);
       k.push(k_i);
     }
 
-    return sim_omeg_state.apply_omeg_to_spinners(
+    return omega_state.apply_omeg_to_spinners(
       dt,
       this.spinners.map(s => s.copy()),
-      sim_omeg_state.sum_omeg_states(k, this.RKmatrix.b)
+      omega_state.sum_omeg_states(k, this.RKmatrix.b)
     );
   }
 
@@ -482,26 +494,26 @@ class sim_instance {
     let dt = this.sim_run_params.dt;
 
     // RK calculation
-    let k = [new sim_φ_state(0, this.spinners)];
+    let k = [new phi_state(0, this.spinners)];
     for (var i = 1; i < this.RKmatrix.b.length; i++) {
       let c = this.RKmatrix.c[i];
       let as = this.RKmatrix.a[i - 1];
 
       let omeg_spins = this.calc_omegas(c * dt);
-      let spins = sim_φ_state.apply_φ_to_spinners(
-        dt,
+      let spins = phi_state.apply_φ_to_spinners(
+        c * dt,
         omeg_spins, // make a copy of the projected spinner objects
-        sim_φ_state.sum_φ_states(k, as)
+        phi_state.sum_φ_states(k, as)
       );
-      let k_i = new sim_φ_state(c * dt, spins);
+      let k_i = new phi_state(0, spins);
       k.push(k_i);
     }
 
     // save the new calculated step
-    this.spinners = sim_φ_state.apply_φ_to_spinners(
+    this.spinners = phi_state.apply_φ_to_spinners(
       dt,
       this.calc_omegas(dt).map(s => s.copy()),
-      sim_φ_state.sum_φ_states(k, this.RKmatrix.b)
+      phi_state.sum_φ_states(k, this.RKmatrix.b)
     );
   }
 
@@ -511,12 +523,13 @@ class sim_instance {
     let frame = 0;
     fs.writeFileSync(this.sim_run_params.out_path, `t, ${this.sim_run_params.exports.join(", ")} \n`);
 
+    
     for (
       // time variable
       var t = this.sim_run_params.start_time;
       t < this.sim_run_params.end_time;
       t += this.sim_run_params.dt
-    ) {
+      ) {
       this.step();
 
       // save the simulation state every save_freq frames

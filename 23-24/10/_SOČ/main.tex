@@ -39,7 +39,7 @@
 \usepackage{cmap} %% balíček zajišťující, že vytvořené PDF bude prohledávatelné a kopírovatelné
 
 \usepackage{graphicx} %% balík pro vkládání obrázků
-
+\usepackage{mathtools}
 \usepackage{subcaption} %% balíček pro vkládání podobrázků
 \usepackage{wrapfig}
 \usepackage{hyperref} %% balíček, který v PDF vytváří odkazy
@@ -59,38 +59,6 @@
 
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{1pt}
-
-\addto\captionsczech{\renewcommand{\figurename}{Obr.}}
-\addto\captionsczech{\renewcommand{\tablename}{Tab.}}
-\counterwithout{figure}{chapter}
-\counterwithout{table}{chapter}
-\counterwithout{equation}{chapter}
-\counterwithout{footnote}{chapter}
-
-\setlength{\parskip}{12pt}%
-\setlength{\parindent}{0pt}%
-
-% \usepackage[]{nomencl}
-% % makeindex main.nlo -s nomencl.ist -o main.nls
-\usepackage{tabularx} % in the preamble
-\usepackage{float}
-\usepackage{booktabs}
-\usepackage{url}
-
-%% Balíčky co se můžou hodit :)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{pdfpages} %% Balíček umožňující vkládat stránky z PDF souborů,
-
-\usepackage{upgreek} %% Balíček pro sazbu stojatých řeckých písmen, třeba u jednotky mikrometr. Například stojaté mí: \upmu, stojaté pí: \uppi
-
-\usepackage{amsmath}    %% Balíčky amsmath a amsfonts
-\usepackage{amssymb}    %% Balíčky amsmath a amsfonts
-\usepackage{yhmath}    %% Balíčky amsmath a amsfonts
-\usepackage{amsfonts}   %% pro sazbu matematických symbolů
-\usepackage{esint}     %% pro sazbu různých integrálů (např \oiint)
-\usepackage{mathrsfs}
-\usepackage{enumitem}
 
 \usepackage{xcolor}
 
@@ -118,10 +86,50 @@
     tabsize=2
 }
 
+\renewcommand*{\figureautorefname}{Obr.}
+\renewcommand*{\tableautorefname}{Tab.}
+\renewcommand*{\equationautorefname}{Rov.}
+\renewcommand*{\chapterautorefname}{Kap.}
+\renewcommand*{\sectionautorefname}{Kap.}
+\renewcommand*{\subsectionautorefname}{Kap.}
+% \renewcommand*{\subsubsectionautorefname}{Kap.}
+
+\addto\captionsczech{\renewcommand{\figurename}{Obr.}}
+\addto\captionsczech{\renewcommand{\tablename}{Tab.}}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{equation}{chapter}
+\counterwithout{footnote}{chapter}
+
 \lstset{style=mystyle}
 \lstset{numberbychapter=false}
 \renewcommand{\lstlistingname}{Ústřižek kódu}
 \renewcommand{\lstlistlistingname}{Seznam ústřižků}
+
+\setlength{\parskip}{12pt}%
+\setlength{\parindent}{0pt}%
+
+% \usepackage[]{nomencl}
+% % makeindex main.nlo -s nomencl.ist -o main.nls
+\usepackage{tabularx} % in the preamble
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{url}
+
+%% Balíčky co se můžou hodit :)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{pdfpages} %% Balíček umožňující vkládat stránky z PDF souborů,
+
+\usepackage{upgreek} %% Balíček pro sazbu stojatých řeckých písmen, třeba u jednotky mikrometr. Například stojaté mí: \upmu, stojaté pí: \uppi
+
+\usepackage{amsmath}    %% Balíčky amsmath a amsfonts
+\usepackage{amssymb}    %% Balíčky amsmath a amsfonts
+\usepackage{yhmath}    %% Balíčky amsmath a amsfonts
+\usepackage{amsfonts}   %% pro sazbu matematických symbolů
+\usepackage{esint}     %% pro sazbu různých integrálů (např \oiint)
+\usepackage{mathrsfs}
+\usepackage{enumitem}
 
 %% makra pro sazbu matematiky
 \newcommand{\dif}{\mathrm{d}} %% makro pro sazbu diferenciálu, místo toho
@@ -132,6 +140,12 @@
 %%%%%%%%%%%%%%%%%%%
 
 \usepackage{lipsum} %% balíček který píše lipsum (nesmyslný text, který se používá pro kontrolu typografie)
+\usepackage{tablefootnote}
+\usepackage{dblfnote}
+\DFNtrysingle
+\DFNinhibitcbreak
+\DFNcolumnwidth 1.1\textwidth
+% \DFNsloppiness 1000
 
 %% Začátek dokumentu
 %%%%%%%%%%%%%%%%%%%%
@@ -323,10 +337,10 @@ V tabulce \ref{tab:nomenclature} definujeme symboly, které budeme používat v 
         $\varphi$        & $\text{rad}$              & Úhel rotace spinneru                                                                                           \\
         $\omega$         & $\text{rad} \cdot s^{-1}$ & Úhlová rychlost spinneru                                                                                       \\
         $I$              & $kg \cdot m^2$            & Moment setrvačnosti spinneru                                                                                   \\
-        $\alpha$         & $\text{rad} \cdot s^{-2}$ & Koeficient rychlostně nezávislého brzdného úhlového zrychlení & viz \ref{chap:drag}                            \\
-        $\beta$          & $s^{-1}$                  & Koeficient lineárně závislého brzdného úhlového zrychlení     & viz \ref{chap:drag}                            \\
-        $\gamma$         & $\text{rad}^{-1}$         & Koeficient kvadraticky závislého brzdného úhlového zrychlení  & viz \ref{chap:drag}                            \\
-        $c_1$, $t_{max}$ & $s$                       & Celková délka otáčení spinneru                                & viz \ref{chap:drag}                            \\
+        $\alpha$         & $\text{rad} \cdot s^{-2}$ & Koeficient rychlostně nezávislého brzdného úhlového zrychlení & viz \autoref{chap:drag}                        \\
+        $\beta$          & $s^{-1}$                  & Koeficient lineárně závislého brzdného úhlového zrychlení     & viz \autoref{chap:drag}                        \\
+        $\gamma$         & $\text{rad}^{-1}$         & Koeficient kvadraticky závislého brzdného úhlového zrychlení  & viz \autoref{chap:drag}                        \\
+        $c_1$, $t_{max}$ & $s$                       & Celková délka otáčení spinneru                                & viz \autoref{chap:drag}                        \\
     \end{tabularx}
 
     \vspace{24pt}
@@ -341,7 +355,7 @@ V tabulce \ref{tab:nomenclature} definujeme symboly, které budeme používat v 
         $F_m(\vec{r}, \vec{m_1}, \vec{m_2})$ & $N$                                                                          & Silová interakce mezi magnetickými momenty $\vec{m_1}$ a $\vec{m_2}$ vzdálenými o $\vec{r}$ & \cite{magnetic_force}                  \\
         $B(\vec{r}, \vec{m})$                & $T$                                                                          & Magnetická indukce tvořená magnetickými momentem $\vec{m}$ ve vzdálenosti $\vec{r}$         & \cite{magnetic_force, magnetic_torque} \\
         $\tau_F, \tau_{mag}$                 & $Nm$
-                                             & Momenty sil působící na spinner vycházející ze silové a magnetické interakce & \cite{magnetic_torque,torque_def}, viz rov. \ref{eq:sim_equations2}                                                                  \\
+                                             & Momenty sil působící na spinner vycházející ze silové a magnetické interakce & \cite{magnetic_torque,torque_def}, viz \autoref{eq:sim_equations2}                                                                   \\
     \end{tabularx}
 \end{table}
 
@@ -407,7 +421,7 @@ Pomocí těchto údajů je triviální vyjádřit pozici $P(i)$ libovolného mag
     \label{fig:mag_orientations}
 \end{wrapfigure}
 
-Kromě pozice magnetu hraje také klíčovou roli nasměrování jeho pólů. Zde definujeme 3 důležité orientace pólů (viz Obr. \ref{fig:mag_orientations}):
+Kromě pozice magnetu hraje také klíčovou roli nasměrování jeho pólů. Zde definujeme 3 důležité orientace pólů (viz \autoref{fig:mag_orientations}):
 
 \begin{enumerate}[topsep=0pt, partopsep=0pt]
     \setlength{\itemsep}{0pt}%
@@ -418,7 +432,7 @@ Kromě pozice magnetu hraje také klíčovou roli nasměrování jeho pólů. Zd
 \end{enumerate}
 
 V našich experimentech jsme používali převážně vertikální konfiguraci, jelikož takto bylo uchycení magnetů nejjednodušší.
-Magnety se totiž samy připevnily ke kovovému závaží v každém z ramen spinneru (viz Obr. \ref{fig:1spinner}), které je zde z důvodu zvýšení momentu setrvačnosti.
+Magnety se totiž samy připevnily ke kovovému závaží v každém z ramen spinneru (viz \autoref{fig:1spinner}), které je zde z důvodu zvýšení momentu setrvačnosti.
 
 Tyto konfigurace jsme také schopni popsat a to opět jakožto funkci indexu magnetu.
 Nejdříve vyjádříme směrový vektor $\vec{u}(i)$ pro $i$. magnet v každé konfiguraci:
@@ -448,7 +462,7 @@ Když nyní zvolíme velikost magnetického momentu našich magnetů $|\vec{m}_0
     \vec{m} = |\vec{m}_0| \cdot \vec{u}(i)
 \end{equation}
 
-Velikost magentických momentů bude záviset na teplotě, velikosti a materiálových vlastnostech magnetů (např. jejich chemickém složení a kvalitě), ale to, jaká je pravá velikost magnetických momentů $|\vec{m}_0|$, je momentálně nepodstatné a určíme ji později (viz kap. \ref{sec:remanence_measurement}).
+Velikost magentických momentů bude záviset na teplotě, velikosti a materiálových vlastnostech magnetů (např. jejich chemickém složení a kvalitě), ale to, jaká je pravá velikost magnetických momentů $|\vec{m}_0|$, je momentálně nepodstatné a určíme ji později (viz \autoref{sec:remanence_measurement}).
 
 Posledním parametrem, který zmíníme, ale nebudeme se jím zabývat, je přitahování, či odpuzování magnetů.
 V našem případě jsem se zaměřili převážně na systémy, kde se všechny magnety odpuzují.
@@ -459,7 +473,7 @@ V našem případě jsem se zaměřili převážně na systémy, kde se všechny
 Druhou, složitější, částí popisu našeho systému je jeho pohyb a chování v čase.
 Zde se nevyhneme úhlovým rychlostem jednotlivých spinnerů, které budeme značit $\omega_1, \omega_2,...$.
 Poté by nás přirozeně napadlo úhlové zrychlení $\alpha_1, \alpha_2, ...$, ale pro náš případ bude šikovnější využít toho, že $\tau = I\alpha$, kde $\tau$ značí moment síly a $I$ značí moment setrvačnosti\footnote{Někdy také značeno $J$.} spinneru.
-Moment setrvačnosti určíme později ve své vlastní kapitole (viz kap. \ref{sec:moment_of_inertia}).
+Moment setrvačnosti určíme později ve své vlastní kapitole (viz \autoref{sec:moment_of_inertia}).
 
 Posledním parametrem, který zmíníme, je tření v ložiscích spinnerů a jiné odporové síly.
 Těm se budeme do hloubky věnovat v kapitole \ref{chap:drag}.
@@ -527,7 +541,7 @@ Hlavní interakce mezi dvěma magnetickými dipóly jsou:
 
 \section{Rozměry spinneru}
 \label{sec:spinner_size}
-K popsání spinneru nejdříve určíme jeho rozměry (viz Obr. \ref{fig:spinner_size}).
+K popsání spinneru nejdříve určíme jeho rozměry (viz \autoref{fig:spinner_size}).
 Nejdůležitější rozměr pro nás bude vzdálenost osy otáčení od místa, kde budou umístěny magnety.
 To je v našem případě $r = 35.9(1)mm$.
 
@@ -560,7 +574,7 @@ Nyní stačí změřit frekvenci kmitů zavěšeného spinneru s několika magne
 \subsection{Aparatura}
 Po připevnění šesti neodymových magnetů o jednotkové hmotnosti $0.92(1) g$ byl spinner připevněn pevně ve své ose otáčení.
 Pod takto zavěšený spinner bylo umístěno Magnetické čidlo Vernier MG-BTA, které zaznamenávalo, jak blízko se magnety nacházejí.
-Po umístění spinneru mimo rovnovážnou polohu byl ponechán oscilovat a záznam průběhu magnetické indukce v čase byl čidlem nasnímán (viz \ref{fig:spinner_pendulum_recording}).
+Po umístění spinneru mimo rovnovážnou polohu byl ponechán oscilovat a záznam průběhu magnetické indukce v čase byl čidlem nasnímán (viz \autoref{fig:spinner_pendulum_recording}).
 \vspace{40pt}
 
 {\raggedright
@@ -664,7 +678,7 @@ Po načtení dat vyjmeme pouze hodnoty ve dříve zmíněných intervalech a naj
 Z rozdílu průměrných hodnot magnetického pole v obou otočeních magnetů určíme velikost magnetického pole generovaného pouze magnetem (očištěného od pozadí).
 Z odchylek také určíme celkovou odchylku výsledné hodnoty.
 
-Následně pro každé měření vytvoříme graf (příkladem je Obr. \ref{fig:mag_field_recording_2mag_10cm}).
+Následně pro každé měření vytvoříme graf (příkladem je \autoref{fig:mag_field_recording_2mag_10cm}).
 
 \lstinputlisting[language=Python, caption=Kód k určení průměrné hodnoty magnetického pole a odchylek, label=code:2]{./prilohy/snippets/c2.py}
 
@@ -677,7 +691,7 @@ Následně pro každé měření vytvoříme graf (příkladem je Obr. \ref{fig:
 
 \clearpage
 
-Po zanalyzování všech měření můžeme vytvořit graf závislosti $B$ na vzdálenosti (graf \ref{fig:B_in_dist}):
+Po zanalyzování všech měření můžeme vytvořit graf závislosti $B$ na vzdálenosti (viz \autoref{fig:B_in_dist}):
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \vspace*{0.5cm}
@@ -739,7 +753,7 @@ Výsledné hodnoty $B_r$ zobrazíme v jednotném grafu \ref{fig:rem_final}.
 
 \subsection{Výsledky}
 
-Výsledky obou způsobů měření sjednotíme do grafu závislosti $B_r$ na vzdálenosti (graf \ref{fig:rem_final}).
+Výsledky obou způsobů měření sjednotíme do grafu závislosti $B_r$ na vzdálenosti (viz \autoref{fig:rem_final}).
 Očekávali bychom, že se $B_r$ v závislosti na vzdálenosti nebude měnit, a pro každé měření určíme pomocí optimalizace fitu konstantní funkcí souhrnnou hodnotu. Výsledkem všech měření bude aritmetický průměr těchto souhrnných hodnot.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
@@ -767,19 +781,19 @@ Důvodem, proč je remanence většího magentu znatelně nižší, může být 
 \chapter{Tření}
 \label{chap:drag}
 
-O třecích jevech při otáčení spinneru jsme si již byli schopni udělat představu při úvodním kvalitativním sledování. Tření bude hrát značnou roli v našem systému, jelikož to bude hlavní limitující faktor průběhu chaotického chování. Dalším využitím, kromě našeho úhlavního záměru - zpřesnění popisu chování, bude také například možnost odhadnutí maximálního času, než se spinnery zastaví a systém ztratí všechnu svou energii. Zajímavým, a lehko měřitelným, pro nás bude průběh úhlové rychlosti $\omega$ (resp. změna úhlové rychlosti \footnote{$\dot{\omega} = \tau$}) v čase, ze kterého tkví i náš popis těchto třecích složek.
+O třecích jevech při otáčení spinneru jsme si již byli schopni udělat představu při úvodním kvalitativním sledování. Tření bude hrát značnou roli v našem systému, jelikož to bude hlavní limitující faktor průběhu chaotického chování. Dalším využitím, kromě našeho úhlavního záměru - zpřesnění popisu chování, bude také například možnost odhadnutí maximálního času, než se spinnery zastaví a systém ztratí všechnu svou energii. Zajímavým, a lehko měřitelným, pro nás bude průběh úhlové rychlosti $\omega$ (resp. změna úhlové rychlosti \footnote{$\dot{\omega} = \tau$}) v čase, že kterého tkví i náš popis těchto třecích složek.
 
-Zajímá-li nás tedy změna rychlosti, dovolíme si odhadnout, že hlavními zdroji tření bude ložisko a odpor vzduchu. Provedeme idealizaci ložiska a řekneme, že jeho třecí moment síly bude neměnný v čase a nezávislý na rychlosti. Toto nemusí být vždy pravda, např. objeví-li se v našem, přirozeně neideálním, ložisku nějaké nechtěné oscilace (které jsme sledovali) nebo je-li na ložisko působeno nějakou externí silou mířící kolmo na osu otáčením (jako například když se od sebe velmi silně odpuzují magnety ze dvou blízkých spinnerů). Oba tyto příklady jsou příliš složité k popsání a nejsme je edy schopni zkoumat. Tento třecí moment síly nezávislý na otáčkách spinneru označíme $\alpha$.
+Zajímá-li nás tedy změna rychlosti, dovolíme si odhadnout, že hlavními zdroji tření bude ložisko a odpor vzduchu. Provedeme idealizaci ložiska a řekneme, že jeho brzným moment síly, a tím pádem i úhlové zpomalení, bude neměnné v čase a nezávislé na rychlosti. Toto nemusí být vždy pravda, např. objeví-li se v našem, přirozeně neideálním, ložisku nějaké nechtěnné oscilace (které jsme sledovali) nebo je-li na ložisko působeno nějakou externí silou mířící kolmo na osu otáčením (jako například když se od sebe velmi silně odpuzují magnety ze dvou blízkých spinnerů). Oba tyto příklady jsou příliš složité k popsání a nejsme je tedy schopni zkoumat. Toto brzdné úhlové zrychlení (resp. zpomalení) nezávislé na otáčkách spinneru označíme $\alpha$.
 
-Další výraznou složkou bude již zmíněný odpor vzduchu. Z látky středoškolské fyziky známe přibližnou úměrnost odporové síly a kvadrátu rychlosti ($F \propto v^2$) při turbulentním proudění (které v našem a případě očekáváme kvůli složité geometrii spinneru). V našem rotačním případě bychom tedy analogicky očekávali $\dot{\omega} \propto \omega^2$. Míru táto závislosti označíme $\gamma$.
+Další výraznou složkou bude již zmíněný odpor vzduchu. Z látky středoškolské fyziky známe přibližnou úměrnost odporové síly na kvadrátu rychlosti ($F \propto v^2$) při turbulentním proudění (které v našem a případě očekáváme kvůli složité geometrii spinneru). V našem rotačním případě bychom tedy analogicky očekávali $\dot{\omega} \propto \omega^2$. Míru této závislosti označíme $\gamma$.
 
-Poslední složkou, pro kterou nejsme schopni najít fyzikální podstatu, ale kterou přesto budeme zkoumat je lineární složka $\beta$. Existují-li tedy jevy, které nám unikly a platí pro ně závislost $\dot{\omega} \propto \omega$, můžeme je kompenzovat touto složkou. Zároveň budeme podrobně srovnávat výkony našich předpovědí s, i bez, této složky, abycho určili, zda dává smysl tuto složku využívat, či vůbec uvádět.
+Poslední složkou, pro kterou nejsme schopni najít fyzikální podstatu, ale kterou přesto budeme zkoumat je lineární složka $\beta$. Existují-li tedy jevy, které nám unikly, a platí pro ně závislost $\dot{\omega} \propto \omega$, můžeme pro ně kompenzovat touto složkou. Zároveň budeme podrobně srovnávat výkony našich předpovědí s, i bez, této složky, abychom určili, zda dává smysl tuto složku využívat, či vůbec uvádět.
 
 \clearpage
 
 \section{Analytický popis}
 
-Všech tři dříve zmíněné složky dohromady tedy popisuje řídící závislost systému: \footnote{Záporná znaménka používáme čistě z toho důvodu, aby nám koeficienty $\alpha$, $\beta$ a $gamma$ vycházely kladně, jelikož očekáváme, že systém bude zpomalovat.}:
+Všech tři dříve zmíněné složky dohromady tedy popisuje řídící závislost systému: \footnote{Záporná znaménka používáme čistě z toho důvodu, aby nám koeficienty $\alpha$, $\beta$ a $\gamma$ vycházely kladně, jelikož očekáváme, že systém bude zpomalovat.}:
 \begin{equation}
     \label{eq:drag_diff_wlin}
     \dot{\omega}(t) = - \alpha - \beta \omega(t) - \gamma \omega^2(t)
@@ -804,13 +818,13 @@ a
 
 \subsection{Maximální doba otáčení}
 
-Objevující se parametr $c_1$ \footnote{Někdy také označujeme $t_{max}$.} je hodnota v sekundách, která odpovídá momentu po roztočením spinneru, kdy se spinner zastaví. Vyjádřením $c_1$ (např. z druhé rovnice) jsme schopni určit poměrně přesně, jak dlouho se bude spinner točit, známe-li jeho parametry $\alpha$, ($\beta$) a $\gamma$ a jeho počáteční úhlovou rychlost $\omega_0$:
+Objevující se parametr $c_1$ \footnote{Někdy také označujeme $t_{max}$.} je hodnota v sekundách, která odpovídá době, po které se spinner zastaví. Vyjádřením $c_1$ (např. z druhé rovnice) jsme schopni určit poměrně přesně, jak dlouho se bude spinner točit, známe-li jeho parametry $\alpha$, ($\beta$) a $\gamma$ a jeho počáteční úhlovou rychlost $\omega_0$:
 \begin{equation}
     \label{eq:runtime_from_omeg0}
     c_1(\omega_0) = \frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{\gamma}{\alpha}} \omega_0 \bigg)}
 \end{equation}
 
-Přáli bychom si vyjádřit celkovou dobu otáčení z počáteční kinetické energie, můžeme dosadit $E_k = \frac{1}{2}I\omega^2$, kde je nám $I$ již známe (viz \ref{sec:moment_of_inertia}), a jednoduchou úpravou získáváme:
+Přáli bychom si vyjádřit celkovou dobu otáčení z počáteční kinetické energie, můžeme dosadit $E_k = \frac{1}{2}I\omega^2$, kde je nám $I$ již známe (viz \autoref{sec:moment_of_inertia}), a jednoduchou úpravou získáváme:
 \begin{equation}
     \label{eq:runtime_from_ene}
     c_1(E) = \frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{2 \gamma E}{\alpha I}} \bigg)}
@@ -905,7 +919,7 @@ Přepsáním rovnice \ref{eq:drag_diff_wlin} pouhými jednotkami jsme jednoduše
 
 \subsection{Experiment pro potvrzení analytického řešení}
 
-Abychom ověřili, zda výsledky našich diferencialních rovnic odpovídají realitě, budeme sledovat jak se snižuje úhlová rychlost každého z našich spinnerů. K tomu využijeme opět magnetického čidla Vernier MG-BTA, které bude sledovat momenty, kdy se kolem něj mihne jeden z magnetů připevněných na ramenou spinneru (velmi podobně jako u \ref{fig:spinner_pendulum_aparature}). Časová hustota těchto vrcholů je úměrná úhlové rychlosti - přesněji 1 vrchol za sekundu se rovná $\frac{2}{3}\pi$ $rad/s$.
+Abychom ověřili, zda výsledky našich diferencialních rovnic odpovídají realitě, budeme sledovat jak se snižuje úhlová rychlost každého z našich spinnerů. K tomu využijeme opět magnetického čidla Vernier MG-BTA, které bude sledovat momenty, kdy se kolem něj mihne jeden z magnetů připevněných na ramenou spinneru (velmi podobně jako u \autoref{fig:spinner_pendulum_aparature}). Časová hustota těchto vrcholů je úměrná úhlové rychlosti - přesněji 1 vrchol za sekundu se rovná $\frac{2}{3}\pi$ $rad/s$.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \vspace*{-1.5cm}
@@ -916,7 +930,7 @@ Abychom ověřili, zda výsledky našich diferencialních rovnic odpovídají re
 \end{wrapfigure}
 
 \subsubsection{Aparatura}
-Aparatura tohoto experimetu (vyobrazená na Obr. \ref{fig:spinner_drag_aparature}) je velmi podobná té na Obr. \ref{fig:spinner_pendulum_aparature}. Jediným rozdílem je, že nyní má spinner osazená všechna ramena a to pouze jedním magentem. Zároveň není zavěšen ve své ose, ale leží na podložce a je tedy jeho osa otáčení kolmá na prodložku (resp. rovnoběžná se směrem gravitačního zrychlení). V této orientaci budou prováděna i všechna následující měření v dalších kapitolách.
+Aparatura tohoto experimetu (vyobrazená na \autoref{fig:spinner_drag_aparature}) je velmi podobná té na \autoref{fig:spinner_pendulum_aparature}. Jediným rozdílem je, že nyní má spinner osazená všechna ramena a to pouze jedním magentem. Zároveň není zavěšen ve své ose, ale leží na podložce a je tedy jeho osa otáčení kolmá na prodložku (resp. rovnoběžná se směrem gravitačního zrychlení). V této orientaci budou prováděna i všechna následující měření v dalších kapitolách.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \vspace*{3cm}
@@ -930,7 +944,7 @@ Ke zpracování dat opět použijeme jazyka \texttt{Python} a stejných knihoven
 Prvním úkolem je převedení průběhů kmitů magnetického pole (způsobených mihnutím magnetu před čidlem) do průběhu úhlové rychlosti v čase.
 K tomto bude potřeba určit peaky a jejich pozici v čase a následně konvolucí počítat množství peaků na určitých intervalech.
 Pozice peaků určíme tak, že budeme sledovat kdy naměřená hodnota překročí nějaký práh. Toto bude začátek našeho peaku.
-Když půjde zpět pod hodnotu prahu, ukončíme peak a pozici maxima řekneme, že je ve středu tohoto časového intervalu (viz Obr. \ref{fig:peak_find_alg_drawing}).
+Když půjde zpět pod hodnotu prahu, ukončíme peak a pozici maxima řekneme, že je ve středu tohoto časového intervalu (viz \autoref{fig:peak_find_alg_drawing}).
 
 \clearpage
 \lstinputlisting[language=Python, caption=Kód k hledání pozic peaků, label=code:3]{./prilohy/snippets/c3.py}
@@ -962,7 +976,7 @@ Po analýze všech naměřených dat výše uvedeným algorimem (celkem 7 měře
 
 Nyní je na řadě prozkoumání významu a užitečnosti lineárního brzdného koeficientu. Získané výsledky pro $\beta$ z předchozích sedmi měření se pohybují velmi nahodile a mezi měřeními zaznamenáváme řádové rozdíly. Toto je prvním indikátorem toho, že lineární složka nebude součástí dobrého popisu tření (alespoň pro tento případ).
 
-Fitujeme-li stejná data funkcí bez lineární složky získáváme graf \ref{fig:drag_fit}. Vidíme, že simulace, jejíž implementací se budeme zabývat v kap. \ref{chap:sim}, v tomto případě viditelně lépe kopíruje naměřené hodnoty.
+Fitujeme-li stejná data funkcí bez lineární složky získáváme graf \ref{fig:drag_fit}. Vidíme, že simulace, jejíž implementací se budeme zabývat v \autoref{chap:sim}, v tomto případě viditelně lépe kopíruje naměřené hodnoty.
 \begin{wrapfigure}{r}{1\textwidth}
     \includegraphics[width=1\textwidth]{spinner_decay.png}
     \centering
@@ -976,15 +990,15 @@ Poslední měření, které jsme k účelům porovnání těchto dvou metod prov
 \begin{figure}[H]
     \includegraphics[width=0.65\textwidth]{sim_spinner_magnetic_with_beta.png}
     \centering
-    \caption[Příklad grafu měřeného průběhu $\omega$ v $t$ s $\beta \neq 0$ v magnetickém poli]{Graf měřeného úhlové rychlosti v čase v porovnání s fitem užívajícím všech tří složek. (barevné schéma jako v Obr. \ref{fig:drag_fit_wlin})}
+    \caption[Příklad grafu měřeného průběhu $\omega$ v $t$ s $\beta \neq 0$ v magnetickém poli]{Graf měřeného úhlové rychlosti v čase v porovnání s fitem užívajícím všech tří složek. (barevné schéma jako v \autoref{fig:drag_fit_wlin})}
     \label{fig:drag_fit_mag_wlin}
 \end{figure}
-Jak můžeme vidět na Obr. \ref{fig:drag_fit_mag_wlin}, koeficient $\beta$ nám vychází efektivně nulový a průběhy fitů, ani simulací se od sebe téměř neliší.
+Jak můžeme vidět na \autoref{fig:drag_fit_mag_wlin}, koeficient $\beta$ nám vychází efektivně nulový a průběhy fitů, ani simulací se od sebe téměř neliší.
 Z těchto měření tedy ověřujeme naši předchozí představu, že lineární komponent tření není fyzikálně signifikantní.
 \begin{figure}[H]
     \includegraphics[width=0.65\textwidth]{sim_spinner_magnetic.png}
     \centering
-    \caption[Příklad grafu měřeného průběhu $\omega$ v $t$ s $\beta = 0$ v magnetickém poli]{Graf měřeného úhlové rychlosti v čase v porovnání s fitem užívajícím složek $\alpha$ a $\gamma$. (barevné schéma jako v Obr. \ref{fig:drag_fit})}
+    \caption[Příklad grafu měřeného průběhu $\omega$ v $t$ s $\beta = 0$ v magnetickém poli]{Graf měřeného úhlové rychlosti v čase v porovnání s fitem užívajícím složek $\alpha$ a $\gamma$. (barevné schéma jako v \autoref{fig:drag_fit})}
     \label{fig:drag_fit_mag}
 \end{figure}
 
@@ -1038,7 +1052,7 @@ Některé z podmínek, které sice nezaručují konzistentnost a stabilitu metod
     \end{gathered}
 \end{equation}
 
-Níže vypíšeme Butcherovy tabulky několika základních metod, které později implementujeme \cite{RK_methods_list}:
+Níže vypíšeme Butcherovy tabulky několika základních metod, které byly později implementovány v simulaci \cite{RK_methods_list}:
 
 \begin{table}[H]
     \parbox{.45\linewidth}{
@@ -1147,9 +1161,9 @@ Níže vypíšeme Butcherovy tabulky několika základních metod, které pozdě
 \begin{enumerate}[topsep=0pt, partopsep=0pt]
     \setlength{\itemsep}{0pt}%
     \setlength{\parskip}{0pt}%
-    \item Konfigurace: pozice, velikosti, počet ramen (viz kap. \ref{sub:param_konf})
-    \item Pohyb: úhlová rychlost, moment setrvačnosti (viz kap. \ref{sec:moment_of_inertia}), třecí koeficienty (viz kap. \ref{chap:drag})
-    \item Magnetů: velikost momentů, remanence (viz kap. \ref{sec:remanence_measurement}), orientace (viz Obr. \ref{fig:mag_orientations})
+    \item \textbf{Konfigurace}: pozice, velikosti, počet ramen (viz \autoref{sub:param_konf})
+    \item \textbf{Pohybu}: úhlová rychlost, moment setrvačnosti (viz \autoref{sec:moment_of_inertia}), třecí koeficienty (viz \autoref{chap:drag})
+    \item \textbf{Magnetů}: velikost momentů, remanence (viz \autoref{sec:remanence_measurement}), orientace (viz \autoref{fig:mag_orientations})
 \end{enumerate}
 
 Naším cílem je popisovat rotaci jednotlivých spinnerů v čase. Toto provedeme určením celkového momentu sílu jakožto součtu silových a magnetických složek přes všechny externí magnetické momenty. Popisující rovnice spinneru jsou tedy \footnote{První rovnice vychází z definice momentu síly: $\dot{L} = I \dot{\omega} = \tau$}:
@@ -1187,51 +1201,166 @@ První datovou strukturou, kterou budeme používat v našich výpočtech jsou 3
 
 \subsubsection{Spinnery}
 
-Další strukturou jsou jednotlivé spinnery, které budeme označovat symbolem $\mathbb{S}$ a případně odpovídajícím číselným indexem, či jiným identifikátorem v pravém dolním indexu. Je-li z kontextu zřejmé, o jaký spinner se jedná, můžeme k jeho vlastnosnostem referovat čistě podle znaků určených v nomenklatuře (viz kap. \ref{sec:nomenclature}). Je-li potřeba oddělovat jednotlivé spinnery, budeme k jejich vlastnostem referovat exakktně a to skrze horní index; například, chtěli bychom-li určit počet ramen (značeno písmenem $n$) nějakého externího spinneru, použili bychom $\mathbb{S}_{external}^{n}$. Pokud bychom chtěli získat pozici 1. magnetu 3. spinneru, použili bychom $\mathbb{S}_{3}^{P}(1)$, jelikož $P(i)$ je funkce. Pomocí tohoto způsobu zápisu také v průběhu následujících kapitolá konkretizujeme rovnice \ref{eq:sim_equations} a \ref{eq:sim_equations2}.
+Další strukturou jsou jednotlivé spinnery, které budeme označovat symbolem $\mathbb{S}$ a případně odpovídajícím číselným indexem, či jiným identifikátorem v pravém dolním indexu. Je-li z kontextu zřejmé, o jaký spinner se jedná, můžeme k jeho vlastnosnostem referovat čistě podle znaků určených v nomenklatuře (viz \autoref{sec:nomenclature}). Je-li potřeba oddělovat jednotlivé spinnery, budeme k jejich vlastnostem referovat exaktně a to skrze horní index; například, chtěli bychom-li určit počet ramen (značeno písmenem $n$) nějakého externího spinneru, použili bychom $\mathbb{S}_{external}^{n}$. Pokud bychom chtěli získat pozici 1. magnetu 3. spinneru, použili bychom $\mathbb{S}_{3}^{P}(1)$, jelikož $P(i)$ je funkce. Pomocí tohoto způsobu zápisu také v průběhu následujících kapitol konkretizujeme rovnice \ref{eq:sim_equations} a \ref{eq:sim_equations2}.
 
 V kódu jsou spinnery instancí třídy \textbf{\texttt{spinner}}, jejíž vlastnosti jsou vypsány v tabulce \ref{tab:sim_spinner_properties}.
 
+\DFNalwaysdouble
+\DFNallowcbreak
+\DFNcolumnwidth 0.475\textwidth
 \begin{table}[!ht]
     \captionsetup{justification=raggedright,singlelinecheck=off}
     \caption[Výpis vlastností třídy \textbf{\texttt{spinner}}]{Výpis vlastností třídy \textbf{\texttt{spinner}}:}
     \label{tab:sim_spinner_properties}
 
-    \begin{tabularx}{\textwidth}{p{0.15\textwidth} p{0.15\textwidth} p{0.2\textwidth} p{0.5\textwidth}}
-        \textbf{Symbol}              & \textbf{Datový typ}                & \textbf{Iniciální hodnota} & \textbf{Význam}                                            \\
+    \begin{tabular}{p{0.275\textwidth} p{0.45\textwidth} p{0.275\textwidth} }
+        \textbf{Symbol}                                                                                                                 & \textbf{Datový typ}                                   & \textbf{Iniciální hodnota}                                 \\
         \hline
-        % $r$                          & \texttt{float64}                   & 0.0359                     & Poloměr                                                    \\
-        % $S$                          & \texttt{v3}                        & žádná                      & Střed                                                      \\
-        % $I$                          & \texttt{float64}                   & $4.80\cdot10^{-5}$         & Moment setrvačnosti                                        \\
-        % $φ_0$                        & \texttt{float64}                   & žádná                      & Počáteční úhel                                             \\
-        % $φ$                          & \texttt{float64}                   & žádná                      & Okamžitý úhel                                              \\
-        % $ω_0$                        & \texttt{float64}                   & žádná                      & Počáteční úhlová rychlost                                  \\
-        % $ω$                          & \texttt{float64}                   & žádná                      & Okamžitý úhlová rychlost                                   \\
-        % \texttt{constant\_}$ω$       & \texttt{bool}                      & false                      & Určuje, zda má úhlová rychlost spinenru zůstat konstantní  \\
-        % $α$                          & \texttt{float64}                   & 0.868                      & Konstantní koeficient tření                                \\
-        % $β$                          & \texttt{float64}                   & 0.0                        & Lineární koeficient tření                                  \\
-        % $γ$                          & \texttt{float64}                   & 0.00068                    & Kvadratický koeficient tření                               \\
-        % $n$                          & \texttt{int}                       & 3                          & Počet ramen/magnetů                                        \\
-        % $m_0$                        & \texttt{float64}                   & 0                          & Velikost mag. momentu                                      \\
-        % \texttt{magnet\_orientation} &                                    &                            & Orientace magnetů                                          \\
-        % $m(i)$                       & funkce \texttt{(int -> v3)}        & nelze měnit                & Funkce vracející orientaci magnetu podle jeho indexu       \\
-        % $P(i)$                       & funkce \texttt{(int -> v3)}        & nelze měnit                & Funkce vracející pozici magnetu podle jeho indexu          \\
-        % \texttt{copy ()}             & funkce \texttt{(empty -> spinner)} & nelze měnit                & Funkce vracející novou instanci spinneru se stejným stavem
-    \end{tabularx}
+        $r$                          \tablefootnote{Poloměr (viz \autoref{fig:spinner_size})}                                           & \texttt{float64}                                      & 0.0359                                                     \\
+        $S$                          \tablefootnote{Střed}                                                                              & \texttt{v3}                                           & žádná                                                      \\
+        $I$                          \tablefootnote{Moment setrvačnosti (viz \autoref{sec:moment_of_inertia})}                          & \texttt{float64}                                      & $4.80 \cdot 10^{-5}$                                       \\
+        $\varphi_0$                  \tablefootnote{Počáteční úhel}                                                                     & \texttt{float64}                                      & žádná                                                      \\
+        $\varphi$                    \tablefootnote{Okamžitý úhel}                                                                      & \texttt{float64}                                      & žádná                                                      \\
+        $\omega_0$                   \tablefootnote{Počáteční úhlová rychlost}                                                          & \texttt{float64}                                      & žádná                                                      \\
+        $\omega$                     \tablefootnote{Okamžitý úhlová rychlost}                                                           & \texttt{float64}                                      & žádná                                                      \\
+        $\alpha$                     \tablefootnote{Konstantní koeficient tření (viz \autoref{chap:drag})}                              & \texttt{float64}                                      & 0.868                                                      \\
+        $\beta$                      \tablefootnote{Lineární koeficient tření (viz \autoref{chap:drag})}                                & \texttt{float64}                                      & 0.0                                                        \\
+        $\gamma$                     \tablefootnote{Kvadratický koeficient tření (viz \autoref{chap:drag})}                             & \texttt{float64}                                      & 0.00068                                                    \\
+        $n$                          \tablefootnote{Počet ramen/magnetů}                                                                & \texttt{int}                                          & 3                                                          \\
+        $m_0$                        \tablefootnote{Velikost magnetického momentu (viz \autoref{eq:mag_mom_remanence})}                 & \texttt{float64}                                      & $\frac{1.1049 \cdot 0.005^3}{4\pi \cdot 10^{-7}} = 0.1099$ \\
+        \texttt{magnet\_orientation} \tablefootnote{Orientace magnetů (viz \autoref{fig:mag_orientations})}                             & \texttt{"vertical" / "radial" / "tangent"}            & \texttt{"vertical"}                                        \\
+        \texttt{constant\_}$\omega$  \tablefootnote{Určuje, zda má úhlová rychlost spinneru zůstat konstantní (simuluje hnaný spinner)} & \texttt{bool}                                         & false                                                      \\
+        $m(i)$                       \tablefootnote{Funkce vracející orientaci magnetu podle jeho indexu}                               & \texttt{funkce (int $\rightarrow$ v3)}                & nelze měnit                                                \\
+        $P(i)$                       \tablefootnote{Funkce vracející pozici magnetu podle jeho indexu}                                  & \texttt{funkce (int $\rightarrow$ v3)}                & nelze měnit                                                \\
+        \texttt{copy ()}             \tablefootnote{Funkce vracející novou instanci spinneru se stejným stavem}                         & \texttt{funkce ($\varnothing$ $\rightarrow$ spinner)} & nelze měnit
+    \end{tabular}
 \end{table}
 
+\clearpage
 
-\subsubsection{$\Omega$ stavy}
+\DFNtrysingle
+\DFNinhibitcbreak
+\DFNcolumnwidth 1\textwidth
 
-Další důležitou datovou strukturou
+\subsubsection{$\Omega$-stavy}
 
-\subsubsection{$\varPhi$ stavy}
+Další důležitou datovou strukturou je něco, co nazveme $\Omega$-stav. Tato datová struktura má za úkol uložit celkový stav systému (tedy stavy všech $m$ spinnerů) a provádět na nich operace potřebné k řešení diferenciálních rovnic pomocí RK metod. Zároveň $\Omega$-stav disponuje funkcí pro výpočet všech momentů sil pro všechny spinnery.
 
+Hlavní vlastností $\Omega$-stavů je tedy pole spinnerů $\mathbb{P} = \{ \mathbb{S}_1, \mathbb{S}_2, \ldotp ,\mathbb{S}_m \}$ a na libovolný prvek tohoto pole se budeme odkazovat následovně: $\Omega_{}^{\mathbb{P}}(m) = \mathbb{S}_m$.
 
-\subsection{Implementace Runge-Kutta metod}
+Jelikož úkolem $\Omega$-stavu je i určení všech momentů sil, musí mít i vlastnost značenou $A$, což je pole dopočítaných úhlových zrychlení jednotlivých spinnerů: $A = \{ \alpha_1, \alpha_2, \ldotp, \alpha_m \} $ (na jednotlivé prvky se opět odkazujeme takto: $\Omega_{}^{A}(m) = \alpha_m$). Nyní je na řadě provést formalizaci řídících rovnic \ref{eq:sim_equations} a \ref{eq:sim_equations2}:
+\begin{equation}
+    \label{eq:sim_equations_formalized}
+    \begin{gathered}
+        \tau_F (\mathbb{S}, m_{external}, P_{external}) =
+        \sum_{j=1}^{\mathbb{S}^{n}}
+        F_m(P_{external} - \mathbb{S}^{P}(j), \mathbb{S}^{m}(j), m_{external})
+        \times (\mathbb{S}^{P}(j) -  \mathbb{S}^{S})\\
+        \tau_{mag}(\mathbb{S}, m_{external}, P_{external}) =
+        \sum_{j=1}^{\mathbb{S}^{n}}
+        \mathbb{S}^{m}(j) \times B(\mathbb{S}^{P}(j)-P_{external},m_{external})\\
+    \end{gathered}
+\end{equation}
+
+Nyní, když jsme formalizovali silové a magnetické interakce z jednoho externího magentického dipólu, stačí určit celkový moment síly $\tau_{tot}$, což je součet obou složek ze všech magnetů všech ostatních spinnerů, a z toho jednoduše dopočítat úhlové zrychlení:
+\begin{equation}
+    \label{eq:sim_equations_formalized2}
+    \begin{gathered}
+        \alpha_k = \frac{\tau_{tot}}{I} =
+        \frac{1}{I}
+        \sum_{j=1; j \neq k}^{|\Omega^{\mathbb{P}}|}
+        \sum_{i=1}^{\mathbb{S}_j^n}
+        \tau_F (\mathbb{S}_k, \mathbb{S}_j^m (i), \mathbb{S}_j^P (i)) +
+        \tau_{mag} (\mathbb{S}_k, \mathbb{S}_j^m (i), \mathbb{S}_j^P (i))
+    \end{gathered}
+\end{equation}
+
+Poslední vlastností $\Omega$-stavu je krátky časový úsek $\Delta t$. Z výpočtu zrychlení je pak
+provedena predikce budoucího stavu $\Omega'$, který by měl nastat po uplynutí $\Delta t$:
+
+\begin{equation}
+    \label{eq:sim_equations_formalized3}
+    \begin{gathered}
+        {\Omega'}^{\mathbb{P}}(k)^{\omega} = \mathbb{S}_k^{\omega} + \Omega^{\Delta t} \cdot \alpha_k
+        \quad
+        \forall k \in {1, \ldots, \Omega^{m}} \\
+    \end{gathered}
+\end{equation}
+
+V kódu jsou tyto struktury instancemi třídy \texttt{omega\_state}.
+
+\subsubsection{$\Phi$-stavy}
+
+Poslední datovou strukturou jsou tzv. $\Phi$-stavy, které jsou velmi podobné $\Omega$-stavům svou funkcí. Jejich účelem je opět umožnit použití RK metod - v průběhu jednoho simulačního kroku tedy dochází k dvojitému numerickému integrování. Nejdříve, abychom získali z úhlového zrychlení úhlovou rychlost, a poté poduhé, abychom z úhlové rychlosti získali úhel
+($\alpha_k \xRightarrow{RK} \mathbb{S}_k^{\omega}  \xRightarrow{RK} \mathbb{S}_k^{\varphi}$).
+
+Vlastnosti $\Phi$-stavů jsou stejné jako u $\Omega$-stavů, kromě pole $A$, které je nahrazeno polem $O$\footnote{$\Phi{}^{O} = \{ \omega_1, \omega_2, \ldots, \omega_m\}; \Phi{}^{O}(m) = \omega_m$}, které místo úhlových zrychlení obsahuje úhlové rychlosti každého spinneru. $\Omega$-stavy a $\Phi$-stavy na sebe navazují následovně:
+
+\begin{equation}
+    \label{eq:sim_equations_formalized4}
+    \begin{gathered}
+        \Phi^O(k) = {\Omega'}^{\mathbb{P}}(k)^{\omega}
+        \quad
+        \forall k \in {1, \ldots, \Phi^{m}} \\
+    \end{gathered}
+\end{equation}
+
+Poté je predikce dalšího $\Phi$-stavu analogická predikci $\Omega$-stavu:
+
+\begin{equation}
+    \label{eq:sim_equations_formalized5}
+    \begin{gathered}
+        {\Phi'}^{\mathbb{P}}(k)^{\omega} = \mathbb{S}_k^{\varphi} + \Phi^{\Delta t} \cdot \omega_k
+        \quad
+        \forall k \in {1, \ldots, \Phi^{m}} \\
+    \end{gathered}
+\end{equation}
+
+V kódu jsou tyto struktury instancemi třídy \texttt{phi\_state}.
 
 \subsection{Popis iteračního kroku}
 
+Jak jsme již avizovali, pomocí $\Omega$-stavů a $\Phi$-stavů provedeme v každém iteračním kroku 2 numerické integrace: $\alpha_k \xRightarrow{RK} \mathbb{S}_k^{\omega}  \xRightarrow{RK} \mathbb{S}_k^{\varphi}$. K simulování jsme používali metodu RK4, protože je nejvíce známá a při porovnání metod stejného stupně (např. RK4 a Ralstonovy metody 4. stupně) jsme neshledali téměř žádné rozdíly.
+
+Průběh výpočtu budoucího $\Omega$-stavu (a analogicky $\Phi$-stavu) bude probíhat následovně: 
+
+Máme začáteční stav $\Omega_1$ a určíme $k_1 = \Omega_1^A$. 
+Poté vytvoříme nové spinnery, jejichž úhlové rychlosti jsou zároveň částečně ovlivněny úhlovými zrychleními z $k_1$ a budeme odhadovat jejich úhlové rychlosti po uplynutí $a_{2, 1} \cdot \Delta t$: 
+$${\Omega_1'}^{\mathbb{P}} (k) ^{\omega} = {\Omega_1}^{\mathbb{P}} (k) ^{\omega} + k_1 \cdot a_{2, 1} \cdot \Delta t$$
+Takto vytvořené spinnery necháme zrychlovat po dobu $c_2 \cdot \Delta t$: 
+$${\Omega_1''}^{\mathbb{P}} (k) ^{\omega} ={\Omega_1}^{\mathbb{P}} (k) ^{\omega} + {\Omega_1'}^{A} (k) \cdot c_{2} \cdot \Delta t$$
+Nakonec získáme $k_2$ jako úhlové zrychlení těchto zrychlených (a pootočených) spinnerů: 
+$$k_2 = {\Omega_1''}^{A}$$
+Obecně můžeme tedy vyjádři $k_{n+1}$ takto: 
+\begin{equation}
+    \label{eq:sim_equations_formalized6}
+    \begin{gathered}
+        k_{n+1} = \Bigg( {\Omega_n}^{\mathbb{P}} (k) ^{\omega} + \Bigg( \sum_{i=1}^{n} ( k_i \cdot a_{n+1, i} \cdot \Delta t) \Bigg) \cdot c_{n+1} \cdot \Delta t \Bigg)^A
+    \end{gathered}
+\end{equation}
+
+\clearpage
+
+Po určení všech $k_1, \ldots, k_s$ konečně získáváme nový, odhadovaný stav:
+\begin{equation}
+    \label{eq:sim_equations_formalized6}
+    \begin{gathered}
+        {\Omega_{n+1}}^{\mathbb{P}} (k) ^{\omega} = \Omega_{n}^{\mathbb{P}} (k) ^{\omega} + \Bigg(\sum_{i=1}^{s} ( b_i k_i)\Bigg) \cdot \Delta t
+    \end{gathered}
+\end{equation}
+
+Analogicky funguje naprosto identický postup pro $\Phi$-stavy.
+
 \subsection{Časová komplexita}
+
+Pro dokončení simualce trvající $T$ a časovým intervalem $\tau$ je potřeba udělat $T/\tau$ iteračních kroků. V každém kroku počítáme interakce každého magnetu s každým - pokud máme $M$ spinnerů a každý z nich má $N$ ramen, získáváme $(NM)^2$ interagujících dvojic. K tomu musíme provádět více výpočtů, abychom zpřesnili výsledky. Použijeme-li RK metodu $K$. stupně a potřebujeme v každém kroku provést $U$ numerických integrací (pro nás je $U = 2$), získáváme finální časovou komplexitu:
+
+\begin{equation}
+    \label{eq:sim_complexity}
+    \begin{gathered}
+        \mathcal{O} \bigg( \bigg( \dfrac{T}{\tau} \bigg) \cdot (N M)^2 \cdot K^U \bigg)
+    \end{gathered}
+\end{equation}
 
 \subsection{Webové rozhraní}
 
