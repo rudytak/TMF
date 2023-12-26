@@ -12,7 +12,6 @@
  openright
 ]{report}
 
-
 %% Nutné balíčky a nastavení
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -34,7 +33,7 @@
 
 \usepackage[top=2.5cm, bottom=2.5cm, left=3.5cm, right=1.5cm]{geometry} %% nastaví okraje, left -- vnitřní okraj, right -- vnější okraj
 
-\usepackage[czech]{babel} %% balík babel pro sazbu v češtině
+\usepackage[english, czech]{babel} %% balík babel pro sazbu v češtině
 \usepackage[utf8]{inputenc} %% balíky pro kódování textu
 \usepackage[T1]{fontenc}
 \usepackage{cmap} %% balíček zajišťující, že vytvořené PDF bude prohledávatelné a kopírovatelné
@@ -117,6 +116,9 @@
 \usepackage{booktabs}
 \usepackage{url}
 
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
 %% Balíčky co se můžou hodit :)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -154,6 +156,15 @@
 \newcommand{\Vast}{\bBigg@{5}}
 \newcommand{\Vastt}{\bBigg@{6}}
 \makeatother
+
+\usepackage{tikz}
+% %%%<
+%     \PreviewEnvironment{tikzpicture}
+%     \setlength\PreviewBorder{10pt}%
+% %%%>
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{shapes.geometric, arrows,positioning}
 
 %% Začátek dokumentu
 %%%%%%%%%%%%%%%%%%%%
@@ -1450,7 +1461,19 @@ Po určení všech $k_1, \ldots, k_s$ konečně získáváme nový, odhadovaný 
 Identicky funguje postup i pro provádění numerického integrování $\Phi$-stavů.
 
 % !TODO
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners, minimum height=2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [thick,->,>=stealth]
+
 Nákres průběhu simulace:
+\input{flowchart.tex}
+
+\begin{figure}[!ht]
+    \caption{My label}
+    \label{fig:MyLabel}
+\end{figure}
 
 \subsection{Časová komplexita}
 

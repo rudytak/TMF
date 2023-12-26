@@ -40,5 +40,7 @@
 \contentsline {subsubsection}{$\Omega $-stavy}{32}{table.caption.27}%
 \contentsline {subsubsection}{$\Phi $-stavy}{34}{equation.5.3.36}%
 \contentsline {subsection}{\numberline {5.3.2}Popis iteračního kroku}{34}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Časová komplexita}{35}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Webové rozhraní}{35}{subsection.5.3.4}%
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\contentsline {subsection}{\numberline {5.3.3}Časová komplexita}{36}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Webové rozhraní}{37}{subsection.5.3.4}%
