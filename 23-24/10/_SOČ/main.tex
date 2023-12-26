@@ -12,6 +12,7 @@
  openright
 ]{report}
 
+
 %% Nutné balíčky a nastavení
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -146,6 +147,13 @@
 \DFNinhibitcbreak
 \DFNcolumnwidth 1.1\textwidth
 % \DFNsloppiness 1000
+
+\makeatletter
+\newcommand{\vast}{\bBigg@{3}}
+\newcommand{\vastt}{\bBigg@{4}}
+\newcommand{\Vast}{\bBigg@{5}}
+\newcommand{\Vastt}{\bBigg@{6}}
+\makeatother
 
 %% Začátek dokumentu
 %%%%%%%%%%%%%%%%%%%%
@@ -392,7 +400,7 @@ Z přesného zadání můžeme také vyčíst nějaké důležité předpoklady.
 Jmenovitě se jedná o
 umístění všech spinnerů v jedné \textit{"rovině vedle sebe"}, což z velké míry usnadní budoucí výpočty,
 točením pouze \textit{"jedním z nich"} a
-omezení interakcí mezi spinnery pouze na \textit{"vlivy magentického pole"}.
+omezení interakcí mezi spinnery pouze na \textit{"vlivy magnetického pole"}.
 Neměli bychom opomenout ani skutečnost, že všechny spinnery mají být \textit{"identické"}.
 
 \section{Určení parametrů}
@@ -462,7 +470,7 @@ Když nyní zvolíme velikost magnetického momentu našich magnetů $|\vec{m}_0
     \vec{m} = |\vec{m}_0| \cdot \vec{u}(i)
 \end{equation}
 
-Velikost magentických momentů bude záviset na teplotě, velikosti a materiálových vlastnostech magnetů (např. jejich chemickém složení a kvalitě), ale to, jaká je pravá velikost magnetických momentů $|\vec{m}_0|$, je momentálně nepodstatné a určíme ji později (viz \autoref{sec:remanence_measurement}).
+Velikost magnetických momentů bude záviset na teplotě, velikosti a materiálových vlastnostech magnetů (např. jejich chemickém složení a kvalitě), ale to, jaká je pravá velikost magnetických momentů $|\vec{m}_0|$, je momentálně nepodstatné a určíme ji později (viz \autoref{sec:remanence_measurement}).
 
 Posledním parametrem, který zmíníme, ale nebudeme se jím zabývat, je přitahování, či odpuzování magnetů.
 V našem případě jsem se zaměřili převážně na systémy, kde se všechny magnety odpuzují.
@@ -781,7 +789,7 @@ Důvodem, proč je remanence většího magentu znatelně nižší, může být 
 \chapter{Tření}
 \label{chap:drag}
 
-O třecích jevech při otáčení spinneru jsme si již byli schopni udělat představu při úvodním kvalitativním sledování. Tření bude hrát značnou roli v našem systému, jelikož to bude hlavní limitující faktor průběhu chaotického chování. Dalším využitím, kromě našeho úhlavního záměru - zpřesnění popisu chování, bude také například možnost odhadnutí maximálního času, než se spinnery zastaví a systém ztratí všechnu svou energii. Zajímavým, a lehko měřitelným, pro nás bude průběh úhlové rychlosti $\omega$ (resp. změna úhlové rychlosti \footnote{$\dot{\omega} = \tau$}) v čase, že kterého tkví i náš popis těchto třecích složek.
+O třecích jevech při otáčení spinneru jsme si již byli schopni udělat představu při úvodním kvalitativním sledování. Tření bude hrát značnou roli v našem systému, jelikož to bude hlavní limitující faktor průběhu chaotického chování. Dalším využitím, kromě našeho úhlavního záměru - zpřesnění popisu chování, bude také například možnost odhadnutí maximálního času, než se spinnery zastaví a systém ztratí všechnu svou energii. Zajímavým, a lehko měřitelným, pro nás bude průběh úhlové rychlosti $\omega$ (resp. změna úhlové rychlosti \footnote{$I\dot{\omega} = \tau$}) v čase, že kterého tkví i náš popis těchto třecích složek.
 
 Zajímá-li nás tedy změna rychlosti, dovolíme si odhadnout, že hlavními zdroji tření bude ložisko a odpor vzduchu. Provedeme idealizaci ložiska a řekneme, že jeho brzným moment síly, a tím pádem i úhlové zpomalení, bude neměnné v čase a nezávislé na rychlosti. Toto nemusí být vždy pravda, např. objeví-li se v našem, přirozeně neideálním, ložisku nějaké nechtěnné oscilace (které jsme sledovali) nebo je-li na ložisko působeno nějakou externí silou mířící kolmo na osu otáčením (jako například když se od sebe velmi silně odpuzují magnety ze dvou blízkých spinnerů). Oba tyto příklady jsou příliš složité k popsání a nejsme je tedy schopni zkoumat. Toto brzdné úhlové zrychlení (resp. zpomalení) nezávislé na otáčkách spinneru označíme $\alpha$.
 
@@ -1244,75 +1252,144 @@ V kódu jsou spinnery instancí třídy \textbf{\texttt{spinner}}, jejíž vlast
 
 \subsubsection{$\Omega$-stavy}
 
-Další důležitou datovou strukturou je něco, co nazveme $\Omega$-stav. Tato datová struktura má za úkol uložit celkový stav systému (tedy stavy všech $m$ spinnerů) a provádět na nich operace potřebné k řešení diferenciálních rovnic pomocí RK metod. Zároveň $\Omega$-stav disponuje funkcí pro výpočet všech momentů sil pro všechny spinnery.
+Další důležitou datovou strukturou je něco, co nazveme $\Omega$-stav. Tato datová struktura má za úkol uložit celkový stav systému (tedy stavy všech spinnerů - řekněme, že jejich počet bude $p$) a provádět na nich operace potřebné k řešení diferenciálních rovnic pomocí RK metod. Druhým úkolem $\Omega$-stavů je výpočet všech momentů sil pro všechny spinnery - toto v popisu RK metody (viz \autoref{eq:RK_def}) představuje naši derivaci, neboli funkci $f$.
 
-Hlavní vlastností $\Omega$-stavů je tedy pole spinnerů $\mathbb{P} = \{ \mathbb{S}_1, \mathbb{S}_2, \ldotp ,\mathbb{S}_m \}$ a na libovolný prvek tohoto pole se budeme odkazovat následovně: $\Omega_{}^{\mathbb{P}}(m) = \mathbb{S}_m$.
+Hlavní vlastností $\Omega$-stavů je tedy pole spinnerů označované $\mathbb{P} = \{ \mathbb{S}_1, \mathbb{S}_2, \ldotp ,\mathbb{S}_p \}$ o velikoti $|\Omega_{}^{\mathbb{P}}| = \Omega_{}^{p}$. Na obecný $k$. prvek tohoto pole se budeme odkazovat následovně: $\Omega_{}^{\mathbb{P}}(k) = \mathbb{S}_k$.
 
-Jelikož úkolem $\Omega$-stavu je i určení všech momentů sil, musí mít i vlastnost značenou $A$, což je pole dopočítaných úhlových zrychlení jednotlivých spinnerů: $A = \{ \alpha_1, \alpha_2, \ldotp, \alpha_m \} $ (na jednotlivé prvky se opět odkazujeme takto: $\Omega_{}^{A}(m) = \alpha_m$). Nyní je na řadě provést formalizaci řídících rovnic \ref{eq:sim_equations} a \ref{eq:sim_equations2}:
+Jelikož úkolem $\Omega$-stavu je i určení všech momentů sil, bude mít i vlastnost značenou $A$, což je pole dopočítaných úhlových zrychlení jednotlivých spinnerů. Pole $A$ tedy ukládá všechna vypočtená úhlová zrychlení všech spinnerů, která získáme z rovnice \ref{eq:sim_equations}. Jednotlivá zrychlení označíme symbolem $\alpha$ a tím pádem $A = \{ \alpha_1, \alpha_2, \ldotp, \alpha_p \} $. Na jednotlivé prvky se opět odkazujeme takto: $\Omega_{}^{A}(k) = \alpha_k = \dfrac{\mathbb{S}_k^\tau}{\mathbb{S}_k^I}$. 
+
+Nyní je na řadě provést formalizaci řídících rovnic \ref{eq:sim_equations} a \ref{eq:sim_equations2} pomocí tohoto způsobu zápisu. Začneme rovnicemi pro výpočet silové a magnetické interakce magnetů, které nyní popíšeme jakožto funkce tří parametrů. Prvním parametrem v pořadí bude spinner $\mathbb{S}$, pro který budeme počítat momenty sil, kterými na něj působí externí magnetický moment $m_{external}$ nacházející se na pozici $P_{external}$:
 \begin{equation}
     \label{eq:sim_equations_formalized}
     \begin{gathered}
-        \tau_F (\mathbb{S}, m_{external}, P_{external}) =
-        \sum_{j=1}^{\mathbb{S}^{n}}
-        F_m(P_{external} - \mathbb{S}^{P}(j), \mathbb{S}^{m}(j), m_{external})
-        \times (\mathbb{S}^{P}(j) -  \mathbb{S}^{S})\\
-        \tau_{mag}(\mathbb{S}, m_{external}, P_{external}) =
-        \sum_{j=1}^{\mathbb{S}^{n}}
-        \mathbb{S}^{m}(j) \times B(\mathbb{S}^{P}(j)-P_{external},m_{external})\\
+        \ \\
+        \overbrace{
+            \tau_F (\mathbb{S}, m_{external}, P_{external}) 
+        }^{\mathclap{\substack{\text{Moment síly z} \\ 
+                               \text{silové interakce}}}}
+        =
+        \underbrace{
+            \sum_{j=1}^{\mathbb{S}^{n}}
+        }_{\mathclap{\text{Iterace přes všechny magnety spinneru}}}
+        \overbrace{
+            F_m(P_{external} - \mathbb{S}^{P}(j), \mathbb{S}^{m}(j), m_{external})
+        }^{\mathclap{\substack{\text{Síla mezi $j$. magnetem spinneru} \\ 
+                               \text{ a externím magnetickým momentem}}}}
+        \times
+        \underbrace{
+            (\mathbb{S}^{P}(j) -  \mathbb{S}^{S})
+        }_{\mathclap{\text{Rameno síly}}} \\
+        \ \\
+        \overbrace{
+            \tau_{mag}(\mathbb{S}, m_{external}, P_{external})
+        }^{\mathclap{\substack{\text{Moment síly z} \\ 
+                               \text{magnetické interakce}}}}
+        =
+        \underbrace{
+            \sum_{j=1}^{\mathbb{S}^{n}}
+        }_{\mathclap{\text{Iterace přes všechny magnety spinneru}}}
+        \mathbb{S}^{m}(j)
+        \times
+        \overbrace{
+            B(\mathbb{S}^{P}(j)-P_{external},m_{external})
+        }^{\mathclap{\substack{\text{Magnetické pole tvořené externím} \\ 
+                               \text{momentem na pozici $j.$ magnetu}}}} \\
     \end{gathered}
 \end{equation}
 
-Nyní, když jsme formalizovali silové a magnetické interakce z jednoho externího magentického dipólu, stačí určit celkový moment síly $\tau_{tot}$, což je součet obou složek ze všech magnetů všech ostatních spinnerů, a z toho jednoduše dopočítat úhlové zrychlení:
+\clearpage
+
+Nyní, když jsme formalizovali silové a magnetické interakce z jednoho externího magnetického dipólu, stačí určit celkový moment síly $\tau_{tot}$, kterým na spinner působí všechny magnety dohromady. 
+$\tau_{tot}$ tedy bude součet obou složek ze všech magnetů všech ostatních spinnerů.
+Z $\tau_{tot}$ konečně dopočítám úhlové zrychlení $\alpha_k$ obecného $k$. spinneru $\mathbb{S}_k$ takto:
 \begin{equation}
     \label{eq:sim_equations_formalized2}
     \begin{gathered}
         \alpha_k = \frac{\tau_{tot}}{I} =
-        \frac{1}{I}
-        \sum_{j=1; j \neq k}^{|\Omega^{\mathbb{P}}|}
-        \sum_{i=1}^{\mathbb{S}_j^n}
-        \tau_F (\mathbb{S}_k, \mathbb{S}_j^m (i), \mathbb{S}_j^P (i)) +
-        \tau_{mag} (\mathbb{S}_k, \mathbb{S}_j^m (i), \mathbb{S}_j^P (i))
+        \frac{1}{\mathbb{S}_k^I}
+        \underbrace{
+            \sum_{j=1; j \neq k}^{|\Omega^{\mathbb{P}}|}
+        }_{\mathclap{\substack{\text{Iterace přes všechny} \\ 
+                               \text{ostatní spinnery $\mathbb{S}_j$}}}}
+        \overbrace{
+            \sum_{i=1}^{\mathbb{S}_j^n}
+        }^{\mathclap{\substack{\text{Iterace přes všechny} \\ 
+                               \text{magnety spinneru $\mathbb{S}_j$}}}}
+        \bigg(
+            \underbrace{
+            \tau_F (\mathbb{S}_k, \mathbb{S}_j^m (i), \mathbb{S}_j^P (i))
+            }_{\mathclap{\text{Silová složka}}}
+            +
+            \underbrace{
+                \tau_{mag} (\mathbb{S}_k, \mathbb{S}_j^m (i), \mathbb{S}_j^P (i))
+            }_{\mathclap{\text{Magnetická složka}}}
+            \bigg)
     \end{gathered}
 \end{equation}
 
-Poslední vlastností $\Omega$-stavu je krátky časový úsek $\Delta t$. Z výpočtu zrychlení je pak
-provedena predikce budoucího stavu $\Omega'$, který by měl nastat po uplynutí $\Delta t$:
+Pro další výpočty ještě zavedeme, jak se chová sčítání stavů a násobení $\Omega^A$ časem. 
+Jednoduše řečeno dochází k sčítání hodnot pro každý index, nebo k násobení hodnoty na každém indexu daným časem\footnote{V rovnici \ref{eq:sim_equations_formalized4} jsou jednotky: $[rad \cdot s^{-1}] = [rad \cdot s^{-2}] \cdot [s]$.}. 
+Matematicky bychom tedy tyto operace formulovali takto\footnote{Podmínkou sčítání je, že: $\Omega_{sum}^p = \Omega_{a}^p = \Omega_{b}^p$}:
 
 \begin{equation}
     \label{eq:sim_equations_formalized3}
     \begin{gathered}
-        {\Omega'}^{\mathbb{P}}(k)^{\omega} = \mathbb{S}_k^{\omega} + \Omega^{\Delta t} \cdot \alpha_k
-        \quad
-        \forall k \in {1, \ldots, \Omega^{m}} \\
+        \text{Sčítání: }\quad
+        \Omega_{sum} = \Omega_{a} + \Omega_{b} \\
+        \Updownarrow \\
+        \Omega_{sum}^{\mathbb{P}}(k)^{\omega} = \Omega_{a}^{\mathbb{P}}(k)^{\omega} + \Omega_{b}^{\mathbb{P}}(k)^{\omega} 
+        \quad \forall k \in {1, \ldots, \Omega^{p}} \\
+    \end{gathered}
+\end{equation}
+
+\begin{equation}
+    \label{eq:sim_equations_formalized4}
+    \begin{gathered}
+        \text{Násobení:}\quad
+        \Omega_{b} = \Omega_{a}^A \cdot t \quad \quad \\
+        \Updownarrow \\
+        \Omega_{b}^{\mathbb{P}}(k)^{\omega} = \Omega_{a}^{A}(k) \cdot t
+        \quad \forall k \in {1, \ldots, \Omega^{p}} \\
+    \end{gathered}
+\end{equation}
+
+S tímto jsme konečně schopni definovat poslední vlastnost $\Omega$-stavu, kterou je krátky časový úsek $\delta$. 
+Z výpočtu zrychlení je pak provedena predikce budoucího stavu pod uplynutí $\delta$, který označíme $\prescript{*}{}\Omega$.
+Jeho definicí je:
+
+\begin{equation}
+    \label{eq:sim_equations_formalized5}
+    \begin{gathered}
+        \prescript{*}{}{\Omega} = \Omega + \Omega^A \cdot \Omega^{\delta}
     \end{gathered}
 \end{equation}
 
 V kódu jsou tyto struktury instancemi třídy \texttt{omega\_state}.
 
+\clearpage
+
 \subsubsection{$\Phi$-stavy}
 
-Poslední datovou strukturou jsou tzv. $\Phi$-stavy, které jsou velmi podobné $\Omega$-stavům svou funkcí. Jejich účelem je opět umožnit použití RK metod - v průběhu jednoho simulačního kroku tedy dochází k dvojitému numerickému integrování. Nejdříve, abychom získali z úhlového zrychlení úhlovou rychlost, a poté poduhé, abychom z úhlové rychlosti získali úhel
+Poslední datovou strukturou jsou tzv. $\Phi$-stavy, které jsou velmi podobné $\Omega$-stavům svou funkcí. Jejich účelem je opět umožnit použití RK metod. V průběhu jednoho simulačního kroku totiž dochází k dvojitému numerickému integrování - nejdříve, abychom získali z úhlového zrychlení úhlovou rychlost, a poté podruhé, abychom z úhlové rychlosti získali úhel
 ($\alpha_k \xRightarrow{RK} \mathbb{S}_k^{\omega}  \xRightarrow{RK} \mathbb{S}_k^{\varphi}$).
 
-Vlastnosti $\Phi$-stavů jsou stejné jako u $\Omega$-stavů, kromě pole $A$, které je nahrazeno polem $O$\footnote{$\Phi{}^{O} = \{ \omega_1, \omega_2, \ldots, \omega_m\}; \Phi{}^{O}(m) = \omega_m$}, které místo úhlových zrychlení obsahuje úhlové rychlosti každého spinneru. $\Omega$-stavy a $\Phi$-stavy na sebe navazují následovně:
+Vlastnosti $\Phi$-stavů jsou stejné jako u $\Omega$-stavů, kromě pole $A$, které je nahrazeno polem $O$. Pole $O$, narozdíl od pole $A$, které ukládá úhlová zrychlení, obsahuje úhlové rychlosti každého spinneru. Pole $O$ zapisujeme takto: $\Phi{}^{O} = \{ \omega_1, \omega_2, \ldots, \omega_p\}$. Na libovoný $k$. člen se opět odkazujeme takto: $\Phi{}^{O}(k) = \omega_k$. $\Omega$-stavy a $\Phi$-stavy na sebe navazují následovně:
 
 \begin{equation}
-    \label{eq:sim_equations_formalized4}
+    \label{eq:sim_equations_formalized6}
     \begin{gathered}
-        \Phi^O(k) = {\Omega'}^{\mathbb{P}}(k)^{\omega}
+        \Phi^O(k) = {\Omega}^{\mathbb{P}}(k)^{\omega}
         \quad
-        \forall k \in {1, \ldots, \Phi^{m}} \\
+        \forall k \in {1, \ldots, \Phi^{p}} \\
     \end{gathered}
 \end{equation}
 
 Poté je predikce dalšího $\Phi$-stavu analogická predikci $\Omega$-stavu:
 
 \begin{equation}
-    \label{eq:sim_equations_formalized5}
+    \label{eq:sim_equations_formalized7}
     \begin{gathered}
-        {\Phi'}^{\mathbb{P}}(k)^{\omega} = \mathbb{S}_k^{\varphi} + \Phi^{\Delta t} \cdot \omega_k
-        \quad
-        \forall k \in {1, \ldots, \Phi^{m}} \\
+        \prescript{*}{}{\Phi} = \Phi + \Phi^O \cdot \Phi^{\delta}
     \end{gathered}
 \end{equation}
 
@@ -1320,45 +1397,69 @@ V kódu jsou tyto struktury instancemi třídy \texttt{phi\_state}.
 
 \subsection{Popis iteračního kroku}
 
-Jak jsme již avizovali, pomocí $\Omega$-stavů a $\Phi$-stavů provedeme v každém iteračním kroku 2 numerické integrace: $\alpha_k \xRightarrow{RK} \mathbb{S}_k^{\omega}  \xRightarrow{RK} \mathbb{S}_k^{\varphi}$. K simulování jsme používali metodu RK4, protože je nejvíce známá a při porovnání metod stejného stupně (např. RK4 a Ralstonovy metody 4. stupně) jsme neshledali téměř žádné rozdíly.
+Jak jsme již avizovali, pomocí $\Omega$-stavů a $\Phi$-stavů provedeme v každém iteračním kroku dvě numerické integrace: $\alpha_k \xRightarrow{RK} \mathbb{S}_k^{\omega}  \xRightarrow{RK} \mathbb{S}_k^{\varphi}$. 
 
 Průběh výpočtu budoucího $\Omega$-stavu (a analogicky $\Phi$-stavu) bude probíhat následovně: 
 
 Máme začáteční stav $\Omega_1$ a určíme $k_1 = \Omega_1^A$. 
-Poté vytvoříme nové spinnery, jejichž úhlové rychlosti jsou zároveň částečně ovlivněny úhlovými zrychleními z $k_1$ a budeme odhadovat jejich úhlové rychlosti po uplynutí $a_{2, 1} \cdot \Delta t$: 
-$${\Omega_1'}^{\mathbb{P}} (k) ^{\omega} = {\Omega_1}^{\mathbb{P}} (k) ^{\omega} + k_1 \cdot a_{2, 1} \cdot \Delta t$$
-Takto vytvořené spinnery necháme zrychlovat po dobu $c_2 \cdot \Delta t$: 
-$${\Omega_1''}^{\mathbb{P}} (k) ^{\omega} ={\Omega_1}^{\mathbb{P}} (k) ^{\omega} + {\Omega_1'}^{A} (k) \cdot c_{2} \cdot \Delta t$$
-Nakonec získáme $k_2$ jako úhlové zrychlení těchto zrychlených (a pootočených) spinnerů: 
-$$k_2 = {\Omega_1''}^{A}$$
-Obecně můžeme tedy vyjádři $k_{n+1}$ takto: 
+Poté vytvoříme nový stav, jehož spinnery (resp. jejichž úhlové rychlosti) jsou zároveň částečně ovlivněny úhlovými zrychleními z $k_1$.
+To, jakou mírou jsou ovlivněny, udává $a_{2, 1} \cdot \Delta t$.
+Toto odpovídá tomu, jako kdyby libovolný $k$. spinner $\mathbb{S}_k$ byl zrychlován z jeho původní úhlové rychlosti $\omega$ po dobu $a_{2, 1} \cdot \Delta t$ úhlovým zrychlením $\Omega_1^A(k)$ na nějakou novou úhlovou rychlost $\omega'$.
+Tento výpočet tedy můžeme zapsat následovně:
+
 \begin{equation}
-    \label{eq:sim_equations_formalized6}
+    \label{eq:sim_equations_formalized8}
     \begin{gathered}
-        k_{n+1} = \Bigg( {\Omega_n}^{\mathbb{P}} (k) ^{\omega} + \Bigg( \sum_{i=1}^{n} ( k_i \cdot a_{n+1, i} \cdot \Delta t) \Bigg) \cdot c_{n+1} \cdot \Delta t \Bigg)^A
+        {\Omega_1'}^{\mathbb{P}} (k) ^{\omega} = {\Omega_1}^{\mathbb{P}} (k) ^{\omega} + k_1 \cdot a_{2, 1} \cdot \Delta t \\
+        {\Omega_1'} = {\Omega_1} + k_1 \cdot a_{2, 1} \cdot \Delta t
     \end{gathered}
 \end{equation}
 
-\clearpage
+Takto vytvořené spinnery necháme zrychlovat a zároveň rotovat po dobu ${\Omega'}_1^\delta = c_2 \cdot \Delta t$, čímž získáme: 
+\begin{equation}
+    \label{eq:sim_equations_formalized9}
+    \begin{gathered}
+        \prescript{*}{}{\Omega_1'} = {\Omega_1}^{\mathbb{P}} (k) ^{\omega} + {\Omega_1'}^{A} (k) \cdot {\Omega'}_1^\delta
+    \end{gathered}
+\end{equation}
+
+Nakonec získáme $k_2$ jako úhlové zrychlení těchto zrychlených a pootočených spinnerů: 
+\begin{equation}
+    \label{eq:sim_equations_formalized9}
+    \begin{gathered}
+        k_2 = \prescript{*}{}{\Omega_1'}^{A}
+    \end{gathered}
+\end{equation}
+
+Obecně můžeme tedy vyjádři $k_{n}$ takto: 
+\begin{equation}
+    \label{eq:sim_equations_formalized6}
+    \begin{gathered}
+        k_{n} = \Bigg( {\Omega_n} + \Bigg( \sum_{i=1}^{n} ( k_i \cdot a_{n, i} \cdot \Delta t) \Bigg) \cdot c_{n} \cdot \Delta t \Bigg)^A
+    \end{gathered}
+\end{equation}
 
 Po určení všech $k_1, \ldots, k_s$ konečně získáváme nový, odhadovaný stav:
 \begin{equation}
     \label{eq:sim_equations_formalized6}
     \begin{gathered}
-        {\Omega_{n+1}}^{\mathbb{P}} (k) ^{\omega} = \Omega_{n}^{\mathbb{P}} (k) ^{\omega} + \Bigg(\sum_{i=1}^{s} ( b_i k_i)\Bigg) \cdot \Delta t
+        {\Omega_{n+1}} = \Omega_{n} + \Bigg(\sum_{i=1}^{s} ( b_i k_i)\Bigg) \cdot \Delta t
     \end{gathered}
 \end{equation}
 
-Analogicky funguje naprosto identický postup pro $\Phi$-stavy.
+Identicky funguje postup i pro provádění numerického integrování $\Phi$-stavů.
+
+% !TODO
+Nákres průběhu simulace:
 
 \subsection{Časová komplexita}
 
-Pro dokončení simualce trvající $T$ a časovým intervalem $\tau$ je potřeba udělat $T/\tau$ iteračních kroků. V každém kroku počítáme interakce každého magnetu s každým - pokud máme $M$ spinnerů a každý z nich má $N$ ramen, získáváme $(NM)^2$ interagujících dvojic. K tomu musíme provádět více výpočtů, abychom zpřesnili výsledky. Použijeme-li RK metodu $K$. stupně a potřebujeme v každém kroku provést $U$ numerických integrací (pro nás je $U = 2$), získáváme finální časovou komplexitu:
+Pro dokončení simulace trvající čas $T$ s časovým intervalem $\tau$ je potřeba udělat $T/\tau$ iteračních kroků. V každém kroku počítáme interakce každého magnetu s každým - máme-li tedy $P$ spinnerů a každý z nich má $N$ ramen, získáváme $(NP)^2$ interagujících dvojic. Zároveň provádíme více výpočtů, abychom zpřesnili výsledky, tudíž, použijeme-li RK metodu $K$. stupně a potřebujeme v každém kroku provést $U$ numerických integrací (pro nás je $U = 2$), získáváme finální časovou komplexitu:
 
 \begin{equation}
     \label{eq:sim_complexity}
     \begin{gathered}
-        \mathcal{O} \bigg( \bigg( \dfrac{T}{\tau} \bigg) \cdot (N M)^2 \cdot K^U \bigg)
+        \mathcal{O} \bigg( \bigg( \dfrac{T}{\tau} \bigg) \cdot (N P)^2 \cdot K^U \bigg)
     \end{gathered}
 \end{equation}
 
