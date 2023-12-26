@@ -309,11 +309,13 @@ class omega_state {
     return out_state;
   }
 
-  static apply_omeg_to_spinners(dt, spinners, state) {
+  static apply_omeg_to_spinners(dt, spinners, state, including_ang=true) {
     // rotation
     spinners.forEach((s, id) => {
       s.ω += state.ang_accelerations[id] * dt;
-      s.φ += s.ω * dt;
+      if(including_ang){
+        s.φ += s.ω * dt;
+      }
     });
 
     return spinners;
@@ -340,7 +342,7 @@ class phi_state {
 
   calculate() {
     // save the output
-    this.ωs = this.spinners.map(s => s.ω * this.dt);
+    this.ωs = this.spinners.map(s => s.ω);
   }
 
   static sum_φ_states(states, weights) {
@@ -486,7 +488,8 @@ class sim_instance {
     return omega_state.apply_omeg_to_spinners(
       dt,
       this.spinners.map(s => s.copy()),
-      omega_state.sum_omeg_states(k, this.RKmatrix.b)
+      omega_state.sum_omeg_states(k, this.RKmatrix.b),
+      false
     );
   }
 
