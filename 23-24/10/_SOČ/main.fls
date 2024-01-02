@@ -139,6 +139,8 @@ INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\reru
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titleps.sty
@@ -328,6 +330,8 @@ INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\sha
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\shapes\pgflibraryshapes.arrows.code.tex
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypositioning.code.tex
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypositioning.code.tex
+INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
+INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
 INPUT .\main.aux
 INPUT .\main.aux
 INPUT main.aux
@@ -423,6 +427,9 @@ INPUT .\main.toc
 INPUT .\main.toc
 INPUT main.toc
 OUTPUT main.toc
+INPUT .\1_introduction.tex
+INPUT .\1_introduction.tex
+INPUT 1_introduction.tex
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecsl1200.tfm
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
@@ -447,7 +454,13 @@ INPUT C:\Users\ondra\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs7.tfm
 INPUT C:\Users\ondra\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs5.tfm
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0700.tfm
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecxc1728.tfm
+INPUT .\nomenclature.tex
+INPUT .\nomenclature.tex
+INPUT nomenclature.tex
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
+INPUT .\2_theory.tex
+INPUT .\2_theory.tex
+INPUT 2_theory.tex
 INPUT .\imgsLR\osazeny_spinner.png
 INPUT .\imgsLR\osazeny_spinner.png
 INPUT .\imgsLR\osazeny_spinner.png
@@ -469,6 +482,9 @@ INPUT .\imgsLR\orientace_magnetu.png
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbi1200.tfm
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\fonts\vf\public\yhmath\yhcmex10.vf
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\yhmath\yrcmex10.tfm
+INPUT .\3_parameters.tex
+INPUT .\3_parameters.tex
+INPUT 3_parameters.tex
 INPUT .\imgsLR\dims.png
 INPUT .\imgsLR\dims.png
 INPUT .\imgsLR\dims.png
@@ -536,6 +552,9 @@ INPUT .\imgsLR\Final_remanence.png
 INPUT .\imgsLR\Final_remanence.png
 INPUT .\imgsLR\Final_remanence.png
 INPUT .\imgsLR\Final_remanence.png
+INPUT .\4_drag.tex
+INPUT .\4_drag.tex
+INPUT 4_drag.tex
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\Users\ondra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
@@ -588,6 +607,9 @@ INPUT .\imgsLR\sim_spinner_magnetic.png
 INPUT .\imgsLR\sim_spinner_magnetic.png
 INPUT .\imgsLR\sim_spinner_magnetic.png
 INPUT .\imgsLR\sim_spinner_magnetic.png
+INPUT .\5_simulation.tex
+INPUT .\5_simulation.tex
+INPUT 5_simulation.tex
 INPUT .\flowchart.tex
 INPUT .\flowchart.tex
 INPUT flowchart.tex
