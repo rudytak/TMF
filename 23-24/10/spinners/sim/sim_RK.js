@@ -36,6 +36,22 @@ class spinner {
     this.constant_ω = constant_ω;
   }
 
+  get phi0(){
+    return this.φ0;
+  }
+
+  get phi(){
+    return this.φ;
+  }
+
+  get omega0(){
+    return this.ω0;
+  }
+
+  get omega(){
+    return this.ω;
+  }
+
   P(i) {
     return v(
       this.S.x + this.r * Math.cos(this.φ + (2 * Math.PI * i) / this.n),
@@ -375,7 +391,7 @@ class sim_instance {
       return Math.ceil(1e-3 / this.dt + 1) - 1;
     },
     out_path: `out.csv`,
-    exports: ["s[0].ω", "s[0].φ"],
+    exports: ["s[0].omega", "s[0].phi"],
   };
 
   static default_defaults = {
