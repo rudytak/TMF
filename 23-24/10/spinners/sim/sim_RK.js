@@ -587,7 +587,7 @@ class sim_instance {
     this.frame++;
     this.t += this.sim_run_params.dt;
 
-    return this.t < this.sim_run_params.end_time;
+    return !(this.t < this.sim_run_params.end_time);
   }
 }
 
