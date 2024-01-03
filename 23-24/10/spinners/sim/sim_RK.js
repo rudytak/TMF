@@ -367,42 +367,50 @@ class sim_instance {
     μ_0: Math.PI * 4e-7,
   };
 
+  static default_run_params = {
+    dt: 1e-3, // 1 ms
+    end_time: 1,
+    start_time: 0,
+    get save_freq() {
+      return Math.ceil(1e-3 / this.dt + 1) - 1;
+    },
+    out_path: `out.csv`,
+    exports: ["s[0].ω", "s[0].φ"],
+  };
+
+  static default_defaults = {
+    // these defaults don't really have a reason to be changed
+    r: 0.0359, // effective radius of the spinners
+    B_r: 1.1049, // magnitude residual flux densitty [T]
+    V: 0.005 ** 3, // volume of magnet [m^3] (5mm cubed)
+    I: 4.8e-5, // measured
+    get m_0() {
+      // magnitude of magnetic moment [A*m^2]
+      return (1 / sim_instance.constants.μ_0) * this.B_r * this.V;
+    },
+    magnet_count: 3,
+    magnet_orientation: "vertical", // "vertical", "radial", "tangent"
+
+    // these defaults can be overriden
+    α: 0.868,
+    β: 0,
+    γ: 0.00068,
+  };
+
   constructor(
     sim_run_overrides = {},
     RKmatrix = RK_matrix.RK4,
     default_overrides = {}
   ) {
     this.sim_run_params = {
-      dt: 1e-3, // 1 ms
-      end_time: 1,
-      start_time: 0,
-      get save_freq() {
-        return Math.ceil(1e-3 / this.dt + 1) - 1;
-      },
-      out_path: `out.csv`,
-      exports: ["s[0].ω", "s[0].φ"],
+      ...sim_instance.default_run_params,
 
       // apply the overrides
       ...sim_run_overrides,
     };
 
     this.defaults = {
-      // these defaults don't really have a reason to be changed
-      r: 0.0359, // effective radius of the spinners
-      B_r: 1.1049, // magnitude residual flux densitty [T]
-      V: 0.005 ** 3, // volume of magnet [m^3] (5mm cubed)
-      I: 4.8e-5, // measured
-      get m_0() {
-        // magnitude of magnetic moment [A*m^2]
-        return (1 / sim_instance.constants.μ_0) * this.B_r * this.V;
-      },
-      magnet_count: 3,
-      magnet_orientation: "vertical", // "vertical", "radial", "tangent"
-
-      // these defaults can be overriden
-      α: 0.868,
-      β: 0,
-      γ: 0.00068,
+      ...sim_instance.default_defaults,
 
       // apply the overrides
       ...default_overrides,
@@ -562,7 +570,7 @@ class sim_instance {
   runWebFrame() {
     this.step();
 
-    for(var s of this.spinners){
+    for (var s of this.spinners) {
       s.draw();
     }
 
