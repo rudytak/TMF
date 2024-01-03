@@ -545,7 +545,7 @@ class sim_instance {
         let s = this.spinners;
         fs.appendFileSync(
           this.sim_run_params.out_path,
-          `${t}, ${this.sim_run_params.exports
+          `${this.t}, ${this.sim_run_params.exports
             .map((ex) => eval(ex))
             .join(", ")} \n`
         );
@@ -579,7 +579,7 @@ class sim_instance {
       let s = this.spinners;
       fs.appendFileSync(
         this.sim_run_params.out_path,
-        `${t}, ${this.sim_run_params.exports
+        `${this.t}, ${this.sim_run_params.exports
           .map((ex) => eval(ex))
           .join(", ")} \n`
       );
