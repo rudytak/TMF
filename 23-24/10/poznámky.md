@@ -74,6 +74,7 @@
 # TODO
 1. ~~RK implementace~~
 2. ~~Stabilní webové rozhraní ???~~
+2. webové rozhraní - grid
 3. ~~určení remanance magnetů~~
 4. ~~rerun simulací (vše s _todo...) a výtažek plotů~~
     1. ~~spinner decay rate~~
@@ -94,6 +95,7 @@
 <!-- https://www.unimagnet.cz/neodymovy-magnet-kostka-5-mm-sila-cca-1-3-kg-silnejsi-n50_z518/ -->
 <!-- https://www.unimagnet.cz/neodymovy-magnet-kostka-5-mm-sila-cca-1-2-kg_z28/ -->
 9. *LEPŠÍ PREVODOVKY?*
+9. *LEPŠÍ PREVODOVKA* - alignment pegs ve modulatoru
 9. fix torque transfer efficiency!
 10. ~~Doměření přenosu momentu síly!!!~~
 
