@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.26)  3 JAN 2024 15:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.26)  3 JAN 2024 22:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -975,12 +975,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Kapitola 2.
-<./imgsLR/osazeny_spinner.png, id=363, 501.875pt x 531.9875pt>
+<./imgsLR/osazeny_spinner.png, id=368, 501.875pt x 531.9875pt>
 File: ./imgsLR/osazeny_spinner.png Graphic file (type png)
 <use ./imgsLR/osazeny_spinner.png>
 Package pdftex.def Info: ./imgsLR/osazeny_spinner.png  used on input line 4.
 (pdftex.def)             Requested size: 136.57462pt x 144.76686pt.
-<./imgsLR/3spinnery.png, id=367, 501.875pt x 456.70625pt>
+<./imgsLR/3spinnery.png, id=372, 501.875pt x 456.70625pt>
 File: ./imgsLR/3spinnery.png Graphic file (type png)
 <use ./imgsLR/3spinnery.png>
 Package pdftex.def Info: ./imgsLR/3spinnery.png  used on input line 19.
@@ -991,7 +991,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [5
 
  <./imgsLR/osazeny_spinner.png> <./imgsLR/3spinnery.png>]
-<./imgsLR/orientace_magnetu.png, id=380, 501.875pt x 951.555pt>
+<./imgsLR/orientace_magnetu.png, id=385, 501.875pt x 951.555pt>
 File: ./imgsLR/orientace_magnetu.png Graphic file (type png)
 <use ./imgsLR/orientace_magnetu.png>
 Package pdftex.def Info: ./imgsLR/orientace_magnetu.png  used on input line 55.
@@ -1042,7 +1042,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Kapitola 3.
-<./imgsLR/dims.png, id=433, 501.875pt x 503.8825pt>
+<./imgsLR/dims.png, id=438, 501.875pt x 503.8825pt>
 File: ./imgsLR/dims.png Graphic file (type png)
 <use ./imgsLR/dims.png>
 Package pdftex.def Info: ./imgsLR/dims.png  used on input line 7.
@@ -1052,7 +1052,7 @@ Overfull \hbox (9.91676pt too wide) in paragraph at lines 22--22
 |\T1/cmr/bx/sc/17.28 3.2 Mo-ment se-tr-va£-nosti| 
  []
 
-<./imgsLR/mom_inert_setup.png, id=437, 501.875pt x 531.9875pt>
+<./imgsLR/mom_inert_setup.png, id=442, 501.875pt x 531.9875pt>
 File: ./imgsLR/mom_inert_setup.png Graphic file (type png)
 <use ./imgsLR/mom_inert_setup.png>
 Package pdftex.def Info: ./imgsLR/mom_inert_setup.png  used on input line 40.
@@ -1068,7 +1068,7 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 53
 (C:\Users\ondra\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-<./imgsLR/spin_pendulum_field_rec.png, id=450, 501.875pt x 272.01625pt>
+<./imgsLR/spin_pendulum_field_rec.png, id=455, 501.875pt x 272.01625pt>
 File: ./imgsLR/spin_pendulum_field_rec.png Graphic file (type png)
 <use ./imgsLR/spin_pendulum_field_rec.png>
 Package pdftex.def Info: ./imgsLR/spin_pendulum_field_rec.png  used on input line 58.
@@ -1137,7 +1137,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.93668pt}.
 
 [13])
-<./imgsLR/mag_field_measurement_2mag_10cm.png, id=555, 501.875pt x 316.18124pt>
+<./imgsLR/mag_field_measurement_2mag_10cm.png, id=560, 501.875pt x 316.18124pt>
 File: ./imgsLR/mag_field_measurement_2mag_10cm.png Graphic file (type png)
 <use ./imgsLR/mag_field_measurement_2mag_10cm.png>
 Package pdftex.def Info: ./imgsLR/mag_field_measurement_2mag_10cm.png  used on input line 157.
@@ -1151,7 +1151,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.93668pt}.
 
 [14 <./imgsLR/mag_field_measurement_2mag_10cm.png>]
-<./imgsLR/B_field_in_distance.png, id=579, 501.875pt x 389.455pt>
+<./imgsLR/B_field_in_distance.png, id=584, 501.875pt x 389.455pt>
 File: ./imgsLR/B_field_in_distance.png Graphic file (type png)
 <use ./imgsLR/B_field_in_distance.png>
 Package pdftex.def Info: ./imgsLR/B_field_in_distance.png  used on input line 169.
@@ -1161,7 +1161,7 @@ Underfull \hbox (badness 1067) in paragraph at lines 171--171
 []\T1/cmr/m/n/12 Obr. 8: |Zá-vis-lost mag-ne-tické in-dukce na
  []
 
-<./imgsLR/F_in_distance.png, id=583, 501.875pt x 385.44pt>
+<./imgsLR/F_in_distance.png, id=588, 501.875pt x 385.44pt>
 File: ./imgsLR/F_in_distance.png Graphic file (type png)
 <use ./imgsLR/F_in_distance.png>
 Package pdftex.def Info: ./imgsLR/F_in_distance.png  used on input line 198.
@@ -1176,7 +1176,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [15
 
  <./imgsLR/B_field_in_distance.png> <./imgsLR/F_in_distance.png>]
-<./imgsLR/Final_remanence.png, id=601, 501.875pt x 352.31625pt>
+<./imgsLR/Final_remanence.png, id=606, 501.875pt x 352.31625pt>
 File: ./imgsLR/Final_remanence.png Graphic file (type png)
 <use ./imgsLR/Final_remanence.png>
 Package pdftex.def Info: ./imgsLR/Final_remanence.png  used on input line 232.
@@ -1284,7 +1284,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [20
 
 ]
-<./imgsLR/drag_setup.png, id=657, 501.875pt x 531.9875pt>
+<./imgsLR/drag_setup.png, id=662, 501.875pt x 531.9875pt>
 File: ./imgsLR/drag_setup.png Graphic file (type png)
 <use ./imgsLR/drag_setup.png>
 Package pdftex.def Info: ./imgsLR/drag_setup.png  used on input line 146.
@@ -1294,7 +1294,7 @@ Overfull \hbox (0.80925pt too wide) in paragraph at lines 153--154
 \T1/cmr/m/n/12 no-b¥ºná se sm¥-rem gra-vi-ta£-ního zrych-lení).
  []
 
-<./imgsLR/peak_find_alg_drawing.png, id=660, 501.875pt x 333.245pt>
+<./imgsLR/peak_find_alg_drawing.png, id=665, 501.875pt x 333.245pt>
 File: ./imgsLR/peak_find_alg_drawing.png Graphic file (type png)
 <use ./imgsLR/peak_find_alg_drawing.png>
 Package pdftex.def Info: ./imgsLR/peak_find_alg_drawing.png  used on input line 157.
@@ -1342,7 +1342,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [23
 
 ]
-<./imgsLR/spinner_decay_with_beta.png, id=754, 501.875pt x 344.28625pt>
+<./imgsLR/spinner_decay_with_beta.png, id=759, 501.875pt x 344.28625pt>
 File: ./imgsLR/spinner_decay_with_beta.png Graphic file (type png)
 <use ./imgsLR/spinner_decay_with_beta.png>
 Package pdftex.def Info: ./imgsLR/spinner_decay_with_beta.png  used on input line 191.
@@ -1355,7 +1355,7 @@ Underfull \hbox (badness 1688) in paragraph at lines 197--198
 
 Package wrapfig Warning: Collision between wrapping environments on input line 200.
 
-<./imgsLR/spinner_decay.png, id=757, 501.875pt x 341.275pt>
+<./imgsLR/spinner_decay.png, id=762, 501.875pt x 341.275pt>
 File: ./imgsLR/spinner_decay.png Graphic file (type png)
 <use ./imgsLR/spinner_decay.png>
 Package pdftex.def Info: ./imgsLR/spinner_decay.png  used on input line 201.
@@ -1376,12 +1376,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
 [24 <./imgsLR/spinner_decay_with_beta.png> <./imgsLR/spinner_decay.png>]
-<./imgsLR/sim_spinner_magnetic_with_beta.png, id=766, 501.875pt x 346.29375pt>
+<./imgsLR/sim_spinner_magnetic_with_beta.png, id=771, 501.875pt x 346.29375pt>
 File: ./imgsLR/sim_spinner_magnetic_with_beta.png Graphic file (type png)
 <use ./imgsLR/sim_spinner_magnetic_with_beta.png>
 Package pdftex.def Info: ./imgsLR/sim_spinner_magnetic_with_beta.png  used on input line 211.
 (pdftex.def)             Requested size: 295.90588pt x 204.18471pt.
-<./imgsLR/sim_spinner_magnetic.png, id=770, 501.875pt x 348.30125pt>
+<./imgsLR/sim_spinner_magnetic.png, id=775, 501.875pt x 348.30125pt>
 File: ./imgsLR/sim_spinner_magnetic.png Graphic file (type png)
 <use ./imgsLR/sim_spinner_magnetic.png>
 Package pdftex.def Info: ./imgsLR/sim_spinner_magnetic.png  used on input line 219.
@@ -1502,15 +1502,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 359.
+(hyperref)                removing `math shift' on input line 362.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Phi' on input line 359.
+(hyperref)                removing `\Phi' on input line 362.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 359.
+(hyperref)                removing `math shift' on input line 362.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1532,7 +1532,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [35
 
 ]
-Overfull \hbox (35.99304pt too wide) in paragraph at lines 458--468
+Overfull \hbox (35.99304pt too wide) in paragraph at lines 461--471
 [][] 
  []
 
@@ -1551,7 +1551,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [36
 
-])
+]
+Overfull \hbox (10.65851pt too wide) in paragraph at lines 507--508
+[]\T1/cmr/m/n/12 Ob¥ roz-hraní jsou psaná po-mocí ja-zyku \T1/cmtt/m/n/12 JavaScript\T1/cmr/m/n/12 , coº umoº-¬uje po-u-ºí-vat stejné knihovny,
+ []
+
+<./imgsLR/screenshot_web_interface.png, id=957, 501.875pt x 246.9225pt>
+File: ./imgsLR/screenshot_web_interface.png Graphic file (type png)
+<use ./imgsLR/screenshot_web_interface.png>
+Package pdftex.def Info: ./imgsLR/screenshot_web_interface.png  used on input line 511.
+(pdftex.def)             Requested size: 409.71692pt x 201.59232pt.
+) (6_sim_confirmation.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1561,7 +1571,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [37
 
-]
+ <./imgsLR/screenshot_web_interface.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1572,41 +1582,53 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [38
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Kapitola 6.
+) [39]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.61858pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.61858pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
+
+[40
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
 []\T1/cmr/m/n/12 Jasper. \T1/cmr/m/it/12 Shorthand error no-tation (with brackets) accros de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
 \T1/cmr/m/it/12 ci-mal point [du-pli-cate] \T1/cmr/m/n/12 [on-line]. [cit. 2023-12-16]. Do-stupné
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
 \T1/cmr/m/n/12 z: []$\T1/cmtt/m/n/12 https : / / physics . stackexchange . com / questions / 445141 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 []\T1/cmr/m/it/12 Neodymium Mag-net Gra-des \T1/cmr/m/n/12 [on-line]. [cit. 2023-12-16]. Do-stupné
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 \T1/cmr/m/n/12 z: []$\T1/cmtt/m/n/12 https : / / totalelement . com / blogs / about-[]neodymium-[]magnets /
  []
 
 
-Underfull \hbox (badness 7273) in paragraph at lines 331--332
+Underfull \hbox (badness 7273) in paragraph at lines 332--333
 []\T1/cmr/m/n/12 REICHL, Ja-ro-slav a Mar-tin V’E-TIƒKA. \T1/cmr/m/it/12 Fy-zické ky-va-dlo \T1/cmr/m/n/12 [on-line]. [cit.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 \T1/cmr/m/n/12 2023-12-16]. Do-stupné z: []$\T1/cmtt/m/n/12 http : / / fyzika . jreichl . com / main . article / view /
  []
 
-[39]
+[41]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1614,8 +1636,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[40]
-Underfull \hbox (badness 5490) in paragraph at lines 353--354
+[42]
+Underfull \hbox (badness 5490) in paragraph at lines 354--355
 \T1/cmr/m/n/12 2023-12-27]. Do-stupné z: []$\T1/cmtt/m/n/12 https : / / developer . mozilla . org / en-[]US / docs / Web /
  []
 
@@ -1626,7 +1648,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[41]
+[43]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1634,13 +1656,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[42
+[44
 
 ] (main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [43]
+ [45]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.04742pt, for example:
@@ -1648,13 +1670,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
-[44
+[46
 
 ] (main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [45]
+ [47]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1662,13 +1684,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[46
+[48
 
 ] (main.lol)
 \tf@lol=\write8
 \openout8 = `main.lol'.
 
- [47]
+ [49]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.04742pt, for example:
@@ -1676,24 +1698,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
-[48
+[50
 
-] [49] (main.aux)
+] [51] (main.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1BADE6994B8EA2145CC7B0E83A4889C5;7209.
+(rerunfilecheck)             Checksum: AC5356438A76FE35FC2651D3D61B6D30;7349.
  ) 
 Here is how much of TeX's memory you used:
- 31477 strings out of 474495
- 585099 string characters out of 5743934
+ 31500 strings out of 474495
+ 585775 string characters out of 5743934
  2302460 words of memory out of 5000000
- 52675 multiletter control sequences out of 15000+600000
+ 52690 multiletter control sequences out of 15000+600000
  589239 words of font info for 127 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,21n,93p,1093b,2253s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.37} has been referenced but does not exist, replaced by a fixed one
+
 
 pdfTeX warning (dest): name{Hfootnote.36} has been referenced but does not exist, replaced by a fixed one
 
@@ -1803,9 +1828,9 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1728.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (60 pages, 2243960 bytes).
+Output written on main.pdf (62 pages, 2275486 bytes).
 PDF statistics:
- 2083 PDF objects out of 2487 (max. 8388607)
- 398 named destinations out of 1000 (max. 500000)
- 465 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2117 PDF objects out of 2487 (max. 8388607)
+ 403 named destinations out of 1000 (max. 500000)
+ 478 words of extra memory for PDF output out of 10000 (max. 10000000)
 

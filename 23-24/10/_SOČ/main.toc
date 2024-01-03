@@ -47,3 +47,4 @@
 \babel@toc {czech}{}\relax 
 \contentsline {subsection}{\numberline {5.3.4}Časová komplexita}{37}{subsection.5.3.4}%
 \contentsline {subsection}{\numberline {5.3.5}Webové rozhraní}{37}{subsection.5.3.5}%
+\contentsline {chapter}{\numberline {6}Potvrzení simulace}{39}{chapter.6}%

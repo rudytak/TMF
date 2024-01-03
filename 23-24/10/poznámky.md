@@ -73,7 +73,7 @@
 
 # TODO
 1. ~~RK implementace~~
-2. _Stabilní webové rozhraní ???_
+2. ~~Stabilní webové rozhraní ???~~
 3. ~~určení remanance magnetů~~
 4. ~~rerun simulací (vše s _todo...) a výtažek plotů~~
     1. ~~spinner decay rate~~

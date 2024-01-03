@@ -286,7 +286,7 @@ class omega_state {
         torques[i] = 0;
       } else {
         // get the value of the spinners new angular velocity
-        let new_sω = s.ω + torques[i];
+        let new_sω = s.ω // + torques[i] * this.dt;
 
         // omega damping
         // s.ω += dt * (-α - β * s.ω - γ * s.ω ** 2);

@@ -289,12 +289,14 @@ Nyní je na řadě provést formalizaci řídících rovnic \ref{eq:sim_equation
 
 Nyní, když jsme formalizovali silové a magnetické interakce z jednoho externího magnetického dipólu, stačí určit celkový moment síly $\tau_{tot}$, kterým na spinner působí všechny magnety dohromady.
 $\tau_{tot}$ tedy bude součet obou složek ze všech magnetů všech ostatních spinnerů.
+Jako poslední také nesmíme zapomenou na započítání třecích účinků spinneru.
 Z $\tau_{tot}$ konečně dopočítám úhlové zrychlení $\alpha_k$ obecného $k$. spinneru $\mathbb{S}_k$ takto:
 \begin{equation}
     \label{eq:sim_equations_formalized2}
     \begin{gathered}
         \alpha_k = \frac{\tau_{tot}}{I} =
         \frac{1}{\mathbb{S}_k^I}
+        \Bigg(
         \underbrace{
         \sum_{j=1; j \neq k}^{|\Omega^{\mathbb{P}}|}
         }_{\mathclap{\substack{\text{Iterace přes všechny} \\
@@ -312,6 +314,7 @@ Z $\tau_{tot}$ konečně dopočítám úhlové zrychlení $\alpha_k$ obecného $
         \tau_{mag} (\mathbb{S}_k, \mathbb{S}_j^m (i), \mathbb{S}_j^P (i))
         }_{\mathclap{\text{Magnetická složka}}}
         \bigg)
+        \Bigg)
     \end{gathered}
 \end{equation}
 
@@ -475,13 +478,13 @@ Simulační instance poté opakovaně provádí tyto dvě numerické integrace v
 \tikzstyle{connector} = [thick,->,>=stealth]
 \tikzset{stretch/.initial=1}
 
-Po vytvoření kontextu jsou do něj přidány jednotlivé spinnery (číslovány od 0) pomocí funkce \texttt{add\_spinner}, jejíž povinné parametry jsou $S$, $\varphi_0$ a $\omega_0$ (viz \autoref{tab:sim_spinner_properties}). Zbylé parametry jsou dobrovolné - jejich výchozí hodnoty závisí na kontextu (viz bod 3 \autoref{tab:sim_instance_properties}). Spimulace je poté spuštěna funkcí \texttt{run}.
+Po vytvoření kontextu jsou do něj přidány jednotlivé spinnery (číslovány od 0) pomocí funkce \texttt{add\_spinner}, jejíž povinné parametry jsou $S$, $\varphi_0$ a $\omega_0$ (viz \autoref{tab:sim_spinner_properties}). Zbylé parametry jsou dobrovolné - jejich výchozí hodnoty závisí na kontextu (viz bod 3 tabulce \ref{tab:sim_instance_properties}). Spimulace je poté spuštěna funkcí \texttt{run}.
 Vývojový diagram celé simulace je znázorněn níže:
 
 \begin{figure}[!ht]
     \input{flowchart.tex}
     \caption{Vývojový diagram simulace}
-    \label{fig:MyLabel}
+    \label{fig:flowchart}
 \end{figure}
 
 \clearpage
@@ -498,3 +501,14 @@ Pro dokončení simulace trvající čas $T$ s časovým intervalem $\tau$ je po
 \end{equation}
 
 \subsection{Webové rozhraní}
+
+Webové rozhraní, dostupné na \url{https://rudytak.github.io/cdn/TMF37task10/index.html}, je druhým způsobem, jak simulaci zpuštět. Výhodou webového rozhraní oproti původnímu headless\footnote{"Headless software" je označení pro takový software, který nemá grafické uživatelské rozhraní. Příkladem takového softwaru je právě \texttt{NodeJS}.} rozhraní je grafické zobrazení všech spinnerů, čímž je uživateli umožněno jednodušeji sledovat, co se v průběhu simulace děje. Avšak nevýhodou je značný výkonový rozdíl. Relativně pomalý běh simulace ve webovém rozhraní je způsoben potřebou vykreslovat každý stav simulace, což je výpočetně nesrovnatělně složitější operace. 
+
+Obě rozhraní jsou psaná pomocí jazyku \texttt{JavaScript}, což umožňuje používat stejné knihovny, i když jedno rozhraní používá k interpretaci \texttt{NodeJS} a druhé používá jiný \texttt{JavaScriptový engine} (zavislý na prohlížeči) - výpočty jsou tedy identické, i když různě rychlé.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{screenshot_web_interface.png}
+    \caption{Ukázka webového rozhraní}
+    \label{fig:web_interface}
+\end{figure}
