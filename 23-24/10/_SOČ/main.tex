@@ -42,7 +42,6 @@
 \usepackage{mathtools}
 \usepackage{subcaption} %% balíček pro vkládání podobrázků
 \usepackage{wrapfig}
-\usepackage{hyperref} %% balíček, který v PDF vytváří odkazy
 \usepackage{setspace}
 
 \linespread{1.15} %% řádkování
@@ -86,14 +85,6 @@
     showtabs=false,
     tabsize=2
 }
-
-\renewcommand*{\figureautorefname}{Obr.}
-\renewcommand*{\tableautorefname}{Tab.}
-\renewcommand*{\equationautorefname}{Rov.}
-\renewcommand*{\chapterautorefname}{Kap.}
-\renewcommand*{\sectionautorefname}{Kap.}
-\renewcommand*{\subsectionautorefname}{Kap.}
-% \renewcommand*{\subsubsectionautorefname}{Kap.}
 
 \addto\captionsczech{\renewcommand{\figurename}{Obr.}}
 \addto\captionsczech{\renewcommand{\tablename}{Tab.}}
@@ -167,6 +158,15 @@
 \usetikzlibrary{shapes.arrows}
 \usetikzlibrary{shapes.geometric, arrows,positioning}
 \usetikzlibrary{calc}
+
+\usepackage{hyperref} %% balíček, který v PDF vytváří odkazy
+\renewcommand*{\figureautorefname}{Obr.}
+\renewcommand*{\tableautorefname}{Tab.}
+\renewcommand*{\equationautorefname}{Rov.}
+\renewcommand*{\chapterautorefname}{Kap.}
+\renewcommand*{\sectionautorefname}{Kap.}
+\renewcommand*{\subsectionautorefname}{Kap.}
+% \renewcommand*{\subsubsectionautorefname}{Kap.}
 
 %% Začátek dokumentu
 %%%%%%%%%%%%%%%%%%%%
