@@ -24,8 +24,67 @@ Nevýhodou této metody je, jak již bylo zmíněno, že měření magnetickou s
     \label{fig:mag_coupling_vernier}
 \end{figure}
 
+\section{Hlubší analýza}
+
+Neuspokojivá přesnost výsledků získaných předchozí analýzou dat z magnetického čidla vedla k pokusům o vynalezení rozdílného způsobu zpracování dat, který by nám umožnil sledovat rychlost v průběhu jedné otáčky. Doposud nám tento detail nebyl známý, jelikož předchozí způsob pouze počítá jednotlivá otočení, ale ignoruje jak jedna samotná otočka vypadá.
+
+Takový způsob zpracování by měl stále být schopen analyzovat již naměřená data, abychom nemuseli měnit aparaturu ani měření provádět znovu. Nakonec jsme se rozhodli sledovat deformaci jednotlivých peaků v průběhu magnetické indukce a z této simualce se snažit odhadnout a vyvodit přesný úhel spinenru v daném momentu. Přesněji je tento proces popsán v další kapitole.
 
 \clearpage
+\subsection{Popis nového algoritmu}
+
+Tento nový algortimus je založen na tom, že nám bude známá závislost magnetického pole na úhlu spinneru. Pokud tuto závislost budeme znát a budeme mít nějaký nový záznam průběhu magnetické indukce v čase, jsme schopni zpětně vyvodit, jaký musel být průběh úhlu v čase.
+
+Celý proces tedy začíná tím, že musíme naměřit průběh magnetického pole spinneru, který se otáčí definovanou a konstantní rychlostí a jeho průběh úhlu v čase je tedy triviální - je to přímka se směrnicí závislou na jeho rychlosti.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \includegraphics[width=0.5\textwidth]{target_curve.png}
+    \centering
+    \caption{}
+    \label{fig:target_curve}
+\end{wrapfigure}
+
+Spinner osazený magnety je tedy umístěn do vrtačky a roztáčen konstantní a známou rychlostí. Tento spinner označíme jako \textit{nreušený}, jelikož na něj nepůsobí vnější magnetické síly a je poháněn motorem, nikoliv magnetickým vázáním. Záznam z čidla je následně rozdělen podle jednotlivých peaků. Tyto úseky mezi peaky odpovídají průběhu magnetického pole v jednotlivých pootočeních spinneru od jednoho magnetu k následujícímu. Tomuto pootočení spinneru od jednoho magnetu k dalšímu (v našem případě o 120°, protože spinner má 3 ramena) budeme říkat \textit{sub-perioda}. Amplitudy a doby trvání všech sub-period jsou poté normalizovány, jelikož přesná velikost $B$ nás nezajímá, ale zajímá nás pouze tvar této křivky. Všechny sub-periody sjou následně zprůměrovány, čímž získáváme finální tvar (viz \autoref{fig:target_curve}). Tato křivka průběhu jedné sub-periody nerušeného spinneru se stane naším podkladem, vůči kterému budeme srovnávat ostatní, nyní již rušené, průběhy a vyvozovat jejich úhlové závislosti v čase. Nakonec rozdělíme cílový průběh na prosté úseky, což usnadní pozdější manipulace v algoritmu.
+
+Všechna tři měření provedená v předchozí kapitole (viz \autoref{fig:mag_coupling_vernier}) jsou zpracována stejně jako naše kontrolní měření - rozdělena na sub-periody podle peaků, normalizována a rozdělena na prosté úseky. Nyní však nebudeme provádět průměrování, ale budeme každou sub-periodu řešit jednotlivě. Porovnání všech sub-period je k nahlédnutí v grafu \ref{fig:B_sub_periods}.
+
+\clearpage
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{B_sub_period.png}
+    \centering
+    \caption[Porovnání sub-period rušených spinnerů vůči nerušenému průběhu]{Porovnání sub-period rušených spinnerů vůči nerušenému průběhu. Každá jednotlivá subperioda je vykreslena poloprůhlednou modrou, čož umožní sledování nejčastějších průběhů, které budou tmavější.}
+    \label{fig:B_sub_periods}
+\end{figure}
+
+Dalším krokem je zpětné odvození toho, jaký byl průběh úhlu v čase v těchto sub-periodách. Celá sub-perioda je rozdělena na 2 prosté úseky a tím pádem jsme v obou z nich pro náš nerušený průběh schopni přesně přiřadit, že každá naměřená hladina $B_i$ odpovídá specifickému času $t_i$, ve kterém byla naměřena, a ze znalosti rychlosti jsme ke každému času $t_i$ schopni určit přesný úhel, ve kterém se spinner v tu chvíli nacházel $\varphi_i$:
+
+$$
+    B_i \text{ } \ldots \text{ } t_i \text{ } \ldots \text{ } \varphi_i
+$$
+
+Zpětné odvození pro rušené sub-periody poté zpočívá v porovnání s cílovou (nerušenou) křivkou. Pro každu naměřenou hladinu rušeného spinneru $B_j$ hledáme odpovídají hladiny v naší cílové křivce $B_{i1}$ a $B_{i2}$, mezi kterými se $B_j$ nachází, tedy splňuje $B_i1 < B_j < B_i2$. Z k nim odpovídajících časů (resp. jejich odpovídajícíh úhlů) můžeme lineární interpolací určit přibližný čas, ve kterém by se $B_j$ objevilo v nerušeném případě a tedy i jaká je jeho přibližná pozice v čase $t_j$:
+
+$$
+    B_j \text{ } \ldots \text{ } t_j \text{ } \ldots \text{ } \varphi_j = \frac{B_j - B_{i1}}{B_{i2} - B_{i1}} \cdot (\varphi_{i2} - \varphi_{i1}) + \varphi_{i1}
+$$
+
+Úskalím tohoto procesu je, že když je směrnice magnetické indukce ($dB/dt$) velmi malá a tedy i $B_{i2} - B_{i1}$ malé, extrémně rychle roste nepřesnost určení $\varphi_j$. Při nulové směrnici pak nejsme schopni úhel určit vůbec a chybovost je tedy nepřímo úměrná směrnici $B_i$.
+
+Po určení $\varphi_j$ a $t_j$ pro všechny datové body rušené sub-periody jsme schopni vytvořit závislost úhlu na čase a porovnat ji s kontrolním případem (viz \autoref{fig:ang_sub_periods}). 
+
+\clearpage
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{ang_sub_period.png}
+    \centering
+    \caption[Porovnání průběhu úhlu v sub-periodě rušených spinnerů vůči nerušenému průběhu]{Porovnání průběhu úhlu v sub-periodě rušených spinnerů vůči nerušenému průběhu. Každá subperioda je opět vykreslena poloprůhlednou modrou, čož umožní sledování nejčastějších průběhů.}
+    \label{fig:ang_sub_periods}
+\end{figure}
+
+
+\clearpage
+
 \section{Vylepšení aparatury}
 
 \subsection{Laserový snímač}
@@ -38,7 +97,7 @@ Nevýhodou této metody je, jak již bylo zmíněno, že měření magnetickou s
     \label{fig:laser_circle16}
 \end{wrapfigure}
 
-Dříve použité metody snímání pohybu spinnerů mají své výhody i nevýhody. Nevýhodou snímání pomocí magnetickéh čidla je nízká přesnost a nevýhodou snímání pomocí videa je pracnost následného trackování a časová limitace záznamu. 
+Dříve použité metody snímání pohybu spinnerů mají své výhody i nevýhody. Nevýhodou snímání pomocí magnetickéh čidla je nízká přesnost a nevýhodou snímání pomocí videa je pracnost následného trackování a časová limitace záznamu.
 
 Dalším krokem k vylepšení naší aparatury tedy bylo vytvořit lepší způsob snímání. K tomuto jsme se rozhodli vytvořit vlastní senzory postavené na snímání absorpce laserového paprsku fotodiodou. Na každý spinner pak byl připevněn papírový disk  se střídajícími se černými a bílými pruhy (viz \autoref{fig:laser_circle16}), které jinak absorbují světlo z laseru, čímž se mění i měřené napětí na fotodiodě. Z průběhu napětí měřeného osciloskopem jsme podobně jako v kódu \ref{code:4} schopni určit úhlovou rychlost.
 

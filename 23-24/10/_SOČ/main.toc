@@ -55,6 +55,8 @@
 \contentsline {subsection}{\numberline {6.1.4}Výsledky měření při 1000fps}{41}{subsection.6.1.4}%
 \contentsline {chapter}{\numberline {7}Magnetické vázání}{43}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Měření magnetickým čidlem}{43}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Vylepšení aparatury}{45}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Laserový snímač}{45}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Zbytek aparatury}{45}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.2}Hlubší analýza}{44}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Popis nového algoritmu}{45}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.3}Vylepšení aparatury}{48}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Laserový snímač}{48}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Zbytek aparatury}{48}{subsection.7.3.2}%

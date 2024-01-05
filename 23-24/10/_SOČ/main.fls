@@ -1549,6 +1549,19 @@ INPUT ./imgsLR/simulated_coupling.png
 INPUT ./imgsLR/simulated_coupling.png
 INPUT ./imgsLR/simulated_coupling.png
 INPUT ./imgsLR/simulated_coupling.png
+INPUT ./imgsLR/target_curve.png
+INPUT ./imgsLR/target_curve.png
+INPUT ./imgsLR/target_curve.png
+INPUT ./imgsLR/target_curve.png
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
+INPUT ./imgsLR/B_sub_period.png
+INPUT ./imgsLR/B_sub_period.png
+INPUT ./imgsLR/B_sub_period.png
+INPUT ./imgsLR/B_sub_period.png
+INPUT ./imgsLR/ang_sub_period.png
+INPUT ./imgsLR/ang_sub_period.png
+INPUT ./imgsLR/ang_sub_period.png
+INPUT ./imgsLR/ang_sub_period.png
 INPUT ./imgsLR/laser_tracking_circle16.png
 INPUT ./imgsLR/laser_tracking_circle16.png
 INPUT ./imgsLR/laser_tracking_circle16.png
@@ -1572,6 +1585,7 @@ OUTPUT main.lol
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
+INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
