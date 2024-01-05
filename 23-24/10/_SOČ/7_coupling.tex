@@ -5,6 +5,26 @@ Tomu, v jakém poměru jsou, budeme říkat "mód"; případ, kdy jsou rychlosti
 
 \section{Měření magnetickým čidlem}
 
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \includegraphics[width=0.42\textwidth]{motor_characteristic.png}
+    \centering
+    \caption[$\omega - U$ charakteristika motoru]{$\omega - U$ charakteristika motoru}
+    \label{fig:motor_characteristic}
+\end{wrapfigure}
+
+Prvním způsobem, jak jsme se pokoušeli o sledování vázání spinnerů bylo pomocí magnetického čidla Vernier stejně jako na \autoref{fig:spinner_drag_aparature}. Rotaci hnaného spinneru jsme sledovali tímto čidlem, zatímco hnací spinner byl poháněn vrtačkou regulovanou labortatorním zdrojem napětí. Hnaný i hnací spinner byly pevně připevněny ve vzdálenosti 8cm (vzdálenost jejich středů).
+Z počtu peaků na naměřeném průběhu magnetické indukce v čase jsme opět určovali přibližnou úhlovou rychlost hnaného spinneru (stejně jako v kódu \ref{code:4}). Rychlost hnacího spinneru jsme určili z napětí, kterým byla vrtačka poháněna, jelikož jsme pro ni dříve určili charakteristiku výstupní úhlové rychlosti v závislosti na napětí (viz \autoref{fig:motor_characteristic}).
+
+Nevýhodou této metody je, jak již bylo zmíněno, že měření magnetickou sondou je velmi nepřesné a není schopné určit okamžitou rychlost. Další nevýhodou je, že magnetickou sondu jsme měli k dispozici pouze jednu. Přesto jsme byli schopni několik módů naměřit a porovnat se simulací a tyto výsledky jsou k shlédnutí v grafu \ref{fig:mag_coupling_vernier}.
+
+\begin{figure}[!ht]
+    \includegraphics[width=\textwidth]{simulated_coupling.png}
+    \centering
+    \caption{Výsledky měření vázání prováděného magnetickým čidlem}
+    \label{fig:mag_coupling_vernier}
+\end{figure}
+
+
 \clearpage
 \section{Vylepšení aparatury}
 
