@@ -32,7 +32,7 @@ Nižší snímkovací frekvenci jsme si vybrali, jelikož naše kamera není sch
     % \vspace*{0.75cm}
     \includegraphics[width=\textwidth]{exp_C0000.png}
     \centering
-    \caption{Porovnání měření a simulace experimentu C0000}
+    \caption{Porovnání měření a simulace experimentu C0000 (60 fps)}
     \label{fig:exp_C0000}
 \end{figure}
 
@@ -42,12 +42,14 @@ Výsledné porovnání v grafu \ref{fig:exp_C0000} je velmi uspokojivé. Vidíme
 
 \subsection{Výsledky měření při 1000fps}
 
-Další tři měření porovnávají simulaci na mikroskopickém měřítku a to za různých rychlostí - experimentu C0002 je za vysokých otáček, experiment C0004 za nižších otáček a v experimentu C0007 spinner osciluje kolem rovnovážné polohy stejně jako v experimentu C0000.
+Další tři měření se zaměřují na mikroskopické chování a to za různých rychlostí - experiment C0002 je za vysokých otáček, experiment C0004 za nižších otáček a v experimentu C0007 spinner osciluje kolem rovnovážné polohy stejně jako v experimentu C0000.
 
 \begin{figure}[!ht]
     % \vspace*{0.75cm}
     \includegraphics[width=\textwidth]{exp_C000247.png}
     \centering
-    \caption{Porovnání měření a simulace experimentů C0002, C0004 a C0007}
+    \caption{Porovnání měření a simulace experimentů C0002, C0004 a C0007 (1000 fps)}
     \label{fig:exp_C000247}
 \end{figure}
+
+Graf \ref{fig:exp_C000247} ukazuje, že s rostoucí rychlostí se měření a simulace více a více rozcházejí. Toto může opět být způsobeno nechtěnými jevy, jako například vibracemi v ložisku, které mohou být při vyšších rychlostech více prominentní. Při nižších otáčkách stále sledujeme velmi dobrou schodu a frekvencí, která však s rostoucí rychlsotí klesá na kvalitě. Simulování vysokých rychlostí jsme tedy označili za možnou slabinu naší simulace.
