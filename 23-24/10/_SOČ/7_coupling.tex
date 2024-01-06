@@ -69,7 +69,7 @@ $$
     B_j \text{ } \ldots \text{ } t_j \text{ } \ldots \text{ } \varphi_j = \frac{B_j - B_{i1}}{B_{i2} - B_{i1}} \cdot (\varphi_{i2} - \varphi_{i1}) + \varphi_{i1}
 $$
 
-Úskalím tohoto procesu je, že když je směrnice magnetické indukce ($dB/dt$) velmi malá a tedy i $B_{i2} - B_{i1}$ malé, extrémně rychle roste nepřesnost určení $\varphi_j$. Při nulové směrnici pak nejsme schopni úhel určit vůbec a chybovost je tedy nepřímo úměrná směrnici $B_i$.
+Úskalím tohoto procesu je, že když je směrnice magnetické indukce ($dB/dt = \dot{B}$) velmi malá a tedy i $B_{i2} - B_{i1}$ malé, extrémně rychle roste nepřesnost určení $\varphi_j$. Při nulové směrnici pak nejsme schopni úhel určit vůbec a chybovost je tedy nepřímo úměrná $\dot{B_i}$.
 
 Po určení $\varphi_j$ a $t_j$ pro všechny datové body rušené sub-periody jsme schopni vytvořit závislost úhlu na čase a porovnat ji s kontrolním případem (viz \autoref{fig:ang_sub_periods}). 
 
@@ -81,6 +81,17 @@ Po určení $\varphi_j$ a $t_j$ pro všechny datové body rušené sub-periody j
     \caption[Porovnání průběhu úhlu v sub-periodě rušených spinnerů vůči nerušenému průběhu]{Porovnání průběhu úhlu v sub-periodě rušených spinnerů vůči nerušenému průběhu. Každá subperioda je opět vykreslena poloprůhlednou modrou, čož umožní sledování nejčastějších průběhů.}
     \label{fig:ang_sub_periods}
 \end{figure}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \includegraphics[width=0.5\textwidth]{ang_vel_sub_period.png}
+    \centering
+    \caption{Porovnání měřeného a simulovaného průběhu úhlové rychlosti v čase pro mód 2:1}
+    \label{fig:ang_vel_sub_period}
+\end{wrapfigure}
+
+Nakonec provedeme porovnání se simulací pro mód 2:1. Porovnávat budeme úhlovou rychlost v průběhu sub-periody, kterou z měřených dat dopočítáme pomocí rozdílu vedlejších bodů. Výsledný graf lze vidět na \ref{fig:ang_vel_sub_period}. Můžeme si všimnout, že kolem středu, tedy když je $\dot{B}$ malá, je interval nepřesnosti obrovský ze dříve zmíněných důvodů.
+
+Simulované a měřené hodnoty si jsou, alespoň co se tvaru křivky týče, lehce podobné. Důvody, proč se neschodují více, mohou být mnohé, například: nežádoucí jevy v ložisku, nepřesnost cílové křivky nebo také celková komplexita algoritmu, který pro své fungování využívá mnohé předpoklady.
 
 
 \clearpage
