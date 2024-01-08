@@ -61,3 +61,9 @@
 \contentsline {subsection}{\numberline {7.3.1}Laserový snímač (LS)}{48}{subsection.7.3.1}%
 \contentsline {subsection}{\numberline {7.3.2}Zbytek aparatury}{48}{subsection.7.3.2}%
 \contentsline {subsection}{\numberline {7.3.3}Výsledky měření}{49}{subsection.7.3.3}%
+\contentsline {chapter}{\numberline {8}Přenos momentu síly}{51}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Úprava aparatury}{51}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Popis chování}{52}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Hrubý matematický model}{52}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Měřená $\tau -\omega $ závislost}{54}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.3}Měření přenosu}{55}{section.8.3}%

@@ -61,7 +61,7 @@ Dalším krokem je zpětné odvození toho, jaký byl průběh úhlu v čase v t
 
 $$
     B_i \text{ } \ldots \text{ } t_i \text{ } \ldots \text{ } \varphi_i
-$$
+$$*100
 
 Zpětné odvození pro rušené sub-periody poté zpočívá v porovnání s cílovou (nerušenou) křivkou. Pro každu naměřenou hladinu rušeného spinneru $B_j$ hledáme odpovídají hladiny v naší cílové křivce $B_{i1}$ a $B_{i2}$, mezi kterými se $B_j$ nachází, tedy splňuje $B_i1 < B_j < B_i2$. Z k nim odpovídajících časů (resp. jejich odpovídajícíh úhlů) můžeme lineární interpolací určit přibližný čas, ve kterém by se $B_j$ objevilo v nerušeném případě a tedy i jaká je jeho přibližná pozice v čase $t_j$:
 
@@ -121,6 +121,7 @@ Dalším krokem k vylepšení naší aparatury tedy bylo vytvořit lepší způs
 Nyní jsou našimi limitacemi pouze: vzorkovací frekvence osciloskopu, která je pro naše využití více než dostačující, a počet pruhů na papírovém kole, který můžeme dle libosti měnit.
 
 \subsection{Zbytek aparatury}
+\label{sub:main_2LS_aparature}
 
 Celá aparatura využívá 2 laserové snímače - jeden pro hnací spinner a jeden pro hnaný spinner - a jejich výstupní signály jsou nahrávány dvoukanálovým osciloskopem. Hnací spinner je poháněn motorem, resp. vrtačkou, jejíž otáčky jsou regulovány laboratorním zdrojem napětí. Hnaný spinner je poté pevně upevněn v definované vzdálenosti od hnacího.
 
@@ -139,9 +140,9 @@ Celá aparatura využívá 2 laserové snímače - jeden pro hnací spinner a je
     \label{fig:ang_sub_periods}
 \end{figure}
 
-Nejzajímavější pro nás jsou výsledky měření módu $1:1$ a $2:1$, jelikož na nich můžeme ukázat dva jevy objevující se v magnetické vazbě. Na měření módu $$1:1$$ je vidět oscilace rychlosti hnaného spinneru kolem očekávané rychlosti. K tomuto jevu dochází, protože spinnery tvořící vazbu nebyly ideálně zaklesnuty do sebe (ramena hnaného spinneru nezapadala přesně do středu mezery mezi rameny hnacího spinneru). Rameno hnaného spinneru, které nezapadá perfektně do středu mezery, je tedy blíže k jednomu z ramen hnacího spinneru, což vede k nerovnováze sil, protože z této strany na hnaný spinner působí větší síla než z druhé strany. Tento přirozený způsob vracení ramene do rovnovážné polohy se projevuje právě touto oscilací, která se objevovala již v minulém měření (viz mód $1:1$ v grafu \ref{fig:mag_coupling_vernier}).
+Nejzajímavější pro nás jsou výsledky měření módu $1:1$ a $2:1$, jelikož na nich můžeme ukázat dva jevy objevující se v magnetické vazbě. Na měření módu $1:1$ je vidět oscilace rychlosti hnaného spinneru kolem očekávané rychlosti. K tomuto jevu dochází, protože spinnery tvořící vazbu nebyly ideálně zaklesnuty do sebe (ramena hnaného spinneru nezapadala přesně do středu mezery mezi rameny hnacího spinneru). Rameno hnaného spinneru, které nezapadá perfektně do středu mezery, je tedy blíže k jednomu z ramen hnacího spinneru, což vede k nerovnováze sil, protože z této strany na hnaný spinner působí větší síla než z druhé strany. Tento přirozený způsob vracení ramene do rovnovážné polohy se projevuje právě touto oscilací, která se objevovala již v minulém měření (viz mód $1:1$ v grafu \ref{fig:mag_coupling_vernier}).
 
-Druhým jevem je přecházení mezi módy. Pokud je rychlostní rozdíl spinnerů příliš velký a síla vazby příliš malá, může dojít k rozbití vazby. Poté, tím že hnaný spinner ztrácí rychlost kvůli tření, může být zachycen v nižším módu, jehož interval přijatelných rychlostí je větší. K tomuto došlo v měření módu $2:1$. Spinner se chvíli držel na módu $2:1$, ale kolem šesté sekundy byla jeho rychlost kvůli tření již příliš malá a opustila interval přijatelných rychlostí pro mód $2:1$. Dále, nyní nevázaný, spinner zpomaloval dokud se vazba neobnovila na nižsím módu. Hned poté, co se obnovila, je opět vidět oscilace kolem rovnovážné polohy, kterou jsme popisovali v předchozím odstavci. To, proč se přijatelný interval rychlostí zmenšuje, vychází z toho, že v případě módu $1:1$ zapadá do každé mezery hnacího spinneru přesně 1 rameno hnaného (resp. 1 rameno proběhne mezerou). Při módu $2:1$ "zapadají" do každé mezery dvě ramena (resp. 2 ramena musí proběhnou stejně velkou mezerou), mají tedy méně místa a přesnost fázového seřízení je ještě důležitější.
+Druhým jevem je přecházení mezi módy. Pokud je rychlostní rozdíl spinnerů příliš velký a síla vazby příliš malá, může dojít k rozbití vazby. Poté, tím že hnaný spinner ztrácí rychlost kvůli tření, může být zachycen v nižším módu, jehož interval přijatelných rychlostí je větší. K tomuto došlo v měření módu $2:1$. Spinner se chvíli držel na módu $2:1$, ale kolem šesté sekundy byla jeho rychlost kvůli tření již příliš malá a opustila interval přijatelných rychlostí pro mód $2:1$. Dále, nyní nevázaný, spinner zpomaloval dokud se vazba neobnovila na nižsím módu. Hned poté, co se obnovila, je opět vidět oscilace kolem rovnovážné polohy, kterou jsme popisovali v předchozím odstavci. To, proč se přijatelný interval rychlostí zmenšuje, vychází z toho, že v případě módu $1:1$ zapadá do každé mezery hnacího spinneru přesně 1 rameno hnaného (resp. 1 rameno proběhne mezerou). Při módu $2:1$ "zapadají" do každé mezery dvě ramena (resp. 2 ramena musí proběhnou stejně velkou mezerou), mají tedy méně místa a přesnost fázového seřízení hraje ještě důležitější roli.
 
 \clearpage
 
