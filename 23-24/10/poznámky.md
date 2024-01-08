@@ -66,7 +66,7 @@
     8. _Heatmap stavů ze simulace ???_
 
 3. Kap 2: magnetické převodovky
-    1. simulace přes FEMM
+    1. simulace přes FEMM???
     2. 3D model
     3. měření max torque
     4. Možné využití v mikrostrukturách
@@ -74,7 +74,7 @@
 # TODO
 1. ~~RK implementace~~
 2. ~~Stabilní webové rozhraní ???~~
-2. webové rozhraní - grid
+2. ~~webové rozhraní - grid~~
 3. ~~určení remanance magnetů~~
 4. ~~rerun simulací (vše s _todo...) a výtažek plotů~~
     1. ~~spinner decay rate~~
