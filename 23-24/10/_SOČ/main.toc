@@ -58,5 +58,6 @@
 \contentsline {section}{\numberline {7.2}Hlubší analýza}{44}{section.7.2}%
 \contentsline {subsection}{\numberline {7.2.1}Popis nového algoritmu}{45}{subsection.7.2.1}%
 \contentsline {section}{\numberline {7.3}Vylepšení aparatury}{48}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Laserový snímač}{48}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.1}Laserový snímač (LS)}{48}{subsection.7.3.1}%
 \contentsline {subsection}{\numberline {7.3.2}Zbytek aparatury}{48}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Výsledky měření}{49}{subsection.7.3.3}%

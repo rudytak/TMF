@@ -1,7 +1,7 @@
 \chapter{Magnetické vázání}
 
 Velmi důležitým jevem, který jsme při dalším experimentování objevili, je, že dva spinnery umístěné blízko sebe, z nichž jeden je poháněn motorem\footnote{Tento spinner nazveme hnacím.}, se mohou magneticky vázat - tzn. že si hnaný a hnací spinner udržují nějaký konstantní poměr rychlostí.
-Tomu, v jakém poměru jsou, budeme říkat "mód"; případ, kdy jsou rychlosti hnaného a hnacího spinneru stejné bude, tedy mód 1 ku 1 (značeno 1:1). Později v této kapitole budeme tyto módy dále zkoumat a budeme vždy prvním číslem označovat rychlost hnaného spinneru a druhým číslem rychlost hnacího spinneru. Tento jev je obvzlášť důležitý, jelikož umožňuje tvorbu prvního primitivního druhu magnetického převodu.
+Tomu, v jakém poměru jsou, budeme říkat "mód"; případ, kdy jsou rychlosti hnaného a hnacího spinneru stejné bude, tedy mód 1 ku 1 (značeno $1:1$). Později v této kapitole budeme tyto módy dále zkoumat a budeme vždy prvním číslem označovat rychlost hnaného spinneru a druhým číslem rychlost hnacího spinneru. Tento jev je obvzlášť důležitý, jelikož umožňuje tvorbu prvního primitivního druhu magnetického převodu.
 
 \section{Měření magnetickým čidlem}
 
@@ -85,11 +85,11 @@ Po určení $\varphi_j$ a $t_j$ pro všechny datové body rušené sub-periody j
 \begin{wrapfigure}{r}{0.5\textwidth}
     \includegraphics[width=0.5\textwidth]{ang_vel_sub_period.png}
     \centering
-    \caption{Porovnání měřeného a simulovaného průběhu úhlové rychlosti v čase pro mód 2:1}
+    \caption{Porovnání měřeného a simulovaného průběhu úhlové rychlosti v čase pro mód $2:1$}
     \label{fig:ang_vel_sub_period}
 \end{wrapfigure}
 
-Nakonec provedeme porovnání se simulací pro mód 2:1. Porovnávat budeme úhlovou rychlost v průběhu sub-periody, kterou z měřených dat dopočítáme pomocí rozdílu vedlejších bodů. Výsledný graf lze vidět na \ref{fig:ang_vel_sub_period}. Můžeme si všimnout, že kolem středu, tedy když je $\dot{B}$ malá, je interval nepřesnosti obrovský ze dříve zmíněných důvodů.
+Nakonec provedeme porovnání se simulací pro mód $2:1$. Porovnávat budeme úhlovou rychlost v průběhu sub-periody, kterou z měřených dat dopočítáme pomocí rozdílu vedlejších bodů. Výsledný graf lze vidět na \ref{fig:ang_vel_sub_period}. Můžeme si všimnout, že kolem středu, tedy když je $\dot{B}$ malá, je interval nepřesnosti obrovský ze dříve zmíněných důvodů.
 
 Simulované a měřené hodnoty si jsou, alespoň co se tvaru křivky týče, lehce podobné. Důvody, proč se neschodují více, mohou být mnohé, například: nežádoucí jevy v ložisku, nepřesnost cílové křivky nebo také celková komplexita algoritmu, který pro své fungování využívá mnohé předpoklady.
 
@@ -98,7 +98,7 @@ Simulované a měřené hodnoty si jsou, alespoň co se tvaru křivky týče, le
 
 \section{Vylepšení aparatury}
 
-\subsection{Laserový snímač}
+\subsection{Laserový snímač (LS)}
 
 \begin{wrapfigure}{r}{0.45\textwidth}
     \vspace*{-0.75cm}
@@ -122,6 +122,28 @@ Nyní jsou našimi limitacemi pouze: vzorkovací frekvence osciloskopu, která j
 
 \subsection{Zbytek aparatury}
 
-Celá aparatura využívá 2 laserové snímače - jeden pro hnací spinner a jeden pro hnaný spinner. Hnací spinner je poháněn motorem, resp. vrtačkou, jejíž otáčky jsou regulovány laboratorním zdrojem napětí. Hnaný spinner je poté pevně upevněn v definované vzdálenosti od hnacího.
+Celá aparatura využívá 2 laserové snímače - jeden pro hnací spinner a jeden pro hnaný spinner - a jejich výstupní signály jsou nahrávány dvoukanálovým osciloskopem. Hnací spinner je poháněn motorem, resp. vrtačkou, jejíž otáčky jsou regulovány laboratorním zdrojem napětí. Hnaný spinner je poté pevně upevněn v definované vzdálenosti od hnacího.
+
+\subsection{Výsledky měření}
+
+{
+    \raggedright
+    Pomocí nové, přesnější, aparatury jsme prováděli měření čtyř různých módů. U jednoho z nich jsme opakovali měření i za vyšších otáček, abychom sledovali, zda se schování vazby v tomto případě změní.
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{magnetic_modes1.png}
+    \includegraphics[width=\textwidth]{magnetic_modes2.png}
+    \centering
+    \caption{Měření magnetické vazby pomocí LS}
+    \label{fig:ang_sub_periods}
+\end{figure}
+
+Nejzajímavější pro nás jsou výsledky měření módu $1:1$ a $2:1$, jelikož na nich můžeme ukázat dva jevy objevující se v magnetické vazbě. Na měření módu $$1:1$$ je vidět oscilace rychlosti hnaného spinneru kolem očekávané rychlosti. K tomuto jevu dochází, protože spinnery tvořící vazbu nebyly ideálně zaklesnuty do sebe (ramena hnaného spinneru nezapadala přesně do středu mezery mezi rameny hnacího spinneru). Rameno hnaného spinneru, které nezapadá perfektně do středu mezery, je tedy blíže k jednomu z ramen hnacího spinneru, což vede k nerovnováze sil, protože z této strany na hnaný spinner působí větší síla než z druhé strany. Tento přirozený způsob vracení ramene do rovnovážné polohy se projevuje právě touto oscilací, která se objevovala již v minulém měření (viz mód $1:1$ v grafu \ref{fig:mag_coupling_vernier}).
+
+Druhým jevem je přecházení mezi módy. Pokud je rychlostní rozdíl spinnerů příliš velký a síla vazby příliš malá, může dojít k rozbití vazby. Poté, tím že hnaný spinner ztrácí rychlost kvůli tření, může být zachycen v nižším módu, jehož interval přijatelných rychlostí je větší. K tomuto došlo v měření módu $2:1$. Spinner se chvíli držel na módu $2:1$, ale kolem šesté sekundy byla jeho rychlost kvůli tření již příliš malá a opustila interval přijatelných rychlostí pro mód $2:1$. Dále, nyní nevázaný, spinner zpomaloval dokud se vazba neobnovila na nižsím módu. Hned poté, co se obnovila, je opět vidět oscilace kolem rovnovážné polohy, kterou jsme popisovali v předchozím odstavci. To, proč se přijatelný interval rychlostí zmenšuje, vychází z toho, že v případě módu $1:1$ zapadá do každé mezery hnacího spinneru přesně 1 rameno hnaného (resp. 1 rameno proběhne mezerou). Při módu $2:1$ "zapadají" do každé mezery dvě ramena (resp. 2 ramena musí proběhnou stejně velkou mezerou), mají tedy méně místa a přesnost fázového seřízení je ještě důležitější.
+
 \clearpage
+
+
 
