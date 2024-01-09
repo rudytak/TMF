@@ -28,12 +28,12 @@ Tomuto celkovému systému definujeme moment setrvačnosti podle následujícíh
     \label{eq:mag_pend}
     \omega = \sqrt{\frac{mgr}{I}}
 \end{equation}
-A po vyjádření z rovnice \ref{eq:mag_pend} tedy získáváme:
+A po vyjádření z rovnice \ref{eq:mag_pend} získáváme:
 \begin{equation}
     \label{eq:mom_inert}
     I = \frac{mgr}{\omega^2} = \frac{mgr}{4\pi^2f^2}
 \end{equation}
-Nyní stačí změřit frekvenci kmitů zavěšeného spinneru s několika magnety na jednom z jeho ramen.
+Nyní stačí změřit frekvenci kmitů zavěšeného spinneru s několika magnety na jednom z jeho ramen a dopočítat moment setrvačnosti.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \vspace*{-0.75cm}
@@ -44,14 +44,14 @@ Nyní stačí změřit frekvenci kmitů zavěšeného spinneru s několika magne
 \end{wrapfigure}
 \subsection{Aparatura}
 Po připevnění šesti neodymových magnetů o jednotkové hmotnosti $0.92(1) g$ byl spinner připevněn pevně ve své ose otáčení.
-Pod takto zavěšený spinner bylo umístěno Magnetické čidlo Vernier MG-BTA, které zaznamenávalo, jak blízko se magnety nacházejí.
-Po umístění spinneru mimo rovnovážnou polohu byl ponechán oscilovat a záznam průběhu magnetické indukce v čase byl čidlem nasnímán (viz \autoref{fig:spinner_pendulum_recording}).
+Pod takto zavěšený spinner bylo umístěno magnetické čidlo Vernier MG-BTA, které zaznamenávalo, jak blízko se magnety nacházejí.
+Po umístění spinneru mimo rovnovážnou polohu byl ponechán oscilovat a záznam průběhu magnetického pole v čase byl čidlem nasnímán (viz \autoref{fig:spinner_pendulum_recording}).
 \vspace{40pt}
 
 {\raggedright
     \subsection{Analýza měření a výsledky}
-    Průběh následně analyzujeme pomocí programovacího jazyka \texttt{Python} \cite{python} a knihovny \texttt{scipy} \cite{scipy}.
-    Námi kýžená maxima vyhledáme použitím funkce \texttt{scipy.signal.find\_peaks} a z jejich počtu jsme schopni určit počet period, kterými kyvadlo prošlo za určený čas.
+    Průběh následně analyzujeme pomocí programovacího jazyku \texttt{Python} \cite{python} a knihovny \texttt{scipy} \cite{scipy}.
+    Námi kýžená maxima, která odpovídají půlperiodě kmitu, vyhledáme použitím funkce \texttt{scipy.signal.find\_peaks} a z jejich počtu jsme schopni určit počet period, kterými kyvadlo prošlo za určený čas.
 }
 
 \begin{wrapfigure}{r}{1\textwidth}
@@ -63,13 +63,13 @@ Po umístění spinneru mimo rovnovážnou polohu byl ponechán oscilovat a záz
 
 \clearpage
 
-Máme-li tedy pole $p$\footnote{$|p|$ označuje počet prvků pole $p$; $p_{min}$ označuje čas prvního peaku; $p_{max}$ označuje čas posledního peaku.} všech časů nalezených peaků, je výpočet frekvence následující:
+Máme-li tedy soubor \footnote{$|p|$ označuje počet prvků pole $p$; $p_{min}$ označuje čas prvního peaku; $p_{max}$ označuje čas posledního peaku.} $p$ všech časů nalezených peaků, je výpočet frekvence následující:
 \begin{equation}
     \label{eq:freq_from_peaks}
     f = \frac{ |p| - 1}{2(p_{max} - p_{min})} = 1.00(1)Hz
 \end{equation}
 
-Dalším dosazením do předchozí rovnice \ref{eq:mom_inert} získáváme výslednou hodnotu\footnote{Tato hodnota je srovnatelná s jinými zdroji dostupnými online (viz. \cite{spinner_mom_inert_external}).}:
+Dosazením do předchozí rovnice \ref{eq:mom_inert} získáváme výslednou hodnotu\footnote{Tato hodnota je srovnatelná s jinými zdroji dostupnými online (viz. \cite{spinner_mom_inert_external}).}:
 \begin{equation}
     \label{eq:mom_inert_results}
     I = 4.80(50) \cdot 10^{-5} kg \cdot m^2
@@ -82,11 +82,11 @@ V níže připnutém ústřižku kódu \ref{code:1} nejdříve načteme použit�
 \texttt{matplotlib} pro vytvoření grafu \ref{fig:spinner_pendulum_recording} \cite{matplotlib} a nakonec
 \texttt{scipy}, kde využijeme funkce \texttt{find\_peaks}, jak již bylo zmíněno.
 
-Prvním krokem je načtení dat ze souboru \texttt{kyvadlo.csv} a jejich převedení z textového fomrátu do 2D pole pojmenovaného \texttt{data}.
+Prvním krokem je načtení dat ze souboru \texttt{kyvadlo.csv} a jejich převedení z textového formátu do 2D pole pojmenovaného \texttt{data}.
 Dále izolujeme data jednotlivých os do separátních proměnných \texttt{xdata}, \texttt{ydata}.
 
-\texttt{ydata} vyhladíme, abychom se zbavili šumu a to pomocí konvoluce skrze funkci \texttt{numpy.convolve}.
-Délku 1D konvoluční matice jsme zvolili $m = 15$ a konvoluční matice délky $m$ v našem případě vypadá obecně takto:
+\texttt{ydata} vyhladíme, abychom se zbavili šumu a to pomocí konvoluce použitím funkce \texttt{numpy.convolve}.
+Délku 1D konvoluční matice jsme zvolili $m = 15$ a konvoluční matice délky $m$ by v našem případě obecně vypadala takto:
 
 \begin{equation}
     \label{eq:conv_matrix_avg}
@@ -98,21 +98,23 @@ Délku 1D konvoluční matice jsme zvolili $m = 15$ a konvoluční matice délky
     }_{m\text{ krát}}
 \end{equation}
 
-Tato konvoluční matice přesněji provádí aritmetický průměr $m$ za sebou jdoucích hodnot.
+Tato konvoluční matice provádí aritmetický průměr $m$ za sebou jdoucích hodnot.
 
-Nyní provedeme hledání peaků na vyhlazenách datech pomocí funkce \texttt{find\_peaks}, která akceptuje další dobrovolné argumenty:
+Nyní provedeme hledání peaků na vyhlazených datech pomocí funkce \texttt{find\_peaks}, která akceptuje další dobrovolné argumenty:
 \begin{enumerate}[topsep=0pt, partopsep=0pt]
     \setlength{\itemsep}{0pt}%
     \setlength{\parskip}{0pt}%
     \item height: určuje minimální absolutní velikost peaku
     \item threshold: minimální rozdíl dvou sousedních hodnot, aby bod mohl být peakem
-    \item distance: minimální indeová vzdálensot dvou peaků
+    \item distance: minimální indexová vzdálensot dvou peaků
 \end{enumerate}
 
 Poté určíme časový interval, kde se peaky nacházejí (a přidáme na každou stranu 0.5 sekundy pro přehlednost grafu),
-a vygrafujeme půdovní naměřená data (modře) společně s pozicemi peaků (červeně). Dále ozačíme osy.
+a vygrafujeme původní naměřená data (modře) společně s pozicemi peaků (červeně). Dále označíme osy.
 
 Nakonec dopočítáme frekvenci kmitů kyvadla podle vzorce \ref{eq:freq_from_peaks} a vypíšeme ji.
+
+\clearpage
 
 \lstinputlisting[language=Python, caption=Kód k analyzování spinnerového kyvadla, label=code:1]{./prilohy/snippets/c1.py}
 
@@ -123,12 +125,12 @@ K určení remanence našich magnetů využijeme dvou různých metod. Jedna z n
 
 \subsection{Určení remanence přes magnetické pole}
 
-Prvním způsobem, jak určit přesnou hodnotu remanentní magentizace našich magnetů, je měření magnetického pole pomocí magnetometru mobilního telefonu.
+Prvním způsobem, jak určit hodnotu remanentní magnetizace našich magnetů, je měření magnetického pole pomocí magnetometru mobilního telefonu.
 Aplikace \texttt{Phyphox} umožňuje čtení těchto dat, která následně analyzujeme.
 
-Měření provedeme pro sloupce 2 a 3 magnetů, abychom oveřili, zda je náš způsob měření konsistentní.
+Měření provedeme pro sloupce 2 a 3 magnetů, abychom oveřili, zda je náš způsob měření konzistentní.
 Dále také měříme větší neodymový magnet, jehož parametry nám nejsou známé, a který budeme používat v některých budoucích experimentech.
-Abychom odstranili pozadí tvořené magnetickým polem země, provedeme měření magnetického pole jednou a poté magnet otočíme.
+Abychom odstranili pozadí tvořené magnetickým polem země, provedeme měření magnetického pole magnetu v jedné orientaci a poté magnet otočíme a změříme hodnotu při opačné orientaci.
 K získání výsledku jednoduše odečteme rozdíl naměřených hodnot, což bude dvojnásobek velikosti magnetického pole tvořeného magnetem.
 Je zřejmé, že tímto odstraníme z meření jiné, neměnné, zdroje magnetických polí.
 
@@ -137,13 +139,13 @@ Celkem provedeme tedy měření 2 magnetů, 3 magnetů a velkého magnetu pro vz
 
 \subsubsection{Analýza měření}
 Výstupem aplikace \texttt{Phyphox} jsou sobory typu \texttt{.csv}, neboli \textit{"Comma separated values"} \cite{csv}.
-Toto je poměrně čitelný a přívětivý formát ukládání dat, která v \texttt{Pythonovém} skriptu načteme pomocí funkce \texttt{open}, stejně jako v kódu \ref{code:1}.
+Toto je poměrně čitelný a přívětivý formát ukládání dat, který v \texttt{Pythonovém} skriptu načteme pomocí funkce \texttt{open} (stejně jako v kódu \ref{code:1}).
 Jinak budeme používat tyto knihovny:
 \texttt{numpy},
 \texttt{matplotlib} pro vytvoření grafu \ref{fig:mag_field_recording_2mag_10cm},
 \texttt{scipy}, kde využijeme funkce \texttt{curve\_fit}, a
 \texttt{math} \cite{pymath}.
-Poté ručně určíme názvy všech datových souborů a časov  é intervaly, na kterých jsou magnety orientovány k snímači a od snímače.
+Poté ručně určíme názvy všech datových souborů a časové intervaly, na kterých jsou magnety orientovány k snímači a od snímače.
 
 Po načtení dat vyjmeme pouze hodnoty ve dříve zmíněných intervalech a najdeme jejich průměrnou hodnotu a odchylky.
 Z rozdílu průměrných hodnot magnetického pole v obou otočeních magnetů určíme velikost magnetického pole generovaného pouze magnetem (očištěného od pozadí).
@@ -245,6 +247,6 @@ $$
     B_{r_{xl}} = 0.87(5)T
 $$
 
-Důvodem, proč je remanence většího magentu znatelně nižší, může být skutečnost, že takto velký magnet náš model není schopen popsat jako jediný magnetický dipól, nebo například jeho stáří.
+Důvodem, proč je remanence většího magnetu znatelně nižší, může být skutečnost, že takto velký magnet náš model není schopen popsat jako jediný magnetický dipól, nebo například jeho stáří.
 
 \clearpage
