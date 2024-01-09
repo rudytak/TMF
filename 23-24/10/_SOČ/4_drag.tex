@@ -1,19 +1,19 @@
 \chapter{Tření}
 \label{chap:drag}
 
-O třecích jevech při otáčení spinneru jsme si již byli schopni udělat představu při úvodním kvalitativním sledování. Tření bude hrát značnou roli v našem systému, jelikož to bude hlavní limitující faktor průběhu chaotického chování. Dalším využitím, kromě našeho úhlavního záměru - zpřesnění popisu chování, bude také například možnost odhadnutí maximálního času, než se spinnery zastaví a systém ztratí všechnu svou energii. Zajímavým, a lehko měřitelným, pro nás bude průběh úhlové rychlosti $\omega$ (resp. změna úhlové rychlosti \footnote{$I\dot{\omega} = \tau$}) v čase, že kterého tkví i náš popis těchto třecích složek.
+O třecích jevech při otáčení spinneru jsme si již byli schopni udělat představu při úvodním kvalitativním sledování. Tření bude hrát značnou roli v našem systému, protože právě tření bude hlavním limitujícím faktorem průběhu chaotického chování. Dalším využitím, kromě našeho úhlavního záměru - zpřesnění popisu chování, bude také například možnost odhadnutí maximálního času, než systém ztratí všechnu svou energii. Zajímavým a lehko měřitelným pro nás bude průběh úhlové rychlosti $\omega$ v čase (resp. změna úhlové rychlosti \footnote{$I\dot{\omega} = \tau$}), ze kterého tkví i náš popis těchto třecích složek.
 
-Zajímá-li nás tedy změna rychlosti, dovolíme si odhadnout, že hlavními zdroji tření bude ložisko a odpor vzduchu. Provedeme idealizaci ložiska a řekneme, že jeho brzným moment síly, a tím pádem i úhlové zpomalení, bude neměnné v čase a nezávislé na rychlosti. Toto nemusí být vždy pravda, např. objeví-li se v našem, přirozeně neideálním, ložisku nějaké nechtěnné oscilace (které jsme sledovali) nebo je-li na ložisko působeno nějakou externí silou mířící kolmo na osu otáčením (jako například když se od sebe velmi silně odpuzují magnety ze dvou blízkých spinnerů). Oba tyto příklady jsou příliš složité k popsání a nejsme je tedy schopni zkoumat. Toto brzdné úhlové zrychlení (resp. zpomalení) nezávislé na otáčkách spinneru označíme $\alpha$.
+Zajímá-li nás tedy změna rychlosti, dovolíme si odhadnout, že hlavními zdroji tření bude ložisko a odpor vzduchu. Provedeme idealizaci ložiska a řekneme, že jeho brzdný moment síly, a tím pádem i úhlové zpomalení, bude neměnné v čase a nezávislé na rychlosti. Toto nemusí být vždy pravda - například objeví-li se v reálném ložisku nějaké nechtěnné oscilace (které jsme sledovali) nebo je-li na ložisko působeno nějakou externí silou mířící kolmo na osu otáčením (jako například když se od sebe velmi silně odpuzují magnety ze dvou blízkých spinnerů). Oba tyto příklady jsou příliš složité k popsání a nejsme je tedy schopni zkoumat. Toto brzdné úhlové zrychlení (resp. zpomalení) nezávislé na rychlosti spinneru označíme $\alpha$.
 
-Další výraznou složkou bude již zmíněný odpor vzduchu. Z látky středoškolské fyziky známe přibližnou úměrnost odporové síly na kvadrátu rychlosti ($F \propto v^2$) při turbulentním proudění (které v našem a případě očekáváme kvůli složité geometrii spinneru). V našem rotačním případě bychom tedy analogicky očekávali $\dot{\omega} \propto \omega^2$. Míru této závislosti označíme $\gamma$.
+Další výraznou složkou bude již zmíněný odpor vzduchu. Z látky středoškolské fyziky známe přibližnou úměrnost odporové síly na kvadrátu rychlosti ($F \propto v^2$) při turbulentním proudění (které v našem případě očekáváme kvůli složité geometrii spinneru). Při rotaci spinneru bychom tedy analogicky očekávali proporcionalitu $\dot{\omega} \propto \omega^2$. Míru této závislosti označíme $\gamma$.
 
-Poslední složkou, pro kterou nejsme schopni najít fyzikální podstatu, ale kterou přesto budeme zkoumat je lineární složka $\beta$. Existují-li tedy jevy, které nám unikly, a platí pro ně závislost $\dot{\omega} \propto \omega$, můžeme pro ně kompenzovat touto složkou. Zároveň budeme podrobně srovnávat výkony našich předpovědí s, i bez, této složky, abychom určili, zda dává smysl tuto složku využívat, či vůbec uvádět.
+Poslední složkou, pro kterou nejsme schopni najít fyzikální podstatu, ale kterou přesto budeme zkoumat je lineární složka $\beta$. Existují-li tedy jevy, které nám unikly, a platí pro ně závislost $\dot{\omega} \propto \omega$, můžeme pro ně kompenzovat touto složkou. Zároveň budeme podrobně srovnávat přesnosti našich předpovědí včetně, ale i bez, této složky, abychom určili, zda dává smysl tuto složku využívat.
 
 \clearpage
 
 \section{Analytický popis}
 
-Všech tři dříve zmíněné složky dohromady tedy popisuje řídící závislost systému: \footnote{Záporná znaménka používáme čistě z toho důvodu, aby nám koeficienty $\alpha$, $\beta$ a $\gamma$ vycházely kladně, jelikož očekáváme, že systém bude zpomalovat.}:
+Všechny tři dříve zmíněné složky dohromady tedy popisuje řídící závislost systému: \footnote{Záporná znaménka používáme čistě z toho důvodu, aby nám koeficienty $\alpha$, $\beta$ a $\gamma$ vycházely kladně, jelikož očekáváme, že systém bude zpomalovat.}:
 \begin{equation}
     \label{eq:drag_diff_wlin}
     \dot{\omega}(t) = - \alpha - \beta \omega(t) - \gamma \omega^2(t)
@@ -44,25 +44,25 @@ Objevující se parametr $c_1$ \footnote{Někdy také označujeme $t_{max}$.} je
     c_1(\omega_0) = \frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{\gamma}{\alpha}} \omega_0 \bigg)}
 \end{equation}
 
-Přáli bychom si vyjádřit celkovou dobu otáčení z počáteční kinetické energie, můžeme dosadit $E_k = \frac{1}{2}I\omega^2$, kde je nám $I$ již známe (viz \autoref{sec:moment_of_inertia}), a jednoduchou úpravou získáváme:
+Pokud bychom si přáli vyjádřit celkovou dobu otáčení z počáteční kinetické energie, můžeme dosadit $E_k = \frac{1}{2}I\omega^2$, kde je nám $I$ již známe (viz \autoref{sec:moment_of_inertia}), a jednoduchou úpravou získáváme:
 \begin{equation}
     \label{eq:runtime_from_ene}
     c_1(E) = \frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{2 \gamma E}{\alpha I}} \bigg)}
 \end{equation}
 
-Jakmile dojde k tomu, že $t > c_1$, nepopisuje již funkce náš spinner, protože by začal opět nabývat energie, k čemuž nemůže dojít.
+Jakmile dojde k tomu, že $t > c_1$, nepopisuje již funkce náš spinner, protože by začal opět nabývat energii a otáčet se opačným směrem, k čemuž nemůže dojít.
 
 \clearpage
 
 \subsubsection{Horní limit doby otáčení $n$ spinnerů}
 
-Další zajímavou vlastností, kterou jsme schopni pro tento idealizovaný systém dokázat je, že máme-li libovolné (přirozené) množství spinnerů o počátečních energiích $E_1, E_2 ... E_n$, které spolu neinteragují, je maximální dobou, po kterou se může některý z nich otáčet $t_{max} \leq c_1(\sum_{i=1}^n E_i)$. Tento fakt se může zdát triviálním a zbytečným, ale jsme tímto způsobem schopni např. určit horní časovou hranici, po kterou by musela běžet simulace, než bychom si byli poměrně \footnote{Nemůžeme si být kompletně jistí kvůli interakcím spinnerů a nepřestnostem simulace.} jistí, že již došlo k zastavení všech spinnerů.
+Další zajímavou vlastností, kterou jsme schopni pro tento idealizovaný systém dokázat je, že máme-li libovolné (přirozené) množství spinnerů o počátečních energiích $E_1, E_2 ... E_n$, které spolu neinteragují, je maximální dobou $t_{max}$, po kterou se může některý z nich otáčet $t_{max} \leq c_1(\sum_{i=1}^n E_i)$. Tento fakt se může zdát triviálním a zbytečným, ale jsme tímto způsobem schopni například určit horní časovou hranici, po kterou by musela běžet simulace, než bychom si byli poměrně \footnote{Nemůžeme si být kompletně jistí kvůli interakcím spinnerů a nepřestnostem simulace.} jisti, že již došlo k zastavení všech spinnerů.
 
-Chtěli bychom-li zlepšit tento odhad i pro interagující spinnery, bylo by potřeba počítat s tím, že spinnery se mohou zrychlovat, zpomalovat a často budou oscilovat. Pokud bychom sledovali mnoho přibližně harmonických oscilací spinnerů, kdy se po relativně dlouhou dobu nepohybují svou nejvyšší rychlostí, mohli bychom se inspirovat efektivní hodnotou sinusoidy a udělat tak hrubý odhad, že $t_{max} \leq \sqrt{2} c_1(\sum_{i=1}^n E_i)$. Nad tím, jaká konstanta by byla dobrá můžeme dlouze polemizovat, ale to není zájmem této práce, proto nebudeme myšlenku dále ozvádět.
+Chtěli bychom-li zlepšit tento odhad i pro interagující spinnery, bylo by potřeba počítat s tím, že spinnery se mohou zrychlovat, zpomalovat a často budou oscilovat. Pokud bychom sledovali mnoho přibližně harmonických oscilací spinnerů, kdy se po relativně dlouhou dobu nepohybují svou nejvyšší rychlostí, mohli bychom se inspirovat efektivní hodnotou sinusoidy a udělat tak hrubý odhad, že $t_{max} \leq \sqrt{2} c_1(\sum_{i=1}^n E_i)$. Nad tím, jaká konstanta by byla dobrá můžeme dlouze polemizovat, ale to není zájmem této práce, proto nebudeme myšlenku dále rozvádět.
 
 Tuto vložku zakončíme důkazem dříve vyslovené věty, že $t_{max} \leq c_1(\sum_{i=1}^n E_i)$:
 
-Nejdříve zdůrazníme několik zřejmých faktů o naší funkci $c_1(\omega_0)$:
+Nejdříve zdůrazníme několik zřejmých skutečností o naší funkci $c_1(E)$:
 
 \begin{equation}
     \label{eq:max_runtime_proof_p1}
@@ -73,7 +73,7 @@ Nejdříve zdůrazníme několik zřejmých faktů o naší funkci $c_1(\omega_0
     \end{gathered}
 \end{equation}
 
-Bez újmy na obecnosti poté můžeme řící:
+Bez újmy na obecnosti poté můžeme řící, že:
 \begin{equation}
     \label{eq:max_runtime_proof_p2}
     \begin{gathered}
@@ -81,7 +81,7 @@ Bez újmy na obecnosti poté můžeme řící:
     \end{gathered}
 \end{equation}
 
-A obecně vybereme energie $E_u$ a $E_v$ takové, že $E_u \geq E_v$ ($u \neq v \wedge 1 \leq u, v \leq n$), pro které dokážeme následující:
+A obecně vybereme energie $E_u$ a $E_v$ takové, že $E_u \geq E_v$ ($u \neq v \wedge 1 \leq v < u \leq n$), pro které se snažíme dokázat následující:
 
 \begin{equation}
     \label{eq:max_runtime_proof_p3}
@@ -112,7 +112,7 @@ A obecně vybereme energie $E_u$ a $E_v$ takové, že $E_u \geq E_v$ ($u \neq v 
     \end{gathered}
 \end{equation}
 
-Dále pouhou analogií pro libovolné dvojice, větší $k$-tice a konečně celou $n$-tici energií je zřejmé, že vyplývá:
+Dále pouhou analogií pro libovolné dvojice, větší $k$-tice a konečně celou $n$-tici energií je zřejmé, že:
 \begin{equation}
     \label{eq:max_runtime_proof_p5}
     \begin{gathered}
@@ -125,7 +125,7 @@ Dále pouhou analogií pro libovolné dvojice, větší $k$-tice a konečně cel
 
 \subsection{Určení jednotek parametrů $\alpha$, $\beta$ a $\gamma$}
 
-Přepsáním rovnice \ref{eq:drag_diff_wlin} pouhými jednotkami jsme jednoduše schopni určit jednotky koeficientů $\alpha$, $\beta$ a $\gamma$:
+Přepsáním rovnice \ref{eq:drag_diff_wlin} pouze pomocí jednotek jsme schopni jednoduše odvodit jednotky koeficientů $\alpha$, $\beta$ a $\gamma$:
 \begin{equation}
     \label{eq:drag_units}
     \begin{gathered}
@@ -139,7 +139,7 @@ Přepsáním rovnice \ref{eq:drag_diff_wlin} pouhými jednotkami jsme jednoduše
 
 \subsection{Experiment pro potvrzení analytického řešení}
 
-Abychom ověřili, zda výsledky našich diferencialních rovnic odpovídají realitě, budeme sledovat jak se snižuje úhlová rychlost každého z našich spinnerů. K tomu využijeme opět magnetického čidla Vernier MG-BTA, které bude sledovat momenty, kdy se kolem něj mihne jeden z magnetů připevněných na ramenou spinneru (velmi podobně jako u \autoref{fig:spinner_pendulum_aparature}). Časová hustota těchto vrcholů je úměrná úhlové rychlosti - přesněji 1 vrchol za sekundu se rovná $\frac{2}{3}\pi$ $rad/s$.
+Abychom ověřili, zda výsledky našich diferencialních rovnic odpovídají realitě, provedeme měření, kde budeme sledovat jak se snižuje úhlová rychlost každého z našich spinnerů v čase. K tomu využijeme opět magnetického čidla Vernier MG-BTA, které bude sledovat momenty, kdy se kolem něj mihne jeden z magnetů připevněných na ramenou spinneru (velmi podobně jako u \autoref{fig:spinner_pendulum_aparature}). Časová hustota těchto vrcholů je úměrná úhlové rychlosti - přesněji 1 vrchol za sekundu se rovná $\frac{2}{3}\pi$ $rad/s$.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \vspace*{-1.5cm}
@@ -160,15 +160,15 @@ Aparatura tohoto experimetu (vyobrazená na \autoref{fig:spinner_drag_aparature}
     \label{fig:peak_find_alg_drawing}
 \end{wrapfigure}
 \subsubsection{Zpracování dat}
-Ke zpracování dat opět použijeme jazyka \texttt{Python} a stejných knihoven jako doposud.
+Ke zpracování dat opět použijeme jazyk \texttt{Python} a stejné knihovny jako doposud.
 Prvním úkolem je převedení průběhů kmitů magnetického pole (způsobených mihnutím magnetu před čidlem) do průběhu úhlové rychlosti v čase.
 K tomto bude potřeba určit peaky a jejich pozici v čase a následně konvolucí počítat množství peaků na určitých intervalech.
 Pozice peaků určíme tak, že budeme sledovat kdy naměřená hodnota překročí nějaký práh. Toto bude začátek našeho peaku.
-Když půjde zpět pod hodnotu prahu, ukončíme peak a pozici maxima řekneme, že je ve středu tohoto časového intervalu (viz \autoref{fig:peak_find_alg_drawing}).
+Když půjde zpět pod hodnotu prahu, ukončíme peak. Pozici maxima umístíme do středu tohoto časového intervalu (viz \autoref{fig:peak_find_alg_drawing}).
 
 \clearpage
 \lstinputlisting[language=Python, caption=Kód k hledání pozic peaků, label=code:3]{./prilohy/snippets/c3.py}
-Druhým krokem je projít celý čas měření a rozdělit ho na menší intervaly. V těchto intervalech spočítáme počet peaků a přepočtem $1$ $peak = \frac{2\pi}{3}$ $rad/s$ určíme přibližnou průměrnou rychlost v tomto okolí.
+Druhým krokem je projít celou časovou domůemu měření a rozdělit ji na menší intervaly. V těchto intervalech spočítáme počet peaků a přepočtem $1$ $peak/s = \frac{2\pi}{3}$ $rad/s$ určíme přibližnou průměrnou rychlost v tomto okolí.
 
 \clearpage
 \lstinputlisting[language=Python, caption=Pokračování kódu \ref{code:3} - výpočet úhlové rychlosti pomocí konvoluce, label=code:4]{./prilohy/snippets/c4.py}

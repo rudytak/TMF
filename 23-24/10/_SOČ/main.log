@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.26)  9 JAN 2024 23:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.26)  9 JAN 2024 23:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1093,10 +1093,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
 [10 <./imgsLR/mom_inert_setup.png> <./imgsLR/spin_pendulum_field_rec.png>]
-Overfull \hbox (50.16553pt too wide) in paragraph at lines 88--90
-[]\T1/cmtt/m/n/12 ydata \T1/cmr/m/n/12 vy-hla-díme, abychom se zba-vili ²umu a to po-mocí kon-vo-luce po-u-ºi-tím funkce \T1/cmtt/m/n/12 numpy.convolve\T1/cmr/m/n/12 .
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.04742pt, for example:
@@ -1156,20 +1152,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.93668pt}.
 
 [14 <./imgsLR/mag_field_measurement_2mag_10cm.png>]
-<./imgsLR/B_field_in_distance.png, id=686, 501.875pt x 389.455pt>
+<./imgsLR/B_field_in_distance.png, id=685, 501.875pt x 389.455pt>
 File: ./imgsLR/B_field_in_distance.png Graphic file (type png)
 <use ./imgsLR/B_field_in_distance.png>
-Package pdftex.def Info: ./imgsLR/B_field_in_distance.png  used on input line 171.
+Package pdftex.def Info: ./imgsLR/B_field_in_distance.png  used on input line 169.
 (pdftex.def)             Requested size: 204.85846pt x 158.97041pt.
 
-Underfull \hbox (badness 1067) in paragraph at lines 173--173
+Underfull \hbox (badness 1067) in paragraph at lines 171--171
 []\T1/cmr/m/n/12 Obr. 8: |Zá-vis-lost mag-ne-tické in-dukce na
  []
 
 <./imgsLR/F_in_distance.png, id=690, 501.875pt x 385.44pt>
 File: ./imgsLR/F_in_distance.png Graphic file (type png)
 <use ./imgsLR/F_in_distance.png>
-Package pdftex.def Info: ./imgsLR/F_in_distance.png  used on input line 200.
+Package pdftex.def Info: ./imgsLR/F_in_distance.png  used on input line 199.
 (pdftex.def)             Requested size: 204.85846pt x 157.33154pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1184,10 +1180,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <./imgsLR/Final_remanence.png, id=708, 501.875pt x 352.31625pt>
 File: ./imgsLR/Final_remanence.png Graphic file (type png)
 <use ./imgsLR/Final_remanence.png>
-Package pdftex.def Info: ./imgsLR/Final_remanence.png  used on input line 234.
+Package pdftex.def Info: ./imgsLR/Final_remanence.png  used on input line 233.
 (pdftex.def)             Requested size: 227.62206pt x 159.79343pt.
 
-Overfull \hbox (0.1525pt too wide) in paragraph at lines 240--241
+Overfull \hbox (0.1525pt too wide) in paragraph at lines 239--240
 [][]\T1/cmr/m/n/12 Výsledná hod-nota re-ma-nence na-²ich krych-
  []
 
@@ -2003,7 +1999,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  84i,21n,93p,1351b,2124s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/public/esint/dpi720\esint10.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1728.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ondra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/ondra/AppData/Local/Programs/MiKTeX/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (80 pages, 3916710 bytes).
+Output written on main.pdf (80 pages, 3916954 bytes).
 PDF statistics:
  2526 PDF objects out of 2984 (max. 8388607)
  478 named destinations out of 1000 (max. 500000)

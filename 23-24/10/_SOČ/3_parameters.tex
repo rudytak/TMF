@@ -85,7 +85,7 @@ V níže připnutém ústřižku kódu \ref{code:1} nejdříve načteme použit�
 Prvním krokem je načtení dat ze souboru \texttt{kyvadlo.csv} a jejich převedení z textového formátu do 2D pole pojmenovaného \texttt{data}.
 Dále izolujeme data jednotlivých os do separátních proměnných \texttt{xdata}, \texttt{ydata}.
 
-\texttt{ydata} vyhladíme, abychom se zbavili šumu a to pomocí konvoluce použitím funkce \texttt{numpy.convolve}.
+\texttt{ydata} vyhladíme, abychom se zbavili šumu, a to pomocí konvoluce použitím funkce \texttt{numpy.convolve}.
 Délku 1D konvoluční matice jsme zvolili $m = 15$ a konvoluční matice délky $m$ by v našem případě obecně vypadala takto:
 
 \begin{equation}
@@ -140,15 +140,15 @@ Celkem provedeme tedy měření 2 magnetů, 3 magnetů a velkého magnetu pro vz
 \subsubsection{Analýza měření}
 Výstupem aplikace \texttt{Phyphox} jsou sobory typu \texttt{.csv}, neboli \textit{"Comma separated values"} \cite{csv}.
 Toto je poměrně čitelný a přívětivý formát ukládání dat, který v \texttt{Pythonovém} skriptu načteme pomocí funkce \texttt{open} (stejně jako v kódu \ref{code:1}).
-Jinak budeme používat tyto knihovny:
+V kódu budeme používat tyto knihovny:
 \texttt{numpy},
 \texttt{matplotlib} pro vytvoření grafu \ref{fig:mag_field_recording_2mag_10cm},
-\texttt{scipy}, kde využijeme funkce \texttt{curve\_fit}, a
+\texttt{scipy}, kde využijeme funkci \texttt{curve\_fit}, a konečně knihovnu
 \texttt{math} \cite{pymath}.
 Poté ručně určíme názvy všech datových souborů a časové intervaly, na kterých jsou magnety orientovány k snímači a od snímače.
 
 Po načtení dat vyjmeme pouze hodnoty ve dříve zmíněných intervalech a najdeme jejich průměrnou hodnotu a odchylky.
-Z rozdílu průměrných hodnot magnetického pole v obou otočeních magnetů určíme velikost magnetického pole generovaného pouze magnetem (očištěného od pozadí).
+Z rozdílu průměrných hodnot magnetického pole při obou otočeních magnetů určíme velikost magnetického pole generovaného pouze magnetem (očištěného od pozadí).
 Z odchylek také určíme celkovou odchylku výsledné hodnoty.
 
 Následně pro každé měření vytvoříme graf (příkladem je \autoref{fig:mag_field_recording_2mag_10cm}).
@@ -164,8 +164,6 @@ Následně pro každé měření vytvoříme graf (příkladem je \autoref{fig:m
 
 \clearpage
 
-Po zanalyzování všech měření můžeme vytvořit graf závislosti $B$ na vzdálenosti (viz \autoref{fig:B_in_dist}):
-
 \begin{wrapfigure}{r}{0.5\textwidth}
     \vspace*{0.5cm}
     \includegraphics[width=0.45\textwidth]{B_field_in_distance.png}
@@ -174,14 +172,15 @@ Po zanalyzování všech měření můžeme vytvořit graf závislosti $B$ na vz
     \label{fig:B_in_dist}
 \end{wrapfigure}
 
-Pro určení $B_r$ z naměřených hodnot provedeme zjednodušení vzorce \ref{eq:B}, kdy nahradíme vektory pouze jejich velikostmi:
+Po zanalyzování všech měření můžeme vytvořit graf závislosti $B$ na vzdálenosti (viz \autoref{fig:B_in_dist}).
+Pro určení $B_r$ z naměřených hodnot zjednodušíme vzorec \ref{eq:B} tak, že nahradíme vektory pouze jejich velikostmi, čímž získáme následující vzorec:
 
 \begin{equation}
     \label{eq:B_reduced}
     |B| = \frac{{\mu}_0 |m|}{2\pi r^3}
 \end{equation}
 
-Zde si všímáme úměrnosti $B \propto r^{-3}$, kterou také sledujeme v našich naměřených datech.
+Zde si všímněme úměrnosti $B \propto r^{-3}$, kterou také sledujeme v našich naměřených datech.
 Následným dosazením rovnice \ref{eq:mag_mom_remanence} a vyjádřením remanence získáváme:
 
 \begin{equation}
@@ -189,7 +188,7 @@ Následným dosazením rovnice \ref{eq:mag_mom_remanence} a vyjádřením remane
     |B_r| = \frac{2\pi r^3 |B|}{V}
 \end{equation}
 
-Pro každou naměřenou hodnotu $B$ dopočítáme odpovídající $B_r$ a výsledky zobrazíme v jednotném grafu \ref{fig:rem_final}.
+Pro každou naměřenou hodnotu $B$ následně dopočítáme odpovídající $B_r$ a výsledky později (společně s výsledky druhého měření) zobrazíme v souhrnném grafu \ref{fig:rem_final}.
 
 \subsection{Určení remanence přes sílu}
 
@@ -203,31 +202,31 @@ Druhý způsob, kterým jsme schopni určit remanenci, je skrze přitahování (
     \label{fig:mag_force_in_dist}
 \end{wrapfigure}
 
-Výhodou této metody je, že jsme schopni přesněji měřit slabší magnety, jelikož je můžeme dát blíže. V předchozí kapitole jsme nebyli schopni přiblížit magnety dostatečně blízko ke snímači telefonu kvůli jeho rozměrům.
+Výhodou této metody je, že jsme schopni přesněji měřit slabší magnety, jelikož je můžeme dát blíže. V předchozí kapitole jsme nebyli schopni přiblížit magnety dostatečně blízko ke snímači telefonu kvůli rozměrům telefonu samotného.
 Toto měření provádíme pouze pro 1 magnet, jelikož pro ten nám chybí výsledky z měření pomocí magnetického pole (ze dříve zmíněných důvodů). Výsledky můžeme vidět na grafu \ref{fig:mag_force_in_dist}.
 
 \clearpage
 
-Výpočet remanence provedeme podobně jako u rovnice \ref{eq:B_reduced} a to náhradou vektorů za jejich velikosti v rovnici \ref{eq:F_m}. Tím jsme ji schopni zjednodušit na následující podobu:
+Výpočet remanence provedeme podobně jako u rovnice \ref{eq:B_reduced}, a to náhradou vektorů za jejich velikosti v rovnici \ref{eq:F_m}. Tím jsme ji schopni zjednodušit na následující podobu:
 
 \begin{equation}
     \label{eq:F_reduced}
     |F| =  \frac{3 {\mu}_0}{2\pi r^4}|m|^2
 \end{equation}
 
-Po dosazení rovnice \ref{eq:mag_mom_remanence} a vyjádřením remanence získáváme:
+Po dosazení rovnice \ref{eq:mag_mom_remanence} a vyjádření remanence získáváme:
 
 \begin{equation}
     \label{eq:Br_from_F}
     B_r = \sqrt{\frac{2\pi {\mu}_0 r^4 F}{3 V^2}}
 \end{equation}
 
-Výsledné hodnoty $B_r$ zobrazíme v jednotném grafu \ref{fig:rem_final}.
+Výsledné hodnoty $B_r$ zobrazíme v jednotném grafu \ref{fig:rem_final} v následující kapitole.
 
 \subsection{Výsledky}
 
 Výsledky obou způsobů měření sjednotíme do grafu závislosti $B_r$ na vzdálenosti (viz \autoref{fig:rem_final}).
-Očekávali bychom, že se $B_r$ v závislosti na vzdálenosti nebude měnit, a pro každé měření určíme pomocí optimalizace fitu konstantní funkcí souhrnnou hodnotu. Výsledkem všech měření bude aritmetický průměr těchto souhrnných hodnot.
+Očekávali bychom, že se $B_r$ v závislosti na vzdálenosti nebude měnit, a pro každé měření určíme souhrnnou hodnotu pomocí optimalizace fitu konstantní funkcí. Výsledkem všech měření bude aritmetický průměr těchto souhrnných hodnot.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \vspace*{-0.5cm}
@@ -247,6 +246,6 @@ $$
     B_{r_{xl}} = 0.87(5)T
 $$
 
-Důvodem, proč je remanence většího magnetu znatelně nižší, může být skutečnost, že takto velký magnet náš model není schopen popsat jako jediný magnetický dipól, nebo například jeho stáří.
+Prvním důvodem, proč je remanence většího magnetu znatelně nižší, může být jeho stáří. Dalším důvodem může být skutečnost, že takto velký magnet náš model není schopen popsat jako jediný magnetický dipól.
 
 \clearpage
