@@ -67,3 +67,4 @@
 \contentsline {subsection}{\numberline {8.2.1}Hrubý matematický model}{52}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}Měřená $\tau -\omega $ závislost}{54}{subsection.8.2.2}%
 \contentsline {section}{\numberline {8.3}Měření přenosu}{55}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Magnetické převodovky}{57}{chapter.9}%
