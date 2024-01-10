@@ -1,15 +1,15 @@
 \chapter{Simulace}
 \label{chap:sim}
 
-Jak již bylo zmíněno v předchozí kapitole a jak vychází z názvu této práce, značnou částí našeho zkoumání bylo také počítačové simulování těchto systémů.
+Jak vychází z názvu této práce, značnou částí našeho zkoumání bylo také počítačové simulování těchto systémů. V této kapitole se bude věnovat jejímu návrhu a vývoji.
 
 \section{Popis způsobu simulování}
 
-Naším cílem bude vytvoření tzv. \textit{"Discrete event simulation"} neboli \textit{DES} \cite{sim_methods}. Jedná se o druh simulační metody, která popisuje náš stav pomocí diskrétních stavů, které existují v daném čase. Z jednoho určitého stavu poté pomocí určitých pravidel popisujících náš systém simulační algoritmus provádí odhad toho, jak bude vypadat další stav po uplynutí $\Delta t$ sekund, kde $\Delta t$ je velmi malé. Toto nazveme nejdím simulačním krokem. Poté stačí opakovat simulační kroky dle libosti.
+Naším cílem bude vytvoření tzv. \textit{"Discrete event simulation"} neboli \textit{DES} \cite{sim_methods}. Jedná se o druh simulační metody, která popisuje náš systém pomocí diskrétních stavů, které existují v daném čase. Z jednoho určitého stavu poté pomocí určitých pravidel systému simulační algoritmus provádí odhad toho, jak bude vypadat další stav po uplynutí velmi malého časovéhu úseku $\Delta t$. Takto vypadá jeden simulačním krok.
 
 \subsection{Runge-Kutta metody}
 
-Runge-Kutta metody, pojmenované po Carlu Davidu Tolmé Rungeovi a Martinu Wilhelmu Kuttovi, jsou rodinou metod používaných k řešení implicitních a explicitních diferenciálních rovnic. Implicitní metody popisující budoucí stav systému z předchozího stavu, stejně jak budeme dělat my v naší \textit{DES}. Runge-Kutta metody (také ornačované pouze RK metody) jsou tedy ideálním nástrojem pro simulování našeho problému. nejjednodušším příkladem RK metody je například Eulerova metoda. Těchto metod je nespočet, ale jejich obecný předpis je následující \cite{RK_def}:
+Runge-Kutta metody, pojmenované po Carlu Davidu Rungeovi a Martinu Wilhelmu Kuttovi, jsou rodinou metod používaných k řešení implicitních a explicitních diferenciálních rovnic. Implicitní metody popisující budoucí stav systému z předchozího stavu, stejně jak budeme dělat my v naší \textit{DES}. Runge-Kutta metody (také označované pouze RK metody) jsou tedy ideálním nástrojem pro simulování našeho problému. Nejjednodušším příkladem RK metody je například Eulerova metoda. Těchto metod je nespočet, ale jejich obecný předpis je následující \cite{RK_def}:
 \begin{equation}
     \label{eq:RK_def}
     \begin{gathered}
@@ -18,9 +18,9 @@ Runge-Kutta metody, pojmenované po Carlu Davidu Tolmé Rungeovi a Martinu Wilhe
     \end{gathered}
 \end{equation}
 
-V tomto předpisu jednotlivé znamenají: $t_n$ je čas stavu $y_n$ a $\Delta t$ je krátký časový krok; $s$ je stupeň RK metody; $a_{m,j}$, $b_i$ a $c_m$ jsou specifické koeficinty dané RK metody; $y_n$ je stávající stav a $y_{n+1}$ je budoucí, předpovídaný, stav; $k_m$ je pomocný sub-stav; $f(t,y) = \dot{y}$.
+V tomto předpisu jednotlivé symboly znamenají: $t_n$ je čas stavu $y_n$ a $\Delta t$ je krátký časový krok; $s$ je stupeň RK metody; $a_{m,j}$, $b_i$ a $c_m$ jsou koeficienty dané RK metody; $y_n$ je stávající stav a $y_{n+1}$ je předpovídaný stav; $k_m$ je pomocný sub-stav; $f(t,y) = \dot{y}$.
 
-Specifick0 koeficienty se nejčastěji zapisují pomocí tzv. Butcherových tabulek \cite{Butcher_tab_def} (pojmenovaných po Johnu Charlesovi Butcherovi). Zápis obecné Butcherovy tabulky pro RK metodu $s$. stupně je:
+Koeficienty RK metody se nejčastěji zapisují pomocí tzv. Butcherových tabulek \cite{Butcher_tab_def} (pojmenovaných po Johnu Charlesovi Butcherovi). Zápis obecné Butcherovy tabulky pro RK metodu $s$. stupně je:
 \begin{table}[!ht]
     \centering
     \captionsetup{singlelinecheck=off}
@@ -38,7 +38,7 @@ Specifick0 koeficienty se nejčastěji zapisují pomocí tzv. Butcherových tabu
     \end{tabularx}
 \end{table}
 
-Některé z podmínek, které sice nezaručují konzistentnost a stabilitu metody, ale dobrými základními pravidly jsou \cite{Butcher_tab_def}:
+Některé z podmínek, které sice nezaručují konzistentnost a stabilitu metody, ale jsou dobrými základními pravidly jsou \cite{Butcher_tab_def}:
 
 \begin{equation}
     \label{eq:RK_conditions}
@@ -152,17 +152,17 @@ Níže vypíšeme Butcherovy tabulky několika základních metod, které byly p
     \hfill
 \end{table}
 
-\section{Popisující interakce}
-Řídícími interakcemi našeho simulovaného modelu budou opět popsány rovnicemi \ref{eq:F_m} a \ref{eq:B}. V simulaci se však zaměříme na interakce celých spinnerů, ne pouze 2 dipólů. Pro popsání spinneru musíme určit několik vlastností týkajících se:
+\section{Pravidla systému}
+Řídící interakce našeho simulovaného modelu budou opět popsány rovnicemi \ref{eq:F_m} a \ref{eq:B}. V simulaci se však zaměříme na interakce celých spinnerů, ne pouze 2 dipólů. Pro popsání spinneru musíme určit několik vlastností týkajících se:
 \begin{enumerate}[topsep=0pt, partopsep=0pt]
     \setlength{\itemsep}{0pt}%
     \setlength{\parskip}{0pt}%
-    \item \textbf{Konfigurace}: pozice, velikosti, počet ramen (viz \autoref{sub:param_konf})
-    \item \textbf{Pohybu}: úhlová rychlost, moment setrvačnosti (viz \autoref{sec:moment_of_inertia}), třecí koeficienty (viz \autoref{chap:drag})
-    \item \textbf{Magnetů}: velikost momentů, remanence (viz \autoref{sec:remanence_measurement}), orientace (viz \autoref{fig:mag_orientations})
+    \item \textbf{konfigurace}: pozice, velikosti, počet ramen (viz \autoref{sub:param_konf}),
+    \item \textbf{pohybu}: úhlová rychlost, moment setrvačnosti (viz \autoref{sec:moment_of_inertia}), třecí koeficienty (viz \autoref{chap:drag}),
+    \item \textbf{magnetů}: velikost momentů, remanence (viz \autoref{sec:remanence_measurement}), orientace (viz \autoref{fig:mag_orientations}).
 \end{enumerate}
 
-Naším cílem je popisovat rotaci jednotlivých spinnerů v čase. Toto provedeme určením celkového momentu sílu jakožto součtu silových a magnetických složek přes všechny externí magnetické momenty. Popisující rovnice spinneru jsou tedy \footnote{První rovnice vychází z definice momentu síly: $\dot{L} = I \dot{\omega} = \tau$}:
+Naším cílem je popisovat rotaci jednotlivých spinnerů v čase. Toto provedeme určením celkového momentu síly jakožto součtu silových a magnetických složek všech externích magnetických momentů. Popisující rovnice spinneru jsou tedy \footnote{První rovnice vychází z definice momentu síly: $\dot{L} = I \dot{\omega} = \tau$}:
 \begin{equation}
     \label{eq:sim_equations}
     \begin{gathered}
@@ -171,9 +171,9 @@ Naším cílem je popisovat rotaci jednotlivých spinnerů v čase. Toto provede
     \end{gathered}
 \end{equation}
 
-Ve výše uvedených rovnicí $\tau_F$ popisuje moment síly pocházející ze silové interakce, kterým na spinner (neboli na všechny jeho magnety) působí nějaký externí magnetický moment $m_{external}$ umístěný v prostoru na pozici $P_{external}$. Moment síly určíme pomocí ramene $r$, přes které síla $F$ na spinner působí: $\vec{\tau} = \vec{F} \times \vec{r}$.
+Ve výše uvedených rovnicích $\tau_F$ popisuje moment síly pocházející ze silové interakce, kterým na spinner (resp. na všechny jeho magnety) působí nějaký externí magnetický moment $m_{external}$ umístěný v prostoru na pozici $P_{external}$. Moment síly určíme pomocí ramene $r$, přes které síla $F$ na spinner působí: $\vec{\tau} = \vec{F} \times \vec{r}$.
 
-$\tau_{mag}$ popisuje moment síly pocházející z toho, že na každý magnet spinneru působí externí magnetické pole $B(r, m_{external})$ tvořené externím magnetickým momentem $m_{external}$ umístěný v prostoru na pozici $P_{external}$. Pomocí momentu magentu umístěného na spinneru jednoduše dopočítáme moment síly podle rovnice \ref{eq:B}: $\tau = m \times B(r, m_{external})$.
+$\tau_{mag}$ popisuje moment síly pocházející z toho, že na každý magnet spinneru působí externí magnetické pole $B(r, m_{external})$ tvořené externím magnetickým momentem $m_{external}$ umístěný v prostoru na pozici $P_{external}$. Pomocí momentu magnetu umístěného na spinneru jednoduše dopočítáme moment síly podle rovnice \ref{eq:B}: $\tau = m \times B(r, m_{external})$.
 
 Předpisy $\tau_F$ a $\tau_{mag}$ jsou:
 \begin{equation}
@@ -185,19 +185,19 @@ Předpisy $\tau_F$ a $\tau_{mag}$ jsou:
 \end{equation}
 
 \section{Implementace}
-K implementaci naší simulace použijeme sotwarový systém zvaný \texttt{Node.js}, který používá programovací jazyk \texttt{JavaScript (JS)} \cite{JS}. K tomuto rozhodnutí jsme došli, jelikož \texttt{Node.js} je rychlejší než \texttt{Python}, ale stále nabízí větší množství programátorsky nápomocných prvků. Pro nás to bude ideální kompromis mezi jednoduchostí implementace a rychlostí. V průběhu implementace také používáme datového formátu \texttt{JSON} \cite{JSON} a nativní knihovnu \texttt{Node.js} zvanou \texttt{fs (File System)}, pomocí které budeme naše výsledky exportovat do \texttt{.csv} souborů pro další zpracování. Použití jazyka \texttt{JavaScript} také nabízí jednoduché znovupoužití již napsaného kódu k vytvoření webového rozhraní s vizualizací simulovaného systému. Toto rozhraní je skvělé k odstraňování chyb v průběhu vývoje a zároveň zjednodušuje interpretaci generovaných výsledků.
+K implementaci naší simulace použijeme sotwarový systém zvaný \texttt{Node.js}, který používá programovací jazyk \texttt{JavaScript (JS)} \cite{JS}. K tomuto rozhodnutí jsme došli, jelikož \texttt{Node.js} je rychlejší než \texttt{Python}, ale stále nabízí větší množství programátorsky užitečných funkcí. \texttt{Node.js} je tedy ideální kompromis mezi jednoduchostí implementace a rychlostí. V průběhu implementace také používáme datového formátu \texttt{JSON} \cite{JSON} a nativní knihovnu zvanou \texttt{fs (File System)}, pomocí které budeme naše výsledky exportovat do \texttt{.csv} souborů pro další zpracování. Použití jazyku \texttt{JavaScript} nám také umožní použití již napsaného kódu k vytvoření webového rozhraní s vizualizací simulovaného systému. Toto rozhraní je skvělé k odstraňování chyb v průběhu vývoje a zároveň zjednodušuje interpretaci generovaných výsledků.
 
 \subsection{Použité datové struktury}
 
 \subsubsection{3D vektory}
 
-První datovou strukturou, kterou budeme používat v našich výpočtech jsou 3D vektory. Jejich implementace společně s užitečnými funkcemi (sčítání, odčítání, vektorov a skalární násobení, apod.) je triviální.
+První datovou strukturou, kterou budeme používat v našich výpočtech jsou 3D vektory. Jejich implementace společně s užitečnými funkcemi (sčítání, odčítání, vektorové a skalární násobení, apod.) je triviální.
 
-3D vektory v našem kódu budou instancí třídy pojmenované \textbf{\texttt{v3}} a jejich jediné vlastnosti jsou jejich $x,y$ a $z$ komponenty vyjádřené jako 64-bitová čísla podle standardu \texttt{IEEE 754} \cite{IEEE-754}.
+3D vektory v našem kódu budou instancí třídy pojmenované \textbf{\texttt{v3}} a jejich jedinými vlastnosti jsou $x,y$ a $z$ komponenty vyjádřené jako 64-bitová čísla podle standardu \texttt{IEEE-754} \cite{IEEE-754}.
 
 \subsubsection{Spinnery}
 
-Další strukturou jsou jednotlivé spinnery, které budeme označovat symbolem $\mathbb{S}$ a případně odpovídajícím číselným indexem, či jiným identifikátorem v pravém dolním indexu. Je-li z kontextu zřejmé, o jaký spinner se jedná, můžeme k jeho vlastnosnostem referovat čistě podle znaků určených v nomenklatuře (viz \autoref{sec:nomenclature}). Je-li potřeba oddělovat jednotlivé spinnery, budeme k jejich vlastnostem referovat exaktně a to skrze horní index; například, chtěli bychom-li určit počet ramen (značeno písmenem $n$) nějakého externího spinneru, použili bychom $\mathbb{S}_{external}^{n}$. Pokud bychom chtěli získat pozici 1. magnetu 3. spinneru, použili bychom $\mathbb{S}_{3}^{P}(1)$, jelikož $P(i)$ je funkce. Pomocí tohoto způsobu zápisu také v průběhu následujících kapitol konkretizujeme rovnice \ref{eq:sim_equations} a \ref{eq:sim_equations2}.
+Další strukturou jsou jednotlivé spinnery, které budeme označovat symbolem $\mathbb{S}$ a odpovídajícím číselným indexem nebo jiným identifikátorem vpravo dole. Je-li z kontextu zřejmé, o jaký spinner se jedná, můžeme k jeho vlastnostem referovat čistě podle znaků určených v nomenklatuře (viz \autoref{sec:nomenclature}). Je-li potřeba oddělovat jednotlivé spinnery, budeme k jejich vlastnostem referovat exaktně, a to skrze horní index; například, pokud bychom chtěli určit počet ramen (značeno písmenem $n$) nějakého externího spinneru, použili bychom $\mathbb{S}_{external}^{n}$. Pokud bychom chtěli získat pozici 1. magnetu 3. spinneru, použili bychom $\mathbb{S}_{3}^{P}(1)$, jelikož $P(i)$ je funkce. Pomocí tohoto způsobu zápisu také v průběhu následujících kapitol formalizujeme rovnice \ref{eq:sim_equations} a \ref{eq:sim_equations2}.
 
 V kódu jsou spinnery instancí třídy \textbf{\texttt{spinner}}, jejíž vlastnosti jsou vypsány v tabulce \ref{tab:sim_spinner_properties}.
 
@@ -218,7 +218,7 @@ V kódu jsou spinnery instancí třídy \textbf{\texttt{spinner}}, jejíž vlast
         $\varphi_0$                  \tablefootnote{Počáteční úhel}                                                                     & \texttt{float64}                                      & žádná                                                      \\
         $\varphi$                    \tablefootnote{Okamžitý úhel}                                                                      & \texttt{float64}                                      & žádná                                                      \\
         $\omega_0$                   \tablefootnote{Počáteční úhlová rychlost}                                                          & \texttt{float64}                                      & žádná                                                      \\
-        $\omega$                     \tablefootnote{Okamžitý úhlová rychlost}                                                           & \texttt{float64}                                      & žádná                                                      \\
+        $\omega$                     \tablefootnote{Okamžitá úhlová rychlost}                                                           & \texttt{float64}                                      & žádná                                                      \\
         $\alpha$                     \tablefootnote{Konstantní koeficient tření (viz \autoref{chap:drag})}                              & \texttt{float64}                                      & 0.868                                                      \\
         $\beta$                      \tablefootnote{Lineární koeficient tření (viz \autoref{chap:drag})}                                & \texttt{float64}                                      & 0.0                                                        \\
         $\gamma$                     \tablefootnote{Kvadratický koeficient tření (viz \autoref{chap:drag})}                             & \texttt{float64}                                      & 0.00068                                                    \\
@@ -240,13 +240,13 @@ V kódu jsou spinnery instancí třídy \textbf{\texttt{spinner}}, jejíž vlast
 
 \subsubsection{$\Omega$-stavy}
 
-Další důležitou datovou strukturou je něco, co nazveme $\Omega$-stav. Tato datová struktura má za úkol uložit celkový stav systému (tedy stavy všech spinnerů - řekněme, že jejich počet bude $p$) a provádět na nich operace potřebné k řešení diferenciálních rovnic pomocí RK metod. Druhým úkolem $\Omega$-stavů je výpočet všech momentů sil pro všechny spinnery - toto v popisu RK metody (viz \autoref{eq:RK_def}) představuje naši derivaci, neboli funkci $f$.
+Další důležitou datovou strukturou je něco, co nazveme $\Omega$-stav. Tato datová struktura má za úkol uložit stavy všech spinnerů a provádět na nich operace potřebné k řešení diferenciálních rovnic pomocí RK metod. Druhým úkolem $\Omega$-stavů je výpočet momentu síly pro všechny spinnery - toto v popisu RK metody představuje naši derivaci, neboli funkci $f$ (viz \autoref{eq:RK_def}). Celkový počet spinnerů v $\Omega$-stavu označíme $p$.
 
-Hlavní vlastností $\Omega$-stavů je tedy pole spinnerů označované $\mathbb{P} = \{ \mathbb{S}_1, \mathbb{S}_2, \ldotp ,\mathbb{S}_p \}$ o velikoti $|\Omega_{}^{\mathbb{P}}| = \Omega_{}^{p}$. Na obecný $k$. prvek tohoto pole se budeme odkazovat následovně: $\Omega_{}^{\mathbb{P}}(k) = \mathbb{S}_k$.
+Hlavní vlastností $\Omega$-stavů je tedy pole spinnerů označené $\mathbb{P} = \{ \mathbb{S}_1, \mathbb{S}_2, \ldotp ,\mathbb{S}_p \}$, jehož velikost je $|\Omega_{}^{\mathbb{P}}| = \Omega_{}^{p}$. Na obecný $k$. prvek tohoto pole se budeme odkazovat následovně: $\Omega_{}^{\mathbb{P}}(k) = \mathbb{S}_k$.
 
-Jelikož úkolem $\Omega$-stavu je i určení všech momentů sil, bude mít i vlastnost značenou $A$, což je pole dopočítaných úhlových zrychlení jednotlivých spinnerů. Pole $A$ tedy ukládá všechna vypočtená úhlová zrychlení všech spinnerů, která získáme z rovnice \ref{eq:sim_equations}. Jednotlivá zrychlení označíme symbolem $\alpha$ a tím pádem $A = \{ \alpha_1, \alpha_2, \ldotp, \alpha_p \} $. Na jednotlivé prvky se opět odkazujeme takto: $\Omega_{}^{A}(k) = \alpha_k = \dfrac{\mathbb{S}_k^\tau}{\mathbb{S}_k^I}$.
+Jelikož úkolem $\Omega$-stavu je i určení všech momentů sil, musí si ukládat pole dopočítaných úhlových zrychlení jednotlivých spinnerů, které označíme $A$. Jednotlivé prvky pole $A$ získáme dosazením do rovnice \ref{eq:sim_equations}. Zrychlení spinnerů označíme symbolem $\alpha$ a tím pádem $A = \{ \alpha_1, \alpha_2, \ldotp, \alpha_p \} $. Na prvky pole $A$ se opět odkazujeme takto: $\Omega_{}^{A}(k) = \alpha_k = \dfrac{\mathbb{S}_k^\tau}{\mathbb{S}_k^I}$.
 
-Nyní je na řadě provést formalizaci řídících rovnic \ref{eq:sim_equations} a \ref{eq:sim_equations2} pomocí tohoto způsobu zápisu. Začneme rovnicemi pro výpočet silové a magnetické interakce magnetů, které nyní popíšeme jakožto funkce tří parametrů. Prvním parametrem v pořadí bude spinner $\mathbb{S}$, pro který budeme počítat momenty sil, kterými na něj působí externí magnetický moment $m_{external}$ nacházející se na pozici $P_{external}$:
+Nyní je na řadě provést formalizaci řídících rovnic \ref{eq:sim_equations} a \ref{eq:sim_equations2} pomocí tohoto způsobu zápisu. Začneme rovnicemi pro výpočet silové a magnetické interakce magnetů, které nyní popíšeme jakožto funkce tří parametrů. Prvním parametrem bude vždy spinner $\mathbb{S}$, pro který budeme počítat momenty sil. Druhým parametrem je externí magnetický moment $m_{external}$, který působí na $\mathbb{S}$, a posledním parametrem je pozice momentu značená $P_{external}$. Formalizovaný přepis momentů sil je následující:
 \begin{equation}
     \label{eq:sim_equations_formalized}
     \begin{gathered}
@@ -289,7 +289,7 @@ Nyní je na řadě provést formalizaci řídících rovnic \ref{eq:sim_equation
 
 Nyní, když jsme formalizovali silové a magnetické interakce z jednoho externího magnetického dipólu, stačí určit celkový moment síly $\tau_{tot}$, kterým na spinner působí všechny magnety dohromady.
 $\tau_{tot}$ tedy bude součet obou složek ze všech magnetů všech ostatních spinnerů.
-Jako poslední také nesmíme zapomenou na započítání třecích účinků spinneru.
+Nakonec také nesmíme zapomenou na započítání třecích účinků spinneru.
 Z $\tau_{tot}$ konečně dopočítám úhlové zrychlení $\alpha_k$ obecného $k$. spinneru $\mathbb{S}_k$ takto:
 \begin{equation}
     \label{eq:sim_equations_formalized2}
@@ -334,9 +334,9 @@ Z $\tau_{tot}$ konečně dopočítám úhlové zrychlení $\alpha_k$ obecného $
     \end{gathered}
 \end{equation}
 
-Pro další výpočty ještě zavedeme, jak se chová sčítání stavů a násobení $\Omega^A$ časem.
-Jednoduše řečeno dochází k sčítání hodnot pro každý index, nebo k násobení hodnoty na každém indexu daným časem\footnote{V rovnici \ref{eq:sim_equations_formalized4} jsou jednotky: $[rad \cdot s^{-1}] = [rad \cdot s^{-2}] \cdot [s]$.}.
-Matematicky bychom tedy tyto operace formulovali takto\footnote{Podmínkou sčítání je, že: $\Omega_{sum}^p = \Omega_{a}^p = \Omega_{b}^p$}:
+Pro  použití v dalších výpočtech také zavedeme, jak se chová sčítání stavů a násobení $\Omega^A$ časem.
+Jednoduše řečeno, dochází k sčítání hodnot pro každý index a k násobení hodnoty na každém indexu daným časem\footnote{V rovnici \ref{eq:sim_equations_formalized4} jsou jednotky: $[rad \cdot s^{-1}] = [rad \cdot s^{-2}] \cdot [s]$.}.
+Matematicky bychom tyto operace formulovali takto\footnote{Podmínkou sčítání je, že: $\Omega_{sum}^p = \Omega_{a}^p = \Omega_{b}^p$}:
 
 \begin{equation}
     \label{eq:sim_equations_formalized3}
@@ -361,7 +361,7 @@ Matematicky bychom tedy tyto operace formulovali takto\footnote{Podmínkou sčí
 \end{equation}
 
 S tímto jsme konečně schopni definovat poslední vlastnost $\Omega$-stavu, kterou je krátky časový úsek $\delta$.
-Z výpočtu zrychlení je pak provedena predikce budoucího stavu pod uplynutí $\delta$, který označíme $\prescript{*}{}\Omega$.
+Z výpočtu zrychlení je pak provedena predikce budoucího stavu po uplynutí $\delta$, který označíme $\prescript{*}{}\Omega$.
 Jeho definicí je:
 
 \begin{equation}
@@ -377,10 +377,10 @@ V kódu jsou tyto struktury instancemi třídy \texttt{omega\_state}.
 
 \subsubsection{$\Phi$-stavy}
 
-Poslední datovou strukturou jsou tzv. $\Phi$-stavy, které jsou velmi podobné $\Omega$-stavům svou funkcí. Jejich účelem je opět umožnit použití RK metod. V průběhu jednoho simulačního kroku totiž dochází k dvojitému numerickému integrování - nejdříve, abychom získali z úhlového zrychlení úhlovou rychlost, a poté podruhé, abychom z úhlové rychlosti získali úhel
+Poslední datovou strukturou jsou tzv. $\Phi$-stavy, které jsou velmi podobné $\Omega$-stavům svou funkcí. Jejich účelem je opět umožnit použití RK metod. V průběhu jednoho simulačního kroku totiž dochází k dvojitému numerickému integrování - nejdříve, abychom získali z úhlového zrychlení úhlovou rychlost, a podruhé, abychom z úhlové rychlosti získali úhel
 ($\alpha_k \xRightarrow{RK} \mathbb{S}_k^{\omega}  \xRightarrow{RK} \mathbb{S}_k^{\varphi}$).
 
-Vlastnosti $\Phi$-stavů jsou stejné jako u $\Omega$-stavů, kromě pole $A$, které je nahrazeno polem $O$. Pole $O$, narozdíl od pole $A$, které ukládá úhlová zrychlení, obsahuje úhlové rychlosti každého spinneru. Pole $O$ zapisujeme takto: $\Phi{}^{O} = \{ \omega_1, \omega_2, \ldots, \omega_p\}$. Na libovoný $k$. člen se opět odkazujeme takto: $\Phi{}^{O}(k) = \omega_k$. $\Omega$-stavy a $\Phi$-stavy na sebe navazují následovně:
+Vlastnosti $\Phi$-stavů jsou stejné jako u $\Omega$-stavů, kromě pole $A$, které je nahrazeno polem $O$. Narozdíl od pole $A$, které ukládá úhlová zrychlení, pole $O$ obsahuje úhlové rychlosti každého spinneru. Pole $O$ zapisujeme takto: $\Phi{}^{O} = \{ \omega_1, \omega_2, \ldots, \omega_p\}$. Na libovoný $k$. člen se opět odkazujeme takto: $\Phi{}^{O}(k) = \omega_k$. $\Omega$-stavy a $\Phi$-stavy na sebe navazují následovně:
 
 \begin{equation}
     \label{eq:sim_equations_formalized6}
@@ -409,8 +409,8 @@ Jak jsme již avizovali, pomocí $\Omega$-stavů a $\Phi$-stavů provedeme v ka�
 Průběh výpočtu budoucího $\Omega$-stavu (a analogicky $\Phi$-stavu) bude probíhat následovně:
 
 Máme začáteční stav $\Omega_1$ a určíme $k_1 = \Omega_1^A$.
-Poté vytvoříme nový stav, jehož spinnery (resp. jejichž úhlové rychlosti) jsou zároveň částečně ovlivněny úhlovými zrychleními z $k_1$.
-To, jakou mírou jsou ovlivněny, udává $a_{2, 1} \cdot \Delta t$.
+Poté vytvoříme nový stav, jehož spinnery (resp. jejich úhlové rychlosti) jsou zároveň částečně ovlivněny úhlovými zrychleními z $k_1$.
+To, jakou mírou jsou ovlivněny, udává koeficient $a_{2, 1}$ vynásobený časovým krokem $\Delta t$.
 Toto odpovídá tomu, jako kdyby libovolný $k$. spinner $\mathbb{S}_k$ byl zrychlován z jeho původní úhlové rychlosti $\omega$ po dobu $a_{2, 1} \cdot \Delta t$ úhlovým zrychlením $\Omega_1^A(k)$ na nějakou novou úhlovou rychlost $\omega'$.
 Tento výpočet tedy můžeme zapsat následovně:
 
@@ -440,7 +440,7 @@ Nakonec získáme $k_2$ jako úhlové zrychlení těchto zrychlených a pootoče
     \end{gathered}
 \end{equation}
 
-Obecně můžeme tedy vyjádři $k_{n}$ takto:
+Obecně můžeme tedy vyjádři $k_{n}$ takto \footnote{Všimněme si podobnosti tohoto zápisu a původní definice RK metody (viz \autoref{eq:RK_def}).}:
 \begin{equation}
     \label{eq:sim_equations_formalized11}
     \begin{gathered}
@@ -456,13 +456,13 @@ Po určení všech $k_1, \ldots, k_s$ konečně získáváme nový, odhadovaný 
     \end{gathered}
 \end{equation}
 
-Identicky funguje postup i pro provádění numerického integrování $\Phi$-stavů, kde pouze místo $k_i$ budeme používat $q_i$ pro přehlednost do budoucna.
+Identicky funguje postup i pro provádění numerického integrování $\Phi$-stavů, kde pouze místo $k_i$ budeme používat $q_i$ pro přehlednost v budoucích vzorcích.
 
-\subsection{Simulační instance}
+\subsection{Simulační kontext}
 
-Simulační instance poté opakovaně provádí tyto dvě numerické integrace v každém kroku a získává nové stavy, s kterými pokračuje v dalším kroku. Každý simulační kontext je instancí třídy \texttt{sim\_instance}, jejíž vstupními parametry jsou:
+Simulační kontext poté opakovaně provádí tyto dvě numerické integrace v každém kroku a získává tak nové stavy, s kterými pokračuje v dalších krocích. Každý simulační kontext je instancí třídy \texttt{sim\_instance}, jejíž vstupními parametry jsou:
 \begin{enumerate}
-    \item \textbf{Simulační parametry:} JSON objekt přepisující vybrané výchozí simulační parametry \footnote{Pomocí tzv. objektové destrukturalizace, což je objektová operace v jazyce JavaScript (viz \cite{JS_deconstruction}).}, jejiž hodnoty jsou v tabulce \ref{tab:sim_instance_properties}.
+    \item \textbf{Simulační parametry:} JSON objekt přepisující vybrané výchozí simulační parametry \footnote{K tomu využívá tzv. objektové destrukturalizace, což je objektová operace v jazyku JavaScript (viz \cite{JS_deconstruction}).}, jejichž hodnoty jsou v tabulce \ref{tab:sim_instance_properties}.
     \item \textbf{Butcherova tabulka RK metody:} instance třídy \texttt{RK\_matrix} (implementace je triviální podle pramene \cite{Butcher_tab_def})
     \item \textbf{Výchozí hodnoty spinnerů:} JSON objekt přepisující výchozí parametry, které se automaticky nastavují při vytvoření každého nového spinneru v tomto kontextu (viz \autoref{tab:sim_spinner_properties}).
 \end{enumerate}
@@ -494,7 +494,7 @@ Simulační instance poté opakovaně provádí tyto dvě numerické integrace v
 \tikzstyle{connector} = [thick,->,>=stealth]
 \tikzset{stretch/.initial=1}
 
-Po vytvoření kontextu jsou do něj přidány jednotlivé spinnery (číslovány od 0) pomocí funkce \texttt{add\_spinner}, jejíž povinné parametry jsou $S$, $\varphi_0$ a $\omega_0$ (viz \autoref{tab:sim_spinner_properties}). Zbylé parametry jsou dobrovolné - jejich výchozí hodnoty závisí na kontextu (viz bod 3 tabulce \ref{tab:sim_instance_properties}). Spimulace je poté spuštěna funkcí \texttt{run}.
+Po vytvoření kontextu jsou do něj přidány jednotlivé spinnery (číslovány od 0) pomocí funkce \texttt{add\_spinner}, jejíž povinné parametry jsou $S$, $\varphi_0$ a $\omega_0$ (viz \autoref{tab:sim_spinner_properties}). Zbylé parametry jsou dobrovolné - jejich výchozí hodnoty závisí na kontextu (viz bod 3 tabulce \ref{tab:sim_instance_properties}). Simulace je poté spuštěna funkcí \texttt{run}.
 Vývojový diagram celé simulace je znázorněn níže:
 
 \begin{figure}[!ht]
@@ -518,9 +518,8 @@ Pro dokončení simulace trvající čas $T$ s časovým intervalem $\tau$ je po
 
 \subsection{Webové rozhraní}
 
-Webové rozhraní, dostupné na \url{https://rudytak.github.io/cdn/TMF37task10/index.html}, je druhým způsobem, jak simulaci zpuštět. Výhodou webového rozhraní oproti původnímu headless\footnote{"Headless software" je označení pro takový software, který nemá grafické uživatelské rozhraní. Příkladem takového softwaru je právě \texttt{NodeJS}.} rozhraní je grafické zobrazení všech spinnerů, čímž je uživateli umožněno jednodušeji sledovat, co se v průběhu simulace děje. Avšak nevýhodou je značný výkonový rozdíl. Relativně pomalý běh simulace ve webovém rozhraní je způsoben potřebou vykreslovat každý stav simulace, což je výpočetně nesrovnatělně složitější operace. 
-
-Obě rozhraní jsou psaná pomocí jazyku \texttt{JavaScript}, což umožňuje používat stejné knihovny, i když jedno rozhraní používá k interpretaci \texttt{NodeJS} a druhé používá jiný \texttt{JavaScriptový engine} (zavislý na prohlížeči) - výpočty jsou tedy identické, i když různě rychlé.
+Webové rozhraní, dostupné na \url{https://rudytak.github.io/cdn/TMF37task10/index.html}, je druhým způsobem, jak simulaci zpouštět. Výhodou webového rozhraní, oproti původnímu headless\footnote{"Headless software" je označení pro takový software, který nemá grafické uživatelské rozhraní. Příkladem takového softwaru je právě \texttt{NodeJS}.} rozhraní, je grafické zobrazení všech spinnerů, čímž je uživateli umožněno jednodušeji sledovat, co se v průběhu simulace děje. Nevýhodou je však značný výkonový rozdíl. Relativně pomalý běh simulace ve webovém rozhraní je způsoben potřebou vykreslovat každý stav simulace, což vyžaduje výpočetně nesrovnatělně složitější operace. 
+Obě rozhraní jsou naprogramována pomocí jazyku \texttt{JavaScript}, což umožňuje používání stejných knihovnen, přestože jedno rozhraní používá k interpretaci \texttt{NodeJS} a druhé používá jiný \texttt{JavaScriptový engine} (zavislý na prohlížeči) - výpočty jsou tedy identické, i když různě rychlé.
 
 \begin{figure}[!ht]
     \centering

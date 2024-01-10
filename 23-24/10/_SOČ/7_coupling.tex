@@ -1,7 +1,7 @@
 \chapter{Magnetické vázání}
 
 Velmi důležitým jevem, který jsme při dalším experimentování objevili, je, že dva spinnery umístěné blízko sebe, z nichž jeden je poháněn motorem\footnote{Tento spinner nazveme hnacím.}, se mohou magneticky vázat - tzn. že si hnaný a hnací spinner udržují nějaký konstantní poměr rychlostí.
-Tomu, v jakém poměru jsou, budeme říkat "mód"; případ, kdy jsou rychlosti hnaného a hnacího spinneru stejné bude, tedy mód 1 ku 1 (značeno $1:1$). Později v této kapitole budeme tyto módy dále zkoumat a budeme vždy prvním číslem označovat rychlost hnaného spinneru a druhým číslem rychlost hnacího spinneru. Tento jev je obvzlášť důležitý, jelikož umožňuje tvorbu prvního primitivního druhu magnetického převodu.
+Tomu, v jakém poměru jsou, budeme říkat "mód". Například, když jsou rychlosti hnaného a hnacího spinneru stejné, řekneme, že jsou v módu 1 ku 1 (značeno $1:1$). Později v této kapitole budeme tyto módy dále zkoumat a budeme vždy prvním číslem označovat rychlost hnaného spinneru a druhým číslem rychlost hnacího spinneru. Tento jev je obvzlášť důležitý, jelikož umožňuje tvorbu prvního primitivního druhu magnetického převodu.
 
 \section{Měření magnetickým čidlem}
 
@@ -13,9 +13,9 @@ Tomu, v jakém poměru jsou, budeme říkat "mód"; případ, kdy jsou rychlosti
 \end{wrapfigure}
 
 Prvním způsobem, jak jsme se pokoušeli o sledování vázání spinnerů bylo pomocí magnetického čidla Vernier stejně jako na \autoref{fig:spinner_drag_aparature}. Rotaci hnaného spinneru jsme sledovali tímto čidlem, zatímco hnací spinner byl poháněn vrtačkou regulovanou labortatorním zdrojem napětí. Hnaný i hnací spinner byly pevně připevněny ve vzdálenosti 8cm (vzdálenost jejich středů).
-Z počtu peaků na naměřeném průběhu magnetické indukce v čase jsme opět určovali přibližnou úhlovou rychlost hnaného spinneru (stejně jako v kódu \ref{code:4}). Rychlost hnacího spinneru jsme určili z napětí, kterým byla vrtačka poháněna, jelikož jsme pro ni dříve určili charakteristiku výstupní úhlové rychlosti v závislosti na napětí (viz \autoref{fig:motor_characteristic}).
+Z hustoty naměřených peaků jsme opět určili přibližnou úhlovou rychlost hnaného spinneru (stejně jako v kódu \ref{code:4}). Rychlost hnacího spinneru jsme určili z napětí, kterým byla vrtačka poháněna, jelikož jsme pro ni dříve určili charakteristiku výstupní úhlové rychlosti v závislosti na napětí (viz \autoref{fig:motor_characteristic}).
 
-Nevýhodou této metody je, jak již bylo zmíněno, že měření magnetickou sondou je velmi nepřesné a není schopné určit okamžitou rychlost. Další nevýhodou je, že magnetickou sondu jsme měli k dispozici pouze jednu. Přesto jsme byli schopni několik módů naměřit a porovnat se simulací a tyto výsledky jsou k shlédnutí v grafu \ref{fig:mag_coupling_vernier}.
+Nevýhodou této metody je, jak již bylo zmíněno, že měření magnetickou sondou je velmi nepřesné a není schopné určit okamžitou rychlost. Další nevýhodou je, že magnetickou sondu jsme měli k dispozici pouze jednu. Přesto jsme byli schopni několik módů naměřit a porovnat se simulací a tyto výsledky jsou shrnuty v grafu \ref{fig:mag_coupling_vernier}.
 
 \begin{figure}[!ht]
     \includegraphics[width=\textwidth]{simulated_coupling.png}
@@ -26,16 +26,16 @@ Nevýhodou této metody je, jak již bylo zmíněno, že měření magnetickou s
 
 \section{Hlubší analýza}
 
-Neuspokojivá přesnost výsledků získaných předchozí analýzou dat z magnetického čidla vedla k pokusům o vynalezení rozdílného způsobu zpracování dat, který by nám umožnil sledovat rychlost v průběhu jedné otáčky. Doposud nám tento detail nebyl známý, jelikož předchozí způsob pouze počítá jednotlivá otočení, ale ignoruje jak jedna samotná otočka vypadá.
+Neuspokojivá přesnost výsledků získaných předchozí analýzou dat z magnetického čidla vedla k pokusům o vynalezení rozdílného způsobu zpracování dat, který by nám umožnil sledovat rychlost v průběhu jedné otáčky. Doposud nebylo možné tento detail získat, jelikož předchozí způsob pouze počítá jednotlivá otočení, ale ignoruje jak jedna samotná otočka vypadá.
 
-Takový způsob zpracování by měl stále být schopen analyzovat již naměřená data, abychom nemuseli měnit aparaturu ani měření provádět znovu. Nakonec jsme se rozhodli sledovat deformaci jednotlivých peaků v průběhu magnetické indukce a z této simualce se snažit odhadnout a vyvodit přesný úhel spinenru v daném momentu. Přesněji je tento proces popsán v další kapitole.
+Nový způsob zpracování by měl stále být schopen analyzovat již naměřená data, abychom nemuseli měnit aparaturu ani měření provádět znovu. Nakonec jsme se rozhodli sledovat deformaci jednotlivých peaků průběhu magnetické indukce a z této deformace se snažit odhadnout a vyvodit přesný úhel spinneru v daném momentu. Do hloubky je tento proces popsán v další kapitole.
 
 \clearpage
 \subsection{Popis nového algoritmu}
 
-Tento nový algortimus je založen na tom, že nám bude známá závislost magnetického pole na úhlu spinneru. Pokud tuto závislost budeme znát a budeme mít nějaký nový záznam průběhu magnetické indukce v čase, jsme schopni zpětně vyvodit, jaký musel být průběh úhlu v čase.
+Tento algoritmus je založen na tom, že nám bude známá závislost magnetického pole na úhlu spinneru. Pokud tuto závislost budeme znát a budeme mít nějaký nový záznam průběhu magnetické indukce v čase, jsme schopni zpětně vyvodit, jaký musel být průběh úhlu v čase.
 
-Celý proces tedy začíná tím, že musíme naměřit průběh magnetického pole spinneru, který se otáčí definovanou a konstantní rychlostí a jeho průběh úhlu v čase je tedy triviální - je to přímka se směrnicí závislou na jeho rychlosti.
+Celý proces tedy začíná tím, že musíme naměřit průběh magnetického pole spinneru, který se otáčí definovanou a konstantní rychlostí. Jeho průběh úhlu v čase je tedy triviální - je to přímka se směrnicí závislou na jeho rychlosti.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \includegraphics[width=0.5\textwidth]{target_curve.png}
@@ -44,7 +44,7 @@ Celý proces tedy začíná tím, že musíme naměřit průběh magnetického p
     \label{fig:target_curve}
 \end{wrapfigure}
 
-Spinner osazený magnety je tedy umístěn do vrtačky a roztáčen konstantní a známou rychlostí. Tento spinner označíme jako \textit{nreušený}, jelikož na něj nepůsobí vnější magnetické síly a je poháněn motorem, nikoliv magnetickým vázáním. Záznam z čidla je následně rozdělen podle jednotlivých peaků. Tyto úseky mezi peaky odpovídají průběhu magnetického pole v jednotlivých pootočeních spinneru od jednoho magnetu k následujícímu. Tomuto pootočení spinneru od jednoho magnetu k dalšímu (v našem případě o 120°, protože spinner má 3 ramena) budeme říkat \textit{sub-perioda}. Amplitudy a doby trvání všech sub-period jsou poté normalizovány, jelikož přesná velikost $B$ nás nezajímá, ale zajímá nás pouze tvar této křivky. Všechny sub-periody sjou následně zprůměrovány, čímž získáváme finální tvar (viz \autoref{fig:target_curve}). Tato křivka průběhu jedné sub-periody nerušeného spinneru se stane naším podkladem, vůči kterému budeme srovnávat ostatní, nyní již rušené, průběhy a vyvozovat jejich úhlové závislosti v čase. Nakonec rozdělíme cílový průběh na prosté úseky, což usnadní pozdější manipulace v algoritmu.
+Spinner osazený magnety byl tedy umístěn do vrtačky a roztáčen konstantní a známou rychlostí. Tento spinner označíme jako \textit{nerušený}, jelikož na něj nepůsobí vnější magnetické síly a je poháněn motorem, nikoliv magnetickým vázáním. Záznam z čidla je následně rozdělen podle jednotlivých peaků. Tyto úseky mezi peaky odpovídají průběhu magnetického pole v jednotlivých pootočeních spinneru od jednoho magnetu k následujícímu. Tomuto pootočení spinneru od jednoho magnetu k dalšímu (v našem případě o 120°, protože spinner má 3 ramena) budeme říkat \textit{sub-perioda}. Amplitudy a doby trvání všech sub-period jsou poté normalizovány, jelikož přesná velikost $B$ nás nezajímá, ale zajímá nás pouze tvar této křivky. Všechny sub-periody jsou následně zprůměrovány, čímž získáváme finální tvar (viz \autoref{fig:target_curve}). Tato křivka průběhu jedné sub-periody nerušeného spinneru se stane naším podkladem, vůči kterému budeme srovnávat ostatní, nyní již rušené, průběhy a vyvozovat jejich úhlové závislosti v čase. Jako poslední krok, rozdělíme cílový průběh na prosté úseky, což usnadní pozdější manipulace v algoritmu.
 
 Všechna tři měření provedená v předchozí kapitole (viz \autoref{fig:mag_coupling_vernier}) jsou zpracována stejně jako naše kontrolní měření - rozdělena na sub-periody podle peaků, normalizována a rozdělena na prosté úseky. Nyní však nebudeme provádět průměrování, ale budeme každou sub-periodu řešit jednotlivě. Porovnání všech sub-period je k nahlédnutí v grafu \ref{fig:B_sub_periods}.
 
@@ -61,9 +61,9 @@ Dalším krokem je zpětné odvození toho, jaký byl průběh úhlu v čase v t
 
 $$
     B_i \text{ } \ldots \text{ } t_i \text{ } \ldots \text{ } \varphi_i
-$$*100
+$$
 
-Zpětné odvození pro rušené sub-periody poté zpočívá v porovnání s cílovou (nerušenou) křivkou. Pro každu naměřenou hladinu rušeného spinneru $B_j$ hledáme odpovídají hladiny v naší cílové křivce $B_{i1}$ a $B_{i2}$, mezi kterými se $B_j$ nachází, tedy splňuje $B_i1 < B_j < B_i2$. Z k nim odpovídajících časů (resp. jejich odpovídajícíh úhlů) můžeme lineární interpolací určit přibližný čas, ve kterém by se $B_j$ objevilo v nerušeném případě a tedy i jaká je jeho přibližná pozice v čase $t_j$:
+Zpětné odvození pro rušené sub-periody poté spočívá v porovnání s cílovou (nerušenou) křivkou. Pro každu naměřenou hladinu magnetického pole rušeného spinneru $B_j$ hledáme odpovídají hladiny v naší cílové křivce $B_{i1}$ a $B_{i2}$, mezi kterými se $B_j$ nachází, tedy splňuje $B_i1 < B_j < B_i2$. Z jejich odpovídajících časů a úhlů lineární interpolací určit přibližný čas, ve kterém by se $B_j$ objevilo v nerušeném případě a tedy i jaká je jeho přibližná pozice v čase $t_j$:
 
 $$
     B_j \text{ } \ldots \text{ } t_j \text{ } \ldots \text{ } \varphi_j = \frac{B_j - B_{i1}}{B_{i2} - B_{i1}} \cdot (\varphi_{i2} - \varphi_{i1}) + \varphi_{i1}
@@ -101,7 +101,6 @@ Simulované a měřené hodnoty si jsou, alespoň co se tvaru křivky týče, le
 \subsection{Laserový snímač (LS)}
 
 \begin{wrapfigure}{r}{0.45\textwidth}
-    \vspace*{-0.75cm}
     \includegraphics[width=0.30\textwidth]{laser_tracking_circle16.png}
     \centering
     \caption[Obrázek použitého absorpčního kola]{Obrázek použitého absorpčního kola (16 výsečí) na našich spinnerech. Vyšší počet výsečí je možný, ale 16 bylo pro náš případ dostačující. Šedivá výseč tvoří referenční bod, podle kterého je možné v kódu určit přesnou rotaci vůči okolí. }
@@ -110,13 +109,13 @@ Simulované a měřené hodnoty si jsou, alespoň co se tvaru křivky týče, le
 
 Dříve použité metody snímání pohybu spinnerů mají své výhody i nevýhody. Nevýhodou snímání pomocí magnetickéh čidla je nízká přesnost a nevýhodou snímání pomocí videa je pracnost následného trackování a časová limitace záznamu.
 
-Dalším krokem k vylepšení naší aparatury tedy bylo vytvořit lepší způsob snímání. K tomuto jsme se rozhodli vytvořit vlastní senzory postavené na snímání absorpce laserového paprsku fotodiodou. Na každý spinner pak byl připevněn papírový disk  se střídajícími se černými a bílými pruhy (viz \autoref{fig:laser_circle16}), které jinak absorbují světlo z laseru, čímž se mění i měřené napětí na fotodiodě. Z průběhu napětí měřeného osciloskopem jsme podobně jako v kódu \ref{code:4} schopni určit úhlovou rychlost.
+Dalším krokem k vylepšení naší aparatury tedy bylo vytvořit lepší způsob snímání. K tomuto jsme se rozhodli vytvořit vlastní senzory postavené na principu sledování absorpce laserového paprsku fotodiodou. Na každý spinner pak byl připevněn papírový disk  se střídajícími se černými a bílými pruhy (viz \autoref{fig:laser_circle16}), které jinak absorbují světlo z laseru, čímž se mění i měřené napětí na fotodiodě. Z průběhu napětí měřeného osciloskopem jsme následně podobně schopni určit úhlovou rychlost, protože každý \\ proužek odpovídá 22.5° rotace.
 
 \begin{wrapfigure}{r}{0.45\textwidth}
     \includegraphics[width=0.45\textwidth]{laser_setup_0.png}
     \centering
     \caption{Ilustrace použití laserového snímače (LS)}
-    \label{fig:laser_circle16}
+    \label{fig:LS_diode}
 \end{wrapfigure}
 Nyní jsou našimi limitacemi pouze: vzorkovací frekvence osciloskopu, která je pro naše využití více než dostačující, a počet pruhů na papírovém kole, který můžeme dle libosti měnit.
 

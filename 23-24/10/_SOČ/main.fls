@@ -1610,6 +1610,8 @@ INPUT ./imgsLR/torque_trans.png
 INPUT ./imgsLR/torque_trans.png
 INPUT ./imgsLR/torque_trans.png
 INPUT ./imgsLR/torque_trans.png
+INPUT c:/texlive/2022/texmf-dist/fonts/vf/public/yhmath/yhcmex10.vf
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/yhmath/yrcmex10.tfm
 INPUT ./9_magnetic_gearbox.tex
 INPUT 9_magnetic_gearbox.tex
 INPUT ./9_magnetic_gearbox.tex
