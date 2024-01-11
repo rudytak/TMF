@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tikzstyle{startstop} = [rectangle, rounded corners,
+minimum width=3cm,
+minimum height=1cm,
+text centered,
+draw=black,
+fill=red!30] %
+
+\tikzstyle{io} = [trapezium,
+trapezium stretches=true, % A later addition
+trapezium left angle=70,
+trapezium right angle=110,
+minimum width=3cm,
+minimum height=1cm, text centered,
+draw=black, fill=blue!30] %
+
+\tikzstyle{process} = [rectangle,
+minimum width=3cm,
+minimum height=1cm,
+text centered,
+text width=3cm,
+draw=black,
+fill=orange!30] %
+
+\tikzstyle{decision} = [diamond,
+minimum width=3cm,
+minimum height=1cm,
+text centered,
+draw=black,
+fill=green!30] %
+
+\tikzstyle{arrow} = [thick,->,>=stealth] %
+
+\selectlanguage{english}
+\begin{tikzpicture}[node distance=2cm, scale=0.7, auto, >=stealth']
+    \shorthandoff{-}
+
+    % START
+    \node (start) [startstop] at (5, 15) {Start};
+    \node (p1) [process] at (5, 13) {Vytvoření sim. kontextu};
+    \draw [arrow] (start) -- (p1);
+
+    % INPUTS
+    \node (in1) [io] at (0, 14) {Sim. parametry};
+    \draw [arrow] (in1) -- (p1);
+    \node (in2) [io] at (0, 12.5) {$\mathbb{S}_1, \ldots, \mathbb{S}_p$};
+    \draw [arrow] (in2) -- (p1);
+
+    % RECTS
+    \draw [thick, draw=black, fill=gray, opacity=0.2]
+       (9.5,13.5) -- (22,13.5) -- (22,-1) -- (9.5,-1) -- cycle;
+    \node[text width=3cm] at (20,12.75) {\textbf{RK: $\Phi$-stavy}};
+
+    \draw [thick, draw=black, fill=gray, opacity=0.2]
+        (16,10) -- (21.5,10) -- (21.5,3) -- (16,3) -- cycle;
+    \node[text width=3cm] at (19.25,9.375) {\textbf{RK: $\Omega$-stavy}};
+
+    % DECISIONS
+    \node (d1) [decision] at (5, 0) {$t_{n} < t_{end}$};
+    \node (d2) [decision] at (5, 6) {$\frac{t}{\Delta t} \mod f_{save} = 0$};
+    \draw[->] (d1.north) -> (d2.south);
+
+    % PHI STATES
+    \node (p2) [process] at (13, 11) {Vytvoření $\Phi_n$ a $q_1$};
+    \node (p3) [process] at (13, 8) {Vytvoření spinnerů pro $q_{n+1}$};
+
+        % OMEGA STATES
+        \node (p4) [process] at (19, 8) {Vytvoření $\Omega$ a $k_1$};
+        \node (p5) [process] at (19, 6) {Určení $k_{n+1}$ až po $k_s$};
+        \draw[thick,<-] ([shift=(30:1cm)]15.95, 6) arc (110:250:0.5cm);
+        \node (p6) [process] at (19, 4) {Určení $\Omega_{n+1}$};
+
+    \node (p7) [process] at (13, 4) {Určení $q_{n+1}$ až po $q_s$};
+    \draw[thick,<-] ([shift=(30:1cm)]9.95, 7.625) arc (135:225:3cm);
+    \node (p8) [process] at (13, 1.5) {Určení $\Phi_{n+1}$};
+
+    % TIME INCREMENT
+    \node (p9) [process] at (5, 11) {$t_{n+1} = t_{n} +\Delta t$};
+    \node (out1) [io] at (0, 9) {Export do \texttt{csv}};
+    \draw [arrow] (d2.180) -| (out1);
+    \draw [arrow] (out1) |- (p9);
+
+    % CONNECTORS
+    \draw [arrow] (p1.0) -| (p2.90);
+    \draw [arrow] (d2) -- (p9.270);
+    \draw [arrow] (p9.0) -- (p2);
+    \draw [arrow] (p2) -- (p3);
+    \draw [arrow] (p3) -- (p4);
+    \draw [arrow] (p4) -- (p5);
+    \draw [arrow] (p5) -- (p6);
+    \draw [arrow] (p6) -- (p7);
+    \draw [arrow] (p7) -- (p8);
+    \draw [arrow] (p8) |- (d1);
+
+    % TEXTS D2
+    \node[text width=3cm] at (7.25,2) {True};
+    \node[text width=3cm] at (4.25,-0.75) {False};
+    % TEXTS D1
+    \node[text width=3cm] at (3,5.25) {True};
+    \node[text width=3cm] at (7.25,9.5) {False};
+
+    % END
+    \node (stop) [startstop] at (0,0) {Stop};
+    \draw [arrow] (d1) -- (stop);
+
+\end{tikzpicture}
+
+\selectlanguage{czech}

@@ -1,0 +1,37 @@
+\begin{table}[!ht]
+    \captionsetup{justification=raggedright,singlelinecheck=off}
+    \caption{Nomenklatura}
+    \label{tab:nomenclature}
+
+    \centering{\textbf{Vlastnosti spinneru}} \\
+    \begin{tabularx}{\textwidth}{m{0.1\textwidth} m{0.1\textwidth} p{0.4\textwidth} p{5cm} }
+        \textbf{Symbol}  & \textbf{Jednotka}         & \textbf{Popis}                                                & \textbf{Poznámka}                              \\
+        \hline
+        $n$              &                           & Celkový počet ramen                                           & Ekvivaletní počtu magnetů                      \\
+        $r$              & $m$                       & Poloměr spinneru                                              & Ekvivaletní vzdálenosti osy otáčení od magnetů \\
+        $S$              & $(m,m,0)$                 & Střed spinneru v rovině                                       & (tzn. pozice osy otáčení)                      \\
+        $P(i)$           & $(m,m,0)$                 & Pozice $i$. magnetu spinneru                                  & Funkce indexu magnetu                          \\
+        $\varphi$        & $\text{rad}$              & Úhel rotace spinneru                                                                                           \\
+        $\omega$         & $\text{rad} \cdot s^{-1}$ & Úhlová rychlost spinneru                                                                                       \\
+        $I$              & $kg \cdot m^2$            & Moment setrvačnosti spinneru                                                                                   \\
+        $\alpha$         & $\text{rad} \cdot s^{-2}$ & Koeficient rychlostně nezávislého brzdného úhlového zrychlení & viz \autoref{chap:drag}                        \\
+        $\beta$          & $s^{-1}$                  & Koeficient lineárně závislého brzdného úhlového zrychlení     & viz \autoref{chap:drag}                        \\
+        $\gamma$         & $\text{rad}^{-1}$         & Koeficient kvadraticky závislého brzdného úhlového zrychlení  & viz \autoref{chap:drag}                        \\
+        $c_1$, $t_{max}$ & $s$                       & Celková doba točení spinneru                                & viz \autoref{chap:drag}                        \\
+    \end{tabularx}
+
+    \vspace{24pt}
+
+    \centering{\textbf{Vlastnosti magnetu}} \\
+    \begin{tabularx}{\textwidth}{m{0.15\textwidth} m{0.1\textwidth} p{0.45\textwidth} p{4cm} }
+        \textbf{Symbol}                      & \textbf{Jednotka}                                                            & \textbf{Popis}                                                                              & \textbf{Poznámka}                      \\
+        \hline
+        $\vec{m}$                            & $A \cdot m^2$                                                                & Magnetický moment                                                                                                                    \\
+        $\vec{B}_r$                          & $T$                                                                          & Remanentní magnetizace                                                                      & (tzv. remanence)                       \\
+        $V$                                  & $m^3$                                                                        & Objem magnetu                                                                                                                        \\
+        $F_m(\vec{r}, \vec{m_1}, \vec{m_2})$ & $N$                                                                          & Silová interakce mezi magnetickými momenty $\vec{m_1}$ a $\vec{m_2}$ vzdálenými o $\vec{r}$ & \cite{magnetic_force}                  \\
+        $B(\vec{r}, \vec{m})$                & $T$                                                                          & Magnetická indukce tvořená magnetickým momentem $\vec{m}$ ve vzdálenosti $\vec{r}$         & \cite{magnetic_force, magnetic_torque} \\
+        $\tau_F, \tau_{mag}$                 & $Nm$
+                                             & Momenty sil působící na spinner vycházející ze silové a magnetické interakce & \cite{magnetic_torque,torque_def}, viz \autoref{eq:sim_equations2}                                                                   \\
+    \end{tabularx}
+\end{table}

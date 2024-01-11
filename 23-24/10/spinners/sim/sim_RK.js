@@ -36,6 +36,22 @@ class spinner {
     this.constant_ω = constant_ω;
   }
 
+  get phi0(){
+    return this.φ0;
+  }
+
+  get phi(){
+    return this.φ;
+  }
+
+  get omega0(){
+    return this.ω0;
+  }
+
+  get omega(){
+    return this.ω;
+  }
+
   P(i) {
     return v(
       this.S.x + this.r * Math.cos(this.φ + (2 * Math.PI * i) / this.n),
@@ -78,10 +94,10 @@ class spinner {
       this.β,
       this.γ,
       this.constant_ω
-    )
+    );
     ns.ω_0 = this.ω_0;
 
-    return ns
+    return ns;
   }
 
   draw() {
@@ -115,11 +131,9 @@ class RK_matrix {
   }
   static get Ralston4() {
     return new RK_matrix(
-      [[.4], 
-      [.29697761, .15875964], 
-      [.21810040, -3.05096516, 3.83286476]],
-      [.17476028, -.55148066, 1.20553560, .17118478],
-      [0, .4, .45573725, 1]
+      [[0.4], [0.29697761, 0.15875964], [0.2181004, -3.05096516, 3.83286476]],
+      [0.17476028, -0.55148066, 1.2055356, 0.17118478],
+      [0, 0.4, 0.45573725, 1]
     );
   }
   static get RK_3_8() {
@@ -140,11 +154,7 @@ class RK_matrix {
   static Second_Order(alp) {
     // https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods#Second-order_methods_with_two_stages
 
-    return new RK_matrix(
-      [[alp]],
-      [1 - 1 / (2 * alp), 1 / (2 * alp)],
-      [0, alp]
-    );
+    return new RK_matrix([[alp]], [1 - 1 / (2 * alp), 1 / (2 * alp)], [0, alp]);
   }
 
   constructor(a, b, c) {
@@ -163,7 +173,8 @@ class RK_matrix {
     for (let i = 0; i < a.length; i++) {
       if (a[i].length <= i) {
         throw new Error(
-          `The row number ${i + 1
+          `The row number ${
+            i + 1
           } in the RK matrix "a" components is not sufficiently long.`
         );
       }
@@ -178,11 +189,9 @@ class omega_state {
     this.dt = dt;
     this.spinners = spinners;
 
-    this.spinners.forEach(
-      s =>{
-        s.φ += this.dt * s.ω
-      }
-    )
+    this.spinners.forEach((s) => {
+      s.φ += this.dt * s.ω;
+    });
 
     this.ang_accelerations = [];
 
@@ -195,7 +204,7 @@ class omega_state {
     let p1 = m2.mult(v3.dot(m1, r));
     let p2 = m1.mult(v3.dot(m2, r));
     let p3 = r.mult(v3.dot(m1, m2));
-    let p4 = r.mult((-5 * v3.dot(m1, r) * v3.dot(m2, r)) / (r.mag() ** 2));
+    let p4 = r.mult((-5 * v3.dot(m1, r) * v3.dot(m2, r)) / r.mag() ** 2);
 
     return p1
       .add(p2)
@@ -277,12 +286,13 @@ class omega_state {
         torques[i] = 0;
       } else {
         // get the value of the spinners new angular velocity
-        let new_sω = s.ω + torques[i];
+        let new_sω = s.ω // + torques[i] * this.dt;
 
         // omega damping
         // s.ω += dt * (-α - β * s.ω - γ * s.ω ** 2);
         // damping acceleration
-        let damp = (-s.α - s.β * new_sω - s.γ * new_sω ** 2) * Math.sign(new_sω);
+        let damp =
+          (-s.α - s.β * new_sω - s.γ * new_sω ** 2) * Math.sign(new_sω);
 
         // perform dampening only when  the omega is not practically 0
         if (Math.abs(new_sω) > 2 * Math.abs(damp) * this.dt) {
@@ -309,11 +319,11 @@ class omega_state {
     return out_state;
   }
 
-  static apply_omeg_to_spinners(dt, spinners, state, including_ang=true) {
+  static apply_omeg_to_spinners(dt, spinners, state, including_ang = true) {
     // rotation
     spinners.forEach((s, id) => {
       s.ω += state.ang_accelerations[id] * dt;
-      if(including_ang){
+      if (including_ang) {
         s.φ += s.ω * dt;
       }
     });
@@ -327,11 +337,9 @@ class phi_state {
     this.dt = dt;
     this.spinners = spinners;
 
-    this.spinners.forEach(
-      s =>{
-        s.φ += this.dt * s.ω
-      }
-    )
+    this.spinners.forEach((s) => {
+      s.φ += this.dt * s.ω;
+    });
 
     this.ωs = [];
 
@@ -342,7 +350,7 @@ class phi_state {
 
   calculate() {
     // save the output
-    this.ωs = this.spinners.map(s => s.ω);
+    this.ωs = this.spinners.map((s) => s.ω);
   }
 
   static sum_φ_states(states, weights) {
@@ -375,42 +383,50 @@ class sim_instance {
     μ_0: Math.PI * 4e-7,
   };
 
+  static default_run_params = {
+    dt: 1e-3, // 1 ms
+    end_time: 1,
+    start_time: 0,
+    get save_freq() {
+      return Math.ceil(1e-3 / this.dt + 1) - 1;
+    },
+    out_path: `out.csv`,
+    exports: ["s[0].omega", "s[0].phi"],
+  };
+
+  static default_defaults = {
+    // these defaults don't really have a reason to be changed
+    r: 0.0359, // effective radius of the spinners
+    B_r: 1.1049, // magnitude residual flux densitty [T]
+    V: 0.005 ** 3, // volume of magnet [m^3] (5mm cubed)
+    I: 4.8e-5, // measured
+    get m_0() {
+      // magnitude of magnetic moment [A*m^2]
+      return (1 / sim_instance.constants.μ_0) * this.B_r * this.V;
+    },
+    magnet_count: 3,
+    magnet_orientation: "vertical", // "vertical", "radial", "tangent"
+
+    // these defaults can be overriden
+    α: 0.868,
+    β: 0,
+    γ: 0.00068,
+  };
+
   constructor(
     sim_run_overrides = {},
     RKmatrix = RK_matrix.RK4,
     default_overrides = {}
   ) {
     this.sim_run_params = {
-      dt: 1e-3, // 1 ms
-      end_time: 1,
-      start_time: 0,
-      get save_freq() {
-        return Math.ceil(1e-3 / this.dt + 1) - 1;
-      },
-      out_path: `out.csv`,
-      exports: ["s[0].ω", "s[0].φ"],
+      ...sim_instance.default_run_params,
 
       // apply the overrides
       ...sim_run_overrides,
     };
 
     this.defaults = {
-      // these defaults don't really have a reason to be changed
-      r: 0.0359, // effective radius of the spinners
-      B_r: 1.1049, // magnitude residual flux densitty [T]
-      V: 0.005 ** 3, // volume of magnet [m^3] (5mm cubed)
-      I: 4.80e-5, // measured
-      get m_0() {
-        // magnitude of magnetic moment [A*m^2]
-        return (1 / sim_instance.constants.μ_0) * this.B_r * this.V;
-      },
-      magnet_count: 3,
-      magnet_orientation: "vertical", // "vertical", "radial", "tangent"
-
-      // these defaults can be overriden
-      α: 0.868,
-      β: 0,
-      γ: 0.00068,
+      ...sim_instance.default_defaults,
 
       // apply the overrides
       ...default_overrides,
@@ -422,6 +438,9 @@ class sim_instance {
     // array of all the spinners in the scene
     this.spinner_params = [];
     this.spinners = [];
+
+    this.t = 0;
+    this.frame = 0;
   }
 
   reset_spinners() {
@@ -478,7 +497,7 @@ class sim_instance {
 
       let spins = omega_state.apply_omeg_to_spinners(
         c * dt,
-        this.spinners.map(s => s.copy()), // make a copy of the current spinner objects
+        this.spinners.map((s) => s.copy()), // make a copy of the current spinner objects
         omega_state.sum_omeg_states(k, as)
       );
       let k_i = new omega_state(0, spins);
@@ -487,7 +506,7 @@ class sim_instance {
 
     return omega_state.apply_omeg_to_spinners(
       dt,
-      this.spinners.map(s => s.copy()),
+      this.spinners.map((s) => s.copy()),
       omega_state.sum_omeg_states(k, this.RKmatrix.b),
       false
     );
@@ -515,7 +534,7 @@ class sim_instance {
     // save the new calculated step
     this.spinners = phi_state.apply_φ_to_spinners(
       dt,
-      this.calc_omegas(dt).map(s => s.copy()),
+      this.calc_omegas(dt).map((s) => s.copy()),
       phi_state.sum_φ_states(k, this.RKmatrix.b)
     );
   }
@@ -523,34 +542,72 @@ class sim_instance {
   run() {
     // init run
     this.reset_spinners();
-    let frame = 0;
-    fs.writeFileSync(this.sim_run_params.out_path, `t, ${this.sim_run_params.exports.join(", ")} \n`);
+    this.frame = 0;
+    fs.writeFileSync(
+      this.sim_run_params.out_path,
+      `t, ${this.sim_run_params.exports.join(", ")} \n`
+    );
 
-    
     for (
       // time variable
-      var t = this.sim_run_params.start_time;
-      t < this.sim_run_params.end_time;
-      t += this.sim_run_params.dt
-      ) {
+      this.t = this.sim_run_params.start_time;
+      this.t < this.sim_run_params.end_time;
+      this.t += this.sim_run_params.dt
+    ) {
       this.step();
 
       // save the simulation state every save_freq frames
-      if (frame % this.sim_run_params.save_freq == 0) {
+      if (this.frame % this.sim_run_params.save_freq == 0) {
         let s = this.spinners;
         fs.appendFileSync(
           this.sim_run_params.out_path,
-          `${t}, ${this.sim_run_params.exports.map(ex => eval(ex)).join(", ")} \n`
+          `${this.t}, ${this.sim_run_params.exports
+            .map((ex) => eval(ex))
+            .join(", ")} \n`
         );
       }
-      frame++;
+      this.frame++;
     }
 
-    console.log(`${this.sim_run_params.out_path} simulation finished`)
+    console.log(`${this.sim_run_params.out_path} simulation finished`);
+  }
+
+  prerunWeb() {
+    // init run
+    this.reset_spinners();
+    this.frame = 0;
+    fs.writeFileSync(
+      this.sim_run_params.out_path,
+      `t, ${this.sim_run_params.exports.join(", ")} \n`
+    );
+    this.t = this.sim_run_params.start_time;
+  }
+
+  runWebFrame() {
+    this.step();
+
+    for (var s of this.spinners) {
+      s.draw();
+    }
+
+    // save the simulation state every save_freq frames
+    if (this.frame % this.sim_run_params.save_freq == 0) {
+      let s = this.spinners;
+      fs.appendFileSync(
+        this.sim_run_params.out_path,
+        `${this.t}, ${this.sim_run_params.exports
+          .map((ex) => eval(ex))
+          .join(", ")} \n`
+      );
+    }
+    this.frame++;
+    this.t += this.sim_run_params.dt;
+
+    return !(this.t < this.sim_run_params.end_time);
   }
 }
 
 module.exports = {
   sim_instance,
-  RK_matrix
+  RK_matrix,
 };
