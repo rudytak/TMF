@@ -1,70 +1,77 @@
 \babel@toc {czech}{}\relax 
-\contentsline {chapter}{\numberline {1}Úvod}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Nomenklatura}{4}{section.1.1}%
-\contentsline {chapter}{\numberline {2}Úvodní sledování}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Určení parametrů}{6}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Parametry týkající se konfigurace spinnerů}{6}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Parametry týkající se pohybu spinnerů}{7}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Modelování magnetů}{8}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Popis magnetických interakcí}{8}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Měření parametrů}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Rozměry spinneru}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Moment setrvačnosti}{9}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Aparatura}{10}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Analýza měření a výsledky}{10}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Popis skriptu}{11}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Remanence $\vec {B}_r$}{13}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Určení remanence přes magnetické pole}{13}{subsection.3.3.1}%
-\contentsline {subsubsection}{Analýza měření}{13}{subsubsection*.9}%
-\contentsline {subsection}{\numberline {3.3.2}Určení remanence přes sílu}{15}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Výsledky}{16}{subsection.3.3.3}%
-\contentsline {chapter}{\numberline {4}Tření}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Analytický popis}{18}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Maximální doba otáčení}{18}{subsection.4.1.1}%
-\contentsline {subsubsection}{Horní limit doby otáčení $n$ spinnerů}{19}{subsubsection*.14}%
-\contentsline {subsubsection}{Důkaz}{20}{subsubsection*.15}%
-\contentsline {subsection}{\numberline {4.1.2}Určení jednotek parametrů $\alpha $, $\beta $ a $\gamma $}{20}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Experiment pro potvrzení analytického řešení}{21}{subsection.4.1.3}%
-\contentsline {subsubsection}{Aparatura}{21}{subsubsection*.17}%
-\contentsline {subsubsection}{Zpracování dat}{21}{subsubsection*.19}%
-\contentsline {subsection}{\numberline {4.1.4}Výsledky a porovnání se simulací}{23}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Zhodnocení použití lineárního koeficientu}{24}{subsection.4.1.5}%
-\contentsline {chapter}{\numberline {5}Simulace}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Popis způsobu simulování}{27}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Runge-Kutta metody}{27}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Pravidla systému}{29}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Implementace}{30}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Použité datové struktury}{30}{subsection.5.3.1}%
-\contentsline {subsubsection}{3D vektory}{30}{subsubsection*.29}%
-\contentsline {subsubsection}{Spinnery}{31}{subsubsection*.30}%
-\contentsline {subsubsection}{$\Omega $-stavy}{32}{subsubsection*.32}%
-\contentsline {subsubsection}{$\Phi $-stavy}{34}{subsubsection*.33}%
-\contentsline {subsection}{\numberline {5.3.2}Popis iteračního kroku}{34}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Simulační kontext}{35}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {1}Úvod}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Nomenklatura}{6}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Úvodní sledování}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Určení parametrů}{8}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Parametry týkající se konfigurace spinnerů}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Parametry týkající se pohybu spinnerů}{9}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Modelování magnetů}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Popis magnetických interakcí}{10}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Měření parametrů}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Rozměry spinneru}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Moment setrvačnosti}{11}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Aparatura}{12}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Analýza měření a výsledky}{12}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Popis skriptu}{13}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Remanence $\vec {B}_r$}{15}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Určení remanence přes magnetické pole}{15}{subsection.3.3.1}%
+\contentsline {subsubsection}{Analýza měření}{15}{subsubsection*.9}%
+\contentsline {subsection}{\numberline {3.3.2}Určení remanence přes sílu}{17}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Výsledky}{18}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {4}Tření}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Analytický popis}{20}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Maximální doba otáčení}{20}{subsection.4.1.1}%
+\contentsline {subsubsection}{Horní limit doby otáčení $n$ spinnerů}{21}{subsubsection*.14}%
+\contentsline {subsubsection}{Důkaz}{22}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {4.1.2}Určení jednotek parametrů $\alpha $, $\beta $ a $\gamma $}{22}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Experiment pro potvrzení analytického řešení}{23}{subsection.4.1.3}%
+\contentsline {subsubsection}{Aparatura}{23}{subsubsection*.17}%
+\contentsline {subsubsection}{Zpracování dat}{23}{subsubsection*.19}%
+\contentsline {subsection}{\numberline {4.1.4}Výsledky a porovnání se simulací}{25}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Zhodnocení použití lineárního koeficientu}{26}{subsection.4.1.5}%
+\contentsline {chapter}{\numberline {5}Simulace}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Popis způsobu simulování}{29}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Runge-Kutta metody}{29}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Pravidla systému}{31}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Implementace}{32}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Použité datové struktury}{32}{subsection.5.3.1}%
+\contentsline {subsubsection}{3D vektory}{32}{subsubsection*.29}%
+\contentsline {subsubsection}{Spinnery}{33}{subsubsection*.30}%
+\contentsline {subsubsection}{$\Omega $-stavy}{34}{subsubsection*.32}%
+\contentsline {subsubsection}{$\Phi $-stavy}{36}{subsubsection*.33}%
+\contentsline {subsection}{\numberline {5.3.2}Popis iteračního kroku}{36}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Simulační kontext}{37}{subsection.5.3.3}%
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
-\contentsline {subsection}{\numberline {5.3.4}Časová komplexita}{37}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Webové rozhraní}{37}{subsection.5.3.5}%
-\contentsline {chapter}{\numberline {6}Potvrzení simulace}{39}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Vysokorychlostní video}{39}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Aparatura}{39}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Proces trackování}{40}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Výsledky měření při 60fps}{40}{subsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.1.4}Výsledky měření při 1000fps}{41}{subsection.6.1.4}%
-\contentsline {chapter}{\numberline {7}Magnetické vázání}{43}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Měření magnetickým čidlem}{43}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Hlubší analýza}{44}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Popis nového algoritmu}{45}{subsection.7.2.1}%
-\contentsline {section}{\numberline {7.3}Vylepšení aparatury}{48}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Laserový snímač (LS)}{48}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Zbytek aparatury}{48}{subsection.7.3.2}%
-\contentsline {subsection}{\numberline {7.3.3}Výsledky měření}{49}{subsection.7.3.3}%
-\contentsline {chapter}{\numberline {8}Přenos momentu síly}{51}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Úprava aparatury}{51}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Popis chování}{52}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Hrubý matematický model}{52}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Měřená $\tau -\omega $ závislost}{54}{subsection.8.2.2}%
-\contentsline {section}{\numberline {8.3}Měření přenosu}{55}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Magnetické převodovky}{57}{chapter.9}%
+\contentsline {subsection}{\numberline {5.3.4}Časová komplexita}{39}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Webové rozhraní}{39}{subsection.5.3.5}%
+\contentsline {chapter}{\numberline {6}Potvrzení simulace}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Vysokorychlostní video}{41}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Aparatura}{41}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Proces trackování}{42}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Výsledky měření při 60fps}{42}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Výsledky měření při 1000fps}{43}{subsection.6.1.4}%
+\contentsline {chapter}{\numberline {7}Magnetické vázání}{45}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Měření magnetickým čidlem}{45}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Hlubší analýza}{46}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Popis nového algoritmu}{47}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.3}Vylepšení aparatury}{50}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Laserový snímač (LS)}{50}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Zbytek aparatury}{50}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Výsledky měření}{51}{subsection.7.3.3}%
+\contentsline {chapter}{\numberline {8}Přenos momentu síly}{53}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Úprava aparatury}{53}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Popis chování}{54}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Hrubý matematický model}{54}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Měřená $\tau -\omega $ závislost}{56}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.3}Měření přenosu}{57}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Magnetické převodovky}{59}{chapter.9}%
+\contentsline {subsection}{\numberline {9.0.1}Kompaktnost}{60}{subsection.9.0.1}%
+\contentsline {subsection}{\numberline {9.0.2}Hustota momentu síly}{60}{subsection.9.0.2}%
+\contentsline {subsection}{\numberline {9.0.3}Druhy magnetických převodů}{60}{subsection.9.0.3}%
+\contentsline {section}{\numberline {9.1}Vlastní návrhy}{61}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Princip fungování}{61}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}První návrh}{61}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Druhý návrh}{61}{subsection.9.1.3}%
