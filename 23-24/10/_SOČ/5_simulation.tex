@@ -5,7 +5,7 @@ Jak vychází z názvu této práce, značnou částí našeho zkoumání bude t
 
 \section{Popis způsobu simulování}
 
-Naším cílem bude vytvoření tzv. \textit{"Discrete event simulation"} neboli \textit{DES} \cite{sim_methods}. Jedná se o druh simulační metody, která popisuje náš systém pomocí diskrétních stavů, které existují v daném čase. Z jednoho určitého stavu poté simulační algoritmus provádí pomocí pravidel systému odhad toho, jak bude vypadat další stav po uplynutí velmi malého časovéhu úseku $\Delta t$. Takto vypadá jeden simulačním krok.
+Naším cílem bude vytvoření tzv. \textit{"Discrete event simulation"} neboli \textit{DES} \cite{sim_methods}. Jedná se o druh simulační metody, která popisuje náš systém pomocí diskrétních stavů, které existují v daném čase. Z jednoho určitého stavu poté simulační algoritmus provádí pomocí pravidel systému odhad toho, jak bude vypadat další stav po uplynutí velmi malého časového úseku $\Delta t$. Takto vypadá jeden simulačním krok.
 
 \subsection{Runge-Kutta metody}
 
@@ -185,7 +185,7 @@ Předpisy $\tau_F$ a $\tau_{mag}$ jsou:
 \end{equation}
 
 \section{Implementace}
-K implementaci naší simulace použijeme sotwarový systém zvaný \texttt{Node.js}, který používá programovací jazyk \texttt{JavaScript (JS)} \cite{JS}. K tomuto rozhodnutí jsme došli, jelikož \texttt{Node.js} je rychlejší než \texttt{Python} a nabízí dobré množství programátorsky užitečných funkcí. \texttt{Node.js} je tedy ideální kompromis mezi jednoduchostí implementace a rychlostí. V průběhu implementace také používáme datový formát \texttt{JSON} \cite{JSON} a nativní knihovnu zvanou \texttt{fs (File System)}, pomocí které budeme naše výsledky exportovat do \texttt{.csv} souborů pro další zpracování. Použití jazyku \texttt{JavaScript} nám také umožní použití již napsaného kódu k vytvoření webového rozhraní s vizualizací simulovaného systému. Toto rozhraní je skvělé k odstraňování chyb v průběhu vývoje a zároveň zjednodušuje interpretaci generovaných výsledků.
+K implementaci naší simulace použijeme softwarový systém zvaný \texttt{Node.js}, který používá programovací jazyk \texttt{JavaScript (JS)} \cite{JS}. K tomuto rozhodnutí jsme došli, jelikož \texttt{Node.js} je rychlejší než \texttt{Python} a nabízí dobré množství programátorsky užitečných funkcí. \texttt{Node.js} je tedy ideální kompromis mezi jednoduchostí implementace a rychlostí. V průběhu implementace také používáme datový formát \texttt{JSON} \cite{JSON} a nativní knihovnu zvanou \texttt{fs (File System)}, pomocí které budeme naše výsledky exportovat do \texttt{.csv} souborů pro další zpracování. Použití jazyku \texttt{JavaScript} nám také umožní použití již napsaného kódu k vytvoření webového rozhraní s vizualizací simulovaného systému. Toto rozhraní je skvělé k odstraňování chyb v průběhu vývoje a zároveň zjednodušuje interpretaci generovaných výsledků.
 
 \subsection{Použité datové struktury}
 
@@ -362,7 +362,7 @@ Matematicky bychom tyto operace formulovali následovně\footnote{Podmínkou sč
     \end{gathered}
 \end{equation}
 
-S tímto jsme konečně schopni definovat poslední vlastnost $\Omega$-stavu, kterou je krátky časový úsek $\delta$.
+S tímto jsme konečně schopni definovat poslední vlastnost $\Omega$-stavu, kterou je krátký časový úsek $\delta$.
 Z výpočtu zrychlení je pak provedena predikce budoucího stavu po uplynutí $\delta$, který označíme $\prescript{*}{}\Omega$.
 Jeho definicí je:
 
@@ -382,7 +382,7 @@ V kódu jsou tyto struktury instancemi třídy \texttt{omega\_state}.
 Poslední datovou strukturou jsou tzv. $\Phi$-stavy, které jsou svou funkcí velmi podobné $\Omega$-stavům. Jejich účelem je opět umožnit použití RK metod. V průběhu jednoho simulačního kroku totiž dochází k dvojitému numerickému integrování - nejdříve, abychom získali z úhlového zrychlení úhlovou rychlost, a podruhé, abychom z úhlové rychlosti získali úhel
 ($\alpha_k \xRightarrow{RK} \mathbb{S}_k^{\omega}  \xRightarrow{RK} \mathbb{S}_k^{\varphi}$).
 
-Vlastnosti $\Phi$-stavů jsou stejné jako u $\Omega$-stavů, kromě pole $A$, které je nahrazeno polem $O$. Narozdíl od pole $A$, které ukládá úhlová zrychlení, pole $O$ obsahuje úhlové rychlosti každého spinneru. Pole $O$ zapisujeme takto: $\Phi{}^{O} = \{ \omega_1, \omega_2, \ldots, \omega_p\}$. Na libovoný $k$. člen se opět odkazujeme takto: $\Phi{}^{O}(k) = \omega_k$. $\Omega$-stavy a $\Phi$-stavy na sebe navazují následovně:
+Vlastnosti $\Phi$-stavů jsou stejné jako u $\Omega$-stavů, kromě pole $A$, které je nahrazeno polem $O$. Narozdíl od pole $A$, které ukládá úhlová zrychlení, pole $O$ obsahuje úhlové rychlosti každého spinneru. Pole $O$ zapisujeme takto: $\Phi{}^{O} = \{ \omega_1, \omega_2, \ldots, \omega_p\}$. Na libovolný $k$. člen se opět odkazujeme takto: $\Phi{}^{O}(k) = \omega_k$. $\Omega$-stavy a $\Phi$-stavy na sebe navazují následovně:
 
 \begin{equation}
     \label{eq:sim_equations_formalized6}
@@ -520,8 +520,8 @@ Pro dokončení simulace trvající čas $T$ s časovým intervalem $\tau$ je po
 
 \subsection{Webové rozhraní}
 
-Webové rozhraní, dostupné na \url{https://rudytak.github.io/cdn/TMF37task10/index.html}, je druhým způsobem, jak simulaci spouštět. Výhodou webového rozhraní, oproti původnímu headless\footnote{"Headless software" je označení pro takový software, který nemá grafické uživatelské rozhraní. Příkladem takového softwaru je právě \texttt{NodeJS}.} rozhraní, je grafické zobrazení všech spinnerů, čímž je uživateli umožněno jednodušeji sledovat, co se v průběhu simulace děje. Nevýhodou je však značný výkonový rozdíl. Relativně pomalý běh simulace ve webovém rozhraní je způsoben potřebou vykreslovat každý stav simulace, což vyžaduje výpočetně nesrovnatělně složitější operace. 
-Obě rozhraní jsou naprogramována pomocí jazyku \texttt{JavaScript}, což umožňuje používání stejných knihovnen, přestože jedno rozhraní používá k interpretaci \texttt{NodeJS} a druhé používá jiný \texttt{JavaScriptový engine} (zavislý na prohlížeči) - výpočty jsou tedy identické, i když různě rychlé.
+Webové rozhraní, dostupné na \url{https://rudytak.github.io/cdn/TMF37task10/index.html}, je druhým způsobem, jak simulaci spouštět. Výhodou webového rozhraní, oproti původnímu headless\footnote{"Headless software" je označení pro takový software, který nemá grafické uživatelské rozhraní. Příkladem takového softwaru je právě \texttt{NodeJS}.} rozhraní, je grafické zobrazení všech spinnerů, čímž je uživateli umožněno jednodušeji sledovat, co se v průběhu simulace děje. Nevýhodou je však značný výkonový rozdíl. Relativně pomalý běh simulace ve webovém rozhraní je způsoben potřebou vykreslovat každý stav simulace, což vyžaduje výpočetně nesrovnatelně složitější operace. 
+Obě rozhraní jsou naprogramována pomocí jazyku \texttt{JavaScript}, což umožňuje používání stejných knihoven, přestože jedno rozhraní používá k interpretaci \texttt{NodeJS} a druhé používá jiný \texttt{JavaScriptový engine} (závislý na prohlížeči) - výpočty jsou tedy identické, i když různě rychlé.
 
 \begin{figure}[!ht]
     \centering

@@ -18,12 +18,12 @@ Prvním krokem v řešení této úlohy bylo kvalitativní sledování chování
 Hlavním poznatkem je, že dochází ke změně chování systému dvou spinnerů v závislosti na jejich relativních rychlostech.
 Máme-li na stole 2 spinnery, ze kterých je jeden nehybný, a druhý roztočíme na nízkou rychlost, dojde po krátké chvíli k silné a chaotické interakci (záznam experimentu je k vidění v příloze \ref{attachment_1}).
 Naopak, roztočíme-li druhý spinner znatelně rychleji, nedochází téměř k žádné interakci (viz příloha \ref{attachment_2}).
-Druhý spinner se prvnímu spinneru efektivně jeví jako permanentí magnet - první spinner se tedy nanejvýše umístí do energeticky nejvýhodnější polohy a dále zůstává nehybný.
+Druhý spinner se prvnímu spinneru efektivně jeví jako permanentní magnet - první spinner se tedy nanejvýše umístí do energeticky nejvýhodnější polohy a dále zůstává nehybný.
 Dalším cenným poznatkem je, že při interakci více spinnerů se systém chová chaoticky téměř vždy (viz příloha \ref{attachment_3}).
-Toto dělá měření interakcí více jak dvou spinnerů složité a za účelem získání použitelných výsledků omezéme náš výzkum pouze na jeden či dva spinnery.
+Toto dělá měření interakcí více jak dvou spinnerů složité a za účelem získání použitelných výsledků omezíme náš výzkum pouze na jeden či dva spinnery.
 Po vytvoření fyzikálního modelu pro popsání menšího počtu spinnerů se pokusíme o vývoj simulace, která by dovolila větší počty spinnerů.
 
-Ze zadání můžeme také vyčíst další užitěčná omezení.
+Ze zadání můžeme také vyčíst další užitečná omezení.
 O umístění všech spinnerů je řečeno, že mají být v \textit{"(jedné) rovině vedle sebe"}. Dále má docházet k točení pouze \textit{"jedním z nich"} a interakce mezi spinnery mají probíhat pouze na bázi \textit{"vlivů magnetického pole"}.
 Neměli bychom opomenout ani skutečnost, že všechny spinnery mají být \textit{"identické"}.
 \clearpage
@@ -35,7 +35,7 @@ Z úvodního sledování není těžké určit relevantní parametry a vybrat, k
 \subsection{Parametry týkající se konfigurace spinnerů}
 \label{sub:param_konf}
 Jakožto nejdůležitější bychom určitě označili relativní pozice všech spinnerů, které popíšeme pomocí jejich středů $S_1, S_2,...$ (každý střed je braný jako vektor v rovině spinnerů) a jejich poloměrů $r_1, r_2, ...$.
-Dále bude k přesnému určení pozic magnetů nezbytné znát okamžitý úhel rotace každého spinneru. Ty ozačíme $\varphi_1, \varphi_2,...$.
+Dále bude k přesnému určení pozic magnetů nezbytné znát okamžitý úhel rotace každého spinneru. Ty označíme $\varphi_1, \varphi_2,...$.
 Nakonec k popsání spinneru musíme určit počet ramen (neboli počet připevněných magnetů). Tento počet označíme $n$. V našem případě je roven 3.
 
 Pomocí těchto údajů je triviální vyjádřit pozici $P(i)$ libovolného magnetu jeho indexem $i$ (kde $0 \leq i < n$):
@@ -114,7 +114,7 @@ Těm se budeme do hloubky věnovat v kapitole \ref{chap:drag}.
 
 \section{Modelování magnetů}
 V průběhu našich experimentů používáme neodymové (NdFeB) magnety krychlového tvaru o hraně 5mm a jakosti N35\footnote{Jakosti neodymových magnetů se pohybují od N35 do N55 \cite{magnet_grades}.}.
-Toto standardní označení jakosti neodymových magnetů popisuje jejich chemické složení, tepelnou odolonost a hlavně magnetickou sílu \cite{magnet_grades}, která je popsána pomocí tzv. remanentní magnetizace, neboli remanence.
+Toto standardní označení jakosti neodymových magnetů popisuje jejich chemické složení, tepelnou odolnost a hlavně magnetickou sílu \cite{magnet_grades}, která je popsána pomocí tzv. remanentní magnetizace, neboli remanence.
 
 Jelikož jsou magnety poměrně malé, můžeme je ve větších vzdálenostech aproximovat jakožto magnetické dipóly.
 Zároveň existuje velmi elegantní způsob, jak vypočítat velikost magnetického dipólu z jeho remanence \cite{magnetic_torque}:

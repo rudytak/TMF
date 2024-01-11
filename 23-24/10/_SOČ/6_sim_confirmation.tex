@@ -5,7 +5,7 @@ Po navržení a implementaci simulace je dalším krokem sledování její přes
 
 \section{Vysokorychlostní video}
 
-Nevýhodou minulého měření pomocí magnetického čidla Vernier je, že jsme nebyli schopni přesně určit okamžitou pozici a rychlost. Toto nebyl tak velký problém, jelikož náš celkový záznam byl velmi dlouhý a nezajímalo nás mikroskopické chování spinneru, ale spíše makroskopický dopad tření na jeho schování. Nyní však budeme sledovat okamžité chování spinneru pomocí trackování videa natočeného vysokorychlostní kamerou. K trackování použijeme volně dostupný software zvaný \texttt{Tracker} \cite{Tracker}. Snímkovou frekvenci jsme nastavili v jednom experimnetu na 60 snímků za sekundu, ve zbylých experimentech na 1000 snímků za sekundu.
+Nevýhodou minulého měření pomocí magnetického čidla Vernier je, že jsme nebyli schopni přesně určit okamžitou pozici a rychlost. Toto nebyl tak velký problém, jelikož náš celkový záznam byl velmi dlouhý a nezajímalo nás mikroskopické chování spinneru, ale spíše makroskopický dopad tření na jeho schování. Nyní však budeme sledovat okamžité chování spinneru pomocí trackování videa natočeného vysokorychlostní kamerou. K trackování použijeme volně dostupný software zvaný \texttt{Tracker} \cite{Tracker}. Snímkovou frekvenci jsme nastavili v jednom experimentu na 60 snímků za sekundu, ve zbylých experimentech na 1000 snímků za sekundu.
 
 \subsection{Aparatura}
 
@@ -21,12 +21,12 @@ Aparatura pro následující experimenty je relativně jednoduchá. Jeden spinne
 
 \subsection{Proces trackování}
 
-Proces trackování videa je značně usnadněn schopností softwaru \texttt{Tracker} vyhledávat značky automaticky pomocí definované vyhledávací masky. Pokud \texttt{Tracker} není schopen s dostatečnou jistotou pozici značky ve videu najít, musí být doplněna manuálně. Z trackovaných dat pozice značky v čase jsme poté schopni jednoduše dopočítat, pod jaký úhlem se spinner nachází v daný moment. Z rozdílů dvou úhlů jsme také schopni dopočíat přibližnou okamžitou úhlovou rychlost.
+Proces trackování videa je značně usnadněn schopností softwaru \texttt{Tracker} vyhledávat značky automaticky pomocí definované vyhledávací masky. Pokud \texttt{Tracker} není schopen s dostatečnou jistotou pozici značky ve videu najít, musí být doplněna manuálně. Z trackovaných dat pozice značky v čase jsme poté schopni jednoduše dopočítat, pod jaký úhlem se spinner nachází v daný moment. Z rozdílů dvou úhlů jsme také schopni dopočítat přibližnou okamžitou úhlovou rychlost.
 
 \subsection{Výsledky měření při 60fps}
 
 První měření, označené C0000, je měření prováděné při snímkovací frekvenci 60 fps\footnote{Jednotka \textbf{fps}, vycházející z anglického \textit{frames per second}, je často používaná zkratka pro českou jednotku "snímky za sekundu".}.
-Nižší snímkovací frekvenci jsme si vybrali, jelikož naše kamera není schopna na vyšší frekvenci natáčet déle naž 2 sekundy. Účelem tohoto experimentu bylo určit, do jaké míry se výsledky naší simulace a měření rozchází po uplynutí většího časového úseku. Spinner má kvůli působení vnějšího magnetu rovnovážnou polohu, ze které je v tomto experimentu vychýlen a poté ponechán oscilovat.
+Nižší snímkovací frekvenci jsme si vybrali, jelikož naše kamera není schopna na vyšší frekvenci natáčet déle než 2 sekundy. Účelem tohoto experimentu bylo určit, do jaké míry se výsledky naší simulace a měření rozchází po uplynutí většího časového úseku. Spinner má kvůli působení vnějšího magnetu rovnovážnou polohu, ze které je v tomto experimentu vychýlen a poté ponechán oscilovat.
 
 \begin{figure}[!ht]
     % \vspace*{0.75cm}
@@ -36,7 +36,7 @@ Nižší snímkovací frekvenci jsme si vybrali, jelikož naše kamera není sch
     \label{fig:exp_C0000}
 \end{figure}
 
-Výsledné porovnání v grafu \ref{fig:exp_C0000} je velmi uspokojivé. Vidíme, že amplituda i frekvence jsou velmi podobné v průběhu celého měření. Mezi možné důvody, proč simulace neodpovídá měření více, patří například: další vibrace a jiné nechtěnné jevy v ložisku; nepřesné určení třecích koeficientů; nepřesnost popisu velkého magnetu v simulaci pomocí několika magnetických momentů.
+Výsledné porovnání v grafu \ref{fig:exp_C0000} je velmi uspokojivé. Vidíme, že amplituda i frekvence jsou velmi podobné v průběhu celého měření. Mezi možné důvody, proč simulace neodpovídá měření více, patří například: další vibrace a jiné nechtěné jevy v ložisku; nepřesné určení třecích koeficientů; nepřesnost popisu velkého magnetu v simulaci pomocí několika magnetických momentů.
 
 \clearpage
 
@@ -52,4 +52,4 @@ Další tři měření se zaměřují na mikroskopické chování, a to za různ
     \label{fig:exp_C000247}
 \end{figure}
 
-Graf \ref{fig:exp_C000247} ukazuje, že s rostoucí rychlostí se měření a simulace více a více rozcházejí. Toto může opět být způsobeno nechtěnnými jevy, jako například vibracemi v ložisku, které mohou být při vyšších rychlostech více prominentní. Při nižších otáčkách stále sledujeme velmi dobrou shodu frekvencí a amplitud. Simulování vysokých rychlostí jsme tedy označili za možnou slabinu naší simulace.
+Graf \ref{fig:exp_C000247} ukazuje, že s rostoucí rychlostí se měření a simulace více a více rozcházejí. Toto může opět být způsobeno nechtěnými jevy, jako například vibracemi v ložisku, které mohou být při vyšších rychlostech více prominentní. Při nižších otáčkách stále sledujeme velmi dobrou shodu frekvencí a amplitud. Simulování vysokých rychlostí jsme tedy označili za možnou slabinu naší simulace.

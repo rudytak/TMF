@@ -63,7 +63,7 @@ Po umístění spinneru mimo rovnovážnou polohu byl ponechán oscilovat a záz
 
 \clearpage
 
-Máme-li tedy soubor\footnote{$|p|$ označuje počet prvků pole $p$; $p_{min}$ označuje čas prvního peaku; $p_{max}$ označuje čas posledního peaku.} $p$ všech časů nalezených peaků, je výpočet frekvence následující:
+Máme-li tedy pole\footnote{$|p|$ označuje počet prvků pole $p$; $p_{min}$ označuje čas prvního peaku; $p_{max}$ označuje čas posledního peaku.} $p$ všech časů nalezených peaků, je výpočet frekvence následující:
 \begin{equation}
     \label{eq:freq_from_peaks}
     f = \frac{ |p| - 1}{2(p_{max} - p_{min})} = 1.00(1)Hz
@@ -106,7 +106,7 @@ Nyní provedeme hledání peaků na vyhlazených datech pomocí funkce \texttt{f
     \setlength{\parskip}{0pt}%
     \item height: určuje minimální absolutní velikost peaku
     \item threshold: minimální rozdíl dvou sousedních hodnot, aby bod mohl být peakem
-    \item distance: minimální indexová vzdálensot dvou peaků
+    \item distance: minimální indexová vzdálenost dvou peaků
 \end{enumerate}
 
 Poté určíme časový interval, kde se peaky nacházejí (a přidáme na každou stranu 0.5 sekundy pro přehlednost grafu),
@@ -128,13 +128,13 @@ K určení remanence našich magnetů využijeme dvou různých metod. Jedna z n
 Prvním způsobem, jak určit hodnotu remanentní magnetizace našich magnetů, je měření magnetického pole pomocí magnetometru mobilního telefonu.
 Aplikace \texttt{Phyphox} umožňuje čtení těchto dat, která následně analyzujeme.
 
-Měření provedeme pro sloupce 2 a 3 magnetů, abychom oveřili, zda je náš způsob měření konzistentní.
+Měření provedeme pro sloupce 2 a 3 magnetů, abychom ověřili, zda je náš způsob měření konzistentní.
 Dále také měříme větší neodymový magnet, jehož parametry nám nejsou známé, a který budeme používat v některých budoucích experimentech.
 Abychom odstranili pozadí tvořené magnetickým polem země, provedeme měření magnetického pole magnetu v jedné orientaci a poté magnet otočíme a změříme hodnotu při opačné orientaci.
 K získání výsledku jednoduše odečteme rozdíl naměřených hodnot, což bude dvojnásobek velikosti magnetického pole tvořeného magnetem.
-Je zřejmé, že tímto odstraníme z meření jiné, neměnné, zdroje magnetických polí.
+Je zřejmé, že tímto odstraníme z měření jiné, neměnné, zdroje magnetických polí.
 
-Kromě provádění měření pro různé počty a velikosti magnetů, budeme také meřit pole v různých vzdálenostech od magnetu, abychom dále potvrdili, zda jsou měření a náš model konzistetní.
+Kromě provádění měření pro různé počty a velikosti magnetů, budeme také měřit pole v různých vzdálenostech od magnetu, abychom dále potvrdili, zda jsou měření a náš model konzistentní.
 Celkem provedeme tedy měření 2 magnetů, 3 magnetů a velkého magnetu pro vzdálenosti 5 cm, 10 cm, 20 cm a 30 cm.
 
 \subsubsection{Analýza měření}
@@ -180,7 +180,7 @@ Pro určení $B_r$ z naměřených hodnot zjednodušíme vzorec \ref{eq:B} tak, 
     |B| = \frac{{\mu}_0 |m|}{2\pi r^3}
 \end{equation}
 
-Zde si všímněme úměrnosti $B \propto r^{-3}$, kterou také sledujeme v našich naměřených datech.
+Zde si všimněme úměrnosti $B \propto r^{-3}$, kterou také sledujeme v našich naměřených datech.
 Následným dosazením rovnice \ref{eq:mag_mom_remanence} a vyjádřením remanence získáváme:
 
 \begin{equation}
