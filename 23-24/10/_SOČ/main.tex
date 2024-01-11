@@ -168,12 +168,12 @@
 \renewcommand*{\subsectionautorefname}{Kap.}
 % \renewcommand*{\subsubsectionautorefname}{Kap.}
 
+
 %% Začátek dokumentu
 %%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 \pagestyle{empty}
-\pagenumbering{Roman}
 \graphicspath{{./imgsLR}}
 
 % PŘEDNÍ STRANA
@@ -302,12 +302,12 @@ Chtěl bych poděkovat ...
 % TABLE OF CONTENTS
 % \begin{}
 \setlength{\parskip}{0pt}%
+\pagenumbering{arabic}
+
 \tableofcontents
 \setlength{\parskip}{12pt}%
 
-\pagenumbering{arabic}
 \pagestyle{fancy}
-\setcounter{page}{1}
 % \end{}
 
 \input{1_introduction.tex}

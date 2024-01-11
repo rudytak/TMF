@@ -1,10 +1,10 @@
 \chapter{Přenos momentu síly}
 
-Možnost vytváření takto magneticky vázaných spinnerů je slibnou známkou toho, že bude opravdu možné využít takovýto systém jako funkční převod. Kromě poměru otáček na vstupu a výstupu je ale k vytvoření použitelného převodu potřeba určit i moment síly, který je taková převodovka schopna přenášet a s jakou účinností.
+Možnost vytváření takto magneticky vázaných spinnerů je slibnou známkou toho, že bude opravdu možné využít takovýto systém jako funkční převod. Kromě poměru otáček na vstupu a výstupu je ale k vytvoření použitelného převodu potřeba určit i moment síly, který je taková převodovka schopna přenášet.
 
 \section{Úprava aparatury}
 
-K tomu, abychom změřili přenesený moment síly lehce upravíme naši předchozí aparaturu popsanou v kapitole \ref{sub:main_2LS_aparature}. Tato úprava spočívá v připevnění pevného, ale lehkého, plechového obdelníku k hnanému spinneru, který bude působit jako zátěž. Moment síly, kterým plech působí na spinner, vychází z odporu vzduchu, kterému je plech podroben. Výhodou tohoto řešení je, že zátěž dynamicky roste s otáčkami, což nám později umožní jednoduše hledat maximální přenesitelný moment v závislosti na několika relevantních parametrech této rudimentární převodovky. Alternativní řešení, jako například vytváření umělého tření na spinneru, kde by přenášený moment byl počítán ze smykového tření dvou styčných ploch o známých vlastnostech, má značné nevýhody jako například: 
+K tomu, abychom změřili přenesený moment síly, lehce upravíme naši předchozí aparaturu popsanou v kapitole \ref{sub:main_2LS_aparature}. Tato úprava spočívá v připevnění pevného, ale lehkého, plechového obdelníku k hnanému spinneru, který bude působit jako zátěž. Moment síly, kterým plech působí na spinner, vychází z odporu vzduchu, kterému je plech podroben. Výhodou tohoto řešení je, že zátěž dynamicky roste s otáčkami, což nám později umožní jednoduše hledat maximální přenesitelný moment v závislosti na několika relevantních parametrech této rudimentární převodovky. Alternativní řešení, jako například vytváření umělého tření na spinneru, kde by přenášený moment byl počítán ze smykového tření dvou styčných ploch o známých vlastnostech, má značné nevýhody jako například: 
 
 \begin{enumerate}[topsep=0pt, partopsep=0pt]
     \setlength{\itemsep}{0pt}%
@@ -13,7 +13,7 @@ K tomu, abychom změřili přenesený moment síly lehce upravíme naši předch
     \item \textbf{Konstrukční náročnost} - Vytváření mnohých styčných ploch různých velikostí a potřeba je udržet perfektně v kontaktu na tak malém objektu jako je fidget spinner je nesrovnatelně konstrukčně složitější, než námi nabízené řešení.
 \end{enumerate}
 
-Když nám byl jasný způsob vytváření zátěže, stačilo už jen jeden ze spinnerů permanentně upravit přidáním tohoto plechu. Čepel tohoto jednoduchého "větráčku" byla připojena pomocí pevného drátu, lepící pásky a lepidla k tělu spinneru tak, aby drát nijak nezasahoval do ložiska a neměnil vlastnosti spinneru samotného. Strategickým ohnutím drátu jsme pak byli schopni čepel umístit svým středem co nejblíže k ose otáčení spinneru. Bohužel, toto nebylo perfektní, a tak budeme muset později provádět lehkou korekci v jednom z našich výpočtů.
+Když nám byl jasný způsob vytváření zátěže, stačilo už jen jeden ze spinnerů permanentně upravit přidáním tohoto plechu. Čepel tohoto jednoduchého "větráčku" byla připojena pomocí pevného drátu, lepící pásky a lepidla k tělu spinneru tak, aby drát nijak nezasahoval do ložiska a neměnil vlastnosti spinneru samotného. Strategickým ohnutím drátu jsme pak byli schopni čepel umístit jejím středem co nejblíže k ose otáčení spinneru. Bohužel, toto nebylo perfektní, a tak budeme muset později provádět lehkou korekci v jednom z našich výpočtů.
 Výsledný vzhled upraveného spinneru je na obrázku \ref{fig:dragfoil_spinner}.
 
 \clearpage
@@ -72,7 +72,7 @@ Zde také budeme muset zapojit dříve zmíněnou kompenzaci pro to, že střed 
     \end{gathered}
 \end{equation}
 
-Po dosazení tabulkové hodnoty hustoty vzduchu, změřených rozměrů plechu \footnote{Změřené rozměry plechu byly: $h = 5.2cm$, $R_{left} = 5.55cm - 0.5cm$ a $R_{right} = 5.55cm + 0.5cm$} a činitele odporu $C_d$ získáme závislost $\tau_{breaking}$ na $\omega$. Činitel odporu se těžko určuje, ale pro tento hrubý odhad jsme vybrali hodnotu 1.4, jelikož plech je zároveň částečně konkávně prohnutý \footnote{Zde vycházíme z hodnot určených v knize \textit{Fluid-Dynamic Drag} od Sigharda F. Hoernera \cite{plate_drag_coef}.}.
+Po dosazení tabulkové hodnoty hustoty vzduchu, změřených rozměrů plechu\footnote{Změřené rozměry plechu byly: $h = 5.2cm$, $R_{left} = 5.55cm - 0.5cm$ a $R_{right} = 5.55cm + 0.5cm$} a činitele odporu $C_D$, získáme závislost $\tau_{breaking}$ na $\omega$. Činitel odporu se těžko určuje, ale pro tento hrubý odhad jsme vybrali hodnotu 1.4, jelikož plech je zároveň částečně konkávně prohnutý\footnote{Zde vycházíme z hodnot určených v knize \textit{Fluid-Dynamic Drag} od Sigharda F. Hoernera \cite{plate_drag_coef}.}.
 
 K brzdnému momentu pak můžeme ještě připočítat třecí koeficient spinneru, čímž získáme finální hrubý odhad:
 
@@ -117,7 +117,7 @@ Jak můžeme vidět, čistě kvadratický fit velmi dobře popisuje tuto závisl
 
 \section{Měření přenosu}
 
-Pomocí nové aparatury jsme schopni určit maximální přenášený moment síly pro různé konfigurace. Tuto hodnotu zjistíme tak, že budeme hnací spinner pomalu roztáčet rychleji a rychleji (pomocí zvyšování napětí na laboratorním zdroji), dokud se vazba mezi hnacím a hnaným spinnerem se zátěží nerozbije. Z nejvyšší hodnoty napětí zpětně dopočítáme úhlovou rychlost (viz \autoref{fig:motor_characteristic}) a z úhlové rychlsoti dopočítáme maximální přenesený moment. Vždy budeme urdžovat vazbu v módu 1:1, protože jiné módy jsou moc citlivé a nespolehlivé.
+Pomocí nové aparatury jsme schopni určit maximální přenášený moment síly pro různé konfigurace. Tuto hodnotu zjistíme tak, že budeme hnací spinner pomalu roztáčet rychleji a rychleji (pomocí zvyšování napětí na laboratorním zdroji), dokud se vazba mezi hnacím a hnaným spinnerem se zátěží nerozbije. Z nejvyšší hodnoty napětí zpětně dopočítáme úhlovou rychlost (viz \autoref{fig:motor_characteristic}) a z úhlové rychlosti dopočítáme maximální přenesený moment. Vždy budeme urdžovat vazbu v módu 1:1, protože jiné módy jsou moc citlivé a nespolehlivé.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \vspace{-1cm}
@@ -137,6 +137,6 @@ Co se konfigurací týče, budeme sledovat dva hlavní parametry: vzdálenost sp
 
 Po zpracování dat vyplyne přibližně lineární závislost mezi přenosem a počtem magnetů. Zároveň tato závislost vychází pouze ze tří bodů a celkem jenom přibližně 10 měření, což určitě nění dostatečné k vytvoření definitivního závěru. Také byly měřeny pouze případy s poměrně "malým" počtem magnetů, protože více magnetů se nedalo dobře ke spinneru připěvnit.
 
-Druhá závislost, závislost na vzdálenosti, vykazuje úměrnost \footnote{Přesnější popis této úměrnosti je $r \propto \big( \sqrt{k^2+(d-2r)^2} \big)^{-4}$. $k$ v tomto případě představuje nějakou minimální vzdálenost v tečném směru, kterou si od sebe magnety vždy udržují (např. půl délky sub-periody, pokud by byly spinnery perfektně zaklesnuty). $d$ představuje vzdálenost středů spinnerů. $r$ je poloměr spinneru. } $\tau \propto r^{-4}$, která odpovídá rovnici \ref{eq:F_m}. Velká vzdálenost spinnerů hraje tedy hlavní roli ve velikosti přenášeného momentu.
+Druhá závislost, závislost na vzdálenosti, vykazuje úměrnost\footnote{Přesnější popis této úměrnosti je $r \propto \big( \sqrt{k^2+(d-2r)^2} \big)^{-4}$. $k$ v tomto případě představuje nějakou minimální vzdálenost v tečném směru, kterou si od sebe magnety vždy udržují (např. půl délky sub-periody, pokud by byly spinnery perfektně zaklesnuty). $d$ představuje vzdálenost středů spinnerů. $r$ je poloměr spinneru. } $\tau \propto r^{-4}$, která odpovídá rovnici \ref{eq:F_m}. Velká vzdálenost spinnerů hraje tedy hlavní roli ve velikosti přenášeného momentu.
 
 \clearpage

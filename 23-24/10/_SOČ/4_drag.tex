@@ -1,7 +1,7 @@
 \chapter{Tření}
 \label{chap:drag}
 
-O třecích jevech při otáčení spinneru jsme si již byli schopni udělat představu při úvodním kvalitativním sledování. Tření bude hrát značnou roli v našem systému, protože právě tření bude hlavním limitujícím faktorem průběhu chaotického chování. Dalším využitím, kromě našeho hlavního záměru - zpřesnění popisu chování, bude také například možnost odhadnutí maximálního času, než systém ztratí všechnu svou energii. Zajímavým a snadno měřitelným pro nás bude průběh úhlové rychlosti $\omega$ v čase (resp. změna úhlové rychlosti \footnote{$I\dot{\omega} = \tau$}), ze kterého vyplývá i náš popis těchto třecích složek.
+O třecích jevech při otáčení spinneru jsme si již byli schopni udělat představu při úvodním kvalitativním sledování. Tření bude hrát značnou roli v našem systému, protože právě tření bude hlavním limitujícím faktorem průběhu chaotického chování. Dalším využitím, kromě našeho hlavního záměru - zpřesnění popisu chování, bude také například možnost odhadnutí maximálního času, než systém ztratí všechnu svou energii. Zajímavým a snadno měřitelným pro nás bude průběh úhlové rychlosti $\omega$ v čase (resp. změna úhlové rychlosti\footnote{$I\dot{\omega} = \tau$}), ze kterého vyplývá i náš popis těchto třecích složek.
 
 Zajímá-li nás tedy změna rychlosti, dovolíme si odhadnout, že hlavními zdroji tření bude ložisko a odpor vzduchu. Provedeme idealizaci ložiska a řekneme, že jeho brzdný moment síly, a tím pádem i úhlové zpomalení, bude neměnné v čase a nezávislé na rychlosti. Toto nemusí být vždy pravda - například objeví-li se v reálném ložisku nějaké nechtěnné oscilace (které jsme sledovali) nebo je-li na ložisko působeno nějakou externí silou mířící kolmo na osu otáčením (jako například když se od sebe velmi silně odpuzují magnety ze dvou blízkých spinnerů). Oba tyto příklady jsou příliš složité k popsání a nejsme je tedy schopni zkoumat. Toto brzdné úhlové zrychlení (resp. zpomalení) nezávislé na rychlosti spinneru označíme $\alpha$.
 
@@ -13,7 +13,7 @@ Poslední složkou, pro kterou nejsme schopni najít fyzikální podstatu, ale k
 
 \section{Analytický popis}
 
-Všechny tři dříve zmíněné složky dohromady tedy popisuje řídící závislost systému: \footnote{Záporná znaménka používáme čistě z toho důvodu, aby nám koeficienty $\alpha$, $\beta$ a $\gamma$ vycházely kladně, jelikož očekáváme, že systém bude zpomalovat.}:
+Všechny tři dříve zmíněné složky dohromady tedy popisuje řídící závislost systému:\footnote{Záporná znaménka používáme čistě z toho důvodu, aby nám koeficienty $\alpha$, $\beta$ a $\gamma$ vycházely kladně, jelikož očekáváme, že systém bude zpomalovat.}:
 \begin{equation}
     \label{eq:drag_diff_wlin}
     \dot{\omega}(t) = - \alpha - \beta \omega(t) - \gamma \omega^2(t)
@@ -25,7 +25,7 @@ Pokud bychom odstranili lineární komponent, získáváme:
     \dot{\omega}(t) = - \alpha - \gamma \omega^2(t)
 \end{equation}
 
-Obě tyto diferencialní rovnice jsou analyticky řešitelné a jejich řešení pro $\omega$ jsou v totožném pořadí \footnote{Všimněme si, že rovnice \ref{eq:drag_res_wlin} je ekvivalentní rovnici \ref{eq:drag_res}, když $\beta = 0$.}:
+Obě tyto diferencialní rovnice jsou analyticky řešitelné a jejich řešení pro $\omega$ jsou v totožném pořadí\footnote{Všimněme si, že rovnice \ref{eq:drag_res_wlin} je ekvivalentní rovnici \ref{eq:drag_res}, když $\beta = 0$.}:
 \begin{equation}
     \label{eq:drag_res_wlin}
     \omega(t) = -\frac{\sqrt{4\alpha\gamma - \beta^2} \tan{(\frac{1}{2}\sqrt{4\alpha\gamma - \beta^2}(t-c_1)})-\beta}{2\gamma}
@@ -38,7 +38,7 @@ a
 
 \subsection{Maximální doba otáčení}
 
-Parametr $c_1$ \footnote{Někdy také označujeme $t_{max}$.} je hodnota v sekundách, která odpovídá době, po které se spinner zastaví. Vyjádřením $c_1$ (např. z druhé rovnice) jsme schopni určit poměrně přesně, jak dlouho se bude spinner točit, známe-li jeho parametry $\alpha$, ($\beta$) a $\gamma$ a jeho počáteční úhlovou rychlost $\omega_0$:
+Parametr $c_1$\footnote{Někdy také označujeme $t_{max}$.} je hodnota v sekundách, která odpovídá době, po které se spinner zastaví. Vyjádřením $c_1$ (např. z druhé rovnice) jsme schopni určit poměrně přesně, jak dlouho se bude spinner točit, známe-li jeho parametry $\alpha$, ($\beta$) a $\gamma$ a jeho počáteční úhlovou rychlost $\omega_0$:
 \begin{equation}
     \label{eq:runtime_from_omeg0}
     c_1(\omega_0) = \frac{1}{\sqrt{\alpha\gamma}} \arctan{ \bigg( \sqrt{\frac{\gamma}{\alpha}} \omega_0 \bigg)}
@@ -56,7 +56,7 @@ Jakmile dojde k tomu, že $t > c_1$, nepopisuje již funkce náš spinner, proto
 
 \subsubsection{Horní limit doby otáčení $n$ spinnerů}
 
-Další zajímavou vlastností, kterou jsme schopni pro tento idealizovaný systém dokázat je, že máme-li libovolné (přirozené) množství spinnerů o počátečních energiích $E_1, E_2 ... E_n$, které spolu neinteragují, je maximální dobou $t_{max}$, po kterou se může některý z nich otáčet $t_{max} \leq c_1(\sum_{i=1}^n E_i)$. Tento fakt se může zdát triviálním a zbytečným, ale tímto způsobem jsme schopni určit například horní časovou hranici, po kterou by musela běžet simulace, než bychom si byli poměrně \footnote{Nemůžeme si být kompletně jisti kvůli interakcím spinnerů a nepřestnostem simulace.} jisti, že již došlo k zastavení všech spinnerů.
+Další zajímavou vlastností, kterou jsme schopni pro tento idealizovaný systém dokázat je, že máme-li libovolné (přirozené) množství spinnerů o počátečních energiích $E_1, E_2 ... E_n$, které spolu neinteragují, je maximální dobou $t_{max}$, po kterou se může některý z nich otáčet $t_{max} \leq c_1(\sum_{i=1}^n E_i)$. Tento fakt se může zdát triviálním a zbytečným, ale tímto způsobem jsme schopni určit například horní časovou hranici, po kterou by musela běžet simulace, než bychom si byli poměrně\footnote{Nemůžeme si být kompletně jisti kvůli interakcím spinnerů a nepřestnostem simulace.} jisti, že již došlo k zastavení všech spinnerů.
 
 Pokud bychom chtěli zlepšit tento odhad i pro interagující spinnery, bylo by potřeba počítat s tím, že spinnery se mohou zrychlovat, zpomalovat a často budou oscilovat. Pokud bychom sledovali mnoho přibližně harmonických oscilací spinnerů, kdy se po relativně dlouhou dobu nepohybují svou nejvyšší rychlostí, mohli bychom se inspirovat efektivní hodnotou sinusoidy a udělat tak hrubý odhad, že $t_{max} \leq \sqrt{2} c_1(\sum_{i=1}^n E_i)$. Nad tím, jaká konstanta by byla dobrá, můžeme dlouze polemizovat, ale to není zájmem této práce, proto nebudeme myšlenku dále rozvádět.
 
@@ -213,7 +213,7 @@ Poslední měření, které jsme k účelům porovnání těchto dvou metod prov
     \caption[Příklad grafu měřeného průběhu $\omega$ v $t$ s $\beta \neq 0$ v magnetickém poli]{Graf měřeného úhlové rychlosti v čase v porovnání s fitem užívajícím všech tří složek. (barevné schéma jako v \autoref{fig:drag_fit_wlin})}
     \label{fig:drag_fit_mag_wlin}
 \end{figure}
-Jak můžeme vidět na \autoref{fig:drag_fit_mag_wlin}, koeficient $\beta$ nám vychází efektivně nulový a průběhy fitů, ani simulací, se od sebe téměř neliší.
+Jak můžeme vidět na \autoref{fig:drag_fit_mag_wlin}, koeficient $\beta$ nám vychází efektivně nulový a průběhy fitů se od sebe téměř neliší.
 Z těchto měření tedy ověřujeme naši předchozí představu, že lineární komponent tření není fyzikálně signifikantní.
 \begin{figure}[H]
     \includegraphics[width=0.65\textwidth]{sim_spinner_magnetic.png}
