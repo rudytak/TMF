@@ -40,7 +40,7 @@ Celý proces tedy začíná tím, že musíme naměřit průběh magnetického p
 \begin{wrapfigure}{r}{0.5\textwidth}
     \includegraphics[width=0.5\textwidth]{target_curve.png}
     \centering
-    \caption{}
+    \caption{Nerušený průběh jedné sub-periody}
     \label{fig:target_curve}
 \end{wrapfigure}
 
@@ -63,7 +63,7 @@ $$
     B_i \text{ } \ldots \text{ } t_i \text{ } \ldots \text{ } \varphi_i
 $$
 
-Zpětné odvození pro rušené sub-periody poté spočívá v porovnání s cílovou (nerušenou) křivkou. Pro každou naměřenou hladinu magnetického pole rušeného spinneru $B_j$ hledáme odpovídají hladiny v naší cílové křivce $B_{i1}$ a $B_{i2}$, mezi kterými se $B_j$ nachází, tedy splňuje $B_i1 < B_j < B_i2$. Z jejich odpovídajících časů a úhlů lineární interpolací určit přibližný čas, ve kterém by se $B_j$ objevilo v nerušeném případě a tedy i jaká je jeho přibližná pozice v čase $t_j$:
+Zpětné odvození pro rušené sub-periody poté spočívá v porovnání s cílovou (nerušenou) křivkou. Pro každou naměřenou hladinu magnetického pole rušeného spinneru $B_j$ hledáme odpovídající hladiny v naší cílové křivce $B_{i1}$ a $B_{i2}$, mezi kterými se $B_j$ nachází, tedy splňuje $B_{i1} < B_j < B_{i2}$. Z jejich odpovídajících časů a úhlů pomocí lineární interpolace určíme přibližný čas, ve kterém by se $B_j$ objevilo v nerušeném případě a tedy i jaká je jeho přibližná pozice v čase $t_j$:
 
 $$
     B_j \text{ } \ldots \text{ } t_j \text{ } \ldots \text{ } \varphi_j = \frac{B_j - B_{i1}}{B_{i2} - B_{i1}} \cdot (\varphi_{i2} - \varphi_{i1}) + \varphi_{i1}
@@ -91,7 +91,7 @@ Po určení $\varphi_j$ a $t_j$ pro všechny datové body rušené sub-periody j
 
 Nakonec provedeme porovnání se simulací pro mód $2:1$. Porovnávat budeme úhlovou rychlost v průběhu sub-periody, kterou z měřených dat dopočítáme pomocí rozdílu vedlejších bodů. Výsledný graf lze vidět na \ref{fig:ang_vel_sub_period}. Můžeme si všimnout, že kolem středu, tedy když je $\dot{B}$ malá, je interval nepřesnosti obrovský (viz dříve zmíněné důvody).
 
-Simulované a měřené hodnoty si jsou, alespoň co se tvaru křivky týče, lehce podobné. Důvody, proč se neshodují více, mohou být mnohé. Například: nežádoucí jevy v ložisku, nepřesnost cílové křivky nebo také celková komplexita algoritmu, který pro své fungování využívá mnohé předpoklady.
+Simulované a měřené hodnoty si jsou lehce podobné, alespoň co se tvaru křivky týče. Důvody, proč se neshodují více, mohou být mnohé. Například: nežádoucí jevy v ložisku, nepřesnost cílové křivky nebo také celková komplexita algoritmu, který pro své fungování využívá mnohé předpoklady.
 
 
 \clearpage
@@ -117,7 +117,7 @@ Dalším krokem k vylepšení naší aparatury tedy bylo vytvořit lepší způs
     \caption{Ilustrace použití laserového snímače (LS)}
     \label{fig:LS_diode}
 \end{wrapfigure}
-Nyní jsou našimi limitacemi pouze: vzorkovací frekvence osciloskopu, která je pro naše využití více než dostačující, a počet pruhů na papírovém kole, který můžeme dle libosti měnit.
+Nyní jsou našimi limitacemi pouze vzorkovací frekvence osciloskopu, která je pro naše využití více než dostačující, a počet pruhů na papírovém kole, který můžeme dle libosti měnit.
 
 \subsection{Zbytek aparatury}
 \label{sub:main_2LS_aparature}
@@ -146,7 +146,7 @@ Celá aparatura (viz \autoref{fig:2LS_aparature}) využívá 2 laserové sníma�
 
 Nejzajímavější pro nás jsou výsledky měření módu $1:1$ a $2:1$, jelikož na nich můžeme ukázat dva jevy objevující se v magnetické vazbě. Na měření módu $1:1$ je vidět oscilace rychlosti hnaného spinneru kolem očekávané rychlosti. K tomuto jevu dochází, protože spinnery tvořící vazbu nebyly ideálně zaklesnuty do sebe (ramena hnaného spinneru nezapadala přesně do středu mezery mezi rameny hnacího spinneru). Rameno hnaného spinneru, které nezapadá perfektně do středu mezery, je tedy blíže k jednomu z ramen hnacího spinneru, což vede k nerovnováze sil, protože z této strany na hnaný spinner působí větší síla než z druhé strany. Tento přirozený způsob vracení ramene do rovnovážné polohy se projevuje právě touto oscilací, která se objevovala již v minulém měření (viz mód $1:1$ v grafu \ref{fig:mag_coupling_vernier}).
 
-Druhým jevem je přecházení mezi módy. Pokud je rychlostní rozdíl spinnerů příliš velký a síla vazby příliš malá, může dojít k rozbití vazby. Poté, tím že hnaný spinner ztrácí rychlost kvůli tření, může být zachycen v nižším módu, jehož interval přijatelných rychlostí je větší. K tomuto došlo v měření módu $2:1$. Spinner se chvíli držel na módu $2:1$, ale kolem šesté sekundy byla jeho rychlost kvůli tření již příliš malá a opustila interval přijatelných rychlostí pro mód $2:1$. Nyní nevázaný spinner dále zpomaloval, dokud se vazba neobnovila na nižším módu. Ihned po jejím obnovení je opět vidět oscilace kolem rovnovážné polohy, kterou jsme popisovali v předchozím odstavci. To, proč se přijatelný interval rychlostí zmenšuje, vychází z toho, že v případě módu $1:1$ zapadá do každé mezery hnacího spinneru přesně 1 rameno hnaného (resp. 1 rameno proběhne mezerou). Při módu $2:1$ "zapadají" do každé mezery dvě ramena (resp. 2 ramena musí proběhnou stejně velkou mezerou), mají tedy méně místa a přesnost fázového seřízení hraje ještě důležitější roli.
+Druhým jevem je přecházení mezi módy. Pokud je rychlostní rozdíl spinnerů příliš velký a síla vazby příliš malá, může dojít k rozbití vazby. Poté, tím že hnaný spinner ztrácí rychlost kvůli tření, může být zachycen v nižším módu, jehož interval přijatelných rychlostí je větší. K tomuto došlo v měření módu $2:1$. Spinner se chvíli držel na módu $2:1$, ale kolem šesté sekundy byla jeho rychlost kvůli tření již příliš malá a opustila interval přijatelných rychlostí pro mód $2:1$. Nyní nevázaný spinner dále zpomaloval, dokud se vazba neobnovila na nižším módu. Ihned po jejím obnovení je opět vidět oscilace kolem rovnovážné polohy, kterou jsme popisovali v předchozím odstavci. To, proč se přijatelný interval rychlostí zmenšuje, vychází z toho, že v případě módu $1:1$ zapadá do každé mezery hnacího spinneru přesně 1 rameno hnaného (resp. 1 rameno proběhne mezerou). Při módu $2:1$ "zapadají" do každé mezery dvě ramena (resp. 2 ramena musí proběhnout stejně velkou mezerou), mají tedy méně místa a přesnost fázového seřízení hraje ještě důležitější roli.
 
 \clearpage
 

@@ -73,5 +73,6 @@
 \contentsline {subsection}{\numberline {9.0.3}Druhy magnetických převodů}{60}{subsection.9.0.3}%
 \contentsline {section}{\numberline {9.1}Vlastní návrhy}{61}{section.9.1}%
 \contentsline {subsection}{\numberline {9.1.1}Princip fungování}{61}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}První návrh}{61}{subsection.9.1.2}%
-\contentsline {subsection}{\numberline {9.1.3}Druhý návrh}{61}{subsection.9.1.3}%
+\contentsline {subsection}{\numberline {9.1.2}První návrh}{62}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Druhý návrh}{64}{subsection.9.1.3}%
+\contentsline {chapter}{\numberline {10}Závěr}{67}{chapter.10}%
