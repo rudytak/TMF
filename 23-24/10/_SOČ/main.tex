@@ -24,8 +24,8 @@
 \newcommand\consultant{RNDr. Pavel Josef, CSc.} %% vyplň jméno svého konzultanta
 \newcommand\authorName{Ondřej Sedláček}  %% vyplň své jméno
 \newcommand\publicationYear{2023} %% vyplň rok
-\newcommand\mainTitle{Počítačové modelování dynamických magnetických systémů} %% vyplň název své práce
-\newcommand\mainTitleEN{Computer modelling of dynamic magnetic systems} %% vyplň název své práce
+\newcommand\mainTitle{Počítačové modelování dynamických magnetických systémů a vývoj magnetických převodovek} %% vyplň název své práce
+\newcommand\mainTitleEN{Computer modelling of dynamic magnetic systems and development of magentic gearboxes} %% vyplň název své práce
 
 \title{\mainTitle} %% -- Název tvé práce
 \author{\authorName} %% -- tvé jméno
@@ -174,7 +174,7 @@
 
 \begin{document}
 \pagestyle{empty}
-\graphicspath{{./imgsHR}}
+\graphicspath{{./imgsLR}}
 
 % PŘEDNÍ STRANA
 \begin{titlepage}
@@ -227,7 +227,7 @@
             \mainTitleEN
         }%%%%
 
-        \vspace{0.25\textheight}
+        \vspace{0.20\textheight}
     \end{center}
 }%%%
 {\Large %%%
@@ -236,7 +236,6 @@
     \textbf{Kraj:} \district\\
     \textbf{Konzultant:} \consultant\\
 } %%%
-
 \noindent \city, \publicationYear
 % \end{}
 \cleardoublepage
@@ -259,44 +258,48 @@
 % \end{}
 \cleardoublepage
 
-% PODĚKOVÁNÍ TODO
+% PODĚKOVÁNÍ
 % \begin{}
 \vspace*{0.0\textheight}
 % \vspace*{0.8\textheight}
 \noindent{\Large{\bfseries{Poděkování}}}
 
 \noindent
-Chtěl bych poděkovat ...
+Rád bych poděkoval mému vedoucímu práce panu doktoru Pavlovi za věcné připomínky a pomoc při konstrukci magnetické připomínky. Dále bych rád poděkoval panu doktrou Výbornému za odborné ohodnocení mé práce. Také bych chtěl poděkovat Danielu Culliverovi za asistenci při provádění měření. Nakonec děkuji své rodině a přátelům za podporu.
+
 % \end{}
 \cleardoublepage
 
-% ANOTACE TODO
+% ANOTACE
 % \begin{}
-\noindent{\Large{\bfseries{Anotace}}}
+\noindent{\Large{\bfseries{Abstrakt}}}
 
-\noindent Sem napíšeš svůj abstrakt. \lipsum[1] %% přepiš!!
+\noindent Tento článek se zaměřuje na vývoj simulačního softwaru pro dynamické nelineární magnetické systémy s využitím metod Runge-Kutta. Výsledné simulační výstupy jsou porovnávány s naměřenými daty v několika konfiguracích, které zahrnují přidání a odebrání vnějšího magnetického pole, udržování magnetické vazby mezi dvěma spinnery a konečně měření přenosu točivého momentu. Dále byly představeny a využity metody pro měření a analýzu reálného chování.
+
+Jako poslední se tento článek zabývá návrhem výkonnějších magnetických převodovek na základě výsledků této práce a dalších externích zdrojů.
 
 \vspace{18pt}
 
 % TODO - keywords
 \noindent{\Large{\bfseries{Klíčová slova}}}
 
-\noindent Šablona, \LaTeX, SOČ, \dots
+\noindent TMF; magnetická převodovka; prstové točítko; Runge-Kutta metody; přenos momentu síly; nelineární diferenciální rovnice; úhlový odpor
 
 \vspace{18pt}
 
 % TODO - abstrakt EN
-\noindent{\Large{\bfseries{Annotation}}}
+\noindent{\Large{\bfseries{Abstract}}}
 
-\noindent Write your abstract here! \lipsum[1] %% přepiš!!
+\noindent This paper focuses on the development of simulation software for dynamic non-linear magnetic systems with the utilization of the Runge-Kutta methods. The resulting simulation outputs are compared with measured data in multiple scenarios, which includes addition and omission of an external magnetic field, sustaining magnetic coupling between two spinners and finally measuring torque transfer. The means of measuring and analysing the real-world behaviour were laid out an utilised.
+
+Furthermore, this paper covers the design of more performant magnetic gearboxes, based on the results of this work and other external sources.
 
 \vspace{18pt}
 
 % TODO - keywords EN
 \noindent{\Large{\bfseries{Keywords}}}
 
-\noindent Template, \LaTeX, High school proffessional activity, \dots
-% \end{}
+\noindent IYPT; magnetic gearbox; magnetic transmission; fidget spinner; Runge-Kutta methods; torque tranfer; non-linear differential equations; angular drag 
 \cleardoublepage
 
 % TABLE OF CONTENTS
