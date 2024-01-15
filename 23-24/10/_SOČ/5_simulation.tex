@@ -520,12 +520,12 @@ Pro dokončení simulace trvající čas $T$ s časovým intervalem $\tau$ je po
 
 \subsection{Webové rozhraní}
 
-Webové rozhraní, dostupné na \url{https://rudytak.github.io/cdn/TMF37task10/index.html}, je druhým způsobem, jak simulaci spouštět. Výhodou webového rozhraní, oproti původnímu headless\footnote{"Headless software" je označení pro takový software, který nemá grafické uživatelské rozhraní. Příkladem takového softwaru je právě \texttt{NodeJS}.} rozhraní, je grafické zobrazení všech spinnerů, čímž je uživateli umožněno jednodušeji sledovat, co se v průběhu simulace děje. Nevýhodou je však značný výkonový rozdíl. Relativně pomalý běh simulace ve webovém rozhraní je způsoben potřebou vykreslovat každý stav simulace, což vyžaduje výpočetně nesrovnatelně složitější operace. 
+Webové rozhraní, dostupné na \url{https://rudytak.github.io/cdn/TMF37task10/index.html}, je druhým způsobem, jak simulaci spouštět. Výhodou webového rozhraní, oproti původnímu headless\footnote{"Headless software" je označení pro takový software, který nemá grafické uživatelské rozhraní. Příkladem takového softwaru je právě \texttt{NodeJS}.}\footnote{Zdrojový kód je volně dostupný na: \url{https://github.com/rudytak/TMF/tree/main/23-24/10/spinners/sim}} rozhraní, je grafické zobrazení všech spinnerů, čímž je uživateli umožněno jednodušeji sledovat, co se v průběhu simulace děje. Nevýhodou je však značný výkonový rozdíl. Relativně pomalý běh simulace ve webovém rozhraní je způsoben potřebou vykreslovat každý stav simulace, což vyžaduje výpočetně nesrovnatelně složitější operace. 
 Obě rozhraní jsou naprogramována pomocí jazyku \texttt{JavaScript}, což umožňuje používání stejných knihoven, přestože jedno rozhraní používá k interpretaci \texttt{NodeJS} a druhé používá jiný \texttt{JavaScriptový engine} (závislý na prohlížeči) - výpočty jsou tedy identické, i když různě rychlé.
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.9\textwidth]{screenshot_web_interface.png}
+    \includegraphics[width=0.8\textwidth]{screenshot_web_interface.png}
     \caption{Ukázka webového rozhraní}
     \label{fig:web_interface}
 \end{figure}
