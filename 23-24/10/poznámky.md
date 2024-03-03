@@ -87,17 +87,18 @@
 6. ~~$\alpha\beta\gamma$ damping~~
 7. ~~Add RK optimisation for spinners that should be ignored~~
 8. ~~Add sim selectable output parameters => retrofit everything ofc~~
-9. ~~**PŘEVODOVKY!!!**~~
-9. *Heatmap stavů ???*
-9. *Magnet grade comparison ???*
+9. ~~PŘEVODOVKY!!!~~
+9. **Heatmap stavů ???**
+9. **Magnet grade comparison ???**
 9. *Coupling limits ???*
 9. *Škálování - mikrostruktury ?*
 <!-- https://www.unimagnet.cz/neodymovy-magnet-kostka-5-mm-sila-cca-1-3-kg-silnejsi-n50_z518/ -->
 <!-- https://www.unimagnet.cz/neodymovy-magnet-kostka-5-mm-sila-cca-1-2-kg_z28/ -->
-9. *LEPŠÍ PREVODOVKY?*
-9. ~~*LEPŠÍ PREVODOVKA* - alignment pegs ve modulatoru~~
+9. ~~LEPŠÍ PREVODOVKY?~~
+9. ~~LEPŠÍ PREVODOVKA - alignment pegs ve modulatoru~~
 9. fix torque transfer efficiency!
 10. ~~Doměření přenosu momentu síly!!!~~
+11. **Dynamometr**
 
 <!-- ---------------------------------------------------------------------------------------------------------------------- -->
 <!-- ---------------------------------------------------------------------------------------------------------------------- -->
