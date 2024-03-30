@@ -607,7 +607,55 @@ class sim_instance {
   }
 }
 
+function run_sims(d_range = [7], o1_range = [10], k_range = [1], ang_range = [0], t_range = [25]) {
+  for (var d of d_range) {
+    for (var o1 of o1_range) {
+      for (var k of k_range) {
+        for (var ang of ang_range) {
+          for (var t of t_range) {
+
+            if (
+              !fs.existsSync(
+                `./runs/d=${d.toFixed(2)}_o=${o1.toFixed(2)}_k=${k.toFixed(3)}_ang=${ang.toFixed(4)}_t=${t.toFixed(3)}.csv`
+              )
+            ) {
+              console.log("Start:", d.toFixed(2), o1.toFixed(2), k.toFixed(3), ang.toFixed(4), t.toFixed(3));
+
+              // spinner creation
+              let si = new sim_instance(
+                {
+                  dt: 1e-4,
+                  save_freq: 1e2,
+                  end_time: t,
+                  out_path: `./runs/d=${d.toFixed(2)}_o=${o1.toFixed(2)}_k=${k.toFixed(3)}_ang=${ang.toFixed(4)}_t=${t.toFixed(3)}.csv`,
+                  exports: ["s[1].omega / s[0].omega"],
+                },
+                RK_matrix.RK4,
+                {
+                  α: 0.218,
+                  γ: 0.000259,
+                }
+              );
+              si.add_spinner(v(0, 0, 0), 0, o1, true);
+              si.add_spinner(v(d / 100, 0, 0), ang, -k * o1);
+
+              // large permanent magnet
+              // si.add_spinner(v(0, 0.08, 0), 0, 0, true, 0, 0, "vertical", 1, 0, 1, (1 / sim_instance.constants.μ_0) * 1.4 * 0.047 * 0.022 * 0.0095);
+
+              si.run();
+            } else {
+              console.log("Already done:", d.toFixed(2), o1.toFixed(2), k.toFixed(3), ang.toFixed(4), t.toFixed(3));
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
 module.exports = {
   sim_instance,
   RK_matrix,
+  run_sims
 };
