@@ -616,10 +616,10 @@ function run_sims(d_range = [7], o1_range = [10], k_range = [1], ang_range = [0]
 
             if (
               !fs.existsSync(
-                `./runs/d=${d.toFixed(2)}_o=${o1.toFixed(2)}_k=${k.toFixed(3)}_ang=${ang.toFixed(4)}_t=${t.toFixed(3)}.csv`
+                `./runs/d=${d.toFixed(4)}_o=${o1.toFixed(2)}_k=${k.toFixed(3)}_ang=${ang.toFixed(4)}_t=${t.toFixed(3)}.csv`
               )
             ) {
-              console.log("Start:", d.toFixed(2), o1.toFixed(2), k.toFixed(3), ang.toFixed(4), t.toFixed(3));
+              console.log("Start:", d.toFixed(4), o1.toFixed(2), k.toFixed(3), ang.toFixed(4), t.toFixed(3));
 
               // spinner creation
               let si = new sim_instance(
@@ -627,7 +627,7 @@ function run_sims(d_range = [7], o1_range = [10], k_range = [1], ang_range = [0]
                   dt: 1e-4,
                   save_freq: 1e2,
                   end_time: t,
-                  out_path: `./runs/d=${d.toFixed(2)}_o=${o1.toFixed(2)}_k=${k.toFixed(3)}_ang=${ang.toFixed(4)}_t=${t.toFixed(3)}.csv`,
+                  out_path: `./runs/d=${d.toFixed(4)}_o=${o1.toFixed(2)}_k=${k.toFixed(3)}_ang=${ang.toFixed(4)}_t=${t.toFixed(3)}.csv`,
                   exports: ["s[1].omega / s[0].omega"],
                 },
                 RK_matrix.RK4,
@@ -644,7 +644,7 @@ function run_sims(d_range = [7], o1_range = [10], k_range = [1], ang_range = [0]
 
               si.run();
             } else {
-              console.log("Already done:", d.toFixed(2), o1.toFixed(2), k.toFixed(3), ang.toFixed(4), t.toFixed(3));
+              console.log("Already done:", d.toFixed(4), o1.toFixed(2), k.toFixed(3), ang.toFixed(4), t.toFixed(3));
             }
 
           }
