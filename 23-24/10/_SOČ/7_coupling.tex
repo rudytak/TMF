@@ -189,11 +189,30 @@ Pomocí těchto 4 vlastností poté dělíme průběhy do 4 kategorií (viz \aut
 
 Pro potvrzení změnšování intervalu přijatelných rychlostí jsme nejdříve vytvořili rigorózní průzkum pro parametry $d$ a $k$ v rozmezí $7 > k > 0$ a $13$ cm $> d > 7$ cm. Zbylé parametry jsme fixovali na $\Delta \varphi = 0$, $\omega_{driving} = 10$rad/s a $t_{run} = 25$s.
 
-Výslední klasifikační graf je k vidění na \autoref{}.
+Výslední klasifikační graf je k vidění na \autoref{fig:state_graph_whole}.
 
 \begin{figure}[H]
     \includegraphics[width=0.95\textwidth]{classification_options.png}
     \centering
     \caption{Příklady různě klasifikovaných průběhů $k(t)$}
     \label{fig:classification_options}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=1\textwidth]{state_graph_overview_d_k.png}
+    \centering
+    \caption{Stavový graf v závislosti na parametrech $d$ a $k_0$.}
+    \label{fig:state_graph_whole}
+\end{figure}
+
+\clearpage
+
+Tvary ostrovů stability podporují naše tvrzení, že při dané rychlosti se interval přijatelných rychlostí změnšuje s rostoucím módem. Zároveň se ale dozvídáme i to, že se tento interval zmenšuje se vzdáleností. V grafu také vidíme dva malé ostrovy pro módy 1:2 a 1:3.
+
+\begin{figure}[H]
+    \includegraphics[width=0.49\textwidth]{stable_modes_overview.png}
+    \includegraphics[width=0.49\textwidth]{state_deviation_overview.png}
+    \centering
+    \caption[Barevné oddělení ostrovů stabilních módů a směrodatná odchylka.]{Vlevo: barevně oddělené ostrovy odpovídající specifickým módům. Bílá určuje, že v tomto prostoru není stabilní mód dosažen. Vpravo: směrodatná odchylka (logaritmicky škálovaná) simulovaných systému v celé doméně. Kolem ostrovů stability sledujeme ostrou řádovou změnu.}
+    \label{fig:state_graph_whole}
 \end{figure}
