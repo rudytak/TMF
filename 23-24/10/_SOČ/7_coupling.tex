@@ -150,5 +150,46 @@ Druhým jevem je přecházení mezi módy. Pokud je rychlostní rozdíl spinner�
 
 \clearpage
 
+\section{Simulovaná vazba}
 
+K hlubšímu pochopení magnetické vazby jsme využili dříve vytvořený simulační software. Pomocí něho můžeme sledovat chování v závislosti na více parametrech, které jsme schopni velmi definovaně určit a sledovat tak detaily chování. Námi vybranými parametry, které nejvíce ovlivňují chování, jsou:
 
+\begin{enumerate}[topsep=0pt, partopsep=0pt]
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}%
+    \item vzálenost středů spinnerů $d$,
+    \item počáteční poměr\footnote{Záporné znaménko uvádíme jelikož spinnery so otáčí opačným směrem.} rychlosti hnaného spinneru ku rychlosti hnacího spinneru $k_0 = -\omega_{driven} / \omega_{driving}$ ,
+    \item hnací rychlost $\omega_{driving}$, která se v průběhu simualce nemění,
+    \item fázový rozdíl spinnerů $\Delta \varphi$
+    \item a konečně doba, po kterou simulace běží, značená $t_{run}$. 
+\end{enumerate}
+
+Změnou hodnot těchto parametrů a následným simulováním systému získáváme průběh $k(t)$ v čase. Analýzou tohoto průběhu jsme pak schopni automatizovaně klasifikovat makroskopické chování systému do několika kategorií.
+
+K automatizovanému analyzování používáme 4 hlavní vlastnosti průběhu:
+\begin{enumerate}[topsep=0pt, partopsep=0pt]
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}%
+    \item Zda $k(t)$ v průběhu celé simulace prochází nulou.
+    \item Aritmetický průměr všech hodnot\footnote{$dt$ v zde určuje časový simulační krok, který byl fixovaný na $dt = 10^{-4}$s.}: $\bar{k} = \frac{dt}{t_{run}}\sum_{t=0}^{t_{run}} k(t)$.
+    \item Směrnici $m$ lineárního fitu celého průběhu $k(t)$.
+    \item Směrodatnou odchylku $\sigma$.
+\end{enumerate}
+
+Pomocí těchto 4 vlastností poté dělíme průběhy do 4 kategorií (viz \autoref{fig:classification_options}):
+
+\begin{enumerate}[topsep=0pt, partopsep=0pt]
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}%
+    \item stabilní vazba (když $k(t)$ neprochází 0 a $m$ < $10^{-3}$),
+    \item ustálení kolem 0 (když $k(t)$ prochází 0 a $m$ < $5\cdot10^{-5}$),
+    \item slabá interakce (když $k(t)$ neprochází 0 a $m$ > $10^{-3}$),
+    \item chaos (když $k(t)$ prochází 0, $m$ > $10^{-3}$ a $\sigma \gg 0.1$)
+\end{enumerate}
+
+\begin{figure}[H]
+    \includegraphics[width=0.95\textwidth]{classification_options.png}
+    \centering
+    \caption{Příklady různě klasifikovaných průběhů $k(t)$}
+    \label{fig:classification_options}
+\end{figure}

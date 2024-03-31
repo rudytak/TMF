@@ -62,8 +62,8 @@ K porovnávání kvality převodovek je často používána míra momentu síly,
 \subsection{Druhy magnetických převodů}
 Princip magnetických převodů vychází ze schopnosti vytvořit pomyslný "magnetický zub", který nahrazuje klasické zuby v ozubených kolech. Rapidní vývoj silnějších a odolnějších magnetických látek dovoluje vytvářet nejrůznější konfigurace magnetických převodů a inspirovat se jejich mechanickými protějšky. Na obrázku \ref{fig:topologies_simple} jsou k vidění různé topologie magnetických převodů a jim odpovídajících mechanických ekvivalentů.
 \begin{wrapfigure}{r}{0.50\textwidth}
-    \vspace{-5cm}
-    \includegraphics[width=0.45\textwidth]{simple_gears.png}
+    \vspace{-4cm}
+    \includegraphics[width=0.40\textwidth]{simple_gears.png}
     \centering
     \caption{Základní magnetické topologie a jejich mechanické ekvivalenty (zdroj: \cite{MG_topologies}).}
     \label{fig:topologies_simple}
@@ -199,6 +199,26 @@ Vnější rotor (viz \autoref{fig:MT_v2_outer}) je velmi podobný původnímu ro
     \label{fig:MT_v2}
 \end{figure}
 
+\section{Vlastnosti}
+
+Ke zhodnocení námi vytvořené převodovky je potřebné určit několik základních parametrů, pomocí kterých ji můžeme srovnávat s jinými návrhy. Hlavním limitujícím parametrem je maximální přenesitelný moment síly před tím, než dojde k proklouznutí rotoru mezi magnetickými zuby a ustálení na dalším zubu. Dále nás také zajímá jaký je průběh působícího momentu síly v průběhu času.
+
+\begin{wrapfigure}{r}{0.6\textwidth}
+    \vspace{-1cm}
+    \includegraphics[width=0.6\textwidth]{transmission_torque_in_time.png}
+    \caption{Průběh momentu síly v čase při různých úhlových rychlostech u převodovky v konfiguraci 1:3}
+    \label{fig:transmission_torque_time}
+\end{wrapfigure}
+
+Ke změření momentu síly jsme použili siloměr a z naměřených hodnot jsme za použití známého ramene síly dopočítali výsledný moment síly. Převodovky byla hnaná v poměru 1:3 (konfigurace pro snížení výstupní rychlosti a zvýšení výstupního momentu síly) a to při několika různých rychlostech. Porovnání průběhů je k vidění na grafu \ref{fig:transmission_torque_time}. V průběhu se také objevují značné záporné peaky, které odpovídají zpětnému rázu způsobené kvůli náhlému přeskočení mezi magnetickými zuby.
+
+\begin{wrapfigure}{r}{0.6\textwidth}
+    \includegraphics[width=0.6\textwidth]{transmission_max_torque_in_speed.png}
+    \caption{Průběh momentu síly v čase při různých rychlostech}
+    \label{fig:transmission_max_torque_in_speed}
+\end{wrapfigure}
+
+V dalším grafu (\autoref{fig:transmission_max_torque_in_speed}) vynášíme získanou závislost maximálního momentu síly a velikosti zpětného rázu v závislost na rychlosti. Obě tyto veličiny s rychlostí pomalu klesají. V porovnání s momentem přenášeným pomocí spinnerů sledujeme přibližně stonásobné zvýšení.
 
 % \subsection{Měření}
 % Měření plechů
