@@ -7,7 +7,7 @@ const {
     workerData
 } = require("worker_threads");
 
-const worker_count = 8;
+const worker_count = 6;
 if (isMainThread) {
     ds = []
     for (var d = 8.4; d <= 9.3; d += 0.0025) {
