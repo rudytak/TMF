@@ -9,12 +9,12 @@ const {
 
 const worker_count = 6;
 if (isMainThread) {
-    ds = []
-    for (var d = 8.4; d <= 9.3; d += 0.0025) {
-        ds.push(d)
+    o1s = []
+    for (var o = 0; o <= 20; o += 0.25) {
+        o1s.push(o)
     }
     ks = []
-    for (var k = 0.5; k <= 0.78; k += 0.01) {
+    for (var k = 1.15; k <= 1.6; k += 0.01) {
         ks.push(k)
     }
 
@@ -22,7 +22,8 @@ if (isMainThread) {
         console.log(ks.filter((k,id) => id%worker_count == i))
         let worker = new Worker(__filename, { workerData: {
             ks: ks.filter((k,id) => id%worker_count == i),
-            ds: ds
+            ds: [8],
+            o1s: o1s 
         } });
 
         worker.on("message", msg => console.log(`Worker message received: ${msg}`));

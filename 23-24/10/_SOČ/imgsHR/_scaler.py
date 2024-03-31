@@ -5,7 +5,7 @@ Image.MAX_IMAGE_PIXELS = 1e9
 
 onlyfiles = [f for f in listdir("./") if isfile(join("./", f)) and f.endswith(".png")]
 
-targ_w = 500
+targ_w = 1200
 for f in onlyfiles:
     img = Image.open(f)
     
