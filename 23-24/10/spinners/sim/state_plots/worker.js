@@ -35,7 +35,7 @@ if (isMainThread) {
     for (var k = 0.2; k <= 2.5; k += 0.02) {
         ks.push(k)
     }
-    ds = [8.7]
+    ds = [7.2, 8.7]
     angs = []
     for (var ang = 0; ang <= 2*Math.PI/3; ang += 2*Math.PI/3 * 1/120) { // increment by 1 degree
         angs.push(ang)
