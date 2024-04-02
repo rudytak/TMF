@@ -19,16 +19,16 @@ if (isMainThread) {
     //     ks.push(k)
     // }
 
-    // // iter 2 - initial velocity change
-    // o1s = []
-    // for (var o = 0; o <= 35; o += 0.25) {
-    //     o1s.push(o)
-    // }
-    // ks = []
-    // for (var k = 1; k <= 1.6; k += 0.01) {
-    //     ks.push(k)
-    // }
-    // ds = [8]
+    // iter 2 - initial velocity change
+    o1s = []
+    for (var o = 0; o <= 35; o += 0.25) {
+        o1s.push(o)
+    }
+    ks = []
+    for (var k = 0.95; k <= 1.6; k += 0.01) {
+        ks.push(k)
+    }
+    ds = [8]
 
     // // iter 3 - angle change
     // ks = []
@@ -47,7 +47,7 @@ if (isMainThread) {
         let worker = new Worker(__filename, { workerData: {
             ks: ks.filter((k,id) => id%worker_count == i),
             ds: ds,
-            angs:angs
+            o1s: o1s
         }});
 
         worker.on("message", msg => console.log(`Worker message received: ${msg}`));
