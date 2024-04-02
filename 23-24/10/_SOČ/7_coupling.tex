@@ -157,9 +157,9 @@ K hlubšímu pochopení magnetické vazby jsme využili dříve vytvořený simu
 \begin{enumerate}[topsep=0pt, partopsep=0pt]
     \setlength{\itemsep}{0pt}%
     \setlength{\parskip}{0pt}%
-    \item vzálenost středů spinnerů $d$,
+    \item vzálenost středů spinnerů značená $d$,
     \item počáteční poměr\footnote{Záporné znaménko uvádíme jelikož spinnery so otáčí opačným směrem.} rychlosti hnaného spinneru ku rychlosti hnacího spinneru $k_0 = -\omega_{driven} / \omega_{driving}$ ,
-    \item hnací rychlost $\omega_{driving}$, která se v průběhu simualce nemění,
+    \item hnací rychlost $\omega_{driving}$, která se v průběhu simulace nemění,
     \item fázový rozdíl spinnerů $\Delta \varphi$
     \item a konečně doba, po kterou simulace běží, značená $t_{run}$. 
 \end{enumerate}
@@ -187,9 +187,11 @@ Pomocí těchto 4 vlastností poté dělíme průběhy do 4 kategorií (viz \aut
     \item chaos (když $k(t)$ prochází 0, $m$ > $10^{-3}$ a $\sigma \gg 0.1$).
 \end{enumerate}
 
-Pro potvrzení změnšování intervalu přijatelných rychlostí jsme nejdříve vytvořili rigorózní průzkum pro parametry $d$ a $k$ v rozmezí $7 > k > 0$ a $13$ cm $> d > 7$ cm. Zbylé parametry jsme fixovali na $\Delta \varphi = 0$, $\omega_{driving} = 10$rad/s a $t_{run} = 25$s.
+Pro potvrzení zmenšování intervalu přijatelných rychlostí jsme nejdříve vytvořili rigorózní průzkum pro parametry $d$ a $k$ v rozmezí $7 > k > 0$ a $13$ cm $> d > 7$ cm. Zbylé parametry jsme fixovali na $\Delta \varphi = 0$, $\omega_{driving} = 10$rad/s a $t_{run} = 25$s.
 
 Výslední klasifikační graf je k vidění na \autoref{fig:state_graph_whole}.
+
+Detailní klasifikační graf (pro parametry v rozmezí $0.78 > k > 0.5$ a $9.3$ cm $> d > 8.4$ cm) je k vidění na \autoref{fig:state_graph_zoom}.
 
 \begin{figure}[H]
     \includegraphics[width=0.95\textwidth]{classification_options.png}
@@ -199,7 +201,7 @@ Výslední klasifikační graf je k vidění na \autoref{fig:state_graph_whole}.
 \end{figure}
 
 \begin{figure}[H]
-    \includegraphics[width=1\textwidth]{state_graph_overview_d_k.png}
+    \includegraphics[width=1\textwidth]{overview_classification.png}
     \centering
     \caption{Stavový graf v závislosti na parametrech $d$ a $k_0$.}
     \label{fig:state_graph_whole}
@@ -207,12 +209,32 @@ Výslední klasifikační graf je k vidění na \autoref{fig:state_graph_whole}.
 
 \clearpage
 
-Tvary ostrovů stability podporují naše tvrzení, že při dané rychlosti se interval přijatelných rychlostí změnšuje s rostoucím módem. Zároveň se ale dozvídáme i to, že se tento interval zmenšuje se vzdáleností. V grafu také vidíme dva malé ostrovy pro módy 1:2 a 1:3.
+Tvary ostrovů stability podporují naše tvrzení, že při dané rychlosti se interval přijatelných rychlostí změnšuje s rostoucím módem. Zároveň se ale dozvídáme i to, že se tento interval zmenšuje se vzdáleností. V grafu také vidíme dva malé ostrovy pro módy 1:3, 1:2, 2:3, 4:3.
 
 \begin{figure}[H]
-    \includegraphics[width=0.49\textwidth]{stable_modes_overview.png}
-    \includegraphics[width=0.49\textwidth]{state_deviation_overview.png}
+    \includegraphics[width=0.49\textwidth]{overview_stable_modes.png}
+    \includegraphics[width=0.49\textwidth]{overview_deviations.png}
     \centering
     \caption[Barevné oddělení ostrovů stabilních módů a směrodatná odchylka.]{Vlevo: barevně oddělené ostrovy odpovídající specifickým módům. Bílá určuje, že v tomto prostoru není stabilní mód dosažen. Vpravo: směrodatná odchylka (logaritmicky škálovaná) simulovaných systému v celé doméně. Kolem ostrovů stability sledujeme ostrou řádovou změnu.}
-    \label{fig:state_graph_whole}
+    \label{fig:additional_graphs_whole}
 \end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=0.49\textwidth]{zoom_classification.png}
+    \includegraphics[width=0.49\textwidth]{zoom_deviations.png}
+    \centering
+    \caption[Detail simulovaného chování v závislosti na parametrech $d$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 2:3.]{Detail simulovaného chování v závislosti na parametrech $d$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 2:3. Vlevo: klasifikační graf ukazující fraktálně vypadající ostrov módu 2:3. V pravém dolním rohu je k vidění mód 1:2. Vpravo: směrodatná odchylka pro tento detail. Ostrý přechod mezi stabilitou a chaosem je opět zřejmý.}
+    \label{fig:state_graph_zoom}
+\end{figure}
+
+Kromě sledování v závislosti na $d$ nás dále zajímá chování v závislosti na ostatních parametrech. Dalším parametrem, který jsme zkoumali, je $\omega_{driving}$. Následující graf \ref{fig:state_graph_omega} ukazuje chování v $\omega_{driving}$-$k_0$ prostoru:
+
+\begin{figure}[H]
+    \includegraphics[width=0.49\textwidth]{omega_classification.png}
+    \includegraphics[width=0.49\textwidth]{omega_deviations.png}
+    \centering
+    \caption[Detail simulovaného chování v závislosti na parametrech $\omega_{driving}$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 4:3.]{Detail simulovaného chování v závislosti na parametrech $\omega_{driving}$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 4:3. Vlevo: klasifikační graf. Vpravo: směrodatná odchylka ukazující vysokou stabilitu módu 4:3 při vysokých otáčkách.}
+    \label{fig:state_graph_omega}
+\end{figure}
+
+Zajímavou oblastí v tomto grafu se stává okolí bodu $\omega_{driving} = 19$ rad/s; $k_0=1.35$, protože v této oblasti se objevuje nový mód, 4:3, který nám z dřívějších experimentů nebyl známý.

@@ -44,27 +44,29 @@
 \contentsline {figure}{\numberline {32}{\ignorespaces Příklady různě klasifikovaných průběhů $k(t)$\relax }}{54}{figure.caption.50}%
 \contentsline {figure}{\numberline {33}{\ignorespaces Stavový graf v závislosti na parametrech $d$ a $k_0$.\relax }}{54}{figure.caption.51}%
 \contentsline {figure}{\numberline {34}{\ignorespaces Barevné oddělení ostrovů stabilních módů a směrodatná odchylka.}}{55}{figure.caption.52}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Detail simulovaného chování v závislosti na parametrech $d$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 2:3.}}{55}{figure.caption.53}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Detail simulovaného chování v závislosti na parametrech $\omega _{driving}$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 4:3.}}{56}{figure.caption.54}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {35}{\ignorespaces Spinner upravený k měření přenášeného momentu síly.\relax }}{58}{figure.caption.53}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Výsledky měření k určení třecích koeficientů spinneru.\relax }}{58}{figure.caption.53}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Závislost brzdného momentu na úhlové rychlosti}}{60}{figure.caption.54}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Závislost přenášeného momentu na velikost magnetického momentu\relax }}{61}{figure.caption.55}%
-\contentsline {figure}{\numberline {39}{\ignorespaces Závislost přenášeného momentu na vzdálenosti spinnerů\relax }}{61}{figure.caption.55}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Spinner upravený k měření přenášeného momentu síly.\relax }}{58}{figure.caption.55}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Výsledky měření k určení třecích koeficientů spinneru.\relax }}{58}{figure.caption.55}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Závislost brzdného momentu na úhlové rychlosti}}{60}{figure.caption.56}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Závislost přenášeného momentu na velikost magnetického momentu\relax }}{61}{figure.caption.57}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Závislost přenášeného momentu na vzdálenosti spinnerů\relax }}{61}{figure.caption.57}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {40}{\ignorespaces Nákres šestistupňové magnetické převodovky}}{64}{figure.caption.56}%
-\contentsline {figure}{\numberline {41}{\ignorespaces Hustota momentu síly referenčních magnetických převodovek}}{64}{figure.caption.56}%
-\contentsline {figure}{\numberline {42}{\ignorespaces Hustota momentu síly referenčních mechanických převodovek}}{64}{figure.caption.56}%
-\contentsline {figure}{\numberline {43}{\ignorespaces Základní magnetické topologie a jejich mechanické ekvivalenty (zdroj: \cite {MG_topologies}).\relax }}{65}{figure.caption.57}%
-\contentsline {figure}{\numberline {44}{\ignorespaces Příklady magnetických převodů s vyšší hustotou momentu síly a koncentrických převodů}}{65}{figure.caption.58}%
-\contentsline {figure}{\numberline {45}{\ignorespaces Ilustrace sčítání magnetizací na jednotlivých nástavcích modulátoru}}{66}{figure.caption.59}%
-\contentsline {figure}{\numberline {46}{\ignorespaces Vnitřní rotor prvního návrhu převodovky\relax }}{67}{figure.caption.60}%
-\contentsline {figure}{\numberline {47}{\ignorespaces Modulátor prvního návrhu převodovky\relax }}{67}{figure.caption.60}%
-\contentsline {figure}{\numberline {48}{\ignorespaces Vnější rotor prvního návrhu převodovky\relax }}{67}{figure.caption.60}%
-\contentsline {figure}{\numberline {49}{\ignorespaces Řez celou magnetickou převodovkou.\relax }}{67}{figure.caption.61}%
-\contentsline {figure}{\numberline {50}{\ignorespaces Konstrukce první návrhu\relax }}{68}{figure.caption.62}%
-\contentsline {figure}{\numberline {51}{\ignorespaces Modulátor druhého návrhu převodovky\relax }}{68}{figure.caption.63}%
-\contentsline {figure}{\numberline {52}{\ignorespaces Vnější rotor druhého návrhu převodovky\relax }}{68}{figure.caption.63}%
-\contentsline {figure}{\numberline {53}{\ignorespaces Řez a fotografie finálního návrhu druhé převodovky.\relax }}{69}{figure.caption.64}%
-\contentsline {figure}{\numberline {54}{\ignorespaces Průběh momentu síly v čase při různých úhlových rychlostech u převodovky v konfiguraci 1:3\relax }}{69}{figure.caption.65}%
-\contentsline {figure}{\numberline {55}{\ignorespaces Průběh momentu síly v čase při různých rychlostech\relax }}{70}{figure.caption.66}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Nákres šestistupňové magnetické převodovky}}{64}{figure.caption.58}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Hustota momentu síly referenčních magnetických převodovek}}{64}{figure.caption.58}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Hustota momentu síly referenčních mechanických převodovek}}{64}{figure.caption.58}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Základní magnetické topologie a jejich mechanické ekvivalenty (zdroj: \cite {MG_topologies}).\relax }}{65}{figure.caption.59}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Příklady magnetických převodů s vyšší hustotou momentu síly a koncentrických převodů}}{65}{figure.caption.60}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Ilustrace sčítání magnetizací na jednotlivých nástavcích modulátoru}}{66}{figure.caption.61}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Vnitřní rotor prvního návrhu převodovky\relax }}{67}{figure.caption.62}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Modulátor prvního návrhu převodovky\relax }}{67}{figure.caption.62}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Vnější rotor prvního návrhu převodovky\relax }}{67}{figure.caption.62}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Řez celou magnetickou převodovkou.\relax }}{67}{figure.caption.63}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Konstrukce první návrhu\relax }}{68}{figure.caption.64}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Modulátor druhého návrhu převodovky\relax }}{68}{figure.caption.65}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Vnější rotor druhého návrhu převodovky\relax }}{68}{figure.caption.65}%
+\contentsline {figure}{\numberline {55}{\ignorespaces Řez a fotografie finálního návrhu druhé převodovky.\relax }}{69}{figure.caption.66}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Průběh momentu síly v čase při různých úhlových rychlostech u převodovky v konfiguraci 1:3\relax }}{69}{figure.caption.67}%
+\contentsline {figure}{\numberline {57}{\ignorespaces Průběh momentu síly v čase při různých rychlostech\relax }}{70}{figure.caption.68}%
 \addvspace {10\p@ }

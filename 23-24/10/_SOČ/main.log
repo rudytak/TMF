@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  31 MAR 2024 23:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  2 APR 2024 20:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -759,9 +759,6 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 ) (./main.aux
 
 LaTeX Warning: Label `fig:ang_sub_periods' multiply defined.
-
-
-LaTeX Warning: Label `fig:state_graph_whole' multiply defined.
 
 
 LaTeX Warning: Label `eq:gear_ratio1' multiply defined.
@@ -1817,11 +1814,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
 [52]
-<./imgsLR/classification_options.png, id=1267, 1204.5pt x 842.14626pt>
+<./imgsLR/classification_options.png, id=1268, 1204.5pt x 841.1425pt>
 File: ./imgsLR/classification_options.png Graphic file (type png)
 <use ./imgsLR/classification_options.png>
-Package pdftex.def Info: ./imgsLR/classification_options.png  used on input line 195.
-(pdftex.def)             Requested size: 432.48051pt x 302.37572pt.
+Package pdftex.def Info: ./imgsLR/classification_options.png  used on input line 197.
+(pdftex.def)             Requested size: 432.48051pt x 302.01532pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1836,11 +1833,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [53
 
 ]
-<./imgsLR/state_graph_overview_d_k.png, id=1289, 1204.5pt x 796.9775pt>
-File: ./imgsLR/state_graph_overview_d_k.png Graphic file (type png)
-<use ./imgsLR/state_graph_overview_d_k.png>
-Package pdftex.def Info: ./imgsLR/state_graph_overview_d_k.png  used on input line 202.
-(pdftex.def)             Requested size: 455.24411pt x 301.22504pt.
+<./imgsLR/overview_classification.png, id=1291, 1204.5pt x 793.96625pt>
+File: ./imgsLR/overview_classification.png Graphic file (type png)
+<use ./imgsLR/overview_classification.png>
+Package pdftex.def Info: ./imgsLR/overview_classification.png  used on input line 204.
+(pdftex.def)             Requested size: 455.24411pt x 300.0869pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1849,18 +1846,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
 
-[54 <./imgsLR/classification_options.png> <./imgsLR/state_graph_overview_d_k.png>]
-<./imgsLR/stable_modes_overview.png, id=1297, 1204.5pt x 960.58875pt>
-File: ./imgsLR/stable_modes_overview.png Graphic file (type png)
-<use ./imgsLR/stable_modes_overview.png>
-Package pdftex.def Info: ./imgsLR/stable_modes_overview.png  used on input line 213.
-(pdftex.def)             Requested size: 223.07211pt x 177.89668pt.
-<./imgsLR/state_deviation_overview.png, id=1298, 1204.5pt x 935.495pt>
-File: ./imgsLR/state_deviation_overview.png Graphic file (type png)
-<use ./imgsLR/state_deviation_overview.png>
-Package pdftex.def Info: ./imgsLR/state_deviation_overview.png  used on input line 214.
-(pdftex.def)             Requested size: 223.07211pt x 173.24942pt.
-) (./8_torque_transfer.tex
+[54 <./imgsLR/classification_options.png> <./imgsLR/overview_classification.png>]
+<./imgsLR/overview_stable_modes.png, id=1298, 1204.5pt x 964.60374pt>
+File: ./imgsLR/overview_stable_modes.png Graphic file (type png)
+<use ./imgsLR/overview_stable_modes.png>
+Package pdftex.def Info: ./imgsLR/overview_stable_modes.png  used on input line 215.
+(pdftex.def)             Requested size: 223.07211pt x 178.64024pt.
+<./imgsLR/overview_deviations.png, id=1299, 1204.5pt x 947.54pt>
+File: ./imgsLR/overview_deviations.png Graphic file (type png)
+<use ./imgsLR/overview_deviations.png>
+Package pdftex.def Info: ./imgsLR/overview_deviations.png  used on input line 216.
+(pdftex.def)             Requested size: 223.07211pt x 175.4801pt.
+<./imgsLR/zoom_classification.png, id=1300, 1204.5pt x 782.925pt>
+File: ./imgsLR/zoom_classification.png Graphic file (type png)
+<use ./imgsLR/zoom_classification.png>
+Package pdftex.def Info: ./imgsLR/zoom_classification.png  used on input line 223.
+(pdftex.def)             Requested size: 223.07211pt x 144.99416pt.
+<./imgsLR/zoom_deviations.png, id=1301, 1204.5pt x 756.8275pt>
+File: ./imgsLR/zoom_deviations.png Graphic file (type png)
+<use ./imgsLR/zoom_deviations.png>
+Package pdftex.def Info: ./imgsLR/zoom_deviations.png  used on input line 224.
+(pdftex.def)             Requested size: 223.07211pt x 140.16101pt.
+<./imgsLR/omega_classification.png, id=1303, 1204.5pt x 788.9475pt>
+File: ./imgsLR/omega_classification.png Graphic file (type png)
+<use ./imgsLR/omega_classification.png>
+Package pdftex.def Info: ./imgsLR/omega_classification.png  used on input line 233.
+(pdftex.def)             Requested size: 223.07211pt x 146.1095pt.
+<./imgsLR/omega_deviations.png, id=1304, 1204.5pt x 754.82pt>
+File: ./imgsLR/omega_deviations.png Graphic file (type png)
+<use ./imgsLR/omega_deviations.png>
+Package pdftex.def Info: ./imgsLR/omega_deviations.png  used on input line 234.
+(pdftex.def)             Requested size: 223.07211pt x 139.78925pt.
+
+Underfull \vbox (badness 5563) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.61858pt, for example:
@@ -1870,7 +1890,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [55
 
- <./imgsLR/stable_modes_overview.png> <./imgsLR/state_deviation_overview.png>]
+ <./imgsLR/overview_stable_modes.png> <./imgsLR/overview_deviations.png> <./imgsLR/zoom_classification.png> <./imgsLR/zoom_deviations.png>]) (./8_torque_transfer.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.61858pt, for example:
@@ -1878,17 +1898,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
 
-[56
+[56 <./imgsLR/omega_classification.png> <./imgsLR/omega_deviations.png>]
+Kapitola 8.
+[57
 
 ]
-Kapitola 8.
-[57]
-<./imgsLR/dragfoil_spinner.png, id=1319, 1204.5pt x 1049.9225pt>
+<./imgsLR/dragfoil_spinner.png, id=1331, 1204.5pt x 1049.9225pt>
 File: ./imgsLR/dragfoil_spinner.png Graphic file (type png)
 <use ./imgsLR/dragfoil_spinner.png>
 Package pdftex.def Info: ./imgsLR/dragfoil_spinner.png  used on input line 25.
 (pdftex.def)             Requested size: 204.85846pt x 178.56456pt.
-<./imgsLR/dragfoil_spinner_decay.png, id=1320, 1204.5pt x 966.61125pt>
+<./imgsLR/dragfoil_spinner_decay.png, id=1332, 1204.5pt x 966.61125pt>
 File: ./imgsLR/dragfoil_spinner_decay.png Graphic file (type png)
 <use ./imgsLR/dragfoil_spinner_decay.png>
 Package pdftex.def Info: ./imgsLR/dragfoil_spinner_decay.png  used on input line 31.
@@ -1930,7 +1950,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 88.
 
-<./imgsLR/braking_torque_in_omega.png, id=1350, 1204.5pt x 947.54pt>
+<./imgsLR/braking_torque_in_omega.png, id=1363, 1204.5pt x 947.54pt>
 File: ./imgsLR/braking_torque_in_omega.png Graphic file (type png)
 <use ./imgsLR/braking_torque_in_omega.png>
 Package pdftex.def Info: ./imgsLR/braking_torque_in_omega.png  used on input line 102.
@@ -1945,12 +1965,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [60
 
  <./imgsLR/braking_torque_in_omega.png>]
-<./imgsLR/torque_trans_mag_mom.png, id=1362, 1204.5pt x 903.375pt>
+<./imgsLR/torque_trans_mag_mom.png, id=1374, 1204.5pt x 903.375pt>
 File: ./imgsLR/torque_trans_mag_mom.png Graphic file (type png)
 <use ./imgsLR/torque_trans_mag_mom.png>
 Package pdftex.def Info: ./imgsLR/torque_trans_mag_mom.png  used on input line 124.
 (pdftex.def)             Requested size: 227.62206pt x 170.70569pt.
-<./imgsLR/torque_trans.png, id=1363, 1204.5pt x 903.375pt>
+<./imgsLR/torque_trans.png, id=1375, 1204.5pt x 903.375pt>
 File: ./imgsLR/torque_trans.png Graphic file (type png)
 <use ./imgsLR/torque_trans.png>
 Package pdftex.def Info: ./imgsLR/torque_trans.png  used on input line 130.
@@ -1979,17 +1999,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 Kapitola 9.
 [63]
-<./imgsLR/magnetic_transmission.png, id=1405, 1204.5pt x 1045.9075pt>
+<./imgsLR/magnetic_transmission.png, id=1417, 1204.5pt x 1045.9075pt>
 File: ./imgsLR/magnetic_transmission.png Graphic file (type png)
 <use ./imgsLR/magnetic_transmission.png>
 Package pdftex.def Info: ./imgsLR/magnetic_transmission.png  used on input line 36.
 (pdftex.def)             Requested size: 204.85846pt x 177.88171pt.
-<./imgsLR/torque_density_mag.png, id=1408, 1204.5pt x 890.32625pt>
+<./imgsLR/torque_density_mag.png, id=1420, 1204.5pt x 890.32625pt>
 File: ./imgsLR/torque_density_mag.png Graphic file (type png)
 <use ./imgsLR/torque_density_mag.png>
 Package pdftex.def Info: ./imgsLR/torque_density_mag.png  used on input line 43.
 (pdftex.def)             Requested size: 204.85846pt x 151.42139pt.
-<./imgsLR/torque_density_mech.png, id=1411, 1204.5pt x 897.3525pt>
+<./imgsLR/torque_density_mech.png, id=1423, 1204.5pt x 897.3525pt>
 File: ./imgsLR/torque_density_mech.png Graphic file (type png)
 <use ./imgsLR/torque_density_mech.png>
 Package pdftex.def Info: ./imgsLR/torque_density_mech.png  used on input line 50.
@@ -2027,7 +2047,7 @@ Overfull \hbox (1.39795pt too wide) in paragraph at lines 60--61
 
 Package wrapfig Warning: wrapfigure used inside a conflicting environment on input line 64.
 
-<./imgsLR/simple_gears.png, id=1418, 1204.5pt x 1481.535pt>
+<./imgsLR/simple_gears.png, id=1430, 1204.5pt x 1481.535pt>
 File: ./imgsLR/simple_gears.png Graphic file (type png)
 <use ./imgsLR/simple_gears.png>
 Package pdftex.def Info: ./imgsLR/simple_gears.png  used on input line 66.
@@ -2065,12 +2085,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 Package wrapfig Warning: Stationary wrapfigure forced to float on input line 70.
 
-<./imgsLR/torqe_dense_gears.png, id=1430, 1204.5pt x 507.8975pt>
+<./imgsLR/torqe_dense_gears.png, id=1442, 1204.5pt x 507.8975pt>
 File: ./imgsLR/torqe_dense_gears.png Graphic file (type png)
 <use ./imgsLR/torqe_dense_gears.png>
 Package pdftex.def Info: ./imgsLR/torqe_dense_gears.png  used on input line 76.
 (pdftex.def)             Requested size: 204.85846pt x 86.38017pt.
-<./imgsLR/concentric_gears.png, id=1431, 1204.5pt x 574.145pt>
+<./imgsLR/concentric_gears.png, id=1443, 1204.5pt x 574.145pt>
 File: ./imgsLR/concentric_gears.png Graphic file (type png)
 <use ./imgsLR/concentric_gears.png>
 Package pdftex.def Info: ./imgsLR/concentric_gears.png  used on input line 77.
@@ -2087,7 +2107,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
 [65 <./imgsLR/simple_gears.png> <./imgsLR/torqe_dense_gears.png> <./imgsLR/concentric_gears.png>]
-<./imgsLR/modulation_explanation.png, id=1452, 1204.5pt x 1173.38374pt>
+<./imgsLR/modulation_explanation.png, id=1464, 1204.5pt x 1173.38374pt>
 File: ./imgsLR/modulation_explanation.png Graphic file (type png)
 <use ./imgsLR/modulation_explanation.png>
 Package pdftex.def Info: ./imgsLR/modulation_explanation.png  used on input line 110.
@@ -2101,22 +2121,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
 [66 <./imgsLR/modulation_explanation.png>]
-<./imgsLR/MT_v1_inner.png, id=1462, 1204.5pt x 1187.43625pt>
+<./imgsLR/MT_v1_inner.png, id=1474, 1204.5pt x 1187.43625pt>
 File: ./imgsLR/MT_v1_inner.png Graphic file (type png)
 <use ./imgsLR/MT_v1_inner.png>
 Package pdftex.def Info: ./imgsLR/MT_v1_inner.png  used on input line 126.
 (pdftex.def)             Requested size: 159.33821pt x 157.07182pt.
-<./imgsLR/MT_v1_modulator.png, id=1463, 1204.5pt x 982.67125pt>
+<./imgsLR/MT_v1_modulator.png, id=1475, 1204.5pt x 982.67125pt>
 File: ./imgsLR/MT_v1_modulator.png Graphic file (type png)
 <use ./imgsLR/MT_v1_modulator.png>
 Package pdftex.def Info: ./imgsLR/MT_v1_modulator.png  used on input line 131.
 (pdftex.def)             Requested size: 159.33821pt x 129.9859pt.
-<./imgsLR/MT_v1_outer.png, id=1464, 1204.5pt x 848.16875pt>
+<./imgsLR/MT_v1_outer.png, id=1476, 1204.5pt x 848.16875pt>
 File: ./imgsLR/MT_v1_outer.png Graphic file (type png)
 <use ./imgsLR/MT_v1_outer.png>
 Package pdftex.def Info: ./imgsLR/MT_v1_outer.png  used on input line 136.
 (pdftex.def)             Requested size: 159.33821pt x 112.19415pt.
-<./imgsLR/MT_v1_whole_cut.png, id=1467, 1204.5pt x 857.2025pt>
+<./imgsLR/MT_v1_whole_cut.png, id=1479, 1204.5pt x 857.2025pt>
 File: ./imgsLR/MT_v1_whole_cut.png Graphic file (type png)
 <use ./imgsLR/MT_v1_whole_cut.png>
 Package pdftex.def Info: ./imgsLR/MT_v1_whole_cut.png  used on input line 149.
@@ -2130,17 +2150,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
 [67 <./imgsLR/MT_v1_inner.png> <./imgsLR/MT_v1_modulator.png> <./imgsLR/MT_v1_outer.png> <./imgsLR/MT_v1_whole_cut.png>]
-<./imgsLR/MT_v1_photo.png, id=1478, 1204.5pt x 903.375pt>
+<./imgsLR/MT_v1_photo.png, id=1490, 1204.5pt x 903.375pt>
 File: ./imgsLR/MT_v1_photo.png Graphic file (type png)
 <use ./imgsLR/MT_v1_photo.png>
 Package pdftex.def Info: ./imgsLR/MT_v1_photo.png  used on input line 158.
 (pdftex.def)             Requested size: 204.85846pt x 153.64064pt.
-<./imgsLR/MT_v2_modulator.png, id=1479, 1204.5pt x 1494.58376pt>
+<./imgsLR/MT_v2_modulator.png, id=1491, 1204.5pt x 1494.58376pt>
 File: ./imgsLR/MT_v2_modulator.png Graphic file (type png)
 <use ./imgsLR/MT_v2_modulator.png>
 Package pdftex.def Info: ./imgsLR/MT_v2_modulator.png  used on input line 171.
 (pdftex.def)             Requested size: 136.57462pt x 169.46753pt.
-<./imgsLR/MT_v2_outer.png, id=1480, 1204.5pt x 1210.5225pt>
+<./imgsLR/MT_v2_outer.png, id=1492, 1204.5pt x 1210.5225pt>
 File: ./imgsLR/MT_v2_outer.png Graphic file (type png)
 <use ./imgsLR/MT_v2_outer.png>
 Package pdftex.def Info: ./imgsLR/MT_v2_outer.png  used on input line 176.
@@ -2156,17 +2176,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [68
 
  <./imgsLR/MT_v1_photo.png> <./imgsLR/MT_v2_modulator.png> <./imgsLR/MT_v2_outer.png>]
-<./imgsLR/MT_v2_whole_cut.png, id=1491, 1204.5pt x 1080.035pt>
+<./imgsLR/MT_v2_whole_cut.png, id=1503, 1204.5pt x 1080.035pt>
 File: ./imgsLR/MT_v2_whole_cut.png Graphic file (type png)
 <use ./imgsLR/MT_v2_whole_cut.png>
 Package pdftex.def Info: ./imgsLR/MT_v2_whole_cut.png  used on input line 195.
 (pdftex.def)             Requested size: 204.85846pt x 183.68591pt.
-<./imgsLR/MT_v2_photo.png, id=1492, 1204.5pt x 903.375pt>
+<./imgsLR/MT_v2_photo.png, id=1504, 1204.5pt x 903.375pt>
 File: ./imgsLR/MT_v2_photo.png Graphic file (type png)
 <use ./imgsLR/MT_v2_photo.png>
 Package pdftex.def Info: ./imgsLR/MT_v2_photo.png  used on input line 196.
 (pdftex.def)             Requested size: 204.85846pt x 153.64064pt.
-<./imgsLR/transmission_torque_in_time.png, id=1493, 1204.5pt x 820.06375pt>
+<./imgsLR/transmission_torque_in_time.png, id=1505, 1204.5pt x 820.06375pt>
 File: ./imgsLR/transmission_torque_in_time.png Graphic file (type png)
 <use ./imgsLR/transmission_torque_in_time.png>
 Package pdftex.def Info: ./imgsLR/transmission_torque_in_time.png  used on input line 208.
@@ -2181,7 +2201,7 @@ Underfull \hbox (badness 1515) in paragraph at lines 213--214
 \T1/cmr/m/n/12 hnaná v po-m¥ru 1:3 (kon-fi-gu-
  []
 
-<./imgsLR/transmission_max_torque_in_speed.png, id=1495, 1204.5pt x 886.31125pt>
+<./imgsLR/transmission_max_torque_in_speed.png, id=1507, 1204.5pt x 886.31125pt>
 File: ./imgsLR/transmission_max_torque_in_speed.png Graphic file (type png)
 <use ./imgsLR/transmission_max_torque_in_speed.png>
 Package pdftex.def Info: ./imgsLR/transmission_max_torque_in_speed.png  used on input line 216.
@@ -2197,7 +2217,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  <./imgsLR/MT_v2_whole_cut.png> <./imgsLR/MT_v2_photo.png> <./imgsLR/transmission_torque_in_time.png>]
 Underfull \hbox (badness 1337) in paragraph at lines 221--222
-[][]\T1/cmr/m/n/12 V dal-²ím grafu ([]Obr. 55[][]) vy-
+[][]\T1/cmr/m/n/12 V dal-²ím grafu ([]Obr. 57[][]) vy-
  []
 
 ) (./10_ending.tex
@@ -2306,9 +2326,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [77]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.04742pt, for example:
@@ -2374,18 +2391,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 247382158F3B2ADE77F2BAB558CB4589;11958.
  ) 
 Here is how much of TeX's memory you used:
- 32230 strings out of 476093
- 597463 string characters out of 5795582
+ 32271 strings out of 476093
+ 598679 string characters out of 5795582
  2226787 words of memory out of 5000000
- 51278 multiletter control sequences out of 15000+600000
+ 51313 multiletter control sequences out of 15000+600000
  545653 words of font info for 127 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,21n,88p,1365b,2119s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (95 pages, 26728688 bytes).
+Output written on main.pdf (95 pages, 27513812 bytes).
 PDF statistics:
- 1950 PDF objects out of 2073 (max. 8388607)
- 1643 compressed objects within 17 object streams
- 547 named destinations out of 1000 (max. 500000)
- 923 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1966 PDF objects out of 2073 (max. 8388607)
+ 1651 compressed objects within 17 object streams
+ 549 named destinations out of 1000 (max. 500000)
+ 943 words of extra memory for PDF output out of 10000 (max. 10000000)
 
