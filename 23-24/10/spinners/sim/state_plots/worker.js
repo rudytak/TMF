@@ -21,26 +21,26 @@ if (isMainThread) {
 
     // // iter 2 - initial velocity change
     // o1s = []
-    // for (var o = 0; o <= 20; o += 0.25) {
+    // for (var o = 0; o <= 35; o += 0.25) {
     //     o1s.push(o)
     // }
     // ks = []
-    // for (var k = 1.15; k <= 1.6; k += 0.01) {
+    // for (var k = 1; k <= 1.6; k += 0.01) {
     //     ks.push(k)
     // }
     // ds = [8]
 
-    // iter 3 - angle change
-    ks = []
-    for (var k = 0.2; k <= 2.5; k += 0.02) {
-        ks.push(k)
-    }
-    ds = [7.2, 8.7]
-    angs = []
-    for (var ang = 0; ang <= 2*Math.PI/3; ang += 2*Math.PI/3 * 1/120) { // increment by 1 degree
-        angs.push(ang)
-    }
-    console.log(angs)
+    // // iter 3 - angle change
+    // ks = []
+    // for (var k = 0.2; k <= 2.5; k += 0.02) {
+    //     ks.push(k)
+    // }
+    // ds = [7.2, 8.7]
+    // angs = []
+    // for (var ang = 0; ang <= 2*Math.PI/3; ang += 2*Math.PI/3 * 1/120) { // increment by 1 degree
+    //     angs.push(ang)
+    // }
+    // console.log(angs)
 
     for(var i = 0; i< worker_count; i++){
         console.log(ks.filter((k,id) => id%worker_count == i))
@@ -48,7 +48,7 @@ if (isMainThread) {
             ks: ks.filter((k,id) => id%worker_count == i),
             ds: ds,
             angs:angs
-        } });
+        }});
 
         worker.on("message", msg => console.log(`Worker message received: ${msg}`));
         worker.on("error", err => console.error(error));
