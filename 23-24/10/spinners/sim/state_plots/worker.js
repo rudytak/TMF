@@ -21,7 +21,7 @@ if (isMainThread) {
 
     // iter 2 - initial velocity change
     o1s = []
-    for (var o = 0; o <= 35; o += 0.25) {
+    for (var o = 0; o <= 70; o += 0.25) {
         o1s.push(o)
     }
     ks = []
