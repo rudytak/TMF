@@ -1582,4 +1582,765 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)            
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37
+
+]
+Overfull \hbox (35.99304pt too wide) in paragraph at lines 479--489
+[][] 
+ []
+
+(./_flowchart.tex
+Overfull \hbox (41.13434pt too wide) in paragraph at lines 114--115
+[][] 
+ []
+
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[38
+
+]
+<./imgsLR/screenshot_web_interface.png, id=1125, 1204.5pt x 593.21625pt>
+File: ./imgsLR/screenshot_web_interface.png Graphic file (type png)
+<use ./imgsLR/screenshot_web_interface.png>
+Package pdftex.def Info: ./imgsLR/screenshot_web_interface.png  used on input line 528.
+(pdftex.def)             Requested size: 364.19667pt x 179.36926pt.
+) (./6_sim_confirmation.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[39
+
+ <./imgsLR/screenshot_web_interface.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[40
+
+]
+Kapitola 6.
+<./imgsLR/slowmo_aparature_ss2.png, id=1148, 1204.5pt x 611.28375pt>
+File: ./imgsLR/slowmo_aparature_ss2.png Graphic file (type png)
+<use ./imgsLR/slowmo_aparature_ss2.png>
+Package pdftex.def Info: ./imgsLR/slowmo_aparature_ss2.png  used on input line 14.
+(pdftex.def)             Requested size: 182.09486pt x 92.40681pt.
+
+Underfull \hbox (badness 1292) in paragraph at lines 20--21
+\T1/cmr/m/n/12 jed-no-du-chá. Je-den spin-ner osa-zený mag-nety je
+ []
+
+[41 <./imgsLR/slowmo_aparature_ss2.png>]
+<./imgsLR/exp_C0000.png, id=1158, 1204.5pt x 563.10374pt>
+File: ./imgsLR/exp_C0000.png Graphic file (type png)
+<use ./imgsLR/exp_C0000.png>
+Package pdftex.def Info: ./imgsLR/exp_C0000.png  used on input line 33.
+(pdftex.def)             Requested size: 455.24411pt x 212.83028pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.61858pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.61858pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
+
+[42 <./imgsLR/exp_C0000.png>]
+<./imgsLR/exp_C000247.png, id=1169, 1204.5pt x 832.10875pt>
+File: ./imgsLR/exp_C000247.png Graphic file (type png)
+<use ./imgsLR/exp_C000247.png>
+Package pdftex.def Info: ./imgsLR/exp_C000247.png  used on input line 49.
+(pdftex.def)             Requested size: 455.24411pt x 314.50322pt.
+) (./7_coupling.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.61858pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.61858pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
+
+[43
+
+ <./imgsLR/exp_C000247.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.61858pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.61858pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
+
+[44
+
+]
+Kapitola 7.
+<./imgsLR/motor_characteristic.png, id=1182, 1204.5pt x 964.60374pt>
+File: ./imgsLR/motor_characteristic.png Graphic file (type png)
+<use ./imgsLR/motor_characteristic.png>
+Package pdftex.def Info: ./imgsLR/motor_characteristic.png  used on input line 9.
+(pdftex.def)             Requested size: 191.20169pt x 153.1181pt.
+<./imgsLR/simulated_coupling.png, id=1187, 1204.5pt x 975.645pt>
+File: ./imgsLR/simulated_coupling.png Graphic file (type png)
+<use ./imgsLR/simulated_coupling.png>
+Package pdftex.def Info: ./imgsLR/simulated_coupling.png  used on input line 21.
+(pdftex.def)             Requested size: 455.24411pt x 368.75407pt.
+[45 <./imgsLR/motor_characteristic.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[46 <./imgsLR/simulated_coupling.png>]
+<./imgsLR/target_curve.png, id=1202, 1204.5pt x 1081.03876pt>
+File: ./imgsLR/target_curve.png Graphic file (type png)
+<use ./imgsLR/target_curve.png>
+Package pdftex.def Info: ./imgsLR/target_curve.png  used on input line 41.
+(pdftex.def)             Requested size: 227.62206pt x 204.27782pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[47
+
+ <./imgsLR/target_curve.png>]
+<./imgsLR/B_sub_period.png, id=1214, 1204.5pt x 412.54124pt>
+File: ./imgsLR/B_sub_period.png Graphic file (type png)
+<use ./imgsLR/B_sub_period.png>
+Package pdftex.def Info: ./imgsLR/B_sub_period.png  used on input line 54.
+(pdftex.def)             Requested size: 455.24411pt x 155.92378pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[48
+
+ <./imgsLR/B_sub_period.png>]
+<./imgsLR/ang_sub_period.png, id=1223, 1204.5pt x 415.5525pt>
+File: ./imgsLR/ang_sub_period.png Graphic file (type png)
+<use ./imgsLR/ang_sub_period.png>
+Package pdftex.def Info: ./imgsLR/ang_sub_period.png  used on input line 79.
+(pdftex.def)             Requested size: 455.24411pt x 157.06192pt.
+<./imgsLR/ang_vel_sub_period.png, id=1224, 1204.5pt x 1082.0425pt>
+File: ./imgsLR/ang_vel_sub_period.png Graphic file (type png)
+<use ./imgsLR/ang_vel_sub_period.png>
+Package pdftex.def Info: ./imgsLR/ang_vel_sub_period.png  used on input line 86.
+(pdftex.def)             Requested size: 227.62206pt x 204.46748pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[49
+
+ <./imgsLR/ang_sub_period.png> <./imgsLR/ang_vel_sub_period.png>]
+<./imgsLR/laser_tracking_circle16.png, id=1234, 1204.5pt x 1204.5pt>
+File: ./imgsLR/laser_tracking_circle16.png Graphic file (type png)
+<use ./imgsLR/laser_tracking_circle16.png>
+Package pdftex.def Info: ./imgsLR/laser_tracking_circle16.png  used on input line 104.
+(pdftex.def)             Requested size: 136.57462pt x 136.57558pt.
+<./imgsLR/laser_setup_0.png, id=1236, 1204.5pt x 1072.005pt>
+File: ./imgsLR/laser_setup_0.png Graphic file (type png)
+<use ./imgsLR/laser_setup_0.png>
+Package pdftex.def Info: ./imgsLR/laser_setup_0.png  used on input line 115.
+(pdftex.def)             Requested size: 204.85846pt x 182.32022pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[50
+
+ <./imgsLR/laser_tracking_circle16.png> <./imgsLR/laser_setup_0.png>]
+<./imgsLR/2LS_aparature.png, id=1247, 1204.5pt x 774.895pt>
+File: ./imgsLR/2LS_aparature.png Graphic file (type png)
+<use ./imgsLR/2LS_aparature.png>
+Package pdftex.def Info: ./imgsLR/2LS_aparature.png  used on input line 129.
+(pdftex.def)             Requested size: 318.66948pt x 205.01512pt.
+<./imgsLR/magnetic_modes1.png, id=1248, 1204.5pt x 573.14125pt>
+File: ./imgsLR/magnetic_modes1.png Graphic file (type png)
+<use ./imgsLR/magnetic_modes1.png>
+Package pdftex.def Info: ./imgsLR/magnetic_modes1.png  used on input line 140.
+(pdftex.def)             Requested size: 364.19667pt x 173.29924pt.
+<./imgsLR/magnetic_modes2.png, id=1249, 1204.5pt x 401.5pt>
+File: ./imgsLR/magnetic_modes2.png Graphic file (type png)
+<use ./imgsLR/magnetic_modes2.png>
+Package pdftex.def Info: ./imgsLR/magnetic_modes2.png  used on input line 141.
+(pdftex.def)             Requested size: 364.19667pt x 121.40051pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[51
+
+ <./imgsLR/2LS_aparature.png> <./imgsLR/magnetic_modes1.png> <./imgsLR/magnetic_modes2.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[52]
+<./imgsLR/classification_options.png, id=1268, 1204.5pt x 841.1425pt>
+File: ./imgsLR/classification_options.png Graphic file (type png)
+<use ./imgsLR/classification_options.png>
+Package pdftex.def Info: ./imgsLR/classification_options.png  used on input line 197.
+(pdftex.def)             Requested size: 432.48051pt x 302.01532pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.61858pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.61858pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
+
+[53
+
+]
+<./imgsLR/overview_classification.png, id=1291, 1204.5pt x 790.955pt>
+File: ./imgsLR/overview_classification.png Graphic file (type png)
+<use ./imgsLR/overview_classification.png>
+Package pdftex.def Info: ./imgsLR/overview_classification.png  used on input line 204.
+(pdftex.def)             Requested size: 455.24411pt x 298.94878pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.61858pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.61858pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
+
+[54 <./imgsLR/classification_options.png> <./imgsLR/overview_classification.png>]
+<./imgsLR/overview_stable_modes.png, id=1300, 1204.5pt x 964.60374pt>
+File: ./imgsLR/overview_stable_modes.png Graphic file (type png)
+<use ./imgsLR/overview_stable_modes.png>
+Package pdftex.def Info: ./imgsLR/overview_stable_modes.png  used on input line 215.
+(pdftex.def)             Requested size: 223.07211pt x 178.64024pt.
+<./imgsLR/overview_deviations.png, id=1301, 1204.5pt x 947.54pt>
+File: ./imgsLR/overview_deviations.png Graphic file (type png)
+<use ./imgsLR/overview_deviations.png>
+Package pdftex.def Info: ./imgsLR/overview_deviations.png  used on input line 216.
+(pdftex.def)             Requested size: 223.07211pt x 175.4801pt.
+<./imgsLR/zoom_classification.png, id=1302, 1204.5pt x 782.925pt>
+File: ./imgsLR/zoom_classification.png Graphic file (type png)
+<use ./imgsLR/zoom_classification.png>
+Package pdftex.def Info: ./imgsLR/zoom_classification.png  used on input line 223.
+(pdftex.def)             Requested size: 223.07211pt x 144.99416pt.
+<./imgsLR/zoom_deviations.png, id=1303, 1204.5pt x 756.8275pt>
+File: ./imgsLR/zoom_deviations.png Graphic file (type png)
+<use ./imgsLR/zoom_deviations.png>
+Package pdftex.def Info: ./imgsLR/zoom_deviations.png  used on input line 224.
+(pdftex.def)             Requested size: 223.07211pt x 140.16101pt.
+<./imgsLR/omega_stable_modes.png, id=1305, 1204.5pt x 958.58125pt>
+File: ./imgsLR/omega_stable_modes.png Graphic file (type png)
+<use ./imgsLR/omega_stable_modes.png>
+Package pdftex.def Info: ./imgsLR/omega_stable_modes.png  used on input line 233.
+(pdftex.def)             Requested size: 191.20169pt x 152.16211pt.
+<./imgsLR/omega_deviations.png, id=1306, 1204.5pt x 753.81625pt>
+File: ./imgsLR/omega_deviations.png Graphic file (type png)
+<use ./imgsLR/omega_deviations.png>
+Package pdftex.def Info: ./imgsLR/omega_deviations.png  used on input line 234.
+(pdftex.def)             Requested size: 259.49246pt x 162.4009pt.
+
+Underfull \vbox (badness 1845) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.61858pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.61858pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
+
+[55
+
+ <./imgsLR/overview_stable_modes.png> <./imgsLR/overview_deviations.png> <./imgsLR/zoom_classification.png> <./imgsLR/zoom_deviations.png>]) (./8_torque_transfer.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.61858pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.61858pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
+
+[56 <./imgsLR/omega_stable_modes.png> <./imgsLR/omega_deviations.png>]
+Kapitola 8.
+[57
+
+]
+<./imgsLR/dragfoil_spinner.png, id=1336, 1204.5pt x 1049.9225pt>
+File: ./imgsLR/dragfoil_spinner.png Graphic file (type png)
+<use ./imgsLR/dragfoil_spinner.png>
+Package pdftex.def Info: ./imgsLR/dragfoil_spinner.png  used on input line 25.
+(pdftex.def)             Requested size: 204.85846pt x 178.56456pt.
+<./imgsLR/dragfoil_spinner_decay.png, id=1337, 1204.5pt x 966.61125pt>
+File: ./imgsLR/dragfoil_spinner_decay.png Graphic file (type png)
+<use ./imgsLR/dragfoil_spinner_decay.png>
+Package pdftex.def Info: ./imgsLR/dragfoil_spinner_decay.png  used on input line 31.
+(pdftex.def)             Requested size: 204.85846pt x 164.39548pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[58
+
+ <./imgsLR/dragfoil_spinner.png> <./imgsLR/dragfoil_spinner_decay.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[59
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 88.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tau' on input line 88.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\omega' on input line 88.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 88.
+
+<./imgsLR/braking_torque_in_omega.png, id=1368, 1204.5pt x 947.54pt>
+File: ./imgsLR/braking_torque_in_omega.png Graphic file (type png)
+<use ./imgsLR/braking_torque_in_omega.png>
+Package pdftex.def Info: ./imgsLR/braking_torque_in_omega.png  used on input line 102.
+(pdftex.def)             Requested size: 386.96027pt x 304.40457pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[60
+
+ <./imgsLR/braking_torque_in_omega.png>]
+<./imgsLR/torque_trans_mag_mom.png, id=1379, 1204.5pt x 903.375pt>
+File: ./imgsLR/torque_trans_mag_mom.png Graphic file (type png)
+<use ./imgsLR/torque_trans_mag_mom.png>
+Package pdftex.def Info: ./imgsLR/torque_trans_mag_mom.png  used on input line 124.
+(pdftex.def)             Requested size: 227.62206pt x 170.70569pt.
+<./imgsLR/torque_trans.png, id=1380, 1204.5pt x 903.375pt>
+File: ./imgsLR/torque_trans.png Graphic file (type png)
+<use ./imgsLR/torque_trans.png>
+Package pdftex.def Info: ./imgsLR/torque_trans.png  used on input line 130.
+(pdftex.def)             Requested size: 227.62206pt x 170.70569pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[61
+
+ <./imgsLR/torque_trans_mag_mom.png> <./imgsLR/torque_trans.png>]) (./9_magnetic_gearbox.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[62
+
+
+]
+Kapitola 9.
+[63]
+<./imgsLR/magnetic_transmission.png, id=1422, 1204.5pt x 1045.9075pt>
+File: ./imgsLR/magnetic_transmission.png Graphic file (type png)
+<use ./imgsLR/magnetic_transmission.png>
+Package pdftex.def Info: ./imgsLR/magnetic_transmission.png  used on input line 36.
+(pdftex.def)             Requested size: 204.85846pt x 177.88171pt.
+<./imgsLR/torque_density_mag.png, id=1425, 1204.5pt x 890.32625pt>
+File: ./imgsLR/torque_density_mag.png Graphic file (type png)
+<use ./imgsLR/torque_density_mag.png>
+Package pdftex.def Info: ./imgsLR/torque_density_mag.png  used on input line 43.
+(pdftex.def)             Requested size: 204.85846pt x 151.42139pt.
+<./imgsLR/torque_density_mech.png, id=1428, 1204.5pt x 897.3525pt>
+File: ./imgsLR/torque_density_mech.png Graphic file (type png)
+<use ./imgsLR/torque_density_mech.png>
+Package pdftex.def Info: ./imgsLR/torque_density_mech.png  used on input line 50.
+(pdftex.def)             Requested size: 204.85846pt x 152.61636pt.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 56.
+
+
+Overfull \hbox (5.76901pt too wide) in paragraph at lines 57--58
+\T1/cmr/m/n/12 p°e-vo-do-vek spo-£ívá ve spo-jení funkcí spojky,
+ []
+
+
+Overfull \hbox (12.94922pt too wide) in paragraph at lines 57--58
+\T1/cmr/m/n/12 s r·z-ným po-£tem pó-lo-vých pár·, jsme schopni
+ []
+
+
+Overfull \hbox (9.48914pt too wide) in paragraph at lines 57--58
+\T1/cmr/m/n/12 pro-toºe p°i p°e-ko-nání ma-xi-mál-ního mo-mentu
+ []
+
+
+Overfull \hbox (2.76712pt too wide) in paragraph at lines 57--58
+\T1/cmr/m/n/12 se za-pojí aº na dal-²ím "mag-ne-tic-kém zubu".
+ []
+
+
+Overfull \hbox (1.39795pt too wide) in paragraph at lines 60--61
+\T1/cmr/m/n/12 hmot-nost hrát klí-£o-vou roli v tom, zda bude
+ []
+
+
+Package wrapfig Warning: wrapfigure used inside a conflicting environment on input line 64.
+
+<./imgsLR/simple_gears.png, id=1435, 1204.5pt x 1481.535pt>
+File: ./imgsLR/simple_gears.png Graphic file (type png)
+<use ./imgsLR/simple_gears.png>
+Package pdftex.def Info: ./imgsLR/simple_gears.png  used on input line 66.
+(pdftex.def)             Requested size: 182.09486pt x 223.96135pt.
+
+Overfull \hbox (3.0281pt too wide) in paragraph at lines 63--70
+\T1/cmr/m/n/12 odol-n¥j-²ích mag-ne-tic-kých lá-tek do-vo-luje vy-
+ []
+
+
+Overfull \hbox (3.35448pt too wide) in paragraph at lines 63--70
+\T1/cmr/m/n/12 tvá-°et nej-r·z-n¥j²í kon-fi-gu-race mag-ne-tic-kých
+ []
+
+
+Overfull \hbox (0.35245pt too wide) in paragraph at lines 63--70
+\T1/cmr/m/n/12 d¥ní r·zné to-po-lo-gie mag-ne-tic-kých p°e-vod·
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--70
+\T1/cmr/m/n/12 va-lent·.
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[64
+
+ <./imgsLR/magnetic_transmission.png> <./imgsLR/torque_density_mag.png> <./imgsLR/torque_density_mech.png>]
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 70.
+
+<./imgsLR/torqe_dense_gears.png, id=1447, 1204.5pt x 507.8975pt>
+File: ./imgsLR/torqe_dense_gears.png Graphic file (type png)
+<use ./imgsLR/torqe_dense_gears.png>
+Package pdftex.def Info: ./imgsLR/torqe_dense_gears.png  used on input line 76.
+(pdftex.def)             Requested size: 204.85846pt x 86.38017pt.
+<./imgsLR/concentric_gears.png, id=1448, 1204.5pt x 574.145pt>
+File: ./imgsLR/concentric_gears.png Graphic file (type png)
+<use ./imgsLR/concentric_gears.png>
+Package pdftex.def Info: ./imgsLR/concentric_gears.png  used on input line 77.
+(pdftex.def)             Requested size: 204.85846pt x 97.64716pt.
+
+Overfull \vbox (0.5979pt too high) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[65 <./imgsLR/simple_gears.png> <./imgsLR/torqe_dense_gears.png> <./imgsLR/concentric_gears.png>]
+<./imgsLR/modulation_explanation.png, id=1469, 1204.5pt x 1173.38374pt>
+File: ./imgsLR/modulation_explanation.png Graphic file (type png)
+<use ./imgsLR/modulation_explanation.png>
+Package pdftex.def Info: ./imgsLR/modulation_explanation.png  used on input line 110.
+(pdftex.def)             Requested size: 204.85846pt x 199.56212pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[66 <./imgsLR/modulation_explanation.png>]
+<./imgsLR/MT_v1_inner.png, id=1479, 1204.5pt x 1187.43625pt>
+File: ./imgsLR/MT_v1_inner.png Graphic file (type png)
+<use ./imgsLR/MT_v1_inner.png>
+Package pdftex.def Info: ./imgsLR/MT_v1_inner.png  used on input line 126.
+(pdftex.def)             Requested size: 159.33821pt x 157.07182pt.
+<./imgsLR/MT_v1_modulator.png, id=1480, 1204.5pt x 982.67125pt>
+File: ./imgsLR/MT_v1_modulator.png Graphic file (type png)
+<use ./imgsLR/MT_v1_modulator.png>
+Package pdftex.def Info: ./imgsLR/MT_v1_modulator.png  used on input line 131.
+(pdftex.def)             Requested size: 159.33821pt x 129.9859pt.
+<./imgsLR/MT_v1_outer.png, id=1481, 1204.5pt x 848.16875pt>
+File: ./imgsLR/MT_v1_outer.png Graphic file (type png)
+<use ./imgsLR/MT_v1_outer.png>
+Package pdftex.def Info: ./imgsLR/MT_v1_outer.png  used on input line 136.
+(pdftex.def)             Requested size: 159.33821pt x 112.19415pt.
+<./imgsLR/MT_v1_whole_cut.png, id=1484, 1204.5pt x 857.2025pt>
+File: ./imgsLR/MT_v1_whole_cut.png Graphic file (type png)
+<use ./imgsLR/MT_v1_whole_cut.png>
+Package pdftex.def Info: ./imgsLR/MT_v1_whole_cut.png  used on input line 149.
+(pdftex.def)             Requested size: 227.62206pt x 161.98073pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[67 <./imgsLR/MT_v1_inner.png> <./imgsLR/MT_v1_modulator.png> <./imgsLR/MT_v1_outer.png> <./imgsLR/MT_v1_whole_cut.png>]
+<./imgsLR/MT_v1_photo.png, id=1495, 1204.5pt x 903.375pt>
+File: ./imgsLR/MT_v1_photo.png Graphic file (type png)
+<use ./imgsLR/MT_v1_photo.png>
+Package pdftex.def Info: ./imgsLR/MT_v1_photo.png  used on input line 158.
+(pdftex.def)             Requested size: 204.85846pt x 153.64064pt.
+<./imgsLR/MT_v2_modulator.png, id=1496, 1204.5pt x 1494.58376pt>
+File: ./imgsLR/MT_v2_modulator.png Graphic file (type png)
+<use ./imgsLR/MT_v2_modulator.png>
+Package pdftex.def Info: ./imgsLR/MT_v2_modulator.png  used on input line 171.
+(pdftex.def)             Requested size: 136.57462pt x 169.46753pt.
+<./imgsLR/MT_v2_outer.png, id=1497, 1204.5pt x 1210.5225pt>
+File: ./imgsLR/MT_v2_outer.png Graphic file (type png)
+<use ./imgsLR/MT_v2_outer.png>
+Package pdftex.def Info: ./imgsLR/MT_v2_outer.png  used on input line 176.
+(pdftex.def)             Requested size: 136.57462pt x 137.25845pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[68
+
+ <./imgsLR/MT_v1_photo.png> <./imgsLR/MT_v2_modulator.png> <./imgsLR/MT_v2_outer.png>]
+<./imgsLR/MT_v2_whole_cut.png, id=1509, 1204.5pt x 1080.035pt>
+File: ./imgsLR/MT_v2_whole_cut.png Graphic file (type png)
+<use ./imgsLR/MT_v2_whole_cut.png>
+Package pdftex.def Info: ./imgsLR/MT_v2_whole_cut.png  used on input line 195.
+(pdftex.def)             Requested size: 204.85846pt x 183.68591pt.
+<./imgsLR/MT_v2_photo.png, id=1510, 1204.5pt x 903.375pt>
+File: ./imgsLR/MT_v2_photo.png Graphic file (type png)
+<use ./imgsLR/MT_v2_photo.png>
+Package pdftex.def Info: ./imgsLR/MT_v2_photo.png  used on input line 196.
+(pdftex.def)             Requested size: 204.85846pt x 153.64064pt.
+<./imgsLR/transmission_torque_in_time.png, id=1511, 1204.5pt x 820.06375pt>
+File: ./imgsLR/transmission_torque_in_time.png Graphic file (type png)
+<use ./imgsLR/transmission_torque_in_time.png>
+Package pdftex.def Info: ./imgsLR/transmission_torque_in_time.png  used on input line 208.
+(pdftex.def)             Requested size: 250.38564pt x 170.46663pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[69
+
+ <./imgsLR/MT_v2_whole_cut.png> <./imgsLR/MT_v2_photo.png> <./imgsLR/transmission_torque_in_time.png>]
+<./imgsLR/transmission_max_torque_in_speed.png, id=1524, 1204.5pt x 886.31125pt>
+File: ./imgsLR/transmission_max_torque_in_speed.png Graphic file (type png)
+<use ./imgsLR/transmission_max_torque_in_speed.png>
+Package pdftex.def Info: ./imgsLR/transmission_max_torque_in_speed.png  used on input line 220.
+(pdftex.def)             Requested size: 250.38564pt x 184.23749pt.
+) (./10_ending.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[70
+
+ <./imgsLR/transmission_max_torque_in_speed.png>]
+Kapitola 10.
+) [71
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[72
+
+] [73]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[74]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[75]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[76
+
+] (./main.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+Underfull \vbox (badness 1430) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[78])
+\tf@lof=\write6
+\openout6 = `main.lof'.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[79]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[80
+
+] (./main.lot)
+\tf@lot=\write7
+\openout7 = `main.lot'.
+
+ [81]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[82
+
+] (./main.lol)
+\tf@lol=\write8
+\openout8 = `main.lol'.
+
+ [83]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.04742pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.04742pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
+
+[84
+
+] [85] (./main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 247382158F3B2ADE77F2BAB558CB4589;11958.
+ ) 
+Here is how much of TeX's memory you used:
+ 32274 strings out of 476093
+ 598697 string characters out of 5795582
+ 2226787 words of memory out of 5000000
+ 51313 multiletter control sequences out of 15000+600000
+ 545653 words of font info for 127 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,21n,88p,1365b,2119s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
+Output written on main.pdf (95 pages, 27548779 bytes).
+PDF statistics:
+ 1966 PDF objects out of 2073 (max. 8388607)
+ 1651 compressed objects within 17 object streams
+ 552 named destinations out of 1000 (max. 500000)
+ 943 words of extra memory for PDF output out of 10000 (max. 10000000)
+
