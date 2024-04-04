@@ -152,15 +152,15 @@ Druhým jevem je přecházení mezi módy. Pokud je rychlostní rozdíl spinner�
 
 \section{Simulovaná vazba}
 
-K hlubšímu pochopení magnetické vazby jsme využili dříve vytvořený simulační software. Pomocí něho můžeme sledovat chování v závislosti na více parametrech, které jsme schopni velmi definovaně určit a sledovat tak detaily chování. Námi vybranými parametry, které nejvíce ovlivňují chování, jsou:
+K hlubšímu pochopení magnetické vazby jsme využili dříve vytvořený simulační software. Pomocí něho můžeme sledovat chování v závislosti na více parametrech, které jsme schopni velmi precizně určit a sledovat tak detaily chování. Námi vybranými parametry, které nejvíce ovlivňují chování, jsou:
 
 \begin{enumerate}[topsep=0pt, partopsep=0pt]
     \setlength{\itemsep}{0pt}%
     \setlength{\parskip}{0pt}%
     \item vzálenost středů spinnerů značená $d$,
-    \item počáteční poměr\footnote{Záporné znaménko uvádíme jelikož spinnery so otáčí opačným směrem.} rychlosti hnaného spinneru ku rychlosti hnacího spinneru $k_0 = -\omega_{driven} / \omega_{driving}$ ,
+    \item počáteční poměr\footnote{Záporné znaménko uvádíme, jelikož se spinnery otáčí opačným směrem.} rychlosti hnaného spinneru ku rychlosti hnacího spinneru $k_0 = -\omega_{driven} / \omega_{driving}$ ,
     \item hnací rychlost $\omega_{driving}$, která se v průběhu simulace nemění,
-    \item fázový rozdíl spinnerů $\Delta \varphi$
+    \item fázový rozdíl spinnerů $\Delta \varphi$,
     \item a konečně doba, po kterou simulace běží, značená $t_{run}$. 
 \end{enumerate}
 
@@ -203,13 +203,13 @@ Detailní klasifikační graf (pro parametry v rozmezí $0.78 > k > 0.5$ a $9.3$
 \begin{figure}[H]
     \includegraphics[width=1\textwidth]{overview_classification.png}
     \centering
-    \caption{Stavový graf v závislosti na parametrech $d$ a $k_0$.}
+    \caption{Stavový graf v závislosti na parametrech $d$ a $k_0$ s příklady všech možných klasifikací a jejich pozic v grafu. V grafu též vynášíme přibližnou křivku kritikality pro tyto parametry, při jejímž překročení přecházíme z chaosu do slabé interakce.}
     \label{fig:state_graph_whole}
 \end{figure}
 
 \clearpage
 
-Tvary ostrovů stability podporují naše tvrzení, že při dané rychlosti se interval přijatelných rychlostí změnšuje s rostoucím módem. Zároveň se ale dozvídáme i to, že se tento interval zmenšuje se vzdáleností. V grafu také vidíme dva malé ostrovy pro módy 1:3, 1:2, 2:3, 4:3.
+Tvary ostrovů stability podporují naše tvrzení, že při dané rychlosti se interval přijatelných rychlostí změnšuje s rostoucím módem. Zároveň se ale dozvídáme i to, že se tento interval zmenšuje se vzdáleností. V grafu také vidíme  malé ostrovy pro módy 1:3, 2:3 a 4:3\footnote{Mód 1:2 se také v grafu nachází, ale je téměř neviditelný. Lépe viditelný je na detailním grafu \ref{fig:state_graph_zoom}.}.
 
 \begin{figure}[H]
     \includegraphics[width=0.49\textwidth]{overview_stable_modes.png}
@@ -223,18 +223,21 @@ Tvary ostrovů stability podporují naše tvrzení, že při dané rychlosti se 
     \includegraphics[width=0.49\textwidth]{zoom_classification.png}
     \includegraphics[width=0.49\textwidth]{zoom_deviations.png}
     \centering
-    \caption[Detail simulovaného chování v závislosti na parametrech $d$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 2:3.]{Detail simulovaného chování v závislosti na parametrech $d$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 2:3. Vlevo: klasifikační graf ukazující fraktálně vypadající ostrov módu 2:3. V pravém dolním rohu je k vidění mód 1:2. Vpravo: směrodatná odchylka pro tento detail. Ostrý přechod mezi stabilitou a chaosem je opět zřejmý.}
+    \caption[Detail simulovaného chování v závislosti na parametrech $d$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 2:3.]{Detail simulovaného chování v závislosti na parametrech $d$ a $k_0$ v okolí ostrova stability odpovídajícího módu 2:3. Vlevo: klasifikační graf ukazující fraktálně vypadající ostrov módu 2:3. V pravém dolním rohu je k vidění mód 1:2. Vpravo: směrodatná odchylka pro tento detail. Ostrý přechod mezi stabilitou a chaosem je opět zřejmý.}
     \label{fig:state_graph_zoom}
 \end{figure}
 
 Kromě sledování v závislosti na $d$ nás dále zajímá chování v závislosti na ostatních parametrech. Dalším parametrem, který jsme zkoumali, je $\omega_{driving}$. Následující graf \ref{fig:state_graph_omega} ukazuje chování v $\omega_{driving}$-$k_0$ prostoru:
 
 \begin{figure}[H]
-    \includegraphics[width=0.49\textwidth]{omega_classification.png}
-    \includegraphics[width=0.49\textwidth]{omega_deviations.png}
+    \includegraphics[width=0.42\textwidth]{omega_stable_modes.png}
+    \includegraphics[width=0.57\textwidth]{omega_deviations.png}
     \centering
-    \caption[Detail simulovaného chování v závislosti na parametrech $\omega_{driving}$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 4:3.]{Detail simulovaného chování v závislosti na parametrech $\omega_{driving}$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 4:3. Vlevo: klasifikační graf. Vpravo: směrodatná odchylka ukazující vysokou stabilitu módu 4:3 při vysokých otáčkách.}
+    \caption[Detail simulovaného chování v závislosti na parametrech $\omega_{driving}$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 4:3.]{Detail simulovaného chování v závislosti na parametrech $\omega_{driving}$ a $k_0$ v okolí ostrovu stability odpovídajícího módu 4:3. Vlevo: barevně oddělené módy. Po okrajích módu 1:1 sledujeme opět fraktální chování - opakující se "výstupky". Vpravo: směrodatná odchylka ukazující vysokou stabilitu módu 4:3 při vysokých otáčkách.}
     \label{fig:state_graph_omega}
 \end{figure}
 
-Zajímavou oblastí v tomto grafu se stává okolí bodu $\omega_{driving} = 19$ rad/s; $k_0=1.35$, protože v této oblasti se objevuje nový mód, 4:3, který nám z dřívějších experimentů nebyl známý.
+Zajímavou oblastí v tomto grafu se stává okolí bodu $k_0=1.35$; $95$ rad/s $ > \omega_{driving} > 20$ rad/s, jelikož v této oblasti se objevuje nový mód, 4:3, který nám z dřívějších experimentů nebyl známý.
+Další nově objevené módy jsou 6:5 a 3:2, které však nejsou tak výrazné.
+
+Z těchto simulací odhadujeme, že chování systému je v závislosti na těchto třech parametrech\footnote{V závislosti na $\Delta \varphi$ a $t_{run}$ jsme nezaznamenali zajímavé chování.} značně chaotické, fraktální a analyticky téměř nepopsatelné. Toto odpovídá velmi chaotickému chování sledovanému při reálných experimentech.

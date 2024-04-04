@@ -203,22 +203,27 @@ Vnější rotor (viz \autoref{fig:MT_v2_outer}) je velmi podobný původnímu ro
 
 Ke zhodnocení námi vytvořené převodovky je potřebné určit několik základních parametrů, pomocí kterých ji můžeme srovnávat s jinými návrhy. Hlavním limitujícím parametrem je maximální přenesitelný moment síly před tím, než dojde k proklouznutí rotoru mezi magnetickými zuby a ustálení na dalším zubu. Dále nás také zajímá jaký je průběh působícího momentu síly v průběhu času.
 
-\begin{wrapfigure}{r}{0.6\textwidth}
+\begin{wrapfigure}{r}{0.55\textwidth}
     \vspace{-1cm}
-    \includegraphics[width=0.6\textwidth]{transmission_torque_in_time.png}
+    \includegraphics[width=0.55\textwidth]{transmission_torque_in_time.png}
     \caption{Průběh momentu síly v čase při různých úhlových rychlostech u převodovky v konfiguraci 1:3}
     \label{fig:transmission_torque_time}
 \end{wrapfigure}
 
-Ke změření momentu síly jsme použili siloměr a z naměřených hodnot jsme za použití známého ramene síly dopočítali výsledný moment síly. Převodovky byla hnaná v poměru 1:3 (konfigurace pro snížení výstupní rychlosti a zvýšení výstupního momentu síly) a to při několika různých rychlostech. Porovnání průběhů je k vidění na grafu \ref{fig:transmission_torque_time}. V průběhu se také objevují značné záporné peaky, které odpovídají zpětnému rázu způsobené kvůli náhlému přeskočení mezi magnetickými zuby.
+Ke změření momentu síly jsme použili siloměr a z naměřených hodnot jsme za použití známého ramene síly dopočítali výsledný moment síly. Převodovky byla hnaná v poměru 1:3 (konfigurace pro snížení výstupní rychlosti a zvýšení výstupního momentu síly) a to při několika různých rychlostech. Porovnání průběhů je k vidění na grafu \ref{fig:transmission_torque_time}. V měřeních se také objevují značné záporné peaky, které odpovídají zpětnému rázu způsobenému náhlým přeskočením \footnote{Přeskočení jde proti směru otáčení odpovídajícímu hnacímu motoru.} mezi magnetickými zuby.
 
-\begin{wrapfigure}{r}{0.6\textwidth}
-    \includegraphics[width=0.6\textwidth]{transmission_max_torque_in_speed.png}
-    \caption{Průběh momentu síly v čase při různých rychlostech}
-    \label{fig:transmission_max_torque_in_speed}
-\end{wrapfigure}
-
-V dalším grafu (\autoref{fig:transmission_max_torque_in_speed}) vynášíme získanou závislost maximálního momentu síly a velikosti zpětného rázu v závislost na rychlosti. Obě tyto veličiny s rychlostí pomalu klesají. V porovnání s momentem přenášeným pomocí spinnerů sledujeme přibližně stonásobné zvýšení.
+\raggedright{
+    \begin{wrapfigure}{r}{0.55\textwidth}
+        % \vspace{-3cm}
+        \includegraphics[width=0.55\textwidth]{transmission_max_torque_in_speed.png}
+        \caption{Průběh momentu síly v čase při různých rychlostech}
+        \label{fig:transmission_max_torque_in_speed}
+    \end{wrapfigure}
+    
+    V dalším grafu (\autoref{fig:transmission_max_torque_in_speed}) vynášíme získanou závislost maximálního momentu síly a velikosti zpětného rázu v závislost na rychlosti. 
+    
+    Obě tyto veličiny s rychlostí pomalu klesají. V porovnání s maximálním momentem síly přenášeným pomocí spinnerů sledujeme přibližně stonásobné zvýšení.
+}
 
 % \subsection{Měření}
 % Měření plechů
