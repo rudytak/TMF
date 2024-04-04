@@ -19,16 +19,16 @@ if (isMainThread) {
     //     ks.push(k)
     // }
 
-    // iter 2 - initial velocity change
-    o1s = []
-    for (var o = 0.25; o <= 100; o += 0.25) {
-        o1s.push(o)
-    }
-    ks = []
-    for (var k = 0.95; k <= 1.6; k += 0.01) {
-        ks.push(k)
-    }
-    ds = [8]
+    // // iter 2 - initial velocity change
+    // o1s = []
+    // for (var o = 0.25; o <= 100; o += 0.01) {
+    //     o1s.push(o)
+    // }
+    // ks = []
+    // for (var k = 0.95; k <= 1.6; k += 0.001) {
+    //     ks.push(k)
+    // }
+    // ds = [8]
 
     // // iter 3 - angle change
     // ks = []
@@ -41,6 +41,16 @@ if (isMainThread) {
     //     angs.push(ang)
     // }
     // console.log(angs)
+
+    o1s = []
+    for (var o = 44; o <= 52; o += 0.02) {
+        o1s.push(o)
+    }
+    ks = []
+    for (var k = 1.09; k <= 1.13; k += 0.002) {
+        ks.push(k)
+    }
+    ds = [8]
 
     for(var i = 0; i< worker_count; i++){
         console.log(ks.filter((k,id) => id%worker_count == i))
