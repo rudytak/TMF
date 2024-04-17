@@ -47,7 +47,7 @@ if (isMainThread) {
         o1s.push(o)
     }
     ks = []
-    for (var k = 1.09; k <= 1.13; k += 0.002) {
+    for (var k = 1.09; k <= 1.13; k += 0.001) {
         ks.push(k)
     }
     ds = [8]
